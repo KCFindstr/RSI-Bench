@@ -8,10 +8,12 @@ A multi-turn Large Language Model (LLM) benchmark suite designed for evaluating 
   > *"Generate a random integer. Do NOT output anything else."*
   Preserves full multi-turn dialogue history across turns to measure context retention and prompt caching.
 - **Comprehensive Provider Support**:
-  - **Google Gemini**: Interactions & `generateContent` endpoints with `thinkingConfig` and `cachedContentTokenCount`.
+  - **Google Gemini Interactions API**: Unified agent/model interface (`/v1beta/interactions`) with `previous_interaction_id` state tracking, reasoning/thought extraction from `steps`/`outputs`, and context caching.
+  - **Google Gemini Content API**: Standard `generateContent` endpoint with `thinkingConfig` and `cachedContentTokenCount`.
   - **Anthropic Claude**: Messages API (`/v1/messages`) with prompt caching (`cache_control: {"type": "ephemeral"}`) and extended thinking blocks.
   - **OpenAI Responses API**: Modern `/v1/responses` route with multi-turn items and reasoning configuration.
   - **OpenAI Chat Completions**: Regular `/v1/chat/completions` route supporting `reasoning_effort` (o1, o3-mini) and `prompt_tokens_details.cached_tokens`.
+  - **OpenAI Text Completions**: Legacy/raw text completions route (`/v1/completions`) for direct text generation.
   - **DeepSeek**: Native reasoning extraction (`reasoning_content`) and prompt cache hit metrics (`prompt_cache_hit_tokens`).
   - **OpenRouter**: Unified model router with reasoning capture and provider routing options.
   - **Groq**: Ultra-fast inference with reasoning model support (DeepSeek R1 distill).
@@ -29,6 +31,7 @@ A multi-turn Large Language Model (LLM) benchmark suite designed for evaluating 
   - Logs cached token metrics across all turns.
 - **Robust Output Parser**:
   - Strips thinking tags, markdown wrappers (`**int**`, `` `int` ``, ```` ```int``` ````), prefixes (`Output: 42`), trailing punctuation, and conversational artifacts.
+  - Handles comma-formatted integers (`1,000`), Unicode minus (`−42`), LaTeX math (`\boxed{42}`, `$$42$$`), and JSON outputs (`{"integer": 42}`).
   - Validates and stores the extracted integer.
 - **Structured Storage**:
   - Full trace JSON files (`results/traces/<provider>_<model>_<run_id>.json`).
@@ -62,8 +65,10 @@ RSI-Bench/
 │       ├── __init__.py        # Provider factory and registry
 │       ├── base.py            # BaseProvider abstract class with retries
 │       ├── anthropic.py       # Anthropic Messages provider
-│       ├── gemini.py          # Gemini provider (Interactions / generateContent)
+│       ├── gemini_interactions.py # Google Gemini Interactions API provider
+│       ├── gemini.py          # Google Gemini Content API (generateContent) provider
 │       ├── openai_chat.py     # OpenAI Chat Completions provider
+│       ├── openai_completion.py # OpenAI Text Completions provider
 │       ├── openai_responses.py# OpenAI Responses API provider
 │       ├── deepseek.py        # DeepSeek API provider
 │       ├── openrouter.py      # OpenRouter provider
@@ -103,18 +108,21 @@ pip install -r requirements.txt
 
 Set the API keys for the providers you wish to benchmark:
 
-| Provider | Environment Variable | Default Model |
-| :--- | :--- | :--- |
-| **Anthropic** | `ANTHROPIC_API_KEY` | `claude-3-7-sonnet-20250219` |
-| **Google Gemini** | `GEMINI_API_KEY` or `GOOGLE_API_KEY` | `gemini-2.5-flash` |
-| **OpenAI** | `OPENAI_API_KEY` | `gpt-4o` |
-| **DeepSeek** | `DEEPSEEK_API_KEY` | `deepseek-reasoner` |
-| **OpenRouter** | `OPENROUTER_API_KEY` | `deepseek/deepseek-r1` |
-| **Groq** | `GROQ_API_KEY` | `deepseek-r1-distill-llama-70b` |
-| **Mistral** | `MISTRAL_API_KEY` | `mistral-large-latest` |
-| **Together AI** | `TOGETHER_API_KEY` | `deepseek-ai/DeepSeek-R1` |
-| **Cohere** | `COHERE_API_KEY` | `command-r-plus-08-2024` |
-| **Generic (Local)** | None required | `default` |
+| Provider | Environment Variable | Default Model | Route / Endpoint |
+| :--- | :--- | :--- | :--- |
+| **Google Gemini Interactions** | `GEMINI_API_KEY` or `GOOGLE_API_KEY` | `gemini-2.5-flash` | `POST /v1beta/interactions` |
+| **Google Gemini Content** | `GEMINI_API_KEY` or `GOOGLE_API_KEY` | `gemini-2.5-flash` | `POST /v1beta/models/...:generateContent` |
+| **Anthropic** | `ANTHROPIC_API_KEY` | `claude-3-7-sonnet-20250219` | `POST /v1/messages` |
+| **OpenAI Responses** | `OPENAI_API_KEY` | `gpt-4o` | `POST /v1/responses` |
+| **OpenAI Chat** | `OPENAI_API_KEY` | `gpt-4o` | `POST /v1/chat/completions` |
+| **OpenAI Completion** | `OPENAI_API_KEY` | `gpt-3.5-turbo-instruct` | `POST /v1/completions` |
+| **DeepSeek** | `DEEPSEEK_API_KEY` | `deepseek-reasoner` | `POST /chat/completions` |
+| **OpenRouter** | `OPENROUTER_API_KEY` | `deepseek/deepseek-r1` | `POST /chat/completions` |
+| **Groq** | `GROQ_API_KEY` | `deepseek-r1-distill-llama-70b` | `POST /openai/v1/chat/completions` |
+| **Mistral** | `MISTRAL_API_KEY` | `mistral-large-latest` | `POST /v1/chat/completions` |
+| **Together AI** | `TOGETHER_API_KEY` | `deepseek-ai/DeepSeek-R1` | `POST /v1/chat/completions` |
+| **Cohere** | `COHERE_API_KEY` | `command-r-plus-08-2024` | `POST /v2/chat` |
+| **Generic (Local)** | None required | `default` | `POST /v1/chat/completions` |
 
 To list all supported providers and check which keys are currently detected:
 ```bash
@@ -130,42 +138,52 @@ python run_benchmark.py --list-providers
 python run_benchmark.py --mock --turns 3
 ```
 
-### 2. Anthropic Messages (with Prompt Caching & Thinking)
+### 2. Google Gemini Interactions API
+```bash
+python run_benchmark.py --provider gemini_interactions --model gemini-2.5-flash --turns 3
+```
+
+### 3. Anthropic Messages (with Prompt Caching & Thinking)
 ```bash
 python run_benchmark.py --provider anthropic --model claude-3-7-sonnet-20250219 --turns 3 --thinking-budget 1024
 ```
 
-### 3. OpenAI Responses API
+### 4. OpenAI Responses API
 ```bash
 python run_benchmark.py --provider openai_responses --model gpt-4o --turns 3
 ```
 
-### 4. OpenAI Regular Chat Route (Reasoning Model)
+### 5. OpenAI Regular Chat Route (Reasoning Model)
 ```bash
 python run_benchmark.py --provider openai_chat --model o3-mini --turns 3
 ```
 
-### 5. Google Gemini (Interactions & Content API)
+### 6. OpenAI Text Completions Route
+```bash
+python run_benchmark.py --provider openai_completion --model gpt-3.5-turbo-instruct --turns 3
+```
+
+### 7. Google Gemini Content API (generateContent)
 ```bash
 python run_benchmark.py --provider gemini --model gemini-2.5-flash --turns 3
 ```
 
-### 6. DeepSeek Reasoner
+### 8. DeepSeek Reasoner
 ```bash
 python run_benchmark.py --provider deepseek --model deepseek-reasoner --turns 3
 ```
 
-### 7. OpenRouter
+### 9. OpenRouter
 ```bash
 python run_benchmark.py --provider openrouter --model deepseek/deepseek-r1 --turns 3
 ```
 
-### 8. Local Ollama / vLLM Endpoint
+### 10. Local Ollama / vLLM Endpoint
 ```bash
 python run_benchmark.py --provider generic --base-url http://localhost:11434/v1 --model llama3.3:70b --turns 3
 ```
 
-### 9. Benchmark All Configured Providers
+### 11. Benchmark All Configured Providers
 ```bash
 python run_benchmark.py --all-configured --turns 3
 ```

@@ -120,12 +120,14 @@ class GeminiProvider(BaseProvider):
         completion_tokens = usage_data.get("candidatesTokenCount", 0)
         total_tokens = usage_data.get("totalTokenCount", prompt_tokens + completion_tokens)
         cached_tokens = usage_data.get("cachedContentTokenCount", 0)
+        reasoning_tokens = usage_data.get("thoughtTokenCount", 0)
 
         usage = TokenUsage(
             prompt_tokens=prompt_tokens,
             completion_tokens=completion_tokens,
             total_tokens=total_tokens,
             cached_tokens=cached_tokens,
+            reasoning_tokens=reasoning_tokens,
         )
 
         metadata = {

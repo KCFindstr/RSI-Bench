@@ -82,11 +82,15 @@ class GenericOpenAIProvider(BaseProvider):
         prompt_details = usage_data.get("prompt_tokens_details", {})
         cached_tokens = prompt_details.get("cached_tokens", 0)
 
+        comp_details = usage_data.get("completion_tokens_details", {})
+        reasoning_tokens = comp_details.get("reasoning_tokens", 0)
+
         usage = TokenUsage(
             prompt_tokens=prompt_tokens,
             completion_tokens=completion_tokens,
             total_tokens=total_tokens,
             cached_tokens=cached_tokens,
+            reasoning_tokens=reasoning_tokens,
         )
 
         metadata = {

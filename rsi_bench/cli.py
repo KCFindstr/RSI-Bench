@@ -61,7 +61,7 @@ def build_parser() -> argparse.ArgumentParser:
         "-p", "--provider",
         type=str,
         default="openai_chat",
-        help="Provider to benchmark (e.g. anthropic, gemini, openai_chat, openai_responses, deepseek, openrouter, groq, mistral, together, cohere, generic, mock)",
+        help="Provider to benchmark (e.g. gemini_interactions, anthropic, openai_responses, openai_chat, openai_completion, deepseek, openrouter, gemini, groq, mistral, together, cohere, generic, mock)",
     )
     parser.add_argument(
         "-m", "--model",

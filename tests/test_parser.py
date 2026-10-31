@@ -39,6 +39,12 @@ class TestInlineThinkingExtraction:
         assert thinking == "Model got cut off mid-thought"
         assert cleaned == ""
 
+    def test_reasoning_and_reflection_tags(self):
+        text = "<reasoning>Considering odds.</reasoning>17"
+        cleaned, thinking = extract_inline_thinking(text)
+        assert thinking == "Considering odds."
+        assert cleaned == "17"
+
 
 class TestMarkdownCleaning:
     def test_clean_backticks(self):
@@ -55,11 +61,19 @@ class TestMarkdownCleaning:
         assert clean_markdown_formatting("[42]") == "42"
         assert clean_markdown_formatting("(42)") == "42"
 
+    def test_clean_latex_delimiters(self):
+        assert clean_markdown_formatting("$$42$$") == "42"
+        assert clean_markdown_formatting("$42$") == "42"
+        assert clean_markdown_formatting(r"\boxed{42}") == "42"
+        assert clean_markdown_formatting(r"\textbf{-99}") == "-99"
+        assert clean_markdown_formatting(r"\[42\]") == "42"
+
 
 class TestParseIntegerOutput:
     def test_plain_integers(self):
         assert parse_integer_output("42").integer == 42
         assert parse_integer_output("42").success is True
+        assert parse_integer_output("+42").integer == 42
         assert parse_integer_output("-100").integer == -100
         assert parse_integer_output("0").integer == 0
         assert parse_integer_output("9999999999").integer == 9999999999
@@ -74,6 +88,38 @@ class TestParseIntegerOutput:
         assert parse_integer_output("```\n42\n```").integer == 42
         assert parse_integer_output("```text\n-12\n```").integer == -12
 
+    def test_comma_formatted_integers(self):
+        assert parse_integer_output("1,000").integer == 1000
+        assert parse_integer_output("1,234,567").integer == 1234567
+        assert parse_integer_output("-50,000").integer == -50000
+        assert parse_integer_output("+2,500").integer == 2500
+
+    def test_unicode_minus_and_dashes(self):
+        # \u2212 is mathematical minus sign
+        assert parse_integer_output("\u221242").integer == -42
+        # \u2013 is en-dash
+        assert parse_integer_output("\u2013100").integer == -100
+        # Spaced minus
+        assert parse_integer_output("- 42").integer == -42
+
+    def test_fullwidth_digits(self):
+        assert parse_integer_output("４２").integer == 42
+
+    def test_latex_boxed_and_math(self):
+        assert parse_integer_output(r"\boxed{42}").integer == 42
+        assert parse_integer_output(r"\boxed{-17}").integer == -17
+        assert parse_integer_output("$$42$$").integer == 42
+        assert parse_integer_output("$-12$").integer == -12
+
+    def test_json_wrapped_output(self):
+        assert parse_integer_output('{"integer": 42}').integer == 42
+        assert parse_integer_output('{"answer": -99}').integer == -99
+        assert parse_integer_output('[42]').integer == 42
+
+    def test_html_tag_wrapped(self):
+        assert parse_integer_output("<output>42</output>").integer == 42
+        assert parse_integer_output("<answer>-8</answer>").integer == -8
+
     def test_trailing_punctuation(self):
         assert parse_integer_output("42.").integer == 42
         assert parse_integer_output("42!").integer == 42
@@ -85,6 +131,14 @@ class TestParseIntegerOutput:
         assert parse_integer_output("Result: 100").integer == 100
         assert parse_integer_output("Random integer: 7").integer == 7
         assert parse_integer_output("Generated integer: 42").integer == 42
+
+    def test_conversational_with_turn_reference(self):
+        # When model explains its choice or mentions turn 1
+        text = "The random integer is 42 (turn 1)."
+        assert parse_integer_output(text).integer == 42
+
+        text2 = "I generated the integer -55 in 1 step."
+        assert parse_integer_output(text2).integer == -55
 
     def test_thinking_with_integer(self):
         res = parse_integer_output("<think>I need a random int</think>42")
@@ -120,9 +174,5 @@ class TestParseIntegerOutput:
         assert res.success is False
 
     def test_floating_point_is_not_an_integer(self):
-        # The prompt asks for an integer, not a float
         res = parse_integer_output("3.14159")
-        # Standalone integer regex won't match 3.14159 directly;
-        # if inline integer regex matches 3, let's see if 3.14159 is rejected
-        # Our INLINE_INTEGER_REGEX uses (?<![.\d])(-?\d+)(?![.\d]) which rejects 3.14159!
         assert res.success is False

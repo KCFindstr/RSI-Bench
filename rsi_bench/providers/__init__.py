@@ -14,10 +14,12 @@ from rsi_bench.providers.base import BaseProvider, ProviderError
 from rsi_bench.providers.cohere import CohereProvider
 from rsi_bench.providers.deepseek import DeepSeekProvider
 from rsi_bench.providers.gemini import GeminiProvider
+from rsi_bench.providers.gemini_interactions import GeminiInteractionsProvider
 from rsi_bench.providers.generic_openai import GenericOpenAIProvider
 from rsi_bench.providers.groq import GroqProvider
 from rsi_bench.providers.mistral import MistralProvider
 from rsi_bench.providers.openai_chat import OpenAIChatProvider
+from rsi_bench.providers.openai_completion import OpenAICompletionProvider
 from rsi_bench.providers.openai_responses import OpenAIResponsesProvider
 from rsi_bench.providers.openrouter import OpenRouterProvider
 from rsi_bench.providers.together import TogetherProvider
@@ -76,10 +78,17 @@ PROVIDER_MAP: dict[str, Type[BaseProvider]] = {
     "anthropic": AnthropicProvider,
     "claude": AnthropicProvider,
     "gemini": GeminiProvider,
+    "gemini_content": GeminiProvider,
+    "gemini_interactions": GeminiInteractionsProvider,
+    "gemini-interactions": GeminiInteractionsProvider,
+    "interactions": GeminiInteractionsProvider,
     "google": GeminiProvider,
     "openai": OpenAIChatProvider,
     "openai_chat": OpenAIChatProvider,
     "openai_responses": OpenAIResponsesProvider,
+    "openai_completion": OpenAICompletionProvider,
+    "openai_text": OpenAICompletionProvider,
+    "completion": OpenAICompletionProvider,
     "deepseek": DeepSeekProvider,
     "openrouter": OpenRouterProvider,
     "groq": GroqProvider,
@@ -114,12 +123,14 @@ __all__ = [
     "BaseProvider",
     "CohereProvider",
     "DeepSeekProvider",
+    "GeminiInteractionsProvider",
     "GeminiProvider",
     "GenericOpenAIProvider",
     "GroqProvider",
     "MistralProvider",
     "MockProvider",
     "OpenAIChatProvider",
+    "OpenAICompletionProvider",
     "OpenAIResponsesProvider",
     "OpenRouterProvider",
     "PROVIDER_MAP",

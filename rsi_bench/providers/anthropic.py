@@ -41,9 +41,10 @@ class AnthropicProvider(BaseProvider):
 
         # Build payload
         max_tokens = self.config.max_tokens or 2048
-        if self.config.enable_thinking and self.config.thinking_budget:
-            if max_tokens <= self.config.thinking_budget:
-                max_tokens = self.config.thinking_budget + 1024
+        if self.config.enable_thinking:
+            budget = self.config.thinking_budget or 1024
+            if max_tokens <= budget:
+                max_tokens = budget + 1024
 
         formatted_messages: List[Dict[str, Any]] = []
         for i, msg in enumerate(messages):
@@ -66,8 +67,13 @@ class AnthropicProvider(BaseProvider):
             })
 
             # Apply cache_control to earlier turns if caching enabled
-            if self.config.enable_caching and i > 0 and i == len(messages) - 2:
-                content_blocks[-1]["cache_control"] = {"type": "ephemeral"}
+            # Turn 1: cache initial prompt so Turn 2 can read it
+            # Turn > 1: cache immediately preceding turn
+            if self.config.enable_caching:
+                if len(messages) == 1 and i == 0:
+                    content_blocks[-1]["cache_control"] = {"type": "ephemeral"}
+                elif len(messages) > 1 and i == len(messages) - 2:
+                    content_blocks[-1]["cache_control"] = {"type": "ephemeral"}
 
             formatted_messages.append({
                 "role": msg.role,
@@ -94,10 +100,11 @@ class AnthropicProvider(BaseProvider):
                 body["system"] = system_prompt
 
         # Thinking configuration
-        if self.config.enable_thinking and self.config.thinking_budget:
+        if self.config.enable_thinking:
+            budget = self.config.thinking_budget or 1024
             body["thinking"] = {
                 "type": "enabled",
-                "budget_tokens": self.config.thinking_budget,
+                "budget_tokens": budget,
             }
             # Anthropic requires temperature=1 when thinking is enabled
             body["temperature"] = 1.0
