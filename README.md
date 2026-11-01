@@ -127,6 +127,22 @@ python -m pytest
 
 ---
 
+## FAQs
+
+### Q: Is this benchmark reproducible?
+
+A: The benchmark can be reproduced with the provided scripts. However, it is almost impossible to obtain the same outputs as the original evaluation runs.
+
+### Q: Is this benchmark benchmaxxed?
+
+A: It is developed after all the listed model releases so not _yet_.
+
+### Q: Can this benchmark be benchmaxxed?
+
+A: Very difficult due to the nature of this benchmark - anyway, it is not worth doing it.
+
+---
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
