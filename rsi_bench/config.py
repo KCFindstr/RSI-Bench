@@ -383,7 +383,14 @@ def load_batch_config(config_path: Union[str, Path]) -> BatchConfig:
     """
     path = Path(config_path)
     if not path.is_file():
-        raise FileNotFoundError(f"Configuration file not found: {path}")
+        # Fallback: check relative to project root or filename inside project root
+        project_root = Path(__file__).resolve().parent.parent
+        if (project_root / path).is_file():
+            path = project_root / path
+        elif (project_root / path.name).is_file():
+            path = project_root / path.name
+        else:
+            raise FileNotFoundError(f"Configuration file not found: {path}")
 
     content = path.read_text(encoding="utf-8")
     suffix = path.suffix.lower()
