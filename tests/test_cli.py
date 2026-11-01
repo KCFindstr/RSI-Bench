@@ -4,8 +4,8 @@ import pytest
 from rsi_bench.cli import main
 
 
-def test_cli_mock_run():
-    exit_code = main(["--mock", "--turns", "2"])
+def test_cli_mock_run(tmp_path):
+    exit_code = main(["--mock", "--turns", "2", "--output-dir", str(tmp_path)])
     assert exit_code == 0
 
 
