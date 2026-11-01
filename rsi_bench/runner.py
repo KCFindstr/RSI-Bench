@@ -12,7 +12,10 @@ from typing import Callable, List, Optional
 import httpx
 
 from rsi_bench.cache import ResponseCache
+from rsi_bench.config import build_benchmark_configs
 from rsi_bench.models import (
+    BatchBenchmarkResult,
+    BatchConfig,
     BenchmarkConfig,
     BenchmarkResult,
     Message,
@@ -46,6 +49,17 @@ class BenchmarkRunner:
             config=config,
             http_client=http_client,
         )
+
+    def close(self) -> None:
+        """Close provider resources and underlying HTTP client."""
+        if hasattr(self, "provider") and self.provider:
+            self.provider.close()
+
+    def __enter__(self) -> BenchmarkRunner:
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+        self.close()
 
     def run(
         self,
@@ -187,3 +201,101 @@ class BenchmarkRunner:
         self.storage.save_result(result)
 
         return result
+
+
+def run_batch(
+    batch_config: BatchConfig,
+    output_dir: Optional[str] = None,
+    mock_override: bool = False,
+    filter_name: Optional[str] = None,
+    turns_override: Optional[int] = None,
+    api_key_override: Optional[str] = None,
+    base_url_override: Optional[str] = None,
+    cli_overrides: Optional[dict[str, Any]] = None,
+    storage_manager: Optional[StorageManager] = None,
+    http_client: Optional[httpx.Client] = None,
+    on_run_start: Optional[Callable[[int, int, str, BenchmarkConfig], None]] = None,
+    on_run_end: Optional[Callable[[int, int, BenchmarkResult], None]] = None,
+    on_turn_start: Optional[Callable[[int, int], None]] = None,
+    on_turn_end: Optional[Callable[[TurnTrace], None]] = None,
+) -> BatchBenchmarkResult:
+    """
+    Execute a batch of benchmarks specified by BatchConfig.
+    Saves individual run traces, appends to CSV log, and generates an aggregate batch report.
+    """
+    batch_id = uuid.uuid4().hex[:10]
+    effective_output_dir = output_dir or batch_config.output_dir or "results"
+    storage = storage_manager or StorageManager(output_dir=effective_output_dir)
+
+    merged_overrides: dict[str, Any] = dict(cli_overrides or {})
+    if mock_override:
+        merged_overrides["mock"] = True
+    if filter_name is not None:
+        merged_overrides["filter"] = filter_name
+    if turns_override is not None:
+        merged_overrides["turns"] = turns_override
+    if api_key_override is not None:
+        merged_overrides["api_key"] = api_key_override
+    if base_url_override is not None:
+        merged_overrides["base_url"] = base_url_override
+
+    run_configs = build_benchmark_configs(batch_config, cli_overrides=merged_overrides)
+    total_runs = len(run_configs)
+
+    results: List[BenchmarkResult] = []
+    total_usage = TokenUsage()
+    total_latency_ms = 0.0
+
+    for idx, (run_name, config) in enumerate(run_configs, start=1):
+        if on_run_start:
+            on_run_start(idx, total_runs, run_name, config)
+
+        runner: Optional[BenchmarkRunner] = None
+        try:
+            runner = BenchmarkRunner(
+                config=config,
+                storage_manager=storage,
+                http_client=http_client,
+            )
+            res = runner.run(on_turn_start=on_turn_start, on_turn_end=on_turn_end)
+        except Exception as e:
+            res = BenchmarkResult(
+                run_id=uuid.uuid4().hex[:10],
+                provider=config.provider,
+                model=config.model,
+                num_turns_requested=config.num_turns,
+                num_turns_completed=0,
+                all_valid=False,
+                config=config.model_dump(),
+                error=f"Run initialization error: {e}",
+            )
+            storage.save_result(res)
+        finally:
+            if runner:
+                runner.close()
+
+        results.append(res)
+        total_latency_ms += res.total_latency_ms
+        total_usage = total_usage.add(res.total_usage)
+
+        if on_run_end:
+            on_run_end(idx, total_runs, res)
+
+    successful_runs = sum(1 for r in results if r.all_valid)
+    failed_runs = len(results) - successful_runs
+    all_successful = (successful_runs == total_runs) and (total_runs > 0)
+
+    batch_result = BatchBenchmarkResult(
+        batch_id=batch_id,
+        total_runs=total_runs,
+        completed_runs=len(results),
+        successful_runs=successful_runs,
+        failed_runs=failed_runs,
+        all_successful=all_successful,
+        total_latency_ms=total_latency_ms,
+        total_usage=total_usage,
+        results=results,
+    )
+
+    storage.save_batch_result(batch_result)
+    return batch_result

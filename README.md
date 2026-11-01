@@ -48,7 +48,11 @@ RSI-Bench/
 ├── pyproject.toml
 ├── requirements.txt
 ├── README.md
+├── run.cmd                    # Windows quick launcher
 ├── run_benchmark.py           # Quick CLI runner script
+├── config.example.yaml        # Tracked template configuration (YAML)
+├── config.example.json        # Tracked template configuration (JSON)
+├── config.yaml                # Gitignored local multi-run configuration
 ├── rsi_bench/
 │   ├── __init__.py
 │   ├── cli.py                 # Command-line interface and argument handling
@@ -131,6 +135,38 @@ python run_benchmark.py --list-providers
 
 ---
 
+## Batch Benchmark Configuration
+
+RSI-Bench supports defining multiple benchmark runs in a single, gitignored configuration file (`config.yaml` or `config.json`). Tracked example templates are provided as `config.example.yaml` and `config.example.json`.
+
+### 1. Quick Setup
+Copy the template to your local config:
+```bash
+cp config.example.yaml config.yaml   # or copy on Windows
+```
+
+Edit `config.yaml` with your provider API keys and desired benchmark evaluations. Secrets in `config.yaml` are protected by `.gitignore`.
+
+### 2. Running in Batch
+```bash
+# Run all enabled benchmarks defined in config.yaml / config.json:
+python run_benchmark.py
+
+# Explicitly specify a config file:
+python run_benchmark.py --config my_benchmarks.yaml
+
+# Run offline mock simulation for every run in the config (zero API cost):
+python run_benchmark.py --config config.example.yaml --mock
+
+# Filter runs by name or tag substring:
+python run_benchmark.py --filter reasoning
+
+# Override turn count for all runs in the batch:
+python run_benchmark.py --batch --turns 5
+```
+
+---
+
 ## Usage Examples
 
 ### 1. Offline Simulation (No API key needed)
@@ -194,15 +230,17 @@ python run_benchmark.py --all-configured --turns 3
 
 Every benchmark execution produces structured output in the `results/` directory:
 
-1. **`results/traces/<provider>_<model>_<run_id>.json`**: Complete machine-readable record including:
+1. **`results/batch_<batch_id>.json`**: Complete machine-readable record of an entire batch execution.
+2. **`results/batch_<batch_id>.md`**: Formatted aggregate report with markdown comparison tables across all models in the batch.
+3. **`results/traces/<provider>_<model>_<run_id>.json`**: Complete machine-readable individual run record including:
    - Run configuration and parameters
    - Parsed integers list (`[42, -18, 90]`)
    - Latency per turn (ms)
    - Prompt caching metrics (`cached_tokens`, `cache_creation_tokens`)
    - Reasoning/thinking traces
    - Full raw request and response payloads
-2. **`results/traces/<provider>_<model>_<run_id>.md`**: Formatted Markdown document with collapsible thinking blocks and turn-by-turn tables.
-3. **`results/benchmark_summary.csv`**: Appended summary log row for aggregate performance and latency tracking across models.
+4. **`results/traces/<provider>_<model>_<run_id>.md`**: Formatted Markdown document with collapsible thinking blocks and turn-by-turn tables.
+5. **`results/benchmark_summary.csv`**: Appended summary log row for aggregate performance and latency tracking across models.
 
 ---
 

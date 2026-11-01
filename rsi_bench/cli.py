@@ -5,17 +5,19 @@ Command line interface for RSI-Bench.
 from __future__ import annotations
 
 import argparse
-import sys
+from pathlib import Path
 from typing import Optional
 
 from rsi_bench.cache import ResponseCache
 from rsi_bench.config import (
     PROVIDER_REGISTRY,
+    find_default_config_path,
     get_api_key_for_provider,
     get_available_configured_providers,
+    load_batch_config,
 )
 from rsi_bench.models import BenchmarkConfig
-from rsi_bench.runner import BenchmarkRunner
+from rsi_bench.runner import BenchmarkRunner, run_batch
 from rsi_bench.storage import StorageManager
 from rsi_bench.utils.formatting import (
     BOLD,
@@ -26,6 +28,7 @@ from rsi_bench.utils.formatting import (
     YELLOW,
     colorize,
     print_banner,
+    print_batch_summary,
     print_run_result,
     print_turn_summary,
 )
@@ -60,8 +63,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "-p", "--provider",
         type=str,
-        default="openai_chat",
-        help="Provider to benchmark (e.g. gemini_interactions, anthropic, openai_responses, openai_chat, openai_completion, deepseek, openrouter, gemini, groq, mistral, together, cohere, generic, mock)",
+        default=None,
+        help="Provider to benchmark (e.g. gemini_interactions, anthropic, openai_responses, openai_chat, openai_completion, deepseek, openrouter, gemini, groq, mistral, together, cohere, generic, mock). Defaults to openai_chat or batch config.",
     )
     parser.add_argument(
         "-m", "--model",
@@ -72,14 +75,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "-n", "--turns",
         type=int,
-        default=3,
-        help="Number of conversation turns",
+        default=None,
+        help="Number of conversation turns (defaults to 3 or config value)",
     )
     parser.add_argument(
         "--prompt",
         type=str,
-        default="Generate a random integer. Do NOT output anything else.",
-        help="The prompt sent in each conversation turn",
+        default=None,
+        help="The prompt sent in each conversation turn (defaults to 'Generate a random integer. Do NOT output anything else.' or config value)",
     )
     parser.add_argument(
         "--system-prompt",
@@ -90,19 +93,19 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--thinking",
         action=argparse.BooleanOptionalAction,
-        default=True,
+        default=None,
         help="Enable model thinking/reasoning extraction and configuration",
     )
     parser.add_argument(
         "--thinking-budget",
         type=int,
-        default=1024,
-        help="Token budget for thinking (Anthropic / Gemini)",
+        default=None,
+        help="Token budget for thinking (Anthropic / Gemini, defaults to 1024 or config value)",
     )
     parser.add_argument(
         "--cache",
         action=argparse.BooleanOptionalAction,
-        default=True,
+        default=None,
         help="Enable provider prompt caching flags/headers",
     )
     parser.add_argument(
@@ -130,25 +133,44 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--temperature",
         type=float,
-        default=1.0,
-        help="Sampling temperature",
+        default=None,
+        help="Sampling temperature (defaults to 1.0 or config value)",
     )
     parser.add_argument(
         "--max-tokens",
         type=int,
-        default=2048,
-        help="Max completion tokens",
+        default=None,
+        help="Max completion tokens (defaults to 2048 or config value)",
     )
     parser.add_argument(
         "--output-dir",
         type=str,
-        default="results",
-        help="Directory to save traces and summaries",
+        default=None,
+        help="Directory to save traces and summaries (defaults to results or config value)",
+    )
+    parser.add_argument(
+        "-c", "--config",
+        nargs="?",
+        const="AUTO",
+        type=str,
+        default=None,
+        help="Path to JSON or YAML config file defining multiple benchmark runs. If specified without a path, searches for config.yaml/json.",
+    )
+    parser.add_argument(
+        "--batch",
+        action="store_true",
+        help="Run batch benchmark from default config file (e.g. config.yaml or config.json)",
+    )
+    parser.add_argument(
+        "--filter",
+        type=str,
+        default=None,
+        help="Filter batch benchmark runs by name or provider substring",
     )
     parser.add_argument(
         "--mock",
         action="store_true",
-        help="Shortcut to run with offline MockProvider",
+        help="Shortcut to run with offline MockProvider (or force mock mode in batch)",
     )
     parser.add_argument(
         "--list-providers",
@@ -168,7 +190,9 @@ def run_single_benchmark(config: BenchmarkConfig, output_dir: str) -> bool:
     """Execute a single benchmark run."""
     print(f"\n[*] Running RSI-Bench: Provider={colorize(config.provider, CYAN)}, Model={colorize(config.model, CYAN)}, Turns={config.num_turns}")
 
+    from rsi_bench.storage import sanitize_filename_component
     storage = StorageManager(output_dir=output_dir)
+    runner = None
     try:
         runner = BenchmarkRunner(config=config, storage_manager=storage)
     except Exception as e:
@@ -181,8 +205,15 @@ def run_single_benchmark(config: BenchmarkConfig, output_dir: str) -> bool:
     def on_turn_end(trace) -> None:
         print_turn_summary(trace)
 
-    result = runner.run(on_turn_start=on_turn_start, on_turn_end=on_turn_end)
-    saved_path = storage.traces_dir / f"{result.provider}_{result.model.replace('/', '_')}_{result.run_id}.json"
+    try:
+        result = runner.run(on_turn_start=on_turn_start, on_turn_end=on_turn_end)
+    finally:
+        if runner:
+            runner.close()
+
+    safe_prov = sanitize_filename_component(result.provider)
+    safe_model = sanitize_filename_component(result.model)
+    saved_path = storage.traces_dir / f"{safe_prov}_{safe_model}_{result.run_id}.json"
     print_run_result(result, json_path=str(saved_path))
     return result.all_valid
 
@@ -205,6 +236,105 @@ def main(args: Optional[list[str]] = None) -> int:
 
     print_banner()
 
+    # Check if batch mode is triggered
+    is_batch_mode = False
+    config_path: Optional[Path] = None
+
+    if parsed_args.config:
+        if parsed_args.config == "AUTO":
+            config_path = find_default_config_path()
+            if not config_path:
+                print(colorize("Error: No default config file found (e.g. config.yaml, config.json). Provide path via -c <path>.", RED))
+                return 1
+        else:
+            config_path = Path(parsed_args.config)
+        is_batch_mode = True
+    elif parsed_args.batch or parsed_args.filter is not None:
+        config_path = find_default_config_path()
+        if not config_path:
+            trigger = "--filter" if parsed_args.filter else "--batch"
+            print(colorize(f"Error: No default config file found for {trigger} (e.g. config.yaml, config.json). Provide path via -c <path>.", RED))
+            return 1
+        is_batch_mode = True
+    elif parsed_args.provider is None and not parsed_args.mock and not parsed_args.all_configured:
+        # User didn't specify provider or mock; check if a default config file exists
+        default_cfg = find_default_config_path()
+        if default_cfg:
+            config_path = default_cfg
+            is_batch_mode = True
+
+    if is_batch_mode and config_path:
+        print(f"Loading batch configuration from: {colorize(str(config_path), CYAN)}")
+        try:
+            batch_config = load_batch_config(config_path)
+        except Exception as e:
+            print(colorize(f"Configuration Error: {e}", RED))
+            return 1
+
+        effective_output_dir = parsed_args.output_dir or batch_config.output_dir or "results"
+        storage = StorageManager(output_dir=effective_output_dir)
+
+        cli_overrides: dict[str, Any] = {
+            "mock": parsed_args.mock,
+            "filter": parsed_args.filter,
+            "turns": parsed_args.turns,
+            "api_key": parsed_args.api_key,
+            "base_url": parsed_args.base_url,
+            "prompt": parsed_args.prompt,
+            "system_prompt": parsed_args.system_prompt,
+            "thinking": parsed_args.thinking,
+            "thinking_budget": parsed_args.thinking_budget,
+            "cache": parsed_args.cache,
+            "use_local_cache": True if parsed_args.use_local_cache else None,
+            "temperature": parsed_args.temperature,
+            "max_tokens": parsed_args.max_tokens,
+        }
+        cli_overrides = {k: v for k, v in cli_overrides.items() if v is not None}
+
+        def on_run_start(idx: int, total: int, run_name: str, cfg: BenchmarkConfig) -> None:
+            print(f"\n{BOLD}[{idx}/{total}] Benchmark: {colorize(run_name, CYAN)} (Provider={cfg.provider}, Model={cfg.model}, Turns={cfg.num_turns}){RESET}")
+
+        def on_turn_end(trace) -> None:
+            print_turn_summary(trace)
+
+        batch_result = run_batch(
+            batch_config=batch_config,
+            output_dir=effective_output_dir,
+            mock_override=parsed_args.mock,
+            filter_name=parsed_args.filter,
+            turns_override=parsed_args.turns,
+            api_key_override=parsed_args.api_key,
+            base_url_override=parsed_args.base_url,
+            cli_overrides=cli_overrides,
+            storage_manager=storage,
+            on_run_start=on_run_start,
+            on_turn_end=on_turn_end,
+        )
+
+        batch_json_path = storage.output_dir / f"batch_{batch_result.batch_id}.json"
+        batch_md_path = storage.output_dir / f"batch_{batch_result.batch_id}.md"
+
+        print_batch_summary(
+            batch_result,
+            json_path=str(batch_json_path),
+            md_path=str(batch_md_path),
+        )
+
+        if batch_result.total_runs == 0:
+            print(colorize("Warning: No benchmark runs matched the specified filter or criteria.", YELLOW))
+            return 1
+
+        return 0 if batch_result.all_successful else 1
+
+    turns_count = parsed_args.turns if parsed_args.turns is not None else 3
+    single_output_dir = parsed_args.output_dir or "results"
+    prompt_str = parsed_args.prompt or "Generate a random integer. Do NOT output anything else."
+    thinking_flag = parsed_args.thinking if parsed_args.thinking is not None else True
+    thinking_budget = parsed_args.thinking_budget if parsed_args.thinking_budget is not None else 1024
+    caching_flag = parsed_args.cache if parsed_args.cache is not None else True
+    temp_val = parsed_args.temperature if parsed_args.temperature is not None else 1.0
+    max_toks = parsed_args.max_tokens if parsed_args.max_tokens is not None else 2048
+
     if parsed_args.all_configured:
         configured = get_available_configured_providers()
         if not configured:
@@ -218,24 +348,24 @@ def main(args: Optional[list[str]] = None) -> int:
             config = BenchmarkConfig(
                 provider=provider_name,
                 model=meta.default_model,
-                num_turns=parsed_args.turns,
-                prompt=parsed_args.prompt,
+                num_turns=turns_count,
+                prompt=prompt_str,
                 system_prompt=parsed_args.system_prompt,
-                enable_thinking=parsed_args.thinking,
-                thinking_budget=parsed_args.thinking_budget,
-                temperature=parsed_args.temperature,
-                max_tokens=parsed_args.max_tokens,
-                enable_caching=parsed_args.cache,
+                enable_thinking=thinking_flag,
+                thinking_budget=thinking_budget,
+                temperature=temp_val,
+                max_tokens=max_toks,
+                enable_caching=caching_flag,
                 use_local_cache=parsed_args.use_local_cache,
             )
-            success = run_single_benchmark(config, parsed_args.output_dir)
+            success = run_single_benchmark(config, single_output_dir)
             if not success:
                 overall_success = False
 
         return 0 if overall_success else 1
 
     # Single provider execution
-    provider_name = "mock" if parsed_args.mock else parsed_args.provider
+    provider_name = "mock" if parsed_args.mock else (parsed_args.provider or "openai_chat")
     model_name = parsed_args.model
     if not model_name:
         meta = PROVIDER_REGISTRY.get(provider_name.lower())
@@ -244,20 +374,20 @@ def main(args: Optional[list[str]] = None) -> int:
     config = BenchmarkConfig(
         provider=provider_name,
         model=model_name,
-        num_turns=parsed_args.turns,
-        prompt=parsed_args.prompt,
+        num_turns=turns_count,
+        prompt=prompt_str,
         system_prompt=parsed_args.system_prompt,
-        enable_thinking=parsed_args.thinking,
-        thinking_budget=parsed_args.thinking_budget,
-        temperature=parsed_args.temperature,
-        max_tokens=parsed_args.max_tokens,
-        enable_caching=parsed_args.cache,
+        enable_thinking=thinking_flag,
+        thinking_budget=thinking_budget,
+        temperature=temp_val,
+        max_tokens=max_toks,
+        enable_caching=caching_flag,
         use_local_cache=parsed_args.use_local_cache,
         api_key=parsed_args.api_key,
         base_url=parsed_args.base_url,
     )
 
-    success = run_single_benchmark(config, parsed_args.output_dir)
+    success = run_single_benchmark(config, single_output_dir)
     return 0 if success else 1
 
 

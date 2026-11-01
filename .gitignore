@@ -51,6 +51,22 @@ htmlcov/
 *.pem
 *.key
 
+# Benchmark configurations (contains private API keys)
+config.yaml
+config.yml
+config.json
+benchmark_config.yaml
+benchmark_config.yml
+benchmark_config.json
+*.local.yaml
+*.local.yml
+*.local.json
+config.*.yaml
+config.*.yml
+config.*.json
+!config.example.yaml
+!config.example.json
+
 # Local cache & benchmark runs
 .rsi_cache/
 *.cache

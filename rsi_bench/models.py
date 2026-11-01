@@ -71,6 +71,7 @@ class ProviderResponse(BaseModel):
 
 class BenchmarkConfig(BaseModel):
     """Configuration for running a benchmark evaluation."""
+    name: Optional[str] = None
     provider: str
     model: str
     num_turns: int = 3
@@ -91,6 +92,44 @@ class BenchmarkConfig(BaseModel):
     base_url: Optional[str] = None
     extra_headers: Dict[str, str] = Field(default_factory=dict)
     extra_body: Dict[str, Any] = Field(default_factory=dict)
+    tags: List[str] = Field(default_factory=list)
+
+
+class BatchRunItem(BaseModel):
+    """Specification of an individual run within a batch benchmark configuration."""
+    name: Optional[str] = None
+    provider: str
+    model: Optional[str] = None
+    num_turns: Optional[int] = None
+    prompt: Optional[str] = None
+    system_prompt: Optional[str] = None
+    enable_thinking: Optional[bool] = None
+    thinking_budget: Optional[int] = None
+    temperature: Optional[float] = None
+    top_p: Optional[float] = None
+    seed: Optional[int] = None
+    max_tokens: Optional[int] = None
+    enable_caching: Optional[bool] = None
+    use_local_cache: Optional[bool] = None
+    local_cache_dir: Optional[str] = None
+    timeout_seconds: Optional[float] = None
+    max_retries: Optional[int] = None
+    api_key: Optional[str] = None
+    base_url: Optional[str] = None
+    extra_headers: Dict[str, str] = Field(default_factory=dict)
+    extra_body: Dict[str, Any] = Field(default_factory=dict)
+    enabled: bool = True
+    tags: List[str] = Field(default_factory=list)
+
+
+class BatchConfig(BaseModel):
+    """Top-level batch benchmark configuration containing defaults, keys, and runs."""
+    version: Optional[str] = "1"
+    output_dir: str = "results"
+    defaults: Dict[str, Any] = Field(default_factory=dict)
+    api_keys: Dict[str, str] = Field(default_factory=dict)
+    base_urls: Dict[str, str] = Field(default_factory=dict)
+    runs: List[BatchRunItem] = Field(default_factory=list)
 
 
 class BenchmarkResult(BaseModel):
@@ -111,3 +150,17 @@ class BenchmarkResult(BaseModel):
     turns: List[TurnTrace] = Field(default_factory=list)
     config: Dict[str, Any] = Field(default_factory=dict)
     error: Optional[str] = None
+
+
+class BatchBenchmarkResult(BaseModel):
+    """Comprehensive result of executing a batch of benchmark runs."""
+    batch_id: str
+    timestamp: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    total_runs: int = 0
+    completed_runs: int = 0
+    successful_runs: int = 0
+    failed_runs: int = 0
+    all_successful: bool = False
+    total_latency_ms: float = 0.0
+    total_usage: TokenUsage = Field(default_factory=TokenUsage)
+    results: List[BenchmarkResult] = Field(default_factory=list)

@@ -1,0 +1,184 @@
+# ==============================================================================
+# RSI-Bench: Batch Benchmark Configuration Template
+# ==============================================================================
+# Copy this file to `config.yaml` or `config.json` (which are gitignored)
+# and fill in your API keys to run multi-turn benchmarks in batch:
+#
+#   python run_benchmark.py --config config.yaml
+#   python run_benchmark.py --batch
+#   python run_benchmark.py --filter reasoning
+#   python run_benchmark.py --mock --config config.yaml
+# ==============================================================================
+
+version: "1"
+
+# Directory where traces (.json), reports (.md), and aggregate CSVs will be saved
+output_dir: "results"
+
+# Global default parameters applied to every benchmark run unless overridden
+defaults:
+  num_turns: 3
+  prompt: "Generate a random integer. Do NOT output anything else."
+  system_prompt: null
+  enable_thinking: true
+  thinking_budget: 1024
+  temperature: 1.0
+  max_tokens: 2048
+  enable_caching: true
+  use_local_cache: false
+
+# Shared API keys mapped by provider name.
+# Precedence: Run-level `api_key` > `api_keys` map here > CLI --api-key > Environment variables
+# Environment variables can also be referenced using ${VAR_NAME} or env:VAR_NAME.
+api_keys:
+  anthropic: "${ANTHROPIC_API_KEY}"
+  gemini_interactions: "${GEMINI_API_KEY}"
+  gemini: "${GEMINI_API_KEY}"
+  openai_chat: "${OPENAI_API_KEY}"
+  openai_responses: "${OPENAI_API_KEY}"
+  openai_completion: "${OPENAI_API_KEY}"
+  deepseek: "${DEEPSEEK_API_KEY}"
+  openrouter: "${OPENROUTER_API_KEY}"
+  groq: "${GROQ_API_KEY}"
+  mistral: "${MISTRAL_API_KEY}"
+  together: "${TOGETHER_API_KEY}"
+  cohere: "${COHERE_API_KEY}"
+  generic_openai: ""
+
+# Custom base URLs for local or proxied models
+base_urls:
+  generic_openai: "http://localhost:11434/v1"
+  deepseek: "https://api.deepseek.com"
+
+# List of benchmark evaluations to execute in batch
+runs:
+  # 1. Deterministic Offline Simulation (no API key required)
+  - name: "offline-mock-simulation"
+    provider: "mock"
+    turns: 3
+    enabled: true
+    tags: ["simulation", "offline", "ci"]
+
+  # 2. Anthropic Claude 3.7 with extended thinking and prompt caching
+  - name: "claude-3-7-sonnet"
+    provider: "anthropic"
+    model: "claude-3-7-sonnet-20250219"
+    turns: 3
+    thinking: true
+    thinking_budget: 2048
+    cache: true
+    enabled: false
+    tags: ["reasoning", "anthropic"]
+
+  # 3. Google Gemini Interactions API (unified agent state & context cache)
+  - name: "gemini-2.5-flash-interactions"
+    provider: "gemini_interactions"
+    model: "gemini-2.5-flash"
+    turns: 3
+    thinking: true
+    cache: true
+    enabled: false
+    tags: ["gemini", "interactions"]
+
+  # 4. Google Gemini Standard Content API (generateContent)
+  - name: "gemini-2.5-flash-content"
+    provider: "gemini"
+    model: "gemini-2.5-flash"
+    turns: 3
+    thinking: true
+    cache: true
+    enabled: false
+    tags: ["gemini", "content"]
+
+  # 5. OpenAI Chat Completions Route (with reasoning / prompt caching)
+  - name: "openai-gpt-4o"
+    provider: "openai_chat"
+    model: "gpt-4o"
+    turns: 3
+    thinking: true
+    cache: true
+    enabled: false
+    tags: ["openai", "chat"]
+
+  # 6. OpenAI Responses API Route
+  - name: "openai-responses-api"
+    provider: "openai_responses"
+    model: "gpt-4o"
+    turns: 3
+    thinking: true
+    enabled: false
+    tags: ["openai", "responses"]
+
+  # 7. OpenAI Legacy Text Completions Route
+  - name: "openai-completion-instruct"
+    provider: "openai_completion"
+    model: "gpt-3.5-turbo-instruct"
+    turns: 3
+    thinking: false
+    enabled: false
+    tags: ["openai", "raw-completion"]
+
+  # 8. DeepSeek Reasoner (R1 reasoning extraction & cache hits)
+  - name: "deepseek-reasoner-r1"
+    provider: "deepseek"
+    model: "deepseek-reasoner"
+    turns: 3
+    thinking: true
+    cache: true
+    enabled: false
+    tags: ["deepseek", "reasoning"]
+
+  # 9. OpenRouter (Unified multi-provider router)
+  - name: "openrouter-deepseek-r1"
+    provider: "openrouter"
+    model: "deepseek/deepseek-r1"
+    turns: 3
+    thinking: true
+    enabled: false
+    tags: ["openrouter", "reasoning"]
+
+  # 10. Groq (Ultra-low latency reasoning)
+  - name: "groq-r1-distill-llama"
+    provider: "groq"
+    model: "deepseek-r1-distill-llama-70b"
+    turns: 3
+    thinking: true
+    enabled: false
+    tags: ["groq", "fast"]
+
+  # 11. Local Ollama / vLLM Endpoint
+  - name: "local-ollama-generic"
+    provider: "generic_openai"
+    model: "llama3.3:70b"
+    base_url: "http://localhost:11434/v1"
+    turns: 3
+    thinking: true
+    enabled: false
+    tags: ["local", "ollama"]
+
+  # 12. Mistral AI
+  - name: "mistral-large"
+    provider: "mistral"
+    model: "mistral-large-latest"
+    turns: 3
+    thinking: false
+    enabled: false
+    tags: ["mistral"]
+
+  # 13. Together AI
+  - name: "together-deepseek-r1"
+    provider: "together"
+    model: "deepseek-ai/DeepSeek-R1"
+    turns: 3
+    thinking: true
+    enabled: false
+    tags: ["together", "reasoning"]
+
+  # 14. Cohere
+  - name: "cohere-command-r-plus"
+    provider: "cohere"
+    model: "command-r-plus-08-2024"
+    turns: 3
+    thinking: false
+    enabled: false
+    tags: ["cohere"]
