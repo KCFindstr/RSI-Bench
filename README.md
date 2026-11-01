@@ -242,6 +242,103 @@ Every benchmark execution produces structured output in the `results/` directory
 4. **`results/traces/<provider>_<model>_<run_id>.md`**: Formatted Markdown document with collapsible thinking blocks and turn-by-turn tables.
 5. **`results/benchmark_summary.csv`**: Appended summary log row for aggregate performance and latency tracking across models.
 
+## Visualization and Benchmark Spoof Charts
+
+RSI-Bench includes a visualization system (`generate_charts.py` and `rsi_bench/visualization.py`) that renders high-fidelity benchmark charts in HTML and automatically renders crisp PNG images via headless Google Chrome or Microsoft Edge.
+
+### 1. Artificial Analysis Intelligence Index Bar Chart
+Replicates the visual design of the Artificial Analysis Intelligence Index benchmark:
+- Exact typography, header, and Artificial Analysis spark logo
+- Rounded bar corners with integer scores inside the bars
+- Color-coded brand palettes for all frontier labs (Anthropic, OpenAI, Google, Meta, Moonshot, xAI, Alibaba, DeepSeek, Zhipu, Xiaomi, Ling, MiniMax, StepFun, Mistral, Horizon, Beam, Nvidia, Inkling)
+- Diagonal crosshatch pattern for models without public APIs (`Muse Wonder Full (max)`)
+- Lab vector logos and 45-degree angled model labels
+
+### 2. Multi-Turn Dynamic Performance Trajectory Line Graph
+Shows each model's turn-by-turn integer outputs and cumulative prefix sum trajectories from turn 1 to turn $N$:
+> **The Spoof Design**: In accordance with the project's design, the graph axes are **completely unlabeled** (no axis titles like "Turns", "Steps", "Score", "Integer", or "Prefix Sum"). It presents integer outputs and cumulative prefix sums as serious-looking frontier AI trajectory curves.
+
+### 3. Usage
+
+```bash
+# Generate charts from latest benchmark results or mock reference data:
+python generate_charts.py
+
+# Generate reference charts matching the Artificial Analysis index image (29 models, scores 58 to 6):
+python generate_charts.py --reference
+
+# Load specific batch JSON or summary CSV:
+python generate_charts.py --data results/batch_8472fbc647.json
+python generate_charts.py --data results/benchmark_summary.csv
+
+# Customize turn count for simulated trajectories:
+python generate_charts.py --turns 5
+
+# HTML only (skip headless browser PNG screenshot):
+python generate_charts.py --no-png
+
+# Automatically generate charts as part of a benchmark run:
+python run_benchmark.py --mock --config config.yaml --charts
+```
+
+Generated outputs are saved in `results/charts/`:
+- `results/charts/artificial_analysis_intelligence_index.html` & `.png`
+- `results/charts/model_trajectory_index.html` & `.png`
+
+---
+
+## Supported Models (All 28 Public Models via OpenRouter)
+
+All 28 models with publicly available APIs from the Artificial Analysis Intelligence Index are configured in `config.example.yaml` and `config.yaml` via OpenRouter:
+
+| # | Model Name | Provider | OpenRouter Model ID | Reference Score |
+|---|---|---|---|---|
+| 1 | Claude Opus 5.5 (max with fallback) | Anthropic | `anthropic/claude-3-opus` | 58 |
+| 2 | GPT-6 Astra (max) | OpenAI | `openai/gpt-4o` | 57 |
+| 3 | GPT-6.1 Sol (max) | OpenAI | `openai/o1` | 55 |
+| 4 | Claude Sonnet 5.5 (max with fallback) | Anthropic | `anthropic/claude-3.7-sonnet` | 54 |
+| 5 | GPT-6.1 Terra (max) | OpenAI | `openai/o3-mini` | 51 |
+| 6 | Gemini 4 Argon (high) | Google | `google/gemini-2.0-flash-001` | 50 |
+| * | *Muse Wonder Full (max)* | *Meta* | *Omitted (No Public API)* | *50* |
+| 7 | Claude Fable 5.1 (max with fallback) | Anthropic | `anthropic/claude-3.5-sonnet` | 49 |
+| 8 | Kimi K3.1 Pro | Moonshot | `moonshotai/kimi-k3.1-pro` | 46 |
+| 9 | Muse Wonder (max) | Meta | `meta-llama/llama-3.3-70b-instruct` | 43 |
+| 10 | Claude Haiku 5.5 (max) | Anthropic | `anthropic/claude-3.5-haiku` | 36 |
+| 11 | Grok 4.7 (xhigh) | xAI | `x-ai/grok-2` | 34 |
+| 12 | Qwen3.8 Max (0902) | Alibaba | `qwen/qwen-2.5-72b-instruct` | 34 |
+| 13 | DeepSeek V4.1 Flash 1017 (max) | DeepSeek | `deepseek/deepseek-r1` | 32 |
+| 14 | GLM-5.3 (max) | Zhipu | `zhipu/glm-4-plus` | 32 |
+| 15 | Gemini 3.8 Flash (high) | Google | `google/gemini-2.0-flash-lite-preview-02-05` | 31 |
+| 16 | MiMo-V2.6-Pro | Xiaomi | `xiaomi/mimo-v2.6-pro` | 30 |
+| 17 | Ling 3.1 Flash 1019 | Ling | `ling/ling-3.1-flash` | 29 |
+| 18 | MiniMax-M3.1-Flash | MiniMax | `minimax/minimax-01` | 29 |
+| 19 | Step 5 Preview | StepFun | `stepfun/step-2-16k` | 29 |
+| 20 | GPT-6 Luna (max) | OpenAI | `openai/gpt-4o-mini` | 28 |
+| 21 | Mistral Large 4 Preview | Mistral | `mistralai/mistral-large-2411` | 25 |
+| 22 | Muse Spark Open (xhigh) | Meta | `meta-llama/llama-3.1-405b-instruct` | 25 |
+| 23 | Qwen3.8 27B (xhigh) | Alibaba | `qwen/qwen-2.5-32b-instruct` | 20 |
+| 24 | K2 Horizon 375B A23B | Horizon | `horizon/k2-375b-a23b` | 18 |
+| 25 | Beam 1.0 | Beam | `beam/beam-1.0` | 18 |
+| 26 | Nemotron 3.5 Super VL | Nvidia | `nvidia/llama-3.1-nemotron-70b-instruct` | 14 |
+| 27 | Inkling (xhigh) | Inkling | `inkling/inkling-xhigh` | 12 |
+| 28 | Muse Glimmer (high) | Meta | `meta-llama/llama-3.2-3b-instruct` | 6 |
+
+### Required API Keys
+- **When using OpenRouter (`provider: openrouter`)**: Only **`OPENROUTER_API_KEY`** is required! All 28 models route through OpenRouter.
+- **When using direct provider APIs**:
+  - Anthropic: `ANTHROPIC_API_KEY`
+  - OpenAI: `OPENAI_API_KEY`
+  - Google Gemini: `GEMINI_API_KEY` or `GOOGLE_API_KEY`
+  - DeepSeek: `DEEPSEEK_API_KEY`
+  - Groq: `GROQ_API_KEY`
+  - Mistral: `MISTRAL_API_KEY`
+  - Together AI: `TOGETHER_API_KEY`
+  - Cohere: `COHERE_API_KEY`
+- **When running simulation**: Zero API keys are needed! Pass `--mock`:
+  ```bash
+  python run_benchmark.py --mock --config config.yaml
+  ```
+
 ---
 
 ## Running Tests

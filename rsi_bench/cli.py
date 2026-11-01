@@ -182,6 +182,11 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Run benchmark against all providers with detected API keys",
     )
+    parser.add_argument(
+        "--charts",
+        action="store_true",
+        help="Generate Artificial Analysis bar chart and multi-turn trajectory line graph after benchmark execution",
+    )
 
     return parser
 
@@ -320,6 +325,18 @@ def main(args: Optional[list[str]] = None) -> int:
             md_path=str(batch_md_path),
         )
 
+        if parsed_args.charts and batch_result.total_runs > 0:
+            from rsi_bench.visualization import generate_all_charts
+            charts_out = storage.output_dir / "charts"
+            chart_artifacts = generate_all_charts(
+                data_source=batch_json_path,
+                output_dir=charts_out,
+                num_turns=parsed_args.turns or 5,
+            )
+            print(colorize(f"\n[+] Generated Benchmark Visualizations in: {charts_out}", GREEN))
+            for k, p in chart_artifacts.items():
+                print(f"    - {k:<18}: file:///{p.absolute().as_posix()}")
+
         if batch_result.total_runs == 0:
             print(colorize("Warning: No benchmark runs matched the specified filter or criteria.", YELLOW))
             return 1
@@ -388,6 +405,18 @@ def main(args: Optional[list[str]] = None) -> int:
     )
 
     success = run_single_benchmark(config, single_output_dir)
+    if success and parsed_args.charts:
+        from rsi_bench.visualization import generate_all_charts
+        charts_out = Path(single_output_dir) / "charts"
+        chart_artifacts = generate_all_charts(
+            data_source=Path(single_output_dir) / "benchmark_summary.csv",
+            output_dir=charts_out,
+            num_turns=parsed_args.turns or 5,
+        )
+        print(colorize(f"\n[+] Generated Benchmark Visualizations in: {charts_out}", GREEN))
+        for k, p in chart_artifacts.items():
+            print(f"    - {k:<18}: file:///{p.absolute().as_posix()}")
+
     return 0 if success else 1
 
 
