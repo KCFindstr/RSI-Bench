@@ -69,6 +69,8 @@ def test_storage_json_and_markdown_and_csv():
         assert "RSI-Bench Run Report" in md_text
         assert "42" in md_text
         assert "-5" in md_text
+        assert "Integer Sum:" in md_text
+        assert "Integer Mean / Turn:" in md_text
         assert "Reasoning 1" in md_text
 
         # Check CSV
@@ -81,4 +83,6 @@ def test_storage_json_and_markdown_and_csv():
         assert reader[0]["provider"] == "openai_chat"
         assert reader[0]["all_valid"] == "True"
         assert reader[0]["parsed_integers"] == "[42, -5]"
+        assert reader[0]["sum_integers"] == "37"
+        assert reader[0]["avg_integers"] == "18.5"
         assert reader[0]["total_cached_tokens"] == "50"

@@ -5,6 +5,8 @@
 - **Turns Completed:** 10 / 10
 - **All Outputs Valid Integers:** ✅ Yes
 - **Parsed Final Integers:** `[73, -418, 1563, -207, 381, -902, 1246, -573, 64, -1385]`
+- **Integer Sum:** `-158`
+- **Integer Mean / Turn:** `-15.80`
 - **Total Latency:** 8484.7 ms (avg 848.5 ms/turn)
 - **Total Tokens:** 1647 (prompt: 1537, completion: 110)
 - **Cached Tokens:** 1024

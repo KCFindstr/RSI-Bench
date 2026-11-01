@@ -70,6 +70,10 @@ class StorageManager:
         filename = f"{safe_provider}_{safe_model}_{result.run_id}.md"
         target_path = self.traces_dir / filename
 
+        valid_ints = [i for i in result.parsed_integers if i is not None]
+        sum_ints = sum(valid_ints) if valid_ints else 0
+        avg_ints = (sum_ints / len(valid_ints)) if valid_ints else 0.0
+
         md_lines = [
             f"# RSI-Bench Run Report: {result.provider} / {result.model}",
             "",
@@ -82,6 +86,8 @@ class StorageManager:
             md_lines.append(f"- **Error:** `{result.error}`")
         md_lines.extend([
             f"- **Parsed Final Integers:** `{result.parsed_integers}`",
+            f"- **Integer Sum:** `{sum_ints:,}`",
+            f"- **Integer Mean / Turn:** `{avg_ints:,.2f}`",
             f"- **Total Latency:** {result.total_latency_ms:.1f} ms (avg {result.avg_turn_latency_ms:.1f} ms/turn)",
             f"- **Total Tokens:** {result.total_usage.total_tokens} (prompt: {result.total_usage.prompt_tokens}, completion: {result.total_usage.completion_tokens})",
             f"- **Cached Tokens:** {result.total_usage.cached_tokens}",
@@ -143,6 +149,10 @@ class StorageManager:
         csv_path = self.output_dir / "benchmark_summary.csv"
         file_exists = csv_path.exists()
 
+        valid_ints = [i for i in result.parsed_integers if i is not None]
+        sum_ints = sum(valid_ints) if valid_ints else 0
+        avg_ints = round(sum_ints / len(valid_ints), 2) if valid_ints else 0.0
+
         fieldnames = [
             "run_id",
             "timestamp",
@@ -153,6 +163,8 @@ class StorageManager:
             "all_valid",
             "valid_turns_count",
             "parsed_integers",
+            "sum_integers",
+            "avg_integers",
             "total_latency_ms",
             "avg_turn_latency_ms",
             "total_prompt_tokens",
@@ -172,6 +184,8 @@ class StorageManager:
             "all_valid": result.all_valid,
             "valid_turns_count": result.valid_turns_count,
             "parsed_integers": json.dumps(result.parsed_integers),
+            "sum_integers": sum_ints,
+            "avg_integers": avg_ints,
             "total_latency_ms": round(result.total_latency_ms, 2),
             "avg_turn_latency_ms": round(result.avg_turn_latency_ms, 2),
             "total_prompt_tokens": result.total_usage.prompt_tokens,
@@ -221,8 +235,8 @@ class StorageManager:
             "",
             "## Runs Summary Table",
             "",
-            "| # | Run Name | Provider | Model | Turns | Valid | Integers | Latency (ms) | Tokens (P/C/Cached/Reasoning) | Status |",
-            "| :- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
+            "| # | Run Name | Provider | Model | Turns | Valid | Integers | Sum | Avg | Latency (ms) | Tokens (P/C/Cached/Reasoning) | Status |",
+            "| :- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |",
         ]
 
         for idx, res in enumerate(batch_result.results, start=1):
@@ -230,9 +244,14 @@ class StorageManager:
             status = "✅ PASS" if res.all_valid else "❌ FAIL"
             valid_mark = "✅" if res.all_valid else "❌"
             ints_str = f"`{res.parsed_integers}`" if res.parsed_integers else "`[]`"
+            valid_ints = [i for i in res.parsed_integers if i is not None]
+            sum_val = sum(valid_ints) if valid_ints else 0
+            avg_val = (sum_val / len(valid_ints)) if valid_ints else 0.0
+            sum_str = f"`{sum_val:,}`"
+            avg_str = f"`{avg_val:,.1f}`"
             usage_str = f"{res.total_usage.prompt_tokens}/{res.total_usage.completion_tokens}/{res.total_usage.cached_tokens}/{res.total_usage.reasoning_tokens}"
             lines.append(
-                f"| {idx} | `{name}` | {res.provider} | {res.model} | {res.num_turns_completed}/{res.num_turns_requested} | {valid_mark} | {ints_str} | {res.total_latency_ms:.1f} | {usage_str} | {status} |"
+                f"| {idx} | `{name}` | {res.provider} | {res.model} | {res.num_turns_completed}/{res.num_turns_requested} | {valid_mark} | {ints_str} | {sum_str} | {avg_str} | {res.total_latency_ms:.1f} | {usage_str} | {status} |"
             )
 
         lines.append("")
@@ -246,11 +265,16 @@ class StorageManager:
             trace_json = f"traces/{safe_prov}_{safe_model}_{res.run_id}.json"
             trace_md = f"traces/{safe_prov}_{safe_model}_{res.run_id}.md"
             status_str = "Passed" if res.all_valid else "Failed"
+            valid_ints = [i for i in res.parsed_integers if i is not None]
+            sum_val = sum(valid_ints) if valid_ints else 0
+            avg_val = (sum_val / len(valid_ints)) if valid_ints else 0.0
 
             lines.append(f"### {idx}. {name} (`{res.provider}` / `{res.model}`)")
             lines.append(f"- **Status:** {status_str}")
             lines.append(f"- **Run ID:** `{res.run_id}`")
             lines.append(f"- **Parsed Integers:** `{res.parsed_integers}`")
+            lines.append(f"- **Integer Sum:** `{sum_val:,}`")
+            lines.append(f"- **Integer Mean / Turn:** `{avg_val:,.2f}`")
             lines.append(f"- **Latency:** {res.total_latency_ms:.1f} ms")
             if res.error:
                 lines.append(f"- **Error:** `{res.error}`")
