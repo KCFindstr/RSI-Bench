@@ -57,11 +57,18 @@ class OpenRouterProvider(BaseProvider):
 
         if self.config.enable_thinking:
             body["include_reasoning"] = True
-            effort = self.config.thinking_level or "medium"
-            reasoning_dict: Dict[str, Any] = {"effort": effort}
-            if self.config.thinking_budget:
-                reasoning_dict["max_tokens"] = self.config.thinking_budget
-            body["reasoning"] = reasoning_dict
+            # OpenRouter requires that ONLY ONE of "effort" and "max_tokens" is specified
+            if self.config.thinking_level:
+                effort = self.config.thinking_level.lower()
+                if effort in ("max", "xhigh"):
+                    effort = "high"
+                elif effort not in ("high", "medium", "low"):
+                    effort = "medium"
+                body["reasoning"] = {"effort": effort}
+            elif self.config.thinking_budget:
+                body["reasoning"] = {"max_tokens": self.config.thinking_budget}
+            else:
+                body["reasoning"] = {"effort": "medium"}
 
         if self.config.temperature is not None:
             body["temperature"] = self.config.temperature
@@ -71,12 +78,31 @@ class OpenRouterProvider(BaseProvider):
 
         body.update(self.config.extra_body)
 
-        response = self._execute_with_retry(
-            method="POST",
-            url=url,
-            headers=headers,
-            json_body=body,
-        )
+        try:
+            response = self._execute_with_retry(
+                method="POST",
+                url=url,
+                headers=headers,
+                json_body=body,
+            )
+        except ProviderError as pe:
+            # If model does not support reasoning parameters, retry cleanly without reasoning
+            if (
+                (body.get("include_reasoning") or body.get("reasoning"))
+                and pe.status_code == 400
+                and "reasoning" in (pe.response_body or "").lower()
+            ):
+                fallback_body = dict(body)
+                fallback_body.pop("include_reasoning", None)
+                fallback_body.pop("reasoning", None)
+                response = self._execute_with_retry(
+                    method="POST",
+                    url=url,
+                    headers=headers,
+                    json_body=fallback_body,
+                )
+            else:
+                raise
 
         res_json = response.json()
         choices = res_json.get("choices", [])

@@ -457,6 +457,71 @@ class TestOpenRouterProvider:
         assert resp.usage.cached_tokens == 50
         assert resp.usage.reasoning_tokens == 25
 
+    def test_openrouter_effort_mutual_exclusion(self):
+        recorded_request = {}
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            recorded_request["body"] = json.loads(request.read())
+            resp_body = {
+                "id": "or-456",
+                "model": "openai/o1",
+                "choices": [{"message": {"role": "assistant", "content": "100"}}],
+            }
+            return httpx.Response(200, json=resp_body)
+
+        client = httpx.Client(transport=httpx.MockTransport(handler))
+        config = BenchmarkConfig(
+            provider="openrouter",
+            model="openai/o1",
+            api_key="test-key",
+            enable_thinking=True,
+            thinking_level="max",
+            thinking_budget=32000,
+        )
+        provider = OpenRouterProvider(config=config, http_client=client)
+        resp = provider.send_turn(messages=[Message(role="user", content="Generate")])
+        assert resp.content == "100"
+
+        # Verify ONLY effort is sent, NOT max_tokens
+        reasoning = recorded_request["body"].get("reasoning", {})
+        assert "effort" in reasoning
+        assert "max_tokens" not in reasoning
+        assert reasoning["effort"] == "high"
+
+    def test_openrouter_fallback_on_unsupported_reasoning(self):
+        calls = []
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            body = json.loads(request.read())
+            calls.append(body)
+            if len(calls) == 1:
+                # First call fails because model doesn't support reasoning
+                return httpx.Response(
+                    400,
+                    text='{"error":{"message":"reasoning is not supported for this model","code":400}}',
+                )
+            # Second call succeeds without reasoning
+            return httpx.Response(
+                200,
+                json={"choices": [{"message": {"role": "assistant", "content": "42"}}]},
+            )
+
+        client = httpx.Client(transport=httpx.MockTransport(handler))
+        config = BenchmarkConfig(
+            provider="openrouter",
+            model="openai/gpt-4o",
+            api_key="test-key",
+            enable_thinking=True,
+            thinking_level="max",
+        )
+        provider = OpenRouterProvider(config=config, http_client=client)
+        resp = provider.send_turn(messages=[Message(role="user", content="Generate")])
+        assert resp.content == "42"
+        assert len(calls) == 2
+        assert "reasoning" in calls[0]
+        assert "reasoning" not in calls[1]
+        assert "include_reasoning" not in calls[1]
+
 
 class TestOtherProviders:
     def test_groq(self):
