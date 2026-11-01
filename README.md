@@ -141,6 +141,10 @@ A: It is developed after all the listed model releases so not _yet_.
 
 A: Very difficult due to the nature of this benchmark - anyway, it is not worth doing it.
 
+### Q: Is this benchmark a spoof?
+
+A: `[89, 101, 115, 46]`.
+
 ---
 
 ## License
