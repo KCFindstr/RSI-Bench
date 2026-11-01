@@ -102,6 +102,9 @@ class AnthropicProvider(BaseProvider):
         # Thinking configuration
         if self.config.enable_thinking:
             budget = self.config.thinking_budget or 1024
+            if max_tokens <= budget:
+                max_tokens = budget + 1024
+                body["max_tokens"] = max_tokens
             body["thinking"] = {
                 "type": "enabled",
                 "budget_tokens": budget,

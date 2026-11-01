@@ -274,6 +274,11 @@ DEFAULT_CONFIG_FILENAMES = [
 FIELD_ALIASES: Dict[str, str] = {
     "turns": "num_turns",
     "thinking": "enable_thinking",
+    "thinking_level": "thinking_level",
+    "reasoning_effort": "thinking_level",
+    "reasoning_level": "thinking_level",
+    "effort": "thinking_level",
+    "level": "thinking_level",
     "cache": "enable_caching",
     "local_cache": "use_local_cache",
     "cache_dir": "local_cache_dir",
@@ -573,11 +578,46 @@ def build_benchmark_configs(
         else:
             enable_thinking = bool(defaults.get("enable_thinking", True))
 
+        # Resolve thinking_level (e.g. "max", "xhigh", "high", "medium", "low")
+        thinking_level = None
+        if overrides.get("thinking_level") is not None:
+            thinking_level = str(overrides["thinking_level"]).strip().lower()
+        elif run_item.thinking_level is not None:
+            thinking_level = str(run_item.thinking_level).strip().lower()
+        elif defaults.get("thinking_level") is not None:
+            thinking_level = str(defaults["thinking_level"]).strip().lower()
+        else:
+            # Auto-infer from run name or model name if specified like (max), (high), (xhigh), (medium), (low)
+            check_str = f"{run_name} {model}".lower()
+            if "(max" in check_str or "(max)" in check_str:
+                thinking_level = "max"
+            elif "(xhigh" in check_str or "(xhigh)" in check_str:
+                thinking_level = "xhigh"
+            elif "(high" in check_str or "(high)" in check_str:
+                thinking_level = "high"
+            elif "(medium" in check_str or "(medium)" in check_str:
+                thinking_level = "medium"
+            elif "(low" in check_str or "(low)" in check_str:
+                thinking_level = "low"
+
+        # If thinking_level was explicitly or implicitly found and enable_thinking was not explicitly disabled, turn it on
+        if thinking_level and run_item.enable_thinking is None and overrides.get("thinking") is None:
+            enable_thinking = True
+
         # Thinking budget
+        level_budget_defaults = {
+            "max": 32000,
+            "xhigh": 24000,
+            "high": 16000,
+            "medium": 8192,
+            "low": 2048,
+        }
         if overrides.get("thinking_budget") is not None:
             thinking_budget = int(overrides["thinking_budget"])
         elif run_item.thinking_budget is not None:
             thinking_budget = run_item.thinking_budget
+        elif thinking_level in level_budget_defaults:
+            thinking_budget = level_budget_defaults[thinking_level]
         else:
             thinking_budget = defaults.get("thinking_budget", 1024)
 
@@ -627,6 +667,7 @@ def build_benchmark_configs(
             system_prompt=system_prompt,
             enable_thinking=enable_thinking,
             thinking_budget=thinking_budget,
+            thinking_level=thinking_level,
             temperature=temperature,
             top_p=run_item.top_p if run_item.top_p is not None else defaults.get("top_p"),
             seed=run_item.seed if run_item.seed is not None else defaults.get("seed"),

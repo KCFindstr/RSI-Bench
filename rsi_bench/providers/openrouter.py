@@ -57,7 +57,11 @@ class OpenRouterProvider(BaseProvider):
 
         if self.config.enable_thinking:
             body["include_reasoning"] = True
-            body["reasoning"] = {"effort": "medium"}
+            effort = self.config.thinking_level or "medium"
+            reasoning_dict: Dict[str, Any] = {"effort": effort}
+            if self.config.thinking_budget:
+                reasoning_dict["max_tokens"] = self.config.thinking_budget
+            body["reasoning"] = reasoning_dict
 
         if self.config.temperature is not None:
             body["temperature"] = self.config.temperature

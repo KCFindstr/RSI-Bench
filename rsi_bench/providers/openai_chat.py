@@ -56,7 +56,10 @@ class OpenAIChatProvider(BaseProvider):
         # Handle temperature and tokens depending on reasoning vs non-reasoning models
         if self._is_reasoning_model():
             if self.config.enable_thinking:
-                body["reasoning_effort"] = "medium"
+                effort = self.config.thinking_level or "medium"
+                if effort in ("max", "xhigh"):
+                    effort = "high"
+                body["reasoning_effort"] = effort
             if self.config.max_tokens:
                 body["max_completion_tokens"] = self.config.max_tokens
         else:

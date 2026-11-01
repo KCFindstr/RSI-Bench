@@ -24,6 +24,7 @@ defaults:
   prompt: "Generate a random integer. Do NOT output anything else."
   system_prompt: null
   enable_thinking: true
+  thinking_level: "max"  # Reasoning effort / thinking level: "max", "xhigh", "high", "medium", "low"
   thinking_budget: 1024
   temperature: 1.0
   max_tokens: 2048

@@ -79,6 +79,7 @@ class BenchmarkConfig(BaseModel):
     system_prompt: Optional[str] = None
     enable_thinking: bool = True
     thinking_budget: Optional[int] = 1024
+    thinking_level: Optional[str] = None  # e.g. "max", "xhigh", "high", "medium", "low"
     temperature: Optional[float] = 1.0
     top_p: Optional[float] = None
     seed: Optional[int] = None
@@ -105,6 +106,7 @@ class BatchRunItem(BaseModel):
     system_prompt: Optional[str] = None
     enable_thinking: Optional[bool] = None
     thinking_budget: Optional[int] = None
+    thinking_level: Optional[str] = None
     temperature: Optional[float] = None
     top_p: Optional[float] = None
     seed: Optional[int] = None

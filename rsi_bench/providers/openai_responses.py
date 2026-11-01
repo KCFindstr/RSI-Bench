@@ -52,7 +52,10 @@ class OpenAIResponsesProvider(BaseProvider):
             body["instructions"] = system_prompt
 
         if self.config.enable_thinking:
-            body["reasoning"] = {"effort": "medium"}
+            effort = self.config.thinking_level or "medium"
+            if effort in ("max", "xhigh"):
+                effort = "high"
+            body["reasoning"] = {"effort": effort}
 
         if self.config.temperature is not None and not self.config.enable_thinking:
             body["temperature"] = self.config.temperature
