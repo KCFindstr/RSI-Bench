@@ -19,6 +19,19 @@ def sanitize_filename_component(text: str) -> str:
     return re.sub(r"[^A-Za-z0-9_.-]", "_", text)
 
 
+def redact_sensitive_config(data: dict) -> dict:
+    """Ensure no API keys or secret tokens are stored in dumped result dictionaries."""
+    if "config" in data and isinstance(data["config"], dict):
+        if "api_key" in data["config"] and data["config"]["api_key"]:
+            data["config"]["api_key"] = None
+    if "results" in data and isinstance(data["results"], list):
+        for r in data["results"]:
+            if isinstance(r, dict) and "config" in r and isinstance(r["config"], dict):
+                if "api_key" in r["config"] and r["config"]["api_key"]:
+                    r["config"]["api_key"] = None
+    return data
+
+
 class StorageManager:
     """Manages writing traces, parsed outputs, and benchmark reports."""
 
@@ -38,8 +51,8 @@ class StorageManager:
         filename = f"{safe_provider}_{safe_model}_{result.run_id}.json"
         target_path = self.traces_dir / filename
 
-        # Serialize Pydantic result model
-        data = result.model_dump()
+        # Serialize Pydantic result model and redact sensitive fields
+        data = redact_sensitive_config(result.model_dump())
 
         with open(target_path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
@@ -182,8 +195,9 @@ class StorageManager:
         Returns a tuple of (json_path, markdown_path).
         """
         json_path = self.output_dir / f"batch_{batch_result.batch_id}.json"
+        data = redact_sensitive_config(batch_result.model_dump())
         with open(json_path, "w", encoding="utf-8") as f:
-            json.dump(batch_result.model_dump(), f, indent=2, ensure_ascii=False)
+            json.dump(data, f, indent=2, ensure_ascii=False)
 
         md_path = self.save_batch_markdown_summary(batch_result)
         return json_path, md_path

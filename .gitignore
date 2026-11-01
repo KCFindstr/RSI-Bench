@@ -67,10 +67,9 @@ config.*.json
 !config.example.yaml
 !config.example.json
 
-# Local cache & benchmark runs
+# Local cache
 .rsi_cache/
 *.cache
-results/
 
 # OS generated files
 .DS_Store
