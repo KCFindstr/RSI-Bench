@@ -1,0 +1,1389 @@
+{
+  "run_id": "c484cd3d29",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:59:08.983332+00:00",
+  "provider": "openrouter",
+  "model": "z-ai/glm-5.3",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    42,
+    17,
+    23,
+    91,
+    -8,
+    64,
+    305,
+    -47,
+    127,
+    82
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 7624.339999998483,
+  "avg_turn_latency_ms": 762.4339999998483,
+  "total_usage": {
+    "prompt_tokens": 957,
+    "completion_tokens": 299,
+    "total_tokens": 1256,
+    "cached_tokens": 512,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 289
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "42",
+      "thinking_trace": "The user asks to generate a random integer. I'll just output one integer, nothing else.",
+      "parsed_integer": 42,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 542.5986999998713,
+      "token_usage": {
+        "prompt_tokens": 23,
+        "completion_tokens": 22,
+        "total_tokens": 45,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 21
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501942-nERpZf1cvCiyhZct68YD",
+        "object": "chat.completion",
+        "created": 1793501942,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "42",
+              "refusal": null,
+              "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user asks to generate a random integer. I'll just output one integer, nothing else.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 23,
+          "completion_tokens": 22,
+          "total_tokens": 45,
+          "cost": 3.4917e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 3.4917e-05,
+            "upstream_inference_prompt_cost": 4.117e-06,
+            "upstream_inference_completions_cost": 3.08e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 21,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "17",
+      "thinking_trace": "The user wants a random integer with nothing else output. I'll just output a number.",
+      "parsed_integer": 17,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 392.8083000009792,
+      "token_usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 21,
+        "total_tokens": 60,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 20
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501943-b9TLaLtueA8LdUvNxCht",
+        "object": "chat.completion",
+        "created": 1793501943,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "17",
+              "refusal": null,
+              "reasoning": "The user wants a random integer with nothing else output. I'll just output a number.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer with nothing else output. I'll just output a number.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 39,
+          "completion_tokens": 21,
+          "total_tokens": 60,
+          "cost": 3.6381e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 3.6381e-05,
+            "upstream_inference_prompt_cost": 6.981e-06,
+            "upstream_inference_completions_cost": 2.94e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 20,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "23",
+      "thinking_trace": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else.",
+      "parsed_integer": 23,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 548.1893999985914,
+      "token_usage": {
+        "prompt_tokens": 55,
+        "completion_tokens": 30,
+        "total_tokens": 85,
+        "cached_tokens": 32,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 29
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17",
+            "reasoning": "The user wants a random integer with nothing else output. I'll just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501943-UqANsWfmjF3O6F2HA7Lu",
+        "object": "chat.completion",
+        "created": 1793501943,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "23",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 55,
+          "completion_tokens": 30,
+          "total_tokens": 85,
+          "cost": 5.1813e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 32,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 5.1813e-05,
+            "upstream_inference_prompt_cost": 9.813e-06,
+            "upstream_inference_completions_cost": 4.2e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 29,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "91",
+      "thinking_trace": "The user wants a random integer, nothing else. Previous answers were 42, 17, 23. I'll pick another number.",
+      "parsed_integer": 91,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 702.1160999993299,
+      "token_usage": {
+        "prompt_tokens": 71,
+        "completion_tokens": 31,
+        "total_tokens": 102,
+        "cached_tokens": 32,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 30
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17",
+            "reasoning": "The user wants a random integer with nothing else output. I'll just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "23",
+            "reasoning": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501944-R8NvcLDHSlKEMB0Umeqy",
+        "object": "chat.completion",
+        "created": 1793501944,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "91",
+              "refusal": null,
+              "reasoning": "The user wants a random integer, nothing else. Previous answers were 42, 17, 23. I'll pick another number.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer, nothing else. Previous answers were 42, 17, 23. I'll pick another number.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 71,
+          "completion_tokens": 31,
+          "total_tokens": 102,
+          "cost": 5.6077e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 32,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 5.6077e-05,
+            "upstream_inference_prompt_cost": 1.2677e-05,
+            "upstream_inference_completions_cost": 4.34e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 30,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-8",
+      "thinking_trace": "The user wants a random integer. Just output a number, nothing else.",
+      "parsed_integer": -8,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 453.7297999995644,
+      "token_usage": {
+        "prompt_tokens": 87,
+        "completion_tokens": 19,
+        "total_tokens": 106,
+        "cached_tokens": 32,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 18
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17",
+            "reasoning": "The user wants a random integer with nothing else output. I'll just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "23",
+            "reasoning": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "The user wants a random integer, nothing else. Previous answers were 42, 17, 23. I'll pick another number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501944-GpZ1C1z6MUPXZUU1mnBc",
+        "object": "chat.completion",
+        "created": 1793501944,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-8",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. Just output a number, nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. Just output a number, nothing else.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 87,
+          "completion_tokens": 19,
+          "total_tokens": 106,
+          "cost": 4.2141e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 32,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 4.2141e-05,
+            "upstream_inference_prompt_cost": 1.5541e-05,
+            "upstream_inference_completions_cost": 2.66e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 18,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "64",
+      "thinking_trace": "The user wants me to generate a random integer and output nothing else. Previous responses: 42, 17, 23, 91, -8. I should pick a different random integer.\n\nNote: I can't actually generate truly random numbers, but I can produce a plausible arbitrary integer. Just output a number, nothing else.",
+      "parsed_integer": 64,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 802.682300000015,
+      "token_usage": {
+        "prompt_tokens": 104,
+        "completion_tokens": 71,
+        "total_tokens": 175,
+        "cached_tokens": 32,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 70
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17",
+            "reasoning": "The user wants a random integer with nothing else output. I'll just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "23",
+            "reasoning": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "The user wants a random integer, nothing else. Previous answers were 42, 17, 23. I'll pick another number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-8",
+            "reasoning": "The user wants a random integer. Just output a number, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501945-PyoyYkD8jFxkraSYpzHf",
+        "object": "chat.completion",
+        "created": 1793501945,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "64",
+              "refusal": null,
+              "reasoning": "The user wants me to generate a random integer and output nothing else. Previous responses: 42, 17, 23, 91, -8. I should pick a different random integer.\n\nNote: I can't actually generate truly random numbers, but I can produce a plausible arbitrary integer. Just output a number, nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants me to generate a random integer and output nothing else. Previous responses: 42, 17, 23, 91, -8. I should pick a different random integer.\n\nNote: I can't actually generate truly random numbers, but I can produce a plausible arbitrary integer. Just output a number, nothing else.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 104,
+          "completion_tokens": 71,
+          "total_tokens": 175,
+          "cost": 0.000117984,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 32,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000117984,
+            "upstream_inference_prompt_cost": 1.8584e-05,
+            "upstream_inference_completions_cost": 9.94e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 70,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "305",
+      "thinking_trace": "The user wants a random integer, nothing else. I should just output a number.",
+      "parsed_integer": 305,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 651.168599999437,
+      "token_usage": {
+        "prompt_tokens": 120,
+        "completion_tokens": 20,
+        "total_tokens": 140,
+        "cached_tokens": 96,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 19
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17",
+            "reasoning": "The user wants a random integer with nothing else output. I'll just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "23",
+            "reasoning": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "The user wants a random integer, nothing else. Previous answers were 42, 17, 23. I'll pick another number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-8",
+            "reasoning": "The user wants a random integer. Just output a number, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "64",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. Previous responses: 42, 17, 23, 91, -8. I should pick a different random integer.\n\nNote: I can't actually generate truly random numbers, but I can produce a plausible arbitrary integer. Just output a number, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501945-qeb2LHePwUMzw8JlLGDf",
+        "object": "chat.completion",
+        "created": 1793501945,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "305",
+              "refusal": null,
+              "reasoning": "The user wants a random integer, nothing else. I should just output a number.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer, nothing else. I should just output a number.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 120,
+          "completion_tokens": 20,
+          "total_tokens": 140,
+          "cost": 4.9384e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 96,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 4.9384e-05,
+            "upstream_inference_prompt_cost": 2.1384e-05,
+            "upstream_inference_completions_cost": 2.8e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 19,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-47",
+      "thinking_trace": "The user wants a random integer, nothing else. I should just output a random integer.",
+      "parsed_integer": -47,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 571.6864999994868,
+      "token_usage": {
+        "prompt_tokens": 136,
+        "completion_tokens": 22,
+        "total_tokens": 158,
+        "cached_tokens": 96,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 21
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17",
+            "reasoning": "The user wants a random integer with nothing else output. I'll just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "23",
+            "reasoning": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "The user wants a random integer, nothing else. Previous answers were 42, 17, 23. I'll pick another number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-8",
+            "reasoning": "The user wants a random integer. Just output a number, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "64",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. Previous responses: 42, 17, 23, 91, -8. I should pick a different random integer.\n\nNote: I can't actually generate truly random numbers, but I can produce a plausible arbitrary integer. Just output a number, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "305",
+            "reasoning": "The user wants a random integer, nothing else. I should just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501946-3sWQX3dIqzGuY6sTeBU4",
+        "object": "chat.completion",
+        "created": 1793501946,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-47",
+              "refusal": null,
+              "reasoning": "The user wants a random integer, nothing else. I should just output a random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer, nothing else. I should just output a random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 136,
+          "completion_tokens": 22,
+          "total_tokens": 158,
+          "cost": 5.5048e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 96,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 5.5048e-05,
+            "upstream_inference_prompt_cost": 2.4248e-05,
+            "upstream_inference_completions_cost": 3.08e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 21,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "127",
+      "thinking_trace": "The user wants a random integer. I should just output a random integer, nothing else. Let me pick one different from previous ones.",
+      "parsed_integer": 127,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2424.9841000000742,
+      "token_usage": {
+        "prompt_tokens": 153,
+        "completion_tokens": 30,
+        "total_tokens": 183,
+        "cached_tokens": 96,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 29
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17",
+            "reasoning": "The user wants a random integer with nothing else output. I'll just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "23",
+            "reasoning": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "The user wants a random integer, nothing else. Previous answers were 42, 17, 23. I'll pick another number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-8",
+            "reasoning": "The user wants a random integer. Just output a number, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "64",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. Previous responses: 42, 17, 23, 91, -8. I should pick a different random integer.\n\nNote: I can't actually generate truly random numbers, but I can produce a plausible arbitrary integer. Just output a number, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "305",
+            "reasoning": "The user wants a random integer, nothing else. I should just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-47",
+            "reasoning": "The user wants a random integer, nothing else. I should just output a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501947-WOeby4utk51gfplNO86d",
+        "object": "chat.completion",
+        "created": 1793501947,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "127",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. I should just output a random integer, nothing else. Let me pick one different from previous ones.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. I should just output a random integer, nothing else. Let me pick one different from previous ones.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 153,
+          "completion_tokens": 30,
+          "total_tokens": 183,
+          "cost": 6.9291e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 96,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 6.9291e-05,
+            "upstream_inference_prompt_cost": 2.7291e-05,
+            "upstream_inference_completions_cost": 4.2e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 29,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "82",
+      "thinking_trace": "The user wants a random integer, nothing else. I should just output a random number. Let me pick something varied from previous ones to appear random.",
+      "parsed_integer": 82,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 534.3762000011338,
+      "token_usage": {
+        "prompt_tokens": 169,
+        "completion_tokens": 33,
+        "total_tokens": 202,
+        "cached_tokens": 96,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 32
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer"
+      },
+      "raw_request": {
+        "model": "z-ai/glm-5.3",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "The user asks to generate a random integer. I'll just output one integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17",
+            "reasoning": "The user wants a random integer with nothing else output. I'll just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "23",
+            "reasoning": "The user wants a random integer. Previous responses were 42 and 17. I should output a different random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "The user wants a random integer, nothing else. Previous answers were 42, 17, 23. I'll pick another number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-8",
+            "reasoning": "The user wants a random integer. Just output a number, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "64",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. Previous responses: 42, 17, 23, 91, -8. I should pick a different random integer.\n\nNote: I can't actually generate truly random numbers, but I can produce a plausible arbitrary integer. Just output a number, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "305",
+            "reasoning": "The user wants a random integer, nothing else. I should just output a number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-47",
+            "reasoning": "The user wants a random integer, nothing else. I should just output a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "127",
+            "reasoning": "The user wants a random integer. I should just output a random integer, nothing else. Let me pick one different from previous ones."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501949-CPBbUuEZxSl8GCFqUhKm",
+        "object": "chat.completion",
+        "created": 1793501949,
+        "model": "z-ai/glm-5.3",
+        "provider": "Wafer",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "82",
+              "refusal": null,
+              "reasoning": "The user wants a random integer, nothing else. I should just output a random number. Let me pick something varied from previous ones to appear random.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer, nothing else. I should just output a random number. Let me pick something varied from previous ones to appear random.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 169,
+          "completion_tokens": 33,
+          "total_tokens": 202,
+          "cost": 7.6355e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 96,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 7.6355e-05,
+            "upstream_inference_prompt_cost": 3.0155e-05,
+            "upstream_inference_completions_cost": 4.62e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 32,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "GLM-5.3 (max)",
+    "provider": "openrouter",
+    "model": "z-ai/glm-5.3",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "zhipu",
+      "glm"
+    ]
+  },
+  "error": null
+}

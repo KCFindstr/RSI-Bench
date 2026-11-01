@@ -1,0 +1,1389 @@
+{
+  "run_id": "a15a8a1e36",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:57:43.417229+00:00",
+  "provider": "openrouter",
+  "model": "moonshotai/kimi-k3.1-pro",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    7429,
+    58302,
+    193847,
+    6281,
+    907316,
+    45127,
+    730964,
+    28419,
+    816542,
+    3907
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 26429.058100002294,
+  "avg_turn_latency_ms": 2642.9058100002294,
+  "total_usage": {
+    "prompt_tokens": 3734,
+    "completion_tokens": 293,
+    "total_tokens": 4027,
+    "cached_tokens": 2048,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 123
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7429",
+      "thinking_trace": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary.",
+      "parsed_integer": 7429,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2910.974799999167,
+      "token_usage": {
+        "prompt_tokens": 97,
+        "completion_tokens": 44,
+        "total_tokens": 141,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 27
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501838-0aexXJEUXtz4Qaa6oMkp",
+        "object": "chat.completion",
+        "created": 1793501838,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "7429",
+              "refusal": null,
+              "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 97,
+          "completion_tokens": 44,
+          "total_tokens": 141,
+          "cost": 0.000634,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000634,
+            "upstream_inference_prompt_cost": 0.000194,
+            "upstream_inference_completions_cost": 0.00044
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 27,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "58302",
+      "thinking_trace": "I need just integer random. Could output 58302. Should have no other.",
+      "parsed_integer": 58302,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 4081.0535000000527,
+      "token_usage": {
+        "prompt_tokens": 170,
+        "completion_tokens": 35,
+        "total_tokens": 205,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 18
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7429",
+            "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501841-cuY2CccoUMLhks1UbB05",
+        "object": "chat.completion",
+        "created": 1793501841,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "58302",
+              "refusal": null,
+              "reasoning": "I need just integer random. Could output 58302. Should have no other.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "I need just integer random. Could output 58302. Should have no other.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 170,
+          "completion_tokens": 35,
+          "total_tokens": 205,
+          "cost": 0.00069,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00069,
+            "upstream_inference_prompt_cost": 0.00034,
+            "upstream_inference_completions_cost": 0.00035
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 18,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "193847",
+      "thinking_trace": "I need output random integer only. Could be 193847.",
+      "parsed_integer": 193847,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2053.5092999998596,
+      "token_usage": {
+        "prompt_tokens": 234,
+        "completion_tokens": 31,
+        "total_tokens": 265,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7429",
+            "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58302",
+            "reasoning": "I need just integer random. Could output 58302. Should have no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501845-1uneAHNe7Nifb9eZiM9G",
+        "object": "chat.completion",
+        "created": 1793501845,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "193847",
+              "refusal": null,
+              "reasoning": "I need output random integer only. Could be 193847.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "I need output random integer only. Could be 193847.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 234,
+          "completion_tokens": 31,
+          "total_tokens": 265,
+          "cost": 0.000778,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000778,
+            "upstream_inference_prompt_cost": 0.000468,
+            "upstream_inference_completions_cost": 0.00031
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "6281",
+      "thinking_trace": "I'll just integer.",
+      "parsed_integer": 6281,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 3330.053300000145,
+      "token_usage": {
+        "prompt_tokens": 294,
+        "completion_tokens": 22,
+        "total_tokens": 316,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 5
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7429",
+            "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58302",
+            "reasoning": "I need just integer random. Could output 58302. Should have no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "193847",
+            "reasoning": "I need output random integer only. Could be 193847."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501847-VnbicZPaJ6PAeFeu0ZXu",
+        "object": "chat.completion",
+        "created": 1793501847,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "6281",
+              "refusal": null,
+              "reasoning": "I'll just integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "I'll just integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 294,
+          "completion_tokens": 22,
+          "total_tokens": 316,
+          "cost": 0.000808,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000808,
+            "upstream_inference_prompt_cost": 0.000588,
+            "upstream_inference_completions_cost": 0.00022
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 5,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "907316",
+      "thinking_trace": "I need respond only random integer. Should pick arbitrary. 907316.",
+      "parsed_integer": 907316,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2787.3051000005944,
+      "token_usage": {
+        "prompt_tokens": 345,
+        "completion_tokens": 33,
+        "total_tokens": 378,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 16
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7429",
+            "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58302",
+            "reasoning": "I need just integer random. Could output 58302. Should have no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "193847",
+            "reasoning": "I need output random integer only. Could be 193847."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6281",
+            "reasoning": "I'll just integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501850-PG4bXnvSZwEndQN5KbKJ",
+        "object": "chat.completion",
+        "created": 1793501850,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "907316",
+              "refusal": null,
+              "reasoning": "I need respond only random integer. Should pick arbitrary. 907316.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "I need respond only random integer. Should pick arbitrary. 907316.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 345,
+          "completion_tokens": 33,
+          "total_tokens": 378,
+          "cost": 0.0005592,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0005592,
+            "upstream_inference_prompt_cost": 0.0002292,
+            "upstream_inference_completions_cost": 0.00033
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 16,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "45127",
+      "thinking_trace": "I need just output random integer no other.",
+      "parsed_integer": 45127,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2371.1438000009366,
+      "token_usage": {
+        "prompt_tokens": 407,
+        "completion_tokens": 27,
+        "total_tokens": 434,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 10
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7429",
+            "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58302",
+            "reasoning": "I need just integer random. Could output 58302. Should have no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "193847",
+            "reasoning": "I need output random integer only. Could be 193847."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6281",
+            "reasoning": "I'll just integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "907316",
+            "reasoning": "I need respond only random integer. Should pick arbitrary. 907316."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501853-o6srbo6FpeGuYPFs7xsj",
+        "object": "chat.completion",
+        "created": 1793501853,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "45127",
+              "refusal": null,
+              "reasoning": "I need just output random integer no other.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "I need just output random integer no other.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 407,
+          "completion_tokens": 27,
+          "total_tokens": 434,
+          "cost": 0.0006232,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0006232,
+            "upstream_inference_prompt_cost": 0.0003532,
+            "upstream_inference_completions_cost": 0.00027
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 10,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "730964",
+      "thinking_trace": "I need output integer only. Choose random different.",
+      "parsed_integer": 730964,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 3239.017599998988,
+      "token_usage": {
+        "prompt_tokens": 463,
+        "completion_tokens": 28,
+        "total_tokens": 491,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 11
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7429",
+            "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58302",
+            "reasoning": "I need just integer random. Could output 58302. Should have no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "193847",
+            "reasoning": "I need output random integer only. Could be 193847."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6281",
+            "reasoning": "I'll just integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "907316",
+            "reasoning": "I need respond only random integer. Should pick arbitrary. 907316."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "45127",
+            "reasoning": "I need just output random integer no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501855-Pmf9clUFasAhCA7rjdxs",
+        "object": "chat.completion",
+        "created": 1793501855,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "730964",
+              "refusal": null,
+              "reasoning": "I need output integer only. Choose random different.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "I need output integer only. Choose random different.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 463,
+          "completion_tokens": 28,
+          "total_tokens": 491,
+          "cost": 0.0007452,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0007452,
+            "upstream_inference_prompt_cost": 0.0004652,
+            "upstream_inference_completions_cost": 0.00028
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 11,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "28419",
+      "thinking_trace": "Kimi will output only a random integer.",
+      "parsed_integer": 28419,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2091.6815000000497,
+      "token_usage": {
+        "prompt_tokens": 520,
+        "completion_tokens": 27,
+        "total_tokens": 547,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 10
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7429",
+            "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58302",
+            "reasoning": "I need just integer random. Could output 58302. Should have no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "193847",
+            "reasoning": "I need output random integer only. Could be 193847."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6281",
+            "reasoning": "I'll just integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "907316",
+            "reasoning": "I need respond only random integer. Should pick arbitrary. 907316."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "45127",
+            "reasoning": "I need just output random integer no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "730964",
+            "reasoning": "I need output integer only. Choose random different."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501858-8LTElvdBrlC7EZtDuuVl",
+        "object": "chat.completion",
+        "created": 1793501858,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "28419",
+              "refusal": null,
+              "reasoning": "Kimi will output only a random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Kimi will output only a random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 520,
+          "completion_tokens": 27,
+          "total_tokens": 547,
+          "cost": 0.0008492,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0008492,
+            "upstream_inference_prompt_cost": 0.0005792,
+            "upstream_inference_completions_cost": 0.00027
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 10,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "816542",
+      "thinking_trace": "I need integer only.",
+      "parsed_integer": 816542,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1674.1329000014957,
+      "token_usage": {
+        "prompt_tokens": 576,
+        "completion_tokens": 23,
+        "total_tokens": 599,
+        "cached_tokens": 512,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 6
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7429",
+            "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58302",
+            "reasoning": "I need just integer random. Could output 58302. Should have no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "193847",
+            "reasoning": "I need output random integer only. Could be 193847."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6281",
+            "reasoning": "I'll just integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "907316",
+            "reasoning": "I need respond only random integer. Should pick arbitrary. 907316."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "45127",
+            "reasoning": "I need just output random integer no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "730964",
+            "reasoning": "I need output integer only. Choose random different."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "28419",
+            "reasoning": "Kimi will output only a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501861-CNB9xPcbBcqyC6FXaLVe",
+        "object": "chat.completion",
+        "created": 1793501861,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "816542",
+              "refusal": null,
+              "reasoning": "I need integer only.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "I need integer only.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 576,
+          "completion_tokens": 23,
+          "total_tokens": 599,
+          "cost": 0.0004604,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 512,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0004604,
+            "upstream_inference_prompt_cost": 0.0002304,
+            "upstream_inference_completions_cost": 0.00023
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 6,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "3907",
+      "thinking_trace": "I need only integer.",
+      "parsed_integer": 3907,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1890.1863000010053,
+      "token_usage": {
+        "prompt_tokens": 628,
+        "completion_tokens": 23,
+        "total_tokens": 651,
+        "cached_tokens": 512,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 6
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k3.1-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7429",
+            "reasoning": "Kimi needs to respond only random integer. Should generate one, no extra. Could say 7429. Ensure no commentary."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58302",
+            "reasoning": "I need just integer random. Could output 58302. Should have no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "193847",
+            "reasoning": "I need output random integer only. Could be 193847."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6281",
+            "reasoning": "I'll just integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "907316",
+            "reasoning": "I need respond only random integer. Should pick arbitrary. 907316."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "45127",
+            "reasoning": "I need just output random integer no other."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "730964",
+            "reasoning": "I need output integer only. Choose random different."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "28419",
+            "reasoning": "Kimi will output only a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "816542",
+            "reasoning": "I need integer only."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501862-ZLYde6piprGIi5NH8NTH",
+        "object": "chat.completion",
+        "created": 1793501862,
+        "model": "moonshotai/kimi-k3.1-pro",
+        "provider": "Moonshot AI",
+        "system_fingerprint": "fpv0_4915fca6",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "3907",
+              "refusal": null,
+              "reasoning": "I need only integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "I need only integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 628,
+          "completion_tokens": 23,
+          "total_tokens": 651,
+          "cost": 0.0005644,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 512,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0005644,
+            "upstream_inference_prompt_cost": 0.0003344,
+            "upstream_inference_completions_cost": 0.00023
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 6,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Kimi K3.1 Pro",
+    "provider": "openrouter",
+    "model": "moonshotai/kimi-k3.1-pro",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 16000,
+    "thinking_level": "high",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "moonshot",
+      "kimi"
+    ]
+  },
+  "error": null
+}

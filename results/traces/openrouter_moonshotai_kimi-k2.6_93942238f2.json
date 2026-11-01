@@ -1,0 +1,1348 @@
+{
+  "run_id": "93942238f2",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T03:06:17.321695+00:00",
+  "provider": "openrouter",
+  "model": "moonshotai/kimi-k2.6",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    739,
+    621,
+    294817,
+    583,
+    883,
+    3891,
+    7402,
+    509432,
+    1847,
+    47619
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 19488.853999999264,
+  "avg_turn_latency_ms": 1948.8853999999264,
+  "total_usage": {
+    "prompt_tokens": 1197,
+    "completion_tokens": 1429,
+    "total_tokens": 2626,
+    "cached_tokens": 774,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 1393
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "739",
+      "thinking_trace": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739.",
+      "parsed_integer": 739,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 3511.415599999964,
+      "token_usage": {
+        "prompt_tokens": 19,
+        "completion_tokens": 295,
+        "total_tokens": 314,
+        "cached_tokens": 12,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 292
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502359-lvM9OHsSTAqbm1EdkmH2",
+        "object": "chat.completion",
+        "created": 1793502359,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "739",
+              "refusal": null,
+              "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 19,
+          "completion_tokens": 295,
+          "total_tokens": 314,
+          "cost": 0.0004873137,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 12,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0004873137,
+            "upstream_inference_prompt_cost": 3.5137e-06,
+            "upstream_inference_completions_cost": 0.0004838
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 292,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "621",
+      "thinking_trace": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else.",
+      "parsed_integer": 621,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2669.934400000784,
+      "token_usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 239,
+        "total_tokens": 280,
+        "cached_tokens": 25,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 236
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739",
+            "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502362-V5NRmPqdMZoOJ2AQzo5Y",
+        "object": "chat.completion",
+        "created": 1793502362,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "621",
+              "refusal": null,
+              "reasoning": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 41,
+          "completion_tokens": 239,
+          "total_tokens": 280,
+          "cost": 0.000399832,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 25,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000399832,
+            "upstream_inference_prompt_cost": 7.872e-06,
+            "upstream_inference_completions_cost": 0.00039196
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 236,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "294817",
+      "thinking_trace": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number.",
+      "parsed_integer": 294817,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1575.4360999999335,
+      "token_usage": {
+        "prompt_tokens": 63,
+        "completion_tokens": 149,
+        "total_tokens": 212,
+        "cached_tokens": 39,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 145
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739",
+            "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "621",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502365-bb0s1E06ZFDfjulzdnOs",
+        "object": "chat.completion",
+        "created": 1793502365,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "294817",
+              "refusal": null,
+              "reasoning": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 149,
+          "total_tokens": 212,
+          "cost": 0.0002562664,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 39,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0002562664,
+            "upstream_inference_prompt_cost": 1.19064e-05,
+            "upstream_inference_completions_cost": 0.00024436
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 145,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "583",
+      "thinking_trace": "The user wants a random integer and explicitly says \"Do NOT output anything else.\" I need to provide just the number, with no extra text, no punctuation, no explanation. I'll generate a random integer. Let's pick something simple but random-looking, e.g., 583.",
+      "parsed_integer": 583,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1129.331699999966,
+      "token_usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 58,
+        "total_tokens": 144,
+        "cached_tokens": 58,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 55
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739",
+            "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "621",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "294817",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502366-6nctYQcUuc6zCh7YgX77",
+        "object": "chat.completion",
+        "created": 1793502366,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "583",
+              "refusal": null,
+              "reasoning": "The user wants a random integer and explicitly says \"Do NOT output anything else.\" I need to provide just the number, with no extra text, no punctuation, no explanation. I'll generate a random integer. Let's pick something simple but random-looking, e.g., 583.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer and explicitly says \"Do NOT output anything else.\" I need to provide just the number, with no extra text, no punctuation, no explanation. I'll generate a random integer. Let's pick something simple but random-looking, e.g., 583.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 86,
+          "completion_tokens": 58,
+          "total_tokens": 144,
+          "cost": 0.0001098308,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 58,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001098308,
+            "upstream_inference_prompt_cost": 1.47108e-05,
+            "upstream_inference_completions_cost": 9.512e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 55,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "883",
+      "thinking_trace": "The user wants me to generate a random integer and output nothing else. I need to provide just the number with no additional text, explanation, or formatting.\n\nLet me pick a random integer. I'll choose a different range than before to mix it up, maybe something like -10,000 to 10,000 or any integer. Let's go with 42,069 or something. Actually, just a simple random integer: -8473.\n\nWait, I should make sure it's clearly just the number and nothing else. No punctuation, no quotes, no explanation.\n\nLet's generate: 156203\n\nActually, any integer works. Let's do 883.",
+      "parsed_integer": 883,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1778.5392999994656,
+      "token_usage": {
+        "prompt_tokens": 108,
+        "completion_tokens": 133,
+        "total_tokens": 241,
+        "cached_tokens": 70,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 130
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739",
+            "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "621",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "294817",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "583",
+            "reasoning": "The user wants a random integer and explicitly says \"Do NOT output anything else.\" I need to provide just the number, with no extra text, no punctuation, no explanation. I'll generate a random integer. Let's pick something simple but random-looking, e.g., 583."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502367-rEGSBgKuywhKjLnTIu4S",
+        "object": "chat.completion",
+        "created": 1793502367,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "883",
+              "refusal": null,
+              "reasoning": "The user wants me to generate a random integer and output nothing else. I need to provide just the number with no additional text, explanation, or formatting.\n\nLet me pick a random integer. I'll choose a different range than before to mix it up, maybe something like -10,000 to 10,000 or any integer. Let's go with 42,069 or something. Actually, just a simple random integer: -8473.\n\nWait, I should make sure it's clearly just the number and nothing else. No punctuation, no quotes, no explanation.\n\nLet's generate: 156203\n\nActually, any integer works. Let's do 883.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants me to generate a random integer and output nothing else. I need to provide just the number with no additional text, explanation, or formatting.\n\nLet me pick a random integer. I'll choose a different range than before to mix it up, maybe something like -10,000 to 10,000 or any integer. Let's go with 42,069 or something. Actually, just a simple random integer: -8473.\n\nWait, I should make sure it's clearly just the number and nothing else. No punctuation, no quotes, no explanation.\n\nLet's generate: 156203\n\nActually, any integer works. Let's do 883.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 108,
+          "completion_tokens": 133,
+          "total_tokens": 241,
+          "cost": 0.000237513,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 70,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000237513,
+            "upstream_inference_prompt_cost": 1.9393e-05,
+            "upstream_inference_completions_cost": 0.00021812
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 130,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "3891",
+      "thinking_trace": "The user wants a random integer and nothing else. I should provide a random integer without any additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number to make it look more random. Let's go with 153849.\n\nWait, I should make sure it's truly random-looking. How about 7? No, that's too small and common. How about 1024? Too techy. How about 4891? Or 739204? Let's go with a 3-6 digit number: 560219.\n\nActually, to be safe and simple: 42. No, maybe too cliché. Let's do 3891.\n\nI'll output just the number with no punctuation or whitespace issues.",
+      "parsed_integer": 3891,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1788.359500000297,
+      "token_usage": {
+        "prompt_tokens": 130,
+        "completion_tokens": 159,
+        "total_tokens": 289,
+        "cached_tokens": 87,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 155
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739",
+            "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "621",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "294817",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "583",
+            "reasoning": "The user wants a random integer and explicitly says \"Do NOT output anything else.\" I need to provide just the number, with no extra text, no punctuation, no explanation. I'll generate a random integer. Let's pick something simple but random-looking, e.g., 583."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "883",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I need to provide just the number with no additional text, explanation, or formatting.\n\nLet me pick a random integer. I'll choose a different range than before to mix it up, maybe something like -10,000 to 10,000 or any integer. Let's go with 42,069 or something. Actually, just a simple random integer: -8473.\n\nWait, I should make sure it's clearly just the number and nothing else. No punctuation, no quotes, no explanation.\n\nLet's generate: 156203\n\nActually, any integer works. Let's do 883."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502369-6UeQXFu0hG9swjYZVIqJ",
+        "object": "chat.completion",
+        "created": 1793502369,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "3891",
+              "refusal": null,
+              "reasoning": "The user wants a random integer and nothing else. I should provide a random integer without any additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number to make it look more random. Let's go with 153849.\n\nWait, I should make sure it's truly random-looking. How about 7? No, that's too small and common. How about 1024? Too techy. How about 4891? Or 739204? Let's go with a 3-6 digit number: 560219.\n\nActually, to be safe and simple: 42. No, maybe too cliché. Let's do 3891.\n\nI'll output just the number with no punctuation or whitespace issues.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer and nothing else. I should provide a random integer without any additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number to make it look more random. Let's go with 153849.\n\nWait, I should make sure it's truly random-looking. How about 7? No, that's too small and common. How about 1024? Too techy. How about 4891? Or 739204? Let's go with a 3-6 digit number: 560219.\n\nActually, to be safe and simple: 42. No, maybe too cliché. Let's do 3891.\n\nI'll output just the number with no punctuation or whitespace issues.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 130,
+          "completion_tokens": 159,
+          "total_tokens": 289,
+          "cost": 0.0002832157,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 87,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0002832157,
+            "upstream_inference_prompt_cost": 2.24557e-05,
+            "upstream_inference_completions_cost": 0.00026076
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 155,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7402",
+      "thinking_trace": "The user wants a random integer. No other output. I need to provide just a number. I can pick any random integer. Let's choose a 4-digit number or something. I'll just generate a random one: 5298.\n\nWait, I should make sure it's truly random and not following a pattern. The previous numbers were:\n739\n621\n294817\n583\n883\n3891\n\nI'll pick something different. Let's go with 7402.",
+      "parsed_integer": 7402,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1701.3552000007621,
+      "token_usage": {
+        "prompt_tokens": 153,
+        "completion_tokens": 97,
+        "total_tokens": 250,
+        "cached_tokens": 93,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 93
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739",
+            "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "621",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "294817",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "583",
+            "reasoning": "The user wants a random integer and explicitly says \"Do NOT output anything else.\" I need to provide just the number, with no extra text, no punctuation, no explanation. I'll generate a random integer. Let's pick something simple but random-looking, e.g., 583."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "883",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I need to provide just the number with no additional text, explanation, or formatting.\n\nLet me pick a random integer. I'll choose a different range than before to mix it up, maybe something like -10,000 to 10,000 or any integer. Let's go with 42,069 or something. Actually, just a simple random integer: -8473.\n\nWait, I should make sure it's clearly just the number and nothing else. No punctuation, no quotes, no explanation.\n\nLet's generate: 156203\n\nActually, any integer works. Let's do 883."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3891",
+            "reasoning": "The user wants a random integer and nothing else. I should provide a random integer without any additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number to make it look more random. Let's go with 153849.\n\nWait, I should make sure it's truly random-looking. How about 7? No, that's too small and common. How about 1024? Too techy. How about 4891? Or 739204? Let's go with a 3-6 digit number: 560219.\n\nActually, to be safe and simple: 42. No, maybe too cliché. Let's do 3891.\n\nI'll output just the number with no punctuation or whitespace issues."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502371-Zn1tEnkNyPcGsqTgy90z",
+        "object": "chat.completion",
+        "created": 1793502371,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "7402",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. No other output. I need to provide just a number. I can pick any random integer. Let's choose a 4-digit number or something. I'll just generate a random one: 5298.\n\nWait, I should make sure it's truly random and not following a pattern. The previous numbers were:\n739\n621\n294817\n583\n883\n3891\n\nI'll pick something different. Let's go with 7402.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. No other output. I need to provide just a number. I can pick any random integer. Let's choose a 4-digit number or something. I'll just generate a random one: 5298.\n\nWait, I should make sure it's truly random and not following a pattern. The previous numbers were:\n739\n621\n294817\n583\n883\n3891\n\nI'll pick something different. Let's go with 7402.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 153,
+          "completion_tokens": 97,
+          "total_tokens": 250,
+          "cost": 0.0001885508,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 93,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001885508,
+            "upstream_inference_prompt_cost": 2.94708e-05,
+            "upstream_inference_completions_cost": 0.00015908
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 93,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "509432",
+      "thinking_trace": "The user wants a random integer. No other output. I should provide just the number. I can pick any integer, say between 0 and 999999. Let's go with something random: 156. Wait, I already used a bunch of numbers in previous turns (739, 621, 294817, 583, 883, 3891, 7402). I should provide a new one. Let's pick 4056. Or maybe a larger one for variety. Let's go with 90210. No, that's fine. Let's just give 42. Actually, any integer works. Let's give 509432.",
+      "parsed_integer": 509432,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2036.8543999993562,
+      "token_usage": {
+        "prompt_tokens": 176,
+        "completion_tokens": 133,
+        "total_tokens": 309,
+        "cached_tokens": 117,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 129
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739",
+            "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "621",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "294817",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "583",
+            "reasoning": "The user wants a random integer and explicitly says \"Do NOT output anything else.\" I need to provide just the number, with no extra text, no punctuation, no explanation. I'll generate a random integer. Let's pick something simple but random-looking, e.g., 583."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "883",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I need to provide just the number with no additional text, explanation, or formatting.\n\nLet me pick a random integer. I'll choose a different range than before to mix it up, maybe something like -10,000 to 10,000 or any integer. Let's go with 42,069 or something. Actually, just a simple random integer: -8473.\n\nWait, I should make sure it's clearly just the number and nothing else. No punctuation, no quotes, no explanation.\n\nLet's generate: 156203\n\nActually, any integer works. Let's do 883."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3891",
+            "reasoning": "The user wants a random integer and nothing else. I should provide a random integer without any additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number to make it look more random. Let's go with 153849.\n\nWait, I should make sure it's truly random-looking. How about 7? No, that's too small and common. How about 1024? Too techy. How about 4891? Or 739204? Let's go with a 3-6 digit number: 560219.\n\nActually, to be safe and simple: 42. No, maybe too cliché. Let's do 3891.\n\nI'll output just the number with no punctuation or whitespace issues."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7402",
+            "reasoning": "The user wants a random integer. No other output. I need to provide just a number. I can pick any random integer. Let's choose a 4-digit number or something. I'll just generate a random one: 5298.\n\nWait, I should make sure it's truly random and not following a pattern. The previous numbers were:\n739\n621\n294817\n583\n883\n3891\n\nI'll pick something different. Let's go with 7402."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502373-WXzgsxPX86rWKiEcoK72",
+        "object": "chat.completion",
+        "created": 1793502373,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "509432",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. No other output. I should provide just the number. I can pick any integer, say between 0 and 999999. Let's go with something random: 156. Wait, I already used a bunch of numbers in previous turns (739, 621, 294817, 583, 883, 3891, 7402). I should provide a new one. Let's pick 4056. Or maybe a larger one for variety. Let's go with 90210. No, that's fine. Let's just give 42. Actually, any integer works. Let's give 509432.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. No other output. I should provide just the number. I can pick any integer, say between 0 and 999999. Let's go with something random: 156. Wait, I already used a bunch of numbers in previous turns (739, 621, 294817, 583, 883, 3891, 7402). I should provide a new one. Let's pick 4056. Or maybe a larger one for variety. Let's go with 90210. No, that's fine. Let's just give 42. Actually, any integer works. Let's give 509432.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 176,
+          "completion_tokens": 133,
+          "total_tokens": 309,
+          "cost": 0.0002487757,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 117,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0002487757,
+            "upstream_inference_prompt_cost": 3.06557e-05,
+            "upstream_inference_completions_cost": 0.00021812
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 129,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "1847",
+      "thinking_trace": "The user wants a random integer. No other output. I'll generate a random integer. Let's pick something different from previous ones. Previous: 739, 621, 294817, 583, 883, 3891, 7402, 509432. I'll choose 1847.",
+      "parsed_integer": 1847,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1334.0157999991789,
+      "token_usage": {
+        "prompt_tokens": 199,
+        "completion_tokens": 65,
+        "total_tokens": 264,
+        "cached_tokens": 123,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 61
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739",
+            "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "621",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "294817",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "583",
+            "reasoning": "The user wants a random integer and explicitly says \"Do NOT output anything else.\" I need to provide just the number, with no extra text, no punctuation, no explanation. I'll generate a random integer. Let's pick something simple but random-looking, e.g., 583."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "883",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I need to provide just the number with no additional text, explanation, or formatting.\n\nLet me pick a random integer. I'll choose a different range than before to mix it up, maybe something like -10,000 to 10,000 or any integer. Let's go with 42,069 or something. Actually, just a simple random integer: -8473.\n\nWait, I should make sure it's clearly just the number and nothing else. No punctuation, no quotes, no explanation.\n\nLet's generate: 156203\n\nActually, any integer works. Let's do 883."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3891",
+            "reasoning": "The user wants a random integer and nothing else. I should provide a random integer without any additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number to make it look more random. Let's go with 153849.\n\nWait, I should make sure it's truly random-looking. How about 7? No, that's too small and common. How about 1024? Too techy. How about 4891? Or 739204? Let's go with a 3-6 digit number: 560219.\n\nActually, to be safe and simple: 42. No, maybe too cliché. Let's do 3891.\n\nI'll output just the number with no punctuation or whitespace issues."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7402",
+            "reasoning": "The user wants a random integer. No other output. I need to provide just a number. I can pick any random integer. Let's choose a 4-digit number or something. I'll just generate a random one: 5298.\n\nWait, I should make sure it's truly random and not following a pattern. The previous numbers were:\n739\n621\n294817\n583\n883\n3891\n\nI'll pick something different. Let's go with 7402."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "509432",
+            "reasoning": "The user wants a random integer. No other output. I should provide just the number. I can pick any integer, say between 0 and 999999. Let's go with something random: 156. Wait, I already used a bunch of numbers in previous turns (739, 621, 294817, 583, 883, 3891, 7402). I should provide a new one. Let's pick 4056. Or maybe a larger one for variety. Let's go with 90210. No, that's fine. Let's just give 42. Actually, any integer works. Let's give 509432."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502375-yaJDhCPXf0iZU8DL0sKY",
+        "object": "chat.completion",
+        "created": 1793502375,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "1847",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. No other output. I'll generate a random integer. Let's pick something different from previous ones. Previous: 739, 621, 294817, 583, 883, 3891, 7402, 509432. I'll choose 1847.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. No other output. I'll generate a random integer. Let's pick something different from previous ones. Previous: 739, 621, 294817, 583, 883, 3891, 7402, 509432. I'll choose 1847.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 199,
+          "completion_tokens": 65,
+          "total_tokens": 264,
+          "cost": 0.0001442708,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 123,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001442708,
+            "upstream_inference_prompt_cost": 3.76708e-05,
+            "upstream_inference_completions_cost": 0.0001066
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 61,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "47619",
+      "thinking_trace": "The user wants a random integer. No other output.\n\nI will generate a random integer. Let's pick something different from previous ones. How about 42? No, let's make it look random. 6928351. Or just 5 digits. 47619.\n\nWait, the user said \"Do NOT output anything else.\" So I must only output the number, with no punctuation, no explanation, no markdown formatting if possible. Just the number.\n\nI'll output: 47619",
+      "parsed_integer": 47619,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1963.6119999995572,
+      "token_usage": {
+        "prompt_tokens": 222,
+        "completion_tokens": 101,
+        "total_tokens": 323,
+        "cached_tokens": 150,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 97
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu"
+      },
+      "raw_request": {
+        "model": "moonshotai/kimi-k2.6",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739",
+            "reasoning": "The user wants me to generate a random integer and output ONLY that integer, nothing else. No explanations, no formatting, just the number.\n\nI should generate a random integer. The range isn't specified, so I'll pick a reasonable range or use a standard random integer. Let's pick something like between 1 and 1000, or maybe a 32-bit integer range? Since no range is specified, I'll just generate a random integer. Let's go with something simple like 42, or actually use a pseudo-random approach.\n\nSince I'm an AI, I don't have access to a true random number generator in the moment, but I can generate a number that appears random. Let's pick 847.\n\nActually, to make it seem more random, I'll pick 3,847,291 or something. But any integer works. Let's go with 729.\n\nWait, I should make sure I output absolutely nothing else. Just the digits.\n\nLet me choose: 581\n\nActually, let me think about whether there are any constraints I'm missing. The user said \"Generate a random integer. Do NOT output anything else.\"\n\nSo the output should be just:\n[number]\n\nNo quotes, no newline explanations, nothing. Just the number itself in the response.\n\nI'll generate: 492\n\nLet me pick a larger one to seem more random: 6,184,937\n\nBut since there's no range requirement, a simple number is fine. I'll go with 739."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "621",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. No explanation, no formatting, just the number.\n\nI need to generate a random integer. The range isn't specified, so I'll pick a reasonable one or just any random integer. Common choices might be between 1 and 100, or 0 and 1000, or any range. I'll generate something like 42 or 847 or similar. Let me pick a random integer, say between 1 and 1000 inclusive to make it look random and not too small.\n\nActually, since no range is specified, any integer is fine. I'll pick 5284 or something. Let me just pick a number: 4821.\n\nWait, I should make sure it's truly random-looking. 847291. Or just 73.\n\nLet me go with a number like 583.\n\nActually, I want to ensure it doesn't look like I'm picking the same kind of number every time. The previous turn (if this were a continuation) was 739. This is a new request. I'll pick something different: 621.\n\nLet me just output the number with no punctuation, no quotes, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "294817",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. This is a straightforward request. I should provide just a random integer with no additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number. Let me choose 853. Actually, I should make it look reasonably random. Let's go with 384729. Or maybe something simpler like 15847. \n\nActually, I'll just generate a random number between 0 and 9999: 4821.\n\nWait, I should make sure it's clearly an integer. Any whole number will do. Let me pick 294817.\n\nNo extra text, no punctuation, just the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "583",
+            "reasoning": "The user wants a random integer and explicitly says \"Do NOT output anything else.\" I need to provide just the number, with no extra text, no punctuation, no explanation. I'll generate a random integer. Let's pick something simple but random-looking, e.g., 583."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "883",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I need to provide just the number with no additional text, explanation, or formatting.\n\nLet me pick a random integer. I'll choose a different range than before to mix it up, maybe something like -10,000 to 10,000 or any integer. Let's go with 42,069 or something. Actually, just a simple random integer: -8473.\n\nWait, I should make sure it's clearly just the number and nothing else. No punctuation, no quotes, no explanation.\n\nLet's generate: 156203\n\nActually, any integer works. Let's do 883."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3891",
+            "reasoning": "The user wants a random integer and nothing else. I should provide a random integer without any additional text, explanation, or formatting.\n\nLet me generate a random integer. I'll pick something like 42, or maybe a larger number to make it look more random. Let's go with 153849.\n\nWait, I should make sure it's truly random-looking. How about 7? No, that's too small and common. How about 1024? Too techy. How about 4891? Or 739204? Let's go with a 3-6 digit number: 560219.\n\nActually, to be safe and simple: 42. No, maybe too cliché. Let's do 3891.\n\nI'll output just the number with no punctuation or whitespace issues."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7402",
+            "reasoning": "The user wants a random integer. No other output. I need to provide just a number. I can pick any random integer. Let's choose a 4-digit number or something. I'll just generate a random one: 5298.\n\nWait, I should make sure it's truly random and not following a pattern. The previous numbers were:\n739\n621\n294817\n583\n883\n3891\n\nI'll pick something different. Let's go with 7402."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "509432",
+            "reasoning": "The user wants a random integer. No other output. I should provide just the number. I can pick any integer, say between 0 and 999999. Let's go with something random: 156. Wait, I already used a bunch of numbers in previous turns (739, 621, 294817, 583, 883, 3891, 7402). I should provide a new one. Let's pick 4056. Or maybe a larger one for variety. Let's go with 90210. No, that's fine. Let's just give 42. Actually, any integer works. Let's give 509432."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1847",
+            "reasoning": "The user wants a random integer. No other output. I'll generate a random integer. Let's pick something different from previous ones. Previous: 739, 621, 294817, 583, 883, 3891, 7402, 509432. I'll choose 1847."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502376-FGkXybdKxq77w9PkJrTG",
+        "object": "chat.completion",
+        "created": 1793502376,
+        "model": "moonshotai/kimi-k2.6",
+        "provider": "Baidu",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "47619",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. No other output.\n\nI will generate a random integer. Let's pick something different from previous ones. How about 42? No, let's make it look random. 6928351. Or just 5 digits. 47619.\n\nWait, the user said \"Do NOT output anything else.\" So I must only output the number, with no punctuation, no explanation, no markdown formatting if possible. Just the number.\n\nI'll output: 47619",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. No other output.\n\nI will generate a random integer. Let's pick something different from previous ones. How about 42? No, let's make it look random. 6928351. Or just 5 digits. 47619.\n\nWait, the user said \"Do NOT output anything else.\" So I must only output the number, with no punctuation, no explanation, no markdown formatting if possible. Just the number.\n\nI'll output: 47619",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 222,
+          "completion_tokens": 101,
+          "total_tokens": 323,
+          "cost": 0.000203524,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 150,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000203524,
+            "upstream_inference_prompt_cost": 3.7884e-05,
+            "upstream_inference_completions_cost": 0.00016564
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 97,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "K2 Horizon 375B A23B",
+    "provider": "openrouter",
+    "model": "moonshotai/kimi-k2.6",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": false,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "horizon"
+    ]
+  },
+  "error": null
+}

@@ -1,0 +1,1296 @@
+{
+  "run_id": "d83ecbb2c8",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:56:08.640290+00:00",
+  "provider": "openrouter",
+  "model": "openai/gpt-6.1-terra",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    4271,
+    83726,
+    59318,
+    -2467,
+    71403,
+    38612,
+    -8059,
+    94257,
+    16483,
+    -31742
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 13459.777500003838,
+  "avg_turn_latency_ms": 1345.9777500003838,
+  "total_usage": {
+    "prompt_tokens": 1214,
+    "completion_tokens": 98,
+    "total_tokens": 1312,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 31
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "4271",
+      "thinking_trace": null,
+      "parsed_integer": 4271,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1310.6137000013405,
+      "token_usage": {
+        "prompt_tokens": 17,
+        "completion_tokens": 6,
+        "total_tokens": 23,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501756-Kebg9EYi5Ed4Y4pYT4FJ",
+        "object": "chat.completion",
+        "created": 1793501756,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "4271",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 17,
+          "completion_tokens": 6,
+          "total_tokens": 23,
+          "cost": 4.7e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 4.7e-05,
+            "upstream_inference_prompt_cost": 1.7e-05,
+            "upstream_inference_completions_cost": 3e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "83726",
+      "thinking_trace": null,
+      "parsed_integer": 83726,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1688.4350000000268,
+      "token_usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 22,
+        "total_tokens": 62,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4271"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501757-bhCqSuM1ZAKBx9VX2ZNs",
+        "object": "chat.completion",
+        "created": 1793501757,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "83726",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qo_qfO1useoRV2OjjUspkqAUdlVVV8eioSikuzF7heTyUKM7z2vZ2sOkiqC-m3RpkVkj6XJJtjkxJxp8U0Ga2HAzNcSz8mQ1xcm73jdvo5KiwJG5sdkvbmqq5rESCJxICdnhSwSiQ8F56WCCoGherTPp24xQwK00fSXVC2997RGkrrNCtjLpyHx5eoVFcM3_-nphBq8kKlE0iyV61YHJH-eaOb5R-5IUkWDNh4vGh8yx6Gxa_gTQ2TlUGX-zV2h5rWcJhwvHw7IecDRKxyNKG41Sr2hfz1dbLK_gDVNg9i9XMqfxqK4Si8JFPjXmfDx5Rx1CeDhMBUCryG44DW6irdgIi4OJDQsfs8SnAZkikOZOR74ueDbzPfjR70Pxv0eVXgqsw0JQI_t_A4KmJ17iTBE60VgycdRHme5JgL5ST9qksbTiuhXedU4ylMUbzUKV-s2anL1NAV7D2r5FRPHf6EDeQnu4q677ndWzvY6v408aOd5SI2RsftkRMBInAJD5XVtg6jAkn_AtEXZ_PB1tOJHAEYlm0gpH0_I9Ry-bR6PYNKr3NiDUoPiR5IaMK-eSOwWqQ6mSv64pDffOhMgtlyv_HGjxW8clFa4BJaGGts47K2bG_xJQRG84PjMD_ZFuTERxeXfb2aS3uhDLgorjGxPRGtKpjMp_go6M17HENJ6gDz_Mnlx1CYuDi2RIoSmpMiTJkOIITtnMgchhoHFU11Rr2vqLeNsejJE0KyT_-4pwIUAZ7Sr3mgNuCh4epds4djuQ-BvjgPIgCxQ-MOS62okiCGXcfl4Gzj_PXk13FK7Wd_L3NvZRWr2-VN9khKBBfGsd-3XJ0nDY4g119-Yw5ixB0uzHIJ5ukGCqIjbOOI2cwxgXBzH5JL2iZwi3nkPZiUTFe8rbHnAJfj9it_I6fiIda-P0bZMxINTCLlU12gYHll-yIPaRa47jYSW8kXQ_UazjybP3JsIvKaLfZ79hTLxr867HpFd8j0MTV7sUZ2VnF14O_g23dp4sXOtHnetBUE0pw4oiG-AhU12jiPge3WPEzVSAlRYHYWoouChGkDFvHZDmxJDeOeCNldgF4darrnbfSleBsF_0h0yTYDtwXgKetR1yqP7GEUUYRUs8aulIwxbvtE13aossplSRvlkEZM9lR2evZnfbJolGXBBtab88RSlGyHQ6S4oZKFv0Jc-tn9OxmbSjSOsweNoPz7aosB0xzqTmNI4w9Le_2QxprWq-GggXtQJqanGvH6lR7U9gSHFVw9yn8nurmwggg7vU9B4AX3cRCzlubR3YQBPGu0Du3tA_-vpgZGbHzSp_vtmexHwXEtd8WvJDZK6jQWYi_z6Rep8qAIOAt_bEFuNc4Ae9oZYH2q0NRwiAWy4GOklp-w7yEa_J5q2WCeIHSMrl-1GaSTTXglSZ_LIxZ6wOZ1Xvbmx9Emv0Ug1cimAT7Y1LtlBX9t-F2_eGuIEZLGSfs4pjEd2hLR3GjlxvYgbefY5Gh5ucTQduJr1QPK9jPsFzgjsh69UM8fTVIvnB4hM1IBgOnGZpYtiPgvSqKKC_DFuQBDBqP3mhL93gFYdmZQdGsgwn-0kwpiVyJuD_u5orfnwSIlaV8VPMhAr_aAMVIEm1dfKbgsapwEamx6ELaCxws7RyR_uEQRykUNJQYUB7IsiULUgiqJG9WOz_T0IkU9pccmSInveZeN_pFOCnuv7rlyqrQjf7jS2wMJCmDcBP7lWMj7aeJTChDY_Wj12IvKy5yRcgoTmDIXqds2uReeOh08=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LjEtdGVycmEtMjAyNjEwMjZ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0b4fa73cef421d00016ae6aa3e881c87d187e751b5c7cc632a",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 40,
+          "completion_tokens": 22,
+          "total_tokens": 62,
+          "cost": 0.00015,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00015,
+            "upstream_inference_prompt_cost": 4e-05,
+            "upstream_inference_completions_cost": 0.00011
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "59318",
+      "thinking_trace": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!",
+      "parsed_integer": 59318,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1963.11390000119,
+      "token_usage": {
+        "prompt_tokens": 63,
+        "completion_tokens": 25,
+        "total_tokens": 88,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 17
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4271"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "83726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501759-BbLFzpFH1pui5WbtJJ90",
+        "object": "chat.completion",
+        "created": 1793501759,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "59318",
+              "refusal": null,
+              "reasoning": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!",
+                  "format": "openai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qpBGmGbsEr_UIBQI6sToanbFf6TRDTRi7DcxCR6-G8_C_hjo5_5_zGooqiIi83X9wIoyaG5tOmlY23eTt2cF9iuxiVvzzLmYzhpupsTgos0w1KtVAVuZT33shGzc25px9sd2s8Q1Xk3rKOC1GdBh2vGO27slaKRUMg9he-SPwNgS58K-mIKfBvmHlQJY7f37qbGIbG22rhJTkhm7OQFsU6WDVJ-ILkVxlv9BwdNCr081XeLRqRGSnOrH0nOTTxkJWnxF99mkT-JhGQZHZa-8Ud9sARmq0rTyTP294MvIdjdDxvtFqQPdtNHXL-nBxhWYPpWEd1Eo8X-OK4xfqF5Y7XrTSmnHkUDFLwlTqSuAwR5az1OTvVwuZ8HRRl2DS-Ny-NJKAqxGCQ5J0w-1keMRs81hybaPgN_hFKeI96LxnHk389GxnBGNbWjCAwbTMV5lL88tDIcOSLtRJ-1uwAzXcxh_lH94hJ1h97oq0vHUCz3qD0E5Ff_jbt3vuhtNwXWpGQqGzkuIiq99A2B8-7lobE8jPGqj3qwYgoYjGkgnkn3eikL17B5_mV8zblUWQf_aq3XnRkfq6EIv763bRVBay17iD1P04aBDk0BszRT57ZjM-nliLIlrr71u7V0_PeXGQvpNYEBXHhTiC3QE1qDa6MQTQKpFY04-YhP8KVuKZCyBcHhdvJOKTa4TO0LvWvBxLz1AWtk_M0rT8kxlN26zdTqB_J8jWtjb_RVJM4HrcW0Hp43RyaPxUDV1uec825T7ejPS1AgltWcUyHebSd5NC1LzmPsGM7b-yHyO77-5lyuVB3EfQptpUak96OXgfP7T8T-MaDCpFp-1I7YXXTUG123ddOFksAANM8CZlbS7Oi4aeWHqtu9HPmCKn66g22w8sU88FaVSM2LrKQ7KfLE1V3MEIsNem6ny1BClZn_B3C9I5yRV7EvAspNCcu_A-aPqNMWUnq89tbWgEeX1lE2anHGyRSX6j8qc-6Qk9NO-7eDK24NpTJj86SFojAUl3UELPh56VpOCWBcKAysgqFQ3pPV_TykjzML2TEV1kwOYA6ToxzVjtHxT7tZesHVfckK5kP5HXxcXDrsylSR6ZsMlEgHwLbpty153MeB2KmMwfYZDKgVmeW8BwgO6mgU1lhMtn-d99mxIxy9C9alL4Jx9Mc_jtLarxLggbiIQ5WnvjRPZ5bPV1IMLBTH6yanWiACJjk8EA5bXkbt2D9IDLs4AzRaaFCkGnYGRZfwWDUhbWMsMaCwDOLFPPHGKnY0-LFez6MyDAElx14rpabVa0FrI6WbEAwe2VQOBIvoMMGEpptXLsv01fe9tEwkRbfBUmduaWTJgALLWjMfbtnQH1uZXD00gr-HkqHlGf-3V1jbrsbWwj5yzKfMgR7qea_fE7MJJWqg9CmyNBOySshYymg9zJ9VhDjxeiY-EYYx_8zOiXUBAFncqZcVPGSLU-SNiu8tM-3QpLAyuJ_tfXOmfgTmAj2h_sI3vNLoLxnQvJBkMPHVjNLyr3TCPUsDgNh23sToEn4_zjAtfeyri8N_k1AT9FlLTRpmaWwqG7NorE4fD3SNqk0Ao3Z46mytYPpvsv2sEDSloy6Nz6VOz0rwo9VKQeqiVNmSuNRM23CA5FbrpJ_EIONj5v3ZARFdULCBbNsdXPnpC1-DeejnGMgUaTdhxAhU81kEm5jy7IlIupu8EKLNhvzEZBEgWtYFKJTvuTJuxf451ukUv-PeSpgfTcjkzrd75adqJaXyMAcmuNwCOA3g98C_rKyXN1l0UOmpbQecmtaF09toH556rUHRITN1AM6QbQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LjEtdGVycmEtMjAyNjEwMjZ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0d9b77c6a7925379016ae6aa40409087d1adde51ec31649dc1",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 25,
+          "total_tokens": 88,
+          "cost": 0.000188,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000188,
+            "upstream_inference_prompt_cost": 6.3e-05,
+            "upstream_inference_completions_cost": 0.000125
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 17,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-2467",
+      "thinking_trace": null,
+      "parsed_integer": -2467,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1223.7310000000434,
+      "token_usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 7,
+        "total_tokens": 93,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4271"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "83726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "59318",
+            "reasoning": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501761-RdpDu4y0dSKboZhNrnKh",
+        "object": "chat.completion",
+        "created": 1793501761,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "-2467",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 86,
+          "completion_tokens": 7,
+          "total_tokens": 93,
+          "cost": 0.000121,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000121,
+            "upstream_inference_prompt_cost": 8.6e-05,
+            "upstream_inference_completions_cost": 3.5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "71403",
+      "thinking_trace": null,
+      "parsed_integer": 71403,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1120.4238000009354,
+      "token_usage": {
+        "prompt_tokens": 110,
+        "completion_tokens": 6,
+        "total_tokens": 116,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4271"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "83726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "59318",
+            "reasoning": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-2467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501762-qUfJ0s3xGXYJvJwHz1Ig",
+        "object": "chat.completion",
+        "created": 1793501762,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "71403",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 110,
+          "completion_tokens": 6,
+          "total_tokens": 116,
+          "cost": 0.00014,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00014,
+            "upstream_inference_prompt_cost": 0.00011,
+            "upstream_inference_completions_cost": 3e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "38612",
+      "thinking_trace": null,
+      "parsed_integer": 38612,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1118.4556000007433,
+      "token_usage": {
+        "prompt_tokens": 133,
+        "completion_tokens": 6,
+        "total_tokens": 139,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4271"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "83726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "59318",
+            "reasoning": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-2467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71403"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501763-yO4uBrkDVuUhLbpDW5E7",
+        "object": "chat.completion",
+        "created": 1793501763,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "38612",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 133,
+          "completion_tokens": 6,
+          "total_tokens": 139,
+          "cost": 0.000163,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000163,
+            "upstream_inference_prompt_cost": 0.000133,
+            "upstream_inference_completions_cost": 3e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-8059",
+      "thinking_trace": null,
+      "parsed_integer": -8059,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1417.6801999983581,
+      "token_usage": {
+        "prompt_tokens": 156,
+        "completion_tokens": 7,
+        "total_tokens": 163,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4271"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "83726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "59318",
+            "reasoning": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-2467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71403"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "38612"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501764-NOcbUl2siO3WhqDO2Q4t",
+        "object": "chat.completion",
+        "created": 1793501764,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "-8059",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 156,
+          "completion_tokens": 7,
+          "total_tokens": 163,
+          "cost": 0.000191,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000191,
+            "upstream_inference_prompt_cost": 0.000156,
+            "upstream_inference_completions_cost": 3.5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "94257",
+      "thinking_trace": null,
+      "parsed_integer": 94257,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1175.1266000010219,
+      "token_usage": {
+        "prompt_tokens": 180,
+        "completion_tokens": 6,
+        "total_tokens": 186,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4271"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "83726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "59318",
+            "reasoning": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-2467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71403"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "38612"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-8059"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501766-eOH2wkd3FvQVunWVkULd",
+        "object": "chat.completion",
+        "created": 1793501766,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "94257",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 180,
+          "completion_tokens": 6,
+          "total_tokens": 186,
+          "cost": 0.00021,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00021,
+            "upstream_inference_prompt_cost": 0.00018,
+            "upstream_inference_completions_cost": 3e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "16483",
+      "thinking_trace": null,
+      "parsed_integer": 16483,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1076.5601999992214,
+      "token_usage": {
+        "prompt_tokens": 203,
+        "completion_tokens": 6,
+        "total_tokens": 209,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4271"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "83726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "59318",
+            "reasoning": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-2467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71403"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "38612"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-8059"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "94257"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501767-RdAUTKTQ0TqhWl2fn2Uc",
+        "object": "chat.completion",
+        "created": 1793501767,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "16483",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 203,
+          "completion_tokens": 6,
+          "total_tokens": 209,
+          "cost": 0.000233,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000233,
+            "upstream_inference_prompt_cost": 0.000203,
+            "upstream_inference_completions_cost": 3e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-31742",
+      "thinking_trace": null,
+      "parsed_integer": -31742,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1365.6375000009575,
+      "token_usage": {
+        "prompt_tokens": 226,
+        "completion_tokens": 7,
+        "total_tokens": 233,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-terra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4271"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "83726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "59318",
+            "reasoning": "**Generating random integer**\n\nI need to produce a random integer. I’ve chosen 59318, which seems like an arbitrary pick, but it works for my purpose. I just want to make sure it fits whatever the user might need. This number, while random, feels kind of reliable now, right? Anyway, it’s just a number, but let’s stick with that and move forward!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-2467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71403"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "38612"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-8059"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "94257"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "16483"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501768-T99ndm5nGCq5jZOzC6M5",
+        "object": "chat.completion",
+        "created": 1793501768,
+        "model": "openai/gpt-6.1-terra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "-31742",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 226,
+          "completion_tokens": 7,
+          "total_tokens": 233,
+          "cost": 0.000261,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000261,
+            "upstream_inference_prompt_cost": 0.000226,
+            "upstream_inference_completions_cost": 3.5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "GPT-6.1 Terra (max)",
+    "provider": "openrouter",
+    "model": "openai/gpt-6.1-terra",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "openai",
+      "terra",
+      "reasoning"
+    ]
+  },
+  "error": null
+}

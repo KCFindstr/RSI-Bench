@@ -1,0 +1,1265 @@
+{
+  "run_id": "398befb767",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:55:54.997735+00:00",
+  "provider": "openrouter",
+  "model": "anthropic/claude-sonnet-5.5",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    482917,
+    739206,
+    65381,
+    917453,
+    204768,
+    573142,
+    826091,
+    347825,
+    691374,
+    158937
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 10044.42680000102,
+  "avg_turn_latency_ms": 1004.442680000102,
+  "total_usage": {
+    "prompt_tokens": 1385,
+    "completion_tokens": 50,
+    "total_tokens": 1435,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "482,917",
+      "thinking_trace": null,
+      "parsed_integer": 482917,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1182.5859000000492,
+      "token_usage": {
+        "prompt_tokens": 26,
+        "completion_tokens": 5,
+        "total_tokens": 31,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501746-aHACKDEPQSsYqClq6a2l",
+        "object": "chat.completion",
+        "created": 1793501746,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "482,917",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 26,
+          "completion_tokens": 5,
+          "total_tokens": 31,
+          "cost": 0.000102,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000102,
+            "upstream_inference_prompt_cost": 5.2e-05,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "739,206",
+      "thinking_trace": null,
+      "parsed_integer": 739206,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1038.61599999982,
+      "token_usage": {
+        "prompt_tokens": 51,
+        "completion_tokens": 5,
+        "total_tokens": 56,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "482,917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501747-sC7f6HYH3ClZi9RhT8aD",
+        "object": "chat.completion",
+        "created": 1793501747,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "739,206",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 51,
+          "completion_tokens": 5,
+          "total_tokens": 56,
+          "cost": 0.000152,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000152,
+            "upstream_inference_prompt_cost": 0.000102,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "65,381",
+      "thinking_trace": null,
+      "parsed_integer": 65381,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 974.5752000017092,
+      "token_usage": {
+        "prompt_tokens": 76,
+        "completion_tokens": 5,
+        "total_tokens": 81,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "482,917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739,206"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501748-gziN52G8xGN8LUbPTNJN",
+        "object": "chat.completion",
+        "created": 1793501748,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "65,381",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 76,
+          "completion_tokens": 5,
+          "total_tokens": 81,
+          "cost": 0.000202,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000202,
+            "upstream_inference_prompt_cost": 0.000152,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "917,453",
+      "thinking_trace": null,
+      "parsed_integer": 917453,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 999.9333999985538,
+      "token_usage": {
+        "prompt_tokens": 101,
+        "completion_tokens": 5,
+        "total_tokens": 106,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "482,917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739,206"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "65,381"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501749-xymHGWBDcrY4fhDlizn0",
+        "object": "chat.completion",
+        "created": 1793501749,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "917,453",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 101,
+          "completion_tokens": 5,
+          "total_tokens": 106,
+          "cost": 0.000252,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000252,
+            "upstream_inference_prompt_cost": 0.000202,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "204,768",
+      "thinking_trace": null,
+      "parsed_integer": 204768,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 969.3471999999019,
+      "token_usage": {
+        "prompt_tokens": 126,
+        "completion_tokens": 5,
+        "total_tokens": 131,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "482,917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739,206"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "65,381"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "917,453"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501750-DwDqE2G55JYU20sW8oBG",
+        "object": "chat.completion",
+        "created": 1793501750,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "204,768",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 126,
+          "completion_tokens": 5,
+          "total_tokens": 131,
+          "cost": 0.000302,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000302,
+            "upstream_inference_prompt_cost": 0.000252,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "573,142",
+      "thinking_trace": null,
+      "parsed_integer": 573142,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1020.3457000006892,
+      "token_usage": {
+        "prompt_tokens": 151,
+        "completion_tokens": 5,
+        "total_tokens": 156,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "482,917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739,206"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "65,381"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "917,453"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "204,768"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501751-c0ZBzGPQI3HlU1yJrYUQ",
+        "object": "chat.completion",
+        "created": 1793501751,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "573,142",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 151,
+          "completion_tokens": 5,
+          "total_tokens": 156,
+          "cost": 0.000352,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000352,
+            "upstream_inference_prompt_cost": 0.000302,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "826,091",
+      "thinking_trace": null,
+      "parsed_integer": 826091,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 961.588699999993,
+      "token_usage": {
+        "prompt_tokens": 176,
+        "completion_tokens": 5,
+        "total_tokens": 181,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "482,917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739,206"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "65,381"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "917,453"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "204,768"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "573,142"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501752-0j94xioXXz3NohnWzgOh",
+        "object": "chat.completion",
+        "created": 1793501752,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "826,091",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 176,
+          "completion_tokens": 5,
+          "total_tokens": 181,
+          "cost": 0.000402,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000402,
+            "upstream_inference_prompt_cost": 0.000352,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "347,825",
+      "thinking_trace": null,
+      "parsed_integer": 347825,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 935.506699999678,
+      "token_usage": {
+        "prompt_tokens": 201,
+        "completion_tokens": 5,
+        "total_tokens": 206,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "482,917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739,206"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "65,381"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "917,453"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "204,768"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "573,142"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "826,091"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501753-8qRZZFEZdtoVew89oR2c",
+        "object": "chat.completion",
+        "created": 1793501753,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "347,825",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 201,
+          "completion_tokens": 5,
+          "total_tokens": 206,
+          "cost": 0.000452,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000452,
+            "upstream_inference_prompt_cost": 0.000402,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "691,374",
+      "thinking_trace": null,
+      "parsed_integer": 691374,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 956.7511000004743,
+      "token_usage": {
+        "prompt_tokens": 226,
+        "completion_tokens": 5,
+        "total_tokens": 231,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "482,917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739,206"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "65,381"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "917,453"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "204,768"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "573,142"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "826,091"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "347,825"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501754-eJoQuta9Kdu5EDZMYxE2",
+        "object": "chat.completion",
+        "created": 1793501754,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "691,374",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 226,
+          "completion_tokens": 5,
+          "total_tokens": 231,
+          "cost": 0.000502,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000502,
+            "upstream_inference_prompt_cost": 0.000452,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "158,937",
+      "thinking_trace": null,
+      "parsed_integer": 158937,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1005.1769000001514,
+      "token_usage": {
+        "prompt_tokens": 251,
+        "completion_tokens": 5,
+        "total_tokens": 256,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-sonnet-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "482,917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "739,206"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "65,381"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "917,453"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "204,768"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "573,142"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "826,091"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "347,825"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "691,374"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501755-zK39sSnHKkxxEiu4VxDW",
+        "object": "chat.completion",
+        "created": 1793501755,
+        "model": "anthropic/claude-sonnet-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "158,937",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 251,
+          "completion_tokens": 5,
+          "total_tokens": 256,
+          "cost": 0.000552,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000552,
+            "upstream_inference_prompt_cost": 0.000502,
+            "upstream_inference_completions_cost": 5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Claude Sonnet 5.5 (max with fallback)",
+    "provider": "openrouter",
+    "model": "anthropic/claude-sonnet-5.5",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "anthropic",
+      "sonnet",
+      "reasoning"
+    ]
+  },
+  "error": null
+}

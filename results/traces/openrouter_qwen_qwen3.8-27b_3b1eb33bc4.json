@@ -1,0 +1,1389 @@
+{
+  "run_id": "3b1eb33bc4",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T03:05:57.652157+00:00",
+  "provider": "openrouter",
+  "model": "qwen/qwen3.8-27b",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    47,
+    -83,
+    2047,
+    -15,
+    7,
+    102,
+    -3,
+    5,
+    94,
+    -6
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 3723.7920999996277,
+  "avg_turn_latency_ms": 372.37920999996277,
+  "total_usage": {
+    "prompt_tokens": 2115,
+    "completion_tokens": 189,
+    "total_tokens": 2304,
+    "cached_tokens": 768,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 156
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "47",
+      "thinking_trace": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n",
+      "parsed_integer": 47,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 353.2915000014327,
+      "token_usage": {
+        "prompt_tokens": 21,
+        "completion_tokens": 27,
+        "total_tokens": 48,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 24
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502355-tXcsyz6uZapWmbOxnfes",
+        "object": "chat.completion",
+        "created": 1793502355,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "47",
+              "refusal": null,
+              "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 21,
+          "completion_tokens": 27,
+          "total_tokens": 48,
+          "cost": 7.17e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 7.17e-05,
+            "upstream_inference_prompt_cost": 4.2e-06,
+            "upstream_inference_completions_cost": 6.75e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 24,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-83",
+      "thinking_trace": "The user wants a random integer with no other output.\n",
+      "parsed_integer": -83,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 278.1058000000485,
+      "token_usage": {
+        "prompt_tokens": 70,
+        "completion_tokens": 18,
+        "total_tokens": 88,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502355-4rNaSGMHzIJwGLgOZLw2",
+        "object": "chat.completion",
+        "created": 1793502355,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-83",
+              "refusal": null,
+              "reasoning": "The user wants a random integer with no other output.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer with no other output.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 70,
+          "completion_tokens": 18,
+          "total_tokens": 88,
+          "cost": 5.9e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 5.9e-05,
+            "upstream_inference_prompt_cost": 1.4e-05,
+            "upstream_inference_completions_cost": 4.5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "2047",
+      "thinking_trace": "The user wants a random integer and nothing else.\n",
+      "parsed_integer": 2047,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 341.73529999861785,
+      "token_usage": {
+        "prompt_tokens": 110,
+        "completion_tokens": 18,
+        "total_tokens": 128,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 13
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-83",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502355-yYNVYyL6TXahMRPABgnf",
+        "object": "chat.completion",
+        "created": 1793502355,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "2047",
+              "refusal": null,
+              "reasoning": "The user wants a random integer and nothing else.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer and nothing else.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 110,
+          "completion_tokens": 18,
+          "total_tokens": 128,
+          "cost": 6.7e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 6.7e-05,
+            "upstream_inference_prompt_cost": 2.2e-05,
+            "upstream_inference_completions_cost": 4.5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 13,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-15",
+      "thinking_trace": "The user wants a random integer with no other output.\n",
+      "parsed_integer": -15,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 693.6188999989099,
+      "token_usage": {
+        "prompt_tokens": 150,
+        "completion_tokens": 18,
+        "total_tokens": 168,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-83",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2047",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502356-5xFeajqLCCoqnJR8lFMF",
+        "object": "chat.completion",
+        "created": 1793502356,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-15",
+              "refusal": null,
+              "reasoning": "The user wants a random integer with no other output.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer with no other output.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 150,
+          "completion_tokens": 18,
+          "total_tokens": 168,
+          "cost": 7.5e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 7.5e-05,
+            "upstream_inference_prompt_cost": 3e-05,
+            "upstream_inference_completions_cost": 4.5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7",
+      "thinking_trace": "The user wants a random integer and nothing else. I'll just output a number.\n",
+      "parsed_integer": 7,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 297.95220000050904,
+      "token_usage": {
+        "prompt_tokens": 190,
+        "completion_tokens": 22,
+        "total_tokens": 212,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 20
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-83",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2047",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-15",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502356-yyl2FZNjcuMPMLqF72pT",
+        "object": "chat.completion",
+        "created": 1793502356,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "7",
+              "refusal": null,
+              "reasoning": "The user wants a random integer and nothing else. I'll just output a number.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer and nothing else. I'll just output a number.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 190,
+          "completion_tokens": 22,
+          "total_tokens": 212,
+          "cost": 9.3e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 9.3e-05,
+            "upstream_inference_prompt_cost": 3.8e-05,
+            "upstream_inference_completions_cost": 5.5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 20,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "102",
+      "thinking_trace": "The user wants a random integer and nothing else. I'll pick one.\n",
+      "parsed_integer": 102,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 385.23539999914647,
+      "token_usage": {
+        "prompt_tokens": 234,
+        "completion_tokens": 22,
+        "total_tokens": 256,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 18
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-83",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2047",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-15",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "The user wants a random integer and nothing else. I'll just output a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502357-8sWHqqUzVcvmTmIsVPoq",
+        "object": "chat.completion",
+        "created": 1793502357,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "102",
+              "refusal": null,
+              "reasoning": "The user wants a random integer and nothing else. I'll pick one.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer and nothing else. I'll pick one.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 234,
+          "completion_tokens": 22,
+          "total_tokens": 256,
+          "cost": 0.0001018,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001018,
+            "upstream_inference_prompt_cost": 4.68e-05,
+            "upstream_inference_completions_cost": 5.5e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 18,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-3",
+      "thinking_trace": "The user wants a random integer and nothing else.\n",
+      "parsed_integer": -3,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 344.793700000082,
+      "token_usage": {
+        "prompt_tokens": 278,
+        "completion_tokens": 16,
+        "total_tokens": 294,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 13
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-83",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2047",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-15",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "The user wants a random integer and nothing else. I'll just output a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "102",
+            "reasoning": "The user wants a random integer and nothing else. I'll pick one.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502357-Onri0nWgi8bfpVyNifr5",
+        "object": "chat.completion",
+        "created": 1793502357,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-3",
+              "refusal": null,
+              "reasoning": "The user wants a random integer and nothing else.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer and nothing else.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 278,
+          "completion_tokens": 16,
+          "total_tokens": 294,
+          "cost": 9.56e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 9.56e-05,
+            "upstream_inference_prompt_cost": 5.56e-05,
+            "upstream_inference_completions_cost": 4e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 13,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "5",
+      "thinking_trace": "The user wants a random integer with no other output.\n",
+      "parsed_integer": 5,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 391.28489999893645,
+      "token_usage": {
+        "prompt_tokens": 316,
+        "completion_tokens": 16,
+        "total_tokens": 332,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-83",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2047",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-15",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "The user wants a random integer and nothing else. I'll just output a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "102",
+            "reasoning": "The user wants a random integer and nothing else. I'll pick one.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-3",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502357-K8GAge9qhYLkAz9JNQLS",
+        "object": "chat.completion",
+        "created": 1793502357,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "5",
+              "refusal": null,
+              "reasoning": "The user wants a random integer with no other output.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer with no other output.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 316,
+          "completion_tokens": 16,
+          "total_tokens": 332,
+          "cost": 7.504e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 7.504e-05,
+            "upstream_inference_prompt_cost": 3.504e-05,
+            "upstream_inference_completions_cost": 4e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "94",
+      "thinking_trace": "The user wants a random integer and nothing else.\n",
+      "parsed_integer": 94,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 325.67180000114604,
+      "token_usage": {
+        "prompt_tokens": 354,
+        "completion_tokens": 16,
+        "total_tokens": 370,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 13
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-83",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2047",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-15",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "The user wants a random integer and nothing else. I'll just output a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "102",
+            "reasoning": "The user wants a random integer and nothing else. I'll pick one.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-3",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502358-uuf4tu2NBgOixXwKZoVI",
+        "object": "chat.completion",
+        "created": 1793502358,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "94",
+              "refusal": null,
+              "reasoning": "The user wants a random integer and nothing else.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer and nothing else.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 354,
+          "completion_tokens": 16,
+          "total_tokens": 370,
+          "cost": 8.264e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 8.264e-05,
+            "upstream_inference_prompt_cost": 4.264e-05,
+            "upstream_inference_completions_cost": 4e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 13,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-6",
+      "thinking_trace": "The user wants a random integer and nothing else.\n",
+      "parsed_integer": -6,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 312.1026000007987,
+      "token_usage": {
+        "prompt_tokens": 392,
+        "completion_tokens": 16,
+        "total_tokens": 408,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 13
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-27b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants me to generate a random integer and output nothing else. I'll just pick a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-83",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2047",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-15",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "The user wants a random integer and nothing else. I'll just output a number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "102",
+            "reasoning": "The user wants a random integer and nothing else. I'll pick one.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-3",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5",
+            "reasoning": "The user wants a random integer with no other output.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "94",
+            "reasoning": "The user wants a random integer and nothing else.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502358-gMlFpvUi85sxmcdiIqIP",
+        "object": "chat.completion",
+        "created": 1793502358,
+        "model": "qwen/qwen3.8-27b",
+        "provider": "ModelRun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-6",
+              "refusal": null,
+              "reasoning": "The user wants a random integer and nothing else.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer and nothing else.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 392,
+          "completion_tokens": 16,
+          "total_tokens": 408,
+          "cost": 9.024e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 9.024e-05,
+            "upstream_inference_prompt_cost": 5.024e-05,
+            "upstream_inference_completions_cost": 4e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 13,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Qwen3.8 27B (xhigh)",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.8-27b",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 24000,
+    "thinking_level": "xhigh",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "alibaba",
+      "qwen"
+    ]
+  },
+  "error": null
+}

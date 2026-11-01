@@ -1,0 +1,1390 @@
+{
+  "run_id": "6364a30866",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:58:54.008302+00:00",
+  "provider": "openrouter",
+  "model": "qwen/qwen3.8-max-0902",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    42,
+    7,
+    13,
+    9,
+    57,
+    3,
+    81,
+    24,
+    65,
+    49
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 22458.05069999915,
+  "avg_turn_latency_ms": 2245.805069999915,
+  "total_usage": {
+    "prompt_tokens": 3529,
+    "completion_tokens": 335,
+    "total_tokens": 3864,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 292
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "42",
+      "thinking_trace": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n",
+      "parsed_integer": 42,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2845.339299999978,
+      "token_usage": {
+        "prompt_tokens": 72,
+        "completion_tokens": 59,
+        "total_tokens": 131,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 54
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501912-N0FHyK9dwPhP3cKkXWjR",
+        "object": "chat.completion",
+        "created": 1793501912,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "42",
+              "refusal": null,
+              "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 72,
+          "completion_tokens": 59,
+          "total_tokens": 131,
+          "cost": 0.000498,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000498,
+            "upstream_inference_prompt_cost": 0.000144,
+            "upstream_inference_completions_cost": 0.000354
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 54,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7",
+      "thinking_trace": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number.",
+      "parsed_integer": 7,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2990.0253000014345,
+      "token_usage": {
+        "prompt_tokens": 154,
+        "completion_tokens": 44,
+        "total_tokens": 198,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 41
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501915-7PnIP5CvU3zspYrBDazw",
+        "object": "chat.completion",
+        "created": 1793501915,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "7",
+              "refusal": null,
+              "reasoning": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 154,
+          "completion_tokens": 44,
+          "total_tokens": 198,
+          "cost": 0.000572,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000572,
+            "upstream_inference_prompt_cost": 0.000308,
+            "upstream_inference_completions_cost": 0.000264
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 41,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "13",
+      "thinking_trace": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra.",
+      "parsed_integer": 13,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2456.972699999824,
+      "token_usage": {
+        "prompt_tokens": 222,
+        "completion_tokens": 37,
+        "total_tokens": 259,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 32
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501918-X8Nh8RqyMsRkqv4vNqMk",
+        "object": "chat.completion",
+        "created": 1793501918,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "13",
+              "refusal": null,
+              "reasoning": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 222,
+          "completion_tokens": 37,
+          "total_tokens": 259,
+          "cost": 0.000666,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000666,
+            "upstream_inference_prompt_cost": 0.000444,
+            "upstream_inference_completions_cost": 0.000222
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 32,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "9",
+      "thinking_trace": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need only final integer. Need maybe choose arbitrary. Final only number.\n",
+      "parsed_integer": 9,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2143.8885999996273,
+      "token_usage": {
+        "prompt_tokens": 282,
+        "completion_tokens": 37,
+        "total_tokens": 319,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 33
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "13",
+            "reasoning": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501921-is8iwyRjKzSorEQgA89q",
+        "object": "chat.completion",
+        "created": 1793501921,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "9",
+              "refusal": null,
+              "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need only final integer. Need maybe choose arbitrary. Final only number.\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need only final integer. Need maybe choose arbitrary. Final only number.\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 282,
+          "completion_tokens": 37,
+          "total_tokens": 319,
+          "cost": 0.000786,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000786,
+            "upstream_inference_prompt_cost": 0.000564,
+            "upstream_inference_completions_cost": 0.000222
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 33,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "57",
+      "thinking_trace": "We need answer only integer. Need maybe choose random. Final only number. Let's pick 57? Ensure no newline? Probably okay.",
+      "parsed_integer": 57,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2399.7803999991447,
+      "token_usage": {
+        "prompt_tokens": 342,
+        "completion_tokens": 33,
+        "total_tokens": 375,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 29
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "13",
+            "reasoning": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need only final integer. Need maybe choose arbitrary. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501923-GC9kQxMVsD5SE6QFA3i8",
+        "object": "chat.completion",
+        "created": 1793501923,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "57",
+              "refusal": null,
+              "reasoning": "We need answer only integer. Need maybe choose random. Final only number. Let's pick 57? Ensure no newline? Probably okay.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer only integer. Need maybe choose random. Final only number. Let's pick 57? Ensure no newline? Probably okay.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 342,
+          "completion_tokens": 33,
+          "total_tokens": 375,
+          "cost": 0.000882,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000882,
+            "upstream_inference_prompt_cost": 0.000684,
+            "upstream_inference_completions_cost": 0.000198
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 29,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "3",
+      "thinking_trace": "We need answer only integer. Need maybe choose random. Final only number.",
+      "parsed_integer": 3,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1771.59009999923,
+      "token_usage": {
+        "prompt_tokens": 399,
+        "completion_tokens": 18,
+        "total_tokens": 417,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 15
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "13",
+            "reasoning": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need only final integer. Need maybe choose arbitrary. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "57",
+            "reasoning": "We need answer only integer. Need maybe choose random. Final only number. Let's pick 57? Ensure no newline? Probably okay."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501925-IlCz4yvPgMDGUyB1e7yk",
+        "object": "chat.completion",
+        "created": 1793501925,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "3",
+              "refusal": null,
+              "reasoning": "We need answer only integer. Need maybe choose random. Final only number.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer only integer. Need maybe choose random. Final only number.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 399,
+          "completion_tokens": 18,
+          "total_tokens": 417,
+          "cost": 0.000906,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000906,
+            "upstream_inference_prompt_cost": 0.000798,
+            "upstream_inference_completions_cost": 0.000108
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 15,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "81",
+      "thinking_trace": "We need answer only integer. Need pick random. Final only integer. Maybe 81.",
+      "parsed_integer": 81,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1697.487600000386,
+      "token_usage": {
+        "prompt_tokens": 441,
+        "completion_tokens": 24,
+        "total_tokens": 465,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 19
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "13",
+            "reasoning": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need only final integer. Need maybe choose arbitrary. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "57",
+            "reasoning": "We need answer only integer. Need maybe choose random. Final only number. Let's pick 57? Ensure no newline? Probably okay."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3",
+            "reasoning": "We need answer only integer. Need maybe choose random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501927-RMNGHV1Jr3OaEFEBn0b6",
+        "object": "chat.completion",
+        "created": 1793501927,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "81",
+              "refusal": null,
+              "reasoning": "We need answer only integer. Need pick random. Final only integer. Maybe 81.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer only integer. Need pick random. Final only integer. Maybe 81.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 441,
+          "completion_tokens": 24,
+          "total_tokens": 465,
+          "cost": 0.001026,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001026,
+            "upstream_inference_prompt_cost": 0.000882,
+            "upstream_inference_completions_cost": 0.000144
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 19,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "24",
+      "thinking_trace": "We need answer only integer. Need maybe random. Final only number. Let's pick 24? Ensure no extra.",
+      "parsed_integer": 24,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1632.6852000001963,
+      "token_usage": {
+        "prompt_tokens": 488,
+        "completion_tokens": 29,
+        "total_tokens": 517,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 25
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "13",
+            "reasoning": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need only final integer. Need maybe choose arbitrary. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "57",
+            "reasoning": "We need answer only integer. Need maybe choose random. Final only number. Let's pick 57? Ensure no newline? Probably okay."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3",
+            "reasoning": "We need answer only integer. Need maybe choose random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "81",
+            "reasoning": "We need answer only integer. Need pick random. Final only integer. Maybe 81."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501929-5kkn9Bx8bEIboliLKaPx",
+        "object": "chat.completion",
+        "created": 1793501929,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "24",
+              "refusal": null,
+              "reasoning": "We need answer only integer. Need maybe random. Final only number. Let's pick 24? Ensure no extra.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer only integer. Need maybe random. Final only number. Let's pick 24? Ensure no extra.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 488,
+          "completion_tokens": 29,
+          "total_tokens": 517,
+          "cost": 0.00115,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00115,
+            "upstream_inference_prompt_cost": 0.000976,
+            "upstream_inference_completions_cost": 0.000174
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 25,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "65",
+      "thinking_trace": "We need answer only integer. Need pick random. Final only number. Maybe 65.",
+      "parsed_integer": 65,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2013.043299999481,
+      "token_usage": {
+        "prompt_tokens": 541,
+        "completion_tokens": 24,
+        "total_tokens": 565,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 19
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "13",
+            "reasoning": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need only final integer. Need maybe choose arbitrary. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "57",
+            "reasoning": "We need answer only integer. Need maybe choose random. Final only number. Let's pick 57? Ensure no newline? Probably okay."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3",
+            "reasoning": "We need answer only integer. Need maybe choose random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "81",
+            "reasoning": "We need answer only integer. Need pick random. Final only integer. Maybe 81."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "24",
+            "reasoning": "We need answer only integer. Need maybe random. Final only number. Let's pick 24? Ensure no extra."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501930-c91CA1jCzvIXOU01mDTV",
+        "object": "chat.completion",
+        "created": 1793501930,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "65",
+              "refusal": null,
+              "reasoning": "We need answer only integer. Need pick random. Final only number. Maybe 65.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer only integer. Need pick random. Final only number. Maybe 65.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 541,
+          "completion_tokens": 24,
+          "total_tokens": 565,
+          "cost": 0.001226,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001226,
+            "upstream_inference_prompt_cost": 0.001082,
+            "upstream_inference_completions_cost": 0.000144
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 19,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "49",
+      "thinking_trace": "We need answer only integer. Need maybe random. Final only number. Let's pick 49? Ensure no extra.",
+      "parsed_integer": 49,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2507.238199999847,
+      "token_usage": {
+        "prompt_tokens": 588,
+        "completion_tokens": 30,
+        "total_tokens": 618,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 25
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba"
+      },
+      "raw_request": {
+        "model": "qwen/qwen3.8-max-0902",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need final only integer. Need maybe pick random integer. Could be any. Ensure only integer no extra. Let's output 42? Random-ish. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7",
+            "reasoning": "We need answer user's request: generate random integer and output nothing else. Need final only integer. Could choose arbitrary. Ensure no extra. Let's output 7? Maybe random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "13",
+            "reasoning": "Need respond only integer. Need maybe choose random. Need final only integer. Let's pick 13? Or maybe 84. Ensure no extra."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9",
+            "reasoning": "We need answer user's request: \"Generate a random integer. Do NOT output anything else.\" Need only final integer. Need maybe choose arbitrary. Final only number.\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "57",
+            "reasoning": "We need answer only integer. Need maybe choose random. Final only number. Let's pick 57? Ensure no newline? Probably okay."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3",
+            "reasoning": "We need answer only integer. Need maybe choose random. Final only number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "81",
+            "reasoning": "We need answer only integer. Need pick random. Final only integer. Maybe 81."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "24",
+            "reasoning": "We need answer only integer. Need maybe random. Final only number. Let's pick 24? Ensure no extra."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "65",
+            "reasoning": "We need answer only integer. Need pick random. Final only number. Maybe 65."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501932-NaZvGdpPZOjMq0P4T4Uf",
+        "object": "chat.completion",
+        "created": 1793501932,
+        "model": "qwen/qwen3.8-max-0902",
+        "provider": "Alibaba",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "49",
+              "refusal": null,
+              "reasoning": "We need answer only integer. Need maybe random. Final only number. Let's pick 49? Ensure no extra.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer only integer. Need maybe random. Final only number. Let's pick 49? Ensure no extra.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 588,
+          "completion_tokens": 30,
+          "total_tokens": 618,
+          "cost": 0.001356,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001356,
+            "upstream_inference_prompt_cost": 0.001176,
+            "upstream_inference_completions_cost": 0.00018
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 25,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Qwen3.8 Max (0902)",
+    "provider": "openrouter",
+    "model": "qwen/qwen3.8-max-0902",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "alibaba",
+      "qwen",
+      "max"
+    ]
+  },
+  "error": null
+}

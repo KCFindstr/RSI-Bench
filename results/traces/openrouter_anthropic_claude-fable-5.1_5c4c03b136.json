@@ -1,0 +1,1264 @@
+{
+  "run_id": "5c4c03b136",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:57:16.803953+00:00",
+  "provider": "openrouter",
+  "model": "anthropic/claude-fable-5.1",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    7342,
+    4817,
+    2956,
+    8103,
+    5291,
+    1764,
+    6038,
+    3579,
+    9427,
+    2615
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 12362.217500001861,
+  "avg_turn_latency_ms": 1236.2217500001861,
+  "total_usage": {
+    "prompt_tokens": 1340,
+    "completion_tokens": 40,
+    "total_tokens": 1380,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7342",
+      "thinking_trace": null,
+      "parsed_integer": 7342,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1109.690800001772,
+      "token_usage": {
+        "prompt_tokens": 26,
+        "completion_tokens": 4,
+        "total_tokens": 30,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501825-xl1bow9HOvcPNEjCxjT5",
+        "object": "chat.completion",
+        "created": 1793501825,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "7342",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 26,
+          "completion_tokens": 4,
+          "total_tokens": 30,
+          "cost": 0.00046,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00046,
+            "upstream_inference_prompt_cost": 0.00026,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "4817",
+      "thinking_trace": null,
+      "parsed_integer": 4817,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1331.1125000000175,
+      "token_usage": {
+        "prompt_tokens": 50,
+        "completion_tokens": 4,
+        "total_tokens": 54,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7342"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501826-eszmzs2dOtOg7fXfjmAu",
+        "object": "chat.completion",
+        "created": 1793501826,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "4817",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 50,
+          "completion_tokens": 4,
+          "total_tokens": 54,
+          "cost": 0.0007,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0007,
+            "upstream_inference_prompt_cost": 0.0005,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "2956",
+      "thinking_trace": null,
+      "parsed_integer": 2956,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1154.6543000004021,
+      "token_usage": {
+        "prompt_tokens": 74,
+        "completion_tokens": 4,
+        "total_tokens": 78,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7342"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4817"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501828-FBPU1sa8RmYgvVoZgTGS",
+        "object": "chat.completion",
+        "created": 1793501828,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "2956",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 74,
+          "completion_tokens": 4,
+          "total_tokens": 78,
+          "cost": 0.00094,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00094,
+            "upstream_inference_prompt_cost": 0.00074,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "8103",
+      "thinking_trace": null,
+      "parsed_integer": 8103,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1332.6144999991811,
+      "token_usage": {
+        "prompt_tokens": 98,
+        "completion_tokens": 4,
+        "total_tokens": 102,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7342"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4817"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2956"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501829-HZcoUu4dbYNfgekAkSVe",
+        "object": "chat.completion",
+        "created": 1793501829,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "8103",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 98,
+          "completion_tokens": 4,
+          "total_tokens": 102,
+          "cost": 0.00118,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00118,
+            "upstream_inference_prompt_cost": 0.00098,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "5291",
+      "thinking_trace": null,
+      "parsed_integer": 5291,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1002.1682000005967,
+      "token_usage": {
+        "prompt_tokens": 122,
+        "completion_tokens": 4,
+        "total_tokens": 126,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7342"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4817"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2956"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8103"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501830-xk5phU66cZYbDgfJrw1o",
+        "object": "chat.completion",
+        "created": 1793501830,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "5291",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 122,
+          "completion_tokens": 4,
+          "total_tokens": 126,
+          "cost": 0.00142,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00142,
+            "upstream_inference_prompt_cost": 0.00122,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "1764",
+      "thinking_trace": null,
+      "parsed_integer": 1764,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1398.5157999995863,
+      "token_usage": {
+        "prompt_tokens": 146,
+        "completion_tokens": 4,
+        "total_tokens": 150,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7342"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4817"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2956"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8103"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501831-9yfraCcUxe8ghTmkVWQa",
+        "object": "chat.completion",
+        "created": 1793501831,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "1764",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 4,
+          "total_tokens": 150,
+          "cost": 0.00166,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00166,
+            "upstream_inference_prompt_cost": 0.00146,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "6038",
+      "thinking_trace": null,
+      "parsed_integer": 6038,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1079.9504999995406,
+      "token_usage": {
+        "prompt_tokens": 170,
+        "completion_tokens": 4,
+        "total_tokens": 174,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7342"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4817"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2956"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8103"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1764"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501832-NqYNwDXXML0Yyp1mXYJW",
+        "object": "chat.completion",
+        "created": 1793501833,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "6038",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 170,
+          "completion_tokens": 4,
+          "total_tokens": 174,
+          "cost": 0.0019,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0019,
+            "upstream_inference_prompt_cost": 0.0017,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "3579",
+      "thinking_trace": null,
+      "parsed_integer": 3579,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1192.8281000000425,
+      "token_usage": {
+        "prompt_tokens": 194,
+        "completion_tokens": 4,
+        "total_tokens": 198,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7342"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4817"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2956"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8103"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1764"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6038"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501834-lXJJ3CdlkcQo5BIYgiHm",
+        "object": "chat.completion",
+        "created": 1793501834,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "3579",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 194,
+          "completion_tokens": 4,
+          "total_tokens": 198,
+          "cost": 0.00214,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00214,
+            "upstream_inference_prompt_cost": 0.00194,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "9427",
+      "thinking_trace": null,
+      "parsed_integer": 9427,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1699.025600000823,
+      "token_usage": {
+        "prompt_tokens": 218,
+        "completion_tokens": 4,
+        "total_tokens": 222,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7342"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4817"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2956"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8103"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1764"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6038"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3579"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501835-GP2fJGl8JAK3guslVUDq",
+        "object": "chat.completion",
+        "created": 1793501835,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "9427",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 218,
+          "completion_tokens": 4,
+          "total_tokens": 222,
+          "cost": 0.00238,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00238,
+            "upstream_inference_prompt_cost": 0.00218,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "2615",
+      "thinking_trace": null,
+      "parsed_integer": 2615,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1061.6571999998996,
+      "token_usage": {
+        "prompt_tokens": 242,
+        "completion_tokens": 4,
+        "total_tokens": 246,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-fable-5.1",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7342"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4817"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2956"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8103"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1764"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6038"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3579"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9427"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501836-y2lqmk9hc4nMhfQjvcOm",
+        "object": "chat.completion",
+        "created": 1793501836,
+        "model": "anthropic/claude-fable-5.1",
+        "provider": "Anthropic",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "2615",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 242,
+          "completion_tokens": 4,
+          "total_tokens": 246,
+          "cost": 0.00262,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00262,
+            "upstream_inference_prompt_cost": 0.00242,
+            "upstream_inference_completions_cost": 0.0002
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Claude Fable 5.1 (max with fallback)",
+    "provider": "openrouter",
+    "model": "anthropic/claude-fable-5.1",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "anthropic",
+      "fable"
+    ]
+  },
+  "error": null
+}

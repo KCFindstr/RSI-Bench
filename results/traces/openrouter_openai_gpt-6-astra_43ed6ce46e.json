@@ -1,0 +1,1351 @@
+{
+  "run_id": "43ed6ce46e",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:55:29.365852+00:00",
+  "provider": "openrouter",
+  "model": "openai/gpt-6-astra",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    71843,
+    29467,
+    58391,
+    86204,
+    43726,
+    90518,
+    17639,
+    62805,
+    34972,
+    51486
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 17581.309499997587,
+  "avg_turn_latency_ms": 1758.1309499997587,
+  "total_usage": {
+    "prompt_tokens": 1205,
+    "completion_tokens": 196,
+    "total_tokens": 1401,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 120
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "71843",
+      "thinking_trace": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!",
+      "parsed_integer": 71843,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2683.2845999997517,
+      "token_usage": {
+        "prompt_tokens": 17,
+        "completion_tokens": 28,
+        "total_tokens": 45,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 20
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501713-BOfNG44eIcCBkwpsgq5e",
+        "object": "chat.completion",
+        "created": 1793501713,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "71843",
+              "refusal": null,
+              "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!",
+                  "format": "openai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qoS7v_cldzQXThZeJr0EwBZW1q-8IEMHOgCE36JSdzBcjJZ0v3WjV3IBpo0OmtPBCLde31Qy4nEzZhM2ZF7Zc0gD87hn-9CVypR0blRMzRD99XeQzprXhr0nZAFv1QhjeIXy_45PHQGePG4x1Wdm9f60GlcREQv0SblHKzZL6QwcE2GQqcPwOthcxXdBeC_KfydQgJ-yGJ1zFDIl_zzlavHRxrypiwpHw0rcJ4KIOygCyKhbmKgDVeXkLuH593fxyK89Iu0QgE_SdY1rMJQ5RbM4N6P3wrR4gS4mr1d3n4bBic_RNiHVRzeoPJQUgmz1xRfUCprowZ1s7YcJRWMHfBiz59V4ybSBpxID5RFu5GZZaX_XYVmMTbM7Y0kPkgvKRdhRzD2LiRc3aakC810WZkDDwSjHsErnQmR6mGtT_B6BY7GgbXz8gcLWP6a5KDahYgreOfMCQ46SSMi3GwCZ67EOzrHapMQcNbBjozn_CjjnClwQCkFDVN3X46y2kSi1-cxcZ6BQcg_Q0xTSUzUfVnfW6Wr1NR_JAJjVqDKOasUmB_exHQF5P_0c8JFRG1j5c44XC4gTPVdcKK7e-5vhbn5yRG-SOLa-PjzKu-wuTrwBXwKmdv9JaIkrj5WPcInopSt7fwxjtcRbJDSSQaPh3gZbkgUKjdIoxPqa27FcrwY5qtoWCxzduJg3y0lR0HiiVI7r_D2oaYNYcuPePSznkKOgeJUwj5mTrKLd3s4sxi1IpkyvUksUpVBQhOzytfCwMcVEHTZhX9HumGFhn0Xt555eRRQMFqRi4xzpF66zG1fD2jRrz-eJimM9R1fjZRR6XkBldCV5w2jay3CWj-WMgIS3nvETrtOse_VF2dmAXsMl1XWyR1tTnOzatwLf6i15ZvLPg9g7UTElwNQ545fcjEGD1wANUwJp1BBuoMX51mtDwLLjalut0-dHmPGz5TgZBalM57wA8Eq7emYEmBE1g8JohHviPv9mEnoXjGJt-LufYVfy_Tt53IidF5XaRSt8pPwpFgNmPIQ5auOXohzn90mZGDsgO6duYb5j-ojaX9ieEU8udui1qRTqLmbKGxxSgnMT1R9tigLPtu30jvcRS9o1jkCBrNB5M84o25gg7W0pIM2PH6T3ShW5vVOlpUJ27hVrRoAjeiblM7GK0s6b_rdeDCQZo4YZlu08DgHD0fv-Bg6j3wx0u1ARi7g8WB6wjPyPrJk0MIpNhQmqgYx4Ty9UlFWIWIkAuQqXEg504MTILmEyJOY0g4_79B--mq1VaqgKpVSGBWcA-MmeTbxZsubxsrnZ6M0Ti3592vgOx_aNB8vwqm07fPkyxbWZsgrR6UCoe8dqwj-9Px-ZStI6IX9KSQeqsulOlcPQZGcH3SW339LcNqwa-Glb2pRBgX_usFjVY1yQh4gLjJCA6qJNKQ09ld5rw46IYxV9mMNccmXZcqwinAzAlnv7Bo6Cwh3mxQthLh8hRMPfAY7NlKZb-KXP1SdJJWn-ZynA7NMUm-kKpdHkUonHLb3RUnfq5RikSUNGFbdAQEdjQFt5WVKzpcaKAQhG9SqPcN03WoU1nh-Fw0yofopm89blNZMrNdzVOhxWzxy8DCN2xj2JSHxv7-UJ5IkAEDVDJK79o4B4jAqBmtvW5UD3U_-FJdl8jSAz-X8MDWhf00d7pUzttgbJ0y7-0Aqc4Naa8x2zY4QnA3Ni3P8gnRsDgn3l3UDHDBcG0M8fCwzHNKp1ZwgkuNtPZXUAAxY4Pi0SR8ixJLhnWFttfQOeaz6fwt7qPcbLo39CwidXA7T8iUanx_vSwpzQEEs8Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_00865f3311334838016ae6aa1226b487d1a4d315e4ad051d82",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 17,
+          "completion_tokens": 28,
+          "total_tokens": 45,
+          "cost": 0.00157,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00157,
+            "upstream_inference_prompt_cost": 0.00017,
+            "upstream_inference_completions_cost": 0.0014
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 20,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "29467",
+      "thinking_trace": null,
+      "parsed_integer": 29467,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1773.1814999988273,
+      "token_usage": {
+        "prompt_tokens": 40,
+        "completion_tokens": 18,
+        "total_tokens": 58,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 10
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71843",
+            "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501715-lN318yWOMyP1TPQLwsSI",
+        "object": "chat.completion",
+        "created": 1793501715,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "29467",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qoVyPgbk20CyRoSHXlti-QdNsaWTUsz_U2J8nOkML3FtG4ASMwNwoj0UiQ49Dbt6FZMq-C9TMD1v2mL94mj9AOR3b1zVEFSDQe7tlwaUsEbh3y7P06DSNaYbrmgryiho-8wXdf5V9howfTLNil9UO32QK8mOJsMpycQuoHenF9aYLsEt9Ui4-LrL-H1EP4X4XQZAwOdGaXKkK7rShmEQJ-s63kiBO8gmH7Iwj2ocd5QYBVDxrtC7Xo_J-JKTmDccdUThWGYI53klbkCvvqe2l5UHrYky466B0r9QgAgwvK_sOA-iEZqXmowl7SWihgMMM7flJ-sOriPhXJo4RL7AiUtVjX8T8pFasr69iT_LeIKaf72xp8om-XlFs2MnL60cnb4TQ3LS1WfirPJKTK3GJDInj3CZTUrJlVclur6HlPgP1CP3ctKK80YnRsJ1zbOOKzedWV4-VTdAzYDQpy13gxbtzjBUyIxBz47IZ0r9CtYtQ0rWYCwoOSB2vj5xMPadWMgHwgskarpS7CemP8n6pes11he9bbI1fWnk0WaTI-nPQ4i-P9SaSj4msWaDhKPPx8c1e5XiE_QVJDl-ZxpPBoUBTpp992pxMr08-MmM62_P3fYn36_DPks3LrO5mFoR1Wj41S34sKt92Imq9WOOwUeHHJIbfPW_Q2Prgt11hp5cGnuk8DxeDH1XRfHkUOVUc3sLK7eKUOH5cG-h8a7BWLeKqs_Yqcql12nyW3NHZ9VGSjI4Og712g7mtRcvA7NW5AAKCTKlzPxQtUlqX249Zu5YqcH_edemMtZ_9sWAQsc8cv0EwiCwgsWia23hTymO_SEEdvH4qRfC0Nb2oasyCkZ9S2EmFbVF4a1wfnoOD3atUz9Q2GbWau6JEEN8fIDdoGIlvNOpc7ieL80k7kv-BzcLDK0XSogBTJgyCz3jPBIVt0fFuC-DvOVUt3jzh8vKiaMTaq1EB3pv2QRRdgzfhJzI-kPK_sHIHTuQy9caq02KOWwg5y1w12B2Omk5SwiuMm2YoFFmFMkkn_gU2ZzIHZFa0vd2OS1ZwBtWhOGPmO3_tlBBB9J8DUAoamUzBngGN7HgnMtJEkzQ_a1SsCFqiUuWXdrstwHlLo7OpslRoNKtA6MHFpe8OIOvrmwfz1pDra5yVPHm76OJ3c8o7kP_uA_4162nPLtFsKK0HhJKhsHTha_6foNJvlVu12ntJwMOBIA8e0Jd6XllVrQhYix8X6I4mhZ23z9InzVDz1hhaX_0_BvJl7HBgLb2MmUL9moU42Za40HVNRFu6iDaZ6vBID1MAAKHGRBvWZ0PUgAhNBNVo8JvKnQfAg34NnWa7z7rr0rxIEUO6NXbQTbEj7K2sBH3E1IfyEvg7czk6JfMuFLsTd0KWbYpjsiDV7HAzucKhiN2DP9BWTJSKlFzCkD0hPc_ot2KVKqU9QMRR6qQmfVknrwZkImIJKNPOZoZEDDWSbho1RRoQnjMlqMaGGP6HrzAmcl_r825NY42nJz7HPm0lexgxkk7KNACJzb27Ih95cpjxL6Ii93ueSWf7SSgNNjb13p9VDIG8_1Crvnd2YawiBdTeprI_5PQwX0E0G9qc2Vlw2gQ3cOFLG_YhYrucBl3RhLpUKRB4lHzAXNZ64fmbi0BvQy2Tdapy8zXagtUd87NbvV8m2UwiLK6i-ejiqVV56FlFl5-QMwpJyKD0iZqnY=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0e60147a13f4bb5f016ae6aa14dc5087d1a5c3c7c98b3326a7",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 40,
+          "completion_tokens": 18,
+          "total_tokens": 58,
+          "cost": 0.0013,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0013,
+            "upstream_inference_prompt_cost": 0.0004,
+            "upstream_inference_completions_cost": 0.0009
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 10,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "58391",
+      "thinking_trace": null,
+      "parsed_integer": 58391,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1715.3410000009899,
+      "token_usage": {
+        "prompt_tokens": 63,
+        "completion_tokens": 22,
+        "total_tokens": 85,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71843",
+            "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501717-02hnRXiAwm51QjmK4RG9",
+        "object": "chat.completion",
+        "created": 1793501717,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "58391",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qoWcO3nU4qxkIg9EJbxaGShW1vSH_d2HDZY9D2uziBEeyblSzedqx3EMMwvnouiaV-ZdVdkaBSTlqJIT9Q9oL_703uliHxNshGoDiJ80L4lxYJcPtm_qTOWnkO3hxd4n5CNhktF_nn5r1MhlqBHW8XIUbsASF4mGDEeSFVjV4z8z7q49wkwVrOMwUe_24xu5YN_iiPFJXZ02k6Bf1gAGdvJVti4V1MxdJgD1iWTxtwgw38bjCVsn3l1V_ARba2mBEJjIIjYudb0Q2WTC8byAuNVdUGKWrWDsGraKtEg7rKfI6hpccROsQgny9rwf89YMxNf2PjvdSOriGIEL4YVyC5iKMUblomfwO9DrXUA6SD_REgtMbQeANiYprZ2nbWSjF10QG91wVSBSSK4Esu9Ihd2Cm0j-U3ue7DO_RK9xydxlA4tB7MumZFb2q8HrSfvqnuuksQyHI2hFVTrtbdIdcgV6iCbdB6s7FNif9zuLV3CxyyZ6PC27Xv9-b4tupEuSS7KWsJgV69l_Z85ZWU6QOlTzbCQ93OjLmgWEBE1jJTtWlr7X9cjLnhcxMZT_SjylTxJQ9nbTK1-yy5udz4cS7aSEhsfIOfw7M9YGzrpEoSalr6tcv1ClVwDxF-GQS80DRaVNkuJWvhDGMrgl1Afm3gSlJjmRvTi_6etprNrF3EWaNir64JDqSpCg_cqtn2b8k5KmnGIy8LuH7sJiKKBHeOtPHEBgKZ1uTcVQ12xaC-gKvIUFnlqriS_5wjWxWbdAVG4nYijM1uW9bqv48LHOByhW-9nDT0srV-srCPSaWmNLxsvL7-wSzsbcAt09DXyBhRnnwUlFVXs3QdLuxIG_86F_PSemAJC-jW9zpwG51R5LOJXmrh8V38OxCJ2MH6sZ7WfZx5yVzMGzC96DIiMZg0-51RIEHfDI_ZsOGhtKcU0YP8g-gLfVyd8uZuakavJsMiix1qtaqhD8ltKuPujAVPTzzne__kCla4EEP4Dq7SG_bZTYrkomwM1dqJ23WivH-UE5ZRp81LftYT53pn9_Sc6nQfg274DxafrL629xUVPWh1wzvpfMQHcbXz8vUOWDuFCaufxUZhtv9PkKdz9tXd5W-6Xm7ZwEObywX2yoVPIcUQlNQwi5EavTsDi5jv8ozzgxe0jBZ0UKnw7opXxcgua6IBJh8ytQVjbEsk-R-jXK4V2FHzyaTstypfkkC07I2-KSP8Fk2zHfBmsiUTt2TS-VMHG4BTDtd5dIBoc9_GgqN9lkcDu1d3Hp1gfKh6zPu4BSEWeU7BinsP4lthN-Rn5s_9pWlDkhvzXTrFaMfI_yVYm2AdzDws-qnYH14G-xNxPp-GDEGhPIb23-S5s_8nowRFXEzETPQgCOtUWVtSInwAq_dWtSkm_TrK-QnARIQ1t2u0QNBVoFnmrfnQqHAEKbtIi_qEtxJoQsGMV7CW0ScBxRqznrKurhckldFnB33FbeVVKkAY5JEI0AHD2yt0iylg-1aN-H_v5DORLBecNX0_ORk7zwnaFRZ2xUpkAAvkgxS-3TIebqVKSU1JRcsIX5dbPLM60XJsQnYUk_muqznKrHBKOp7YxZQ1fRwMP0qhGQWmaKdn_lgDu3q6AtNwmfpIVW6IgjrZ1rtpP9l2lNs_7rDw7r0Vj5b79HUewWdx4MyZ9EOjaxyLZCa2hRDLcM8B6Wm1IqB0QlBHU-6edGUhXFkN9hbfghpZoOGzn_Imd.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_05f116e0f745df25016ae6aa168b1087d18e142e5c6159d4ff",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 22,
+          "total_tokens": 85,
+          "cost": 0.00173,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00173,
+            "upstream_inference_prompt_cost": 0.00063,
+            "upstream_inference_completions_cost": 0.0011
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "86204",
+      "thinking_trace": null,
+      "parsed_integer": 86204,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1892.4236000002566,
+      "token_usage": {
+        "prompt_tokens": 86,
+        "completion_tokens": 28,
+        "total_tokens": 114,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 20
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71843",
+            "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58391"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501719-1sIFwLuxme33fDw10ame",
+        "object": "chat.completion",
+        "created": 1793501719,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "86204",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qoYbIDJPjyaqnu7YntHWmnx47cpqiu3eLSUYrukFoU1-VtMWzwEo78aMkrdHEvYvzAHYJquhYjcglFIY1DeYbI6iq28aP1pyQ52j11ouGJSiucGUy1VY3aHkKcDuXdiUT_nK7V-jKMNTX2j0Jz0D4LHZsqgU8JmwdvF711dzJLSyrXe-WQHjSMsEgrCMfgkHiWgQlMD15_oz7nXwmUEQJTnymVhsYtoHTMbHFIYVmVJZrZRhFlFYCPseaLgzPQY_Css8noF8clzzTI8dpBTbKsZ_vLqDmiAP4voZsgGXH_l3tVRC9XklZfwIoEe5SwRBiXM5iH_KZ4eQ3lskFFkUNouvZuaMhWhvOwLSm82_RAOEQDef5haon736XkgTXYsO6kiD-MUtqHO4IaBwXPdqBTmmteKbiJaMBigiRCUrVS5pnx86ow17ht200k-Yb2SVFxYyZBkoEwMVt2aXsNzDxnu_n-5U-c3wyBlCa_lGv06jVOsEWv6n-Ag49ZxRU9WLjE0RkIuFGbNYzNL6IhOI49c0PkDPcErk680aYwqgGVIsTFcbgrjz_JPf2idgVw8bL9If_gjCsUbIEzovLBwtQn5HMGVi-3XeQpLk4FJMtn-B-RNg9NUgqGAsJkBREjR7YcLyQ2MfZuG3VAwDUyHa_22-U_aEFWKJWE2WGZg-NsTeAd3MrAAF88p4DuLmmw6rYdxn9hqRu5MgFVNej1n8HN0HW8-R2DTJr0V0zjjAWBWWcSyheVFYjJRa5bW2IJpFQ0HCCbL0zeOG4kI7GkqcSHbLLcIgGWvg3cKkPDJREi-bR3tTOVUdsUjIerwrkcJkR9daAyPe85HW_BgPU1OWBj9hqrU9Iqw1HNOJ-0Kt45WN3JrCwUWVCqifDyerss78TeEdh1wKqGz6Gwt9uv0EXqDW8LAfAdnzy3Ga3bvIS6n0J_lvTynzVPvKg5RQTbWLJUQPIyOfi5oPS276Z0og8OobdromAfQ7TnLclRlIS8EnG3ePGtnF2xaxF-vJ5_UJ1C81r_Ip8T52VmUaXbEgqG68cUGqKVaiC2vXI--zOOhQt5M61_dTOXAYJd0rEwGhtttyAkxg0Mqv0LgC-gDJm8VrDnlaKvrIqdkA0xwyXyarc8emSUVGoZx7wa88ODgLfxiaPPehHxjOFCS1Xnofft0RUxnN93TFMPJx7j0W1ZrRbGqFsCSk5YRnXsIC277abE25AXIZHJ4gjz955yzV74MyJiKKT_LdhSs3vCRQHoKVicRBPj3h5OyUD_EvTihYxH-vuJ0lnxHTiaktxtM8XHfWV0FS9aN9ANGOxX5ICrtbopLQIx5gApGvXST-NGMrzdqht7sv_3IbepRtAz4JUJ6mh6VoK0pHtoCQILehx7mrBBDdN3uLug7KQoh4mEZcM0HK1eJlwgCAW8HVBNJPoMnAsA6D2Rg_7VkubFSDVhNt4fIhjpqwB_mBNrIrE93RGaeo3iLqPecOZdUxS4oQK86fMqmly1IvbQbeVPnJiQId_ncEMxDhrKyxQ5uXUdl9_5MPUtGR8se8khXhpOnrmjObDa2VtlDQzM1zafklO1huTB_16gONnzU4xUM4UyR_6jZSVav9Tf0bYIlBQc7tmAt6nKbXYv-IGdxB8i-zAHFKg1i5MUGg3vh3WDtWi3PI14wFdq4lDSr-AlFJlihFMgigkdkcZKOWESH7X2q9wanCkIEM2md9At2c_D4dFcVgnMhU80oJUG8Xcn-EOaizVadGS8qTyiVCJmYUaz_7TqWmfGupsKJvWiKsgx0ZwvK8N4j5Ozxse301kLIfXuQi1g9DQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_002a0a34812cc2e3016ae6aa18495c87d19907b76c2cb62e77",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 86,
+          "completion_tokens": 28,
+          "total_tokens": 114,
+          "cost": 0.00226,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00226,
+            "upstream_inference_prompt_cost": 0.00086,
+            "upstream_inference_completions_cost": 0.0014
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 20,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "43726",
+      "thinking_trace": null,
+      "parsed_integer": 43726,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1407.7323000001343,
+      "token_usage": {
+        "prompt_tokens": 109,
+        "completion_tokens": 6,
+        "total_tokens": 115,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71843",
+            "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58391"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "86204"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501721-bBFSvETeJ31qjDYaOUId",
+        "object": "chat.completion",
+        "created": 1793501721,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "43726",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 109,
+          "completion_tokens": 6,
+          "total_tokens": 115,
+          "cost": 0.00139,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00139,
+            "upstream_inference_prompt_cost": 0.00109,
+            "upstream_inference_completions_cost": 0.0003
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "90518",
+      "thinking_trace": null,
+      "parsed_integer": 90518,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1682.1689999997034,
+      "token_usage": {
+        "prompt_tokens": 132,
+        "completion_tokens": 28,
+        "total_tokens": 160,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 20
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71843",
+            "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58391"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "86204"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "43726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501722-cSETzyOI8L50gpE74Avs",
+        "object": "chat.completion",
+        "created": 1793501722,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "90518",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qobQJxUZ29YCuzTUron8UTchzaGIDzqxLWg8p8GDcNwM7MiDPRqbBg_SOIrDGPLrbiKH4gHx6kKCiS75Exs-hsLD3U04jOcOWDExcG8ms11xHPaLTFSOldbyW3CpKbn_CwRkyuhM8ASqU7FamcQR832C9OTp1tU1o9IoEbj1brlqeUWs06LgRFM0KF_U9X0hmdAf-LGQbi22JHBaTTaeT4TroBvvaURStxzec-VHkKp9MRWcX2bS524xQu9EiO45ATkWMSGk-0c4b9BkMF2Gq7nMGnYcGkNHzOkPo09GaeNdgEu8x0b0xKinXhS15tK3It7NDI2aVU4qWKDpJZIZAGLdMJFoPr06MbZ_HC-xfHdSloLBRSKEQhDPQYuEwPuvOUPLVe3tXPOG-PHGgcqbvtL82snvLGAhSoTkP5twceNNRzIdLnkkODnGTIfPvnCkq2SNlC9WN3wLTXJtJh86qF3bP43yaMxSgjUj1RIoQAg4FdMRQq-26u4rk0Atfym2oJfUzV2NeP5nkkFBtL-VoRnp2yNf9Zs8s8XDgQcxe39RTPCix__YawKzXHFObUwbbu-xtN6e3Ru66obYoA9i7hXRENoQZfCpZgJRexK-o0k3892Hrxy802YcQ3dnuwmKZOo7iEqf62SviAztbhMSX_N8oDNdBzyJ6uhkBqu4i1Lr3xRvYJQ_1GCHAVo7Q-wDyaxk23jsxEEUjRKfD9asODh1GqphWPhIIuwkTE3_z6BfCJYPAg9LAha-0h7YEI5mFQSlupzQAJrSY8iSB1Dt8yMUK8jUHijCBqRB5U1t7CL-_IOG6Jqg9EdSnoGYcvBdiVY4HR6nKOsVCQK92VmNSx4KjEKG7l9X0UZIav9DxkCWWfIm003mVetXUOTB84jHpS2W7-CdVKxvCfuwSEmvmPno2ZetqC_wJqydsXFX_LjByYedQmX9fM-P2yZsEmBUOAzMpbicsfD7d7zwtJ-OSPwh-NyKCJ2iFytZzUX8pqVoddB7RjHMNuUUtcQc6Di7Iw_hEzfr6_vXQHcfJB3BmFN_5IX9OR7twsQr5vSXXhAfi0cS47oRbESdB7pNLKdeimn4jn4OY--3fNCPGinSithhmYcRm_VFCDI2H0HyTd9JyUSHLn4Twvf7a4bIflEb0g-u6fj-qhJeGDp_2ZARxLtzov5h5pUejbqnuiKQ3BcKt2LypXlSK1msJBcmF558g6N0N_7MyAtAmj3y6VlKi79dTuYpemd6RO4eiBflHbDQgwFU5SXe4tCdcaPhXExojtNPaFfZObBa2RHVS2wICpPCWNlLpqSCYr90WQQn6zESb0twvUTEjNFgLsCQIeOvhESCJ5rFcuEnC3sYQpRsGN5fI8iOamETyX2I_7nnK1pkGSHWbNDxrtyZRBKBEQAiQL_qIty9MfwR6HaPHJHsjSIjauFv0qDhwh67xCS20DXQh8djs5j3cq3nhI9jvKMhGBMvfdddeIKnRQaFNv2JB3-SPNCAOV3h3FIwFgpjG3a1upDbA_V6dhiUXrHXQDfRVAwk3QscznCLDTmWAVFyKLJv33-A14IgmhaWZxYTSoe_QMqh_VqYOm-H0fTZ7hofBDy1jtKT15AqMtLscjByqs86hOZCQK-rAMZuUoqFgtxRuwmNQIcspAnbqHlqckbu_dY-XOP4V5y48fKY9tIiWGQ-P1JBdy-Sp2Ld98XFUk_ZX_qeAehtlR59-J1VNvNVYAI9gOiVYuooBfCG8Q6WrZTEdarWYr12g-I1UeKci3j2OrXiR7JLMbwJn-EVrn9NZyKVuOTGMjTRM0m8NSTUqhI8Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_08f90c6ca526d2a3016ae6aa1b6d2087d18db5711250ccc473",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 132,
+          "completion_tokens": 28,
+          "total_tokens": 160,
+          "cost": 0.00272,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00272,
+            "upstream_inference_prompt_cost": 0.00132,
+            "upstream_inference_completions_cost": 0.0014
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 20,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "17639",
+      "thinking_trace": null,
+      "parsed_integer": 17639,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1724.2585999993025,
+      "token_usage": {
+        "prompt_tokens": 155,
+        "completion_tokens": 22,
+        "total_tokens": 177,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71843",
+            "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58391"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "86204"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "43726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "90518"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501724-D9ZHYv1TyB6tuigVCQGh",
+        "object": "chat.completion",
+        "created": 1793501724,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "17639",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qodUXuyo7pImbYtGrRIDRiTEqpfhN1JrNekoJWYN3DdeDRoiekV_0hKd5Es56f-R8tZi6IdBwTDnepDnBALSM2cOULdqEVZzh0bpM3G_etIf-0iro6Cg_GNi1OY6kmbEb9WKylbx4iKLmXyF8RA3aChYwjEk8zUoCWxEt3W9E9lltDnczPm0yqtgJl2m6ddIcut1wt7Eu7V3KeA5G4ndvTMv6HBwQa0Ei-163pZMfEuQD8VeU523-tOgSMVt2er-ucDRx3MEmzKEsezEDYvVc1bB2Mr4HKwuBA_o6rr4PV2CAu48LqOZ10o5-dA59zBh-9MmR0C5dosgRYhnKA3ztSoKXrRultFvbdk6jHQ1aS6lDvOvbESmvdNeWh2hooLiFIPrUGMaAX-cM5-wDqr8Wa8ajFNE4f3Vkg-yl_36vgdnzZTBeJjgbcsngypf1M362bQbK97URnRt92Mir8wn7I7ae-obwItgRI-Ji8KBQv-LYD5uE_G_gjyIq4rype-tMQX0CrLge2B8UqclueKOQmJud9UuQDWM6upZzZ99Fms4Vc-YrJpHXtyU62yALnc6zS4cjd9VAiga5Sok8s2c65boire1VWli5kddXPo95zjQfRAWgCyrXBnawbaMh-XF2jIzntZ5tO3-I0lb5kLhw5OYX8S5istsZANuFZ20zWzqondRUDsHL0Uc3j0LsATy0fYwH4OvMYgslOiy3e5xxwoqTodYmCKIW4YC084y1_TajrQbTP4yQGpMNtrAvSMRRo7rHmBML9mMj9IJ1yikjUZeGDg9s6Nen0gamf5kg-hvXyFsZEX6fk0uNLWR_C_H9tDi5rCEQGvCu7IImt2z0TMPA2oEJNf4jcbrASzSyqYcOOxsxUCoJ4iZb2MoVtzHw8E6qfmvYBSaVSoeB11wE8K0IBJvyOGdvb2ELTMmc_aAcOKLg3xHczVRuYq8V9lebL9YdQAbj-XUK4FL71PtHlBUZJgj0MInMIoWwddpNVrcFTTYNLPbrlYjItE6Pgyu4ST0MgU3oVJD_sHs0fjEi2AssbbRM16K74UB9uxUUhlvhaCTpfqVKxCje070uQgX75Cgb0RB1VY7veWMU-rSX_sCi7_cSSJWxLBVujy5-bOEwnUZ3acoYtt6uGBXXLh0AAGlC7oq_PSJ-vV1YTeu2vEEBOiBK1QlzesLBydwVXbN0IyH5GIDz00EyY5BJVvjG2d0Liuv1rHT1-sk7gVsjSDDJ19syyW9WfN4sfQQSSwBAzxO-xhXLG-ADbaqTNHeS4EYBLdErR54ARixfKV4iDIDPv0_uTvnx0Tj5BkUpmLv3txSwjPVyNbZiW9Y0GdVzNV65Vm7tPA_H05yxq7R-qTFuKldi1aXkxfW6PrkFFL3r0lX6VOvO-rqZQqbrIWJSGdYeYF1XlUOFXfAmpM3YlNVCkYORodHYWSE1kRIwCrJhpsrBH8XWRTLItLPodPIILhCgS7j_5EJNwrummnLR-5KloBIwgXPGIaNTFW8vnd36hXuIJml6rF0cUWWW0bDuWxJWQW_PVNunzk8zfar27tGqJf7vjOUGTxBaL08lMO-PEIqbbIlS_JwQXdyPB9MNv9E3693cK2_nnRSoRVGqoHN4jPufHBNEa3h3krTgvNztZMBOdCQLHlYu3LGsF6DAnk5GKTKMxtOZESXgRIWXIK356ubJoaXtkK6jYYNHjY6QKg_GgHLbib__6ASABegBeI.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_02515d712c0ff284016ae6aa1d483887d1bc4096a5fc5b1858",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 155,
+          "completion_tokens": 22,
+          "total_tokens": 177,
+          "cost": 0.00265,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00265,
+            "upstream_inference_prompt_cost": 0.00155,
+            "upstream_inference_completions_cost": 0.0011
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "62805",
+      "thinking_trace": null,
+      "parsed_integer": 62805,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1823.8230999995722,
+      "token_usage": {
+        "prompt_tokens": 178,
+        "completion_tokens": 16,
+        "total_tokens": 194,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 8
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71843",
+            "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58391"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "86204"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "43726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "90518"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17639"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501725-t8mrrwsgclJjQvMtIHOz",
+        "object": "chat.completion",
+        "created": 1793501725,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "62805",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qofkajaT6cueqxhJw6g_lx1yfiO18mZtv9rTchyUBTp7RqPtt-GpAIVvBOtoo6D9-PxAs_43uyKzYhPRNUzqr39AUSCqS8WbgourtvScTYyq4YdSjkaPQY8iUGFwwmiTVt3BuC-YLIfTsP8VmFfgVTGhk9ESuG4-zWlREaBuuASarfJcfnaLEWCidhKupxPOCpeRpa-KG5sqwlXUVEgGkss3EQuMUzEjci7r2p2SCorXwXHeim7sslva-Tx2btV6vOVPgYmEyKydeBQ2l-UnGTBu6Uqxjvm9Dv9tsm6MDfh7lb-XYDGEl-PZiKkDREf0PG-4JxqWbaCVSk16Xgt2qlbe9PpnNwa7OPwhp-ueYtFPhqo-wOvNrdxNtpuBR7JDHufRgJpp0xVjbKqGQD067zXK19Z06Zy-IshXj35rhxss7T9jCnqTEF5z3Obe0FN0A7t_T61ieKhI8IGMXNI_2J__I68SU7dtQn_aYvntN_hljQFAPXZFCV9tGq6VjvZHKwDQ0rVXESXZKJRM5wqD27Pq4nWepBqfYXCdmXvV-BeNyZMpt6XvJ69sejx0gTU5YYd1Ho0tCTGGdnfC5ipDZtuQLSM1yd8Qpca4JA0v7kCqfTw8PFKcsMPRsuJxWsju4tXXDbMaVkSiir2b6Q8HiFVRtDLoNZasJobY-xjU-1IjGf2fHGwd8RknVWojfkLB_1u49I8kaiKYS_lddgR10Fg7fyqOBqsOKB62jseT-89EdySmHruEwBJjcuxtjxinLaS5_-3R5c7SJ_V5kjC16bx7006BIpqNYwuKwv_TiU5r9eZr7ifdffCVeYZ_kNUj68HbCLcZzJYh8WQZW4TfmbQB5Qb_go7aLK37HQLANSVniBdBFSL2Ka-1GPdWPQJTeoDVaiTO5RGHssrSSQmQSSgbQ-v1AZne4bmVvRE2MC2wQfro1e9KVaqEr3phQptcGoBGwp_D71Bc6T9fiuTlqUwBD03JXD04HHbNmcBCHVDHn1EQ_HJ5tD0K74pCqkujSLnqM81fV3nV3SpxPuOK_xuWJQLgC9oifDq9mDFIBgHnYMkWtl7QXGwVBHWsSszZ6KYViBappNQk4n5iwI62zAER76h3FcXthZVjpDMiRnXW-U_8_LDci9LjTjXnK_MzEiJbu1g9fF9jAPICm-nhB8r2e3DqoxXJ6xyCCnnC0N8R9qbKL_YjoNYrnXh8rSK78hOfqramo699LvDb3mGQEguj8TgZaPp_40mju3i-YpVbMhQUDdW8kDWbkotYgFMF9vGFydhUczvMvbdx8fYgM5avFk1FE_n94fZDgLJzUZERwqqqdYvKocw6-LLOgx5Ik7injQV0LRkfyEHh92FSzJixVIBQ_FDc8cjJetFI9tVWKnwQN-_sH8M8iBNC8RTKVOTwlNN1hWIm_pxBPM6U63qa9tFdBWXdTIRDSR8ZZiPNU1Cy23Qf8_vEcnhoZ1oRNJfC4P91MkfysVkUZkK60fuE1DRZ0i2GGBGaq3RJn2g9x2tlA-YNasZpVnzcboDJKFo9TxMWP4sYTfWgmm1xUM7Lz_igsGXWrQNAthm75deiVkr9yzPLGfYSZYvLUdUicI3XWwzuVJmBPqXTMCYRGwMdKMkC9_9bWvxS36WzKofGoyYsrcUjnw1zwJTIZ2BJ_a22ecHRxjQ1t8udoLyVBX-Xg==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_06acb4d1ea11ed7a016ae6aa1f1dac87d18fa81e45e049bfc3",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 178,
+          "completion_tokens": 16,
+          "total_tokens": 194,
+          "cost": 0.00258,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00258,
+            "upstream_inference_prompt_cost": 0.00178,
+            "upstream_inference_completions_cost": 0.0008
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "34972",
+      "thinking_trace": null,
+      "parsed_integer": 34972,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1277.09859999959,
+      "token_usage": {
+        "prompt_tokens": 201,
+        "completion_tokens": 6,
+        "total_tokens": 207,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71843",
+            "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58391"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "86204"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "43726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "90518"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17639"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "62805"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501727-Er87z6VHgndB9L2fvF4n",
+        "object": "chat.completion",
+        "created": 1793501727,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "34972",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 201,
+          "completion_tokens": 6,
+          "total_tokens": 207,
+          "cost": 0.00231,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00231,
+            "upstream_inference_prompt_cost": 0.00201,
+            "upstream_inference_completions_cost": 0.0003
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "51486",
+      "thinking_trace": null,
+      "parsed_integer": 51486,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1601.9971999994596,
+      "token_usage": {
+        "prompt_tokens": 224,
+        "completion_tokens": 22,
+        "total_tokens": 246,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-astra",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "71843",
+            "reasoning": "**Choosing random integers**\n\nI’m focusing on selecting a random integer, and I think 71843 stands out as a good choice. It’s simple and straightforward—just what I need! I don’t really see a need for any other options right now. So, I’m set on using this one. It feels nice to have clarity in my choice without overcomplicating things. Let's go with 71843!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29467"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58391"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "86204"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "43726"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "90518"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "17639"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "62805"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "34972"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501728-dBHia3sEylm6NwGRpnHR",
+        "object": "chat.completion",
+        "created": 1793501728,
+        "model": "openai/gpt-6-astra",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "51486",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qoibcu5FzYmlYoPA946jE2GzMa0I-NjhQNqGaxB15PZxypBnacxiVD94ksro0MOmXJ3lX4UEX1_9kS545wfetSu1GMN29ooj4j-scwbp_QSUg5xiZDXd92C0G01cT2UJ1XRbEXURdt1AS5xLolW93XQjSS5AZQcSQV9EisMosKIf7N1fcktg5JrA2kSwZuD12JWh3wqkabTEiWhN54Ei-Glk4Heb_EGjf4C5c8fa74l15CId_74N92hdG8pCTiLi8gaDfltL1TEqNQIZafjECcOkSiZtF3V1DZl8jG-ksbolA84fPg8GwVYVIGYizQUeC8Yw5bifKURD3lj9AMiqlG3oNMNPGvXb4FhmNHJZyvUqUdMj__Prxz-mtY1J0jPQq54dEy80GJduXL678MI_PmQnbTwKx43soNgoLjnXcjbmL1AurdB6w3XtkANiSf4zlNtMbA5NFxInv2TRJxJN7AB3yAU6EARhtWKXpxOz611Ish9-Nvj58R1lS1iCYrdUhQjZMcrEbRqv9W58cZRpbTIaWcNuUvQK7rYuyIvpktAVEIqxtTFNPREN3rDZ2mnbbSsvzbgobw3pkqIyVfWv3_e5amEu1k884buku1ruA5PD-zn0EZj1ONcEY96G07xKX94ou42oUW_IfDVUY2jFm6PqJILx-Rljw9t5aI9Y72b7JlqMiwv59rq8y2gB25DpTeTskVlofa6s5C7quMT9vel11CmWmMc2XP0sUfMABmfpsHIOEu6a91P7Dwgr_pubR7JU6X8VEFzn1ZSgtVlZi_5L_GtuQJN4abV4V9oeHPyCGVTkqr604DsFaYVAarEH0jX0FLneNPoMWVSuZW7aoXd1Wm2MZnWJgqTOErIIXjedigwklXACc212NOLjO7j1dQrFsgvDgQkzXWqeBJeoEFtkE0Ga_smDQLUCsKYUzIE_Y204FREZhgCII7Y87Cdy3lP7jQ_11uXzrFDtFl6AvkJl3_U69zZzmUj-o9Fj6QYuI1faWeodyWdYVbA_Xju1iIGku6GHmPH-cA7AlIRnFYSlzmJEOm2JoKnj1I5lXJyriNsoemTDMsETOWsISTwVwCIZco1MTtlNT9a0zh73uHVjVex-PPpFer-YbV8Qju4kRW2-IScDsxwCh0t7TNHjFmzneahTuu97KzDjluu73RsHqvkUEUp7mt-EU0gimaBJx7hNcMj8NIiKEX45w03X-KwYSQ8KwPq_5LrOWAh3jOV21F1pen0wAl2GdAg_Gj1UENOt8Z70A5-9G2U9R0Hn3iwZF2H9EAEZD-SE8LS539UuppCF2vwo-lL9WqNASG4qmI8dZjspEbQgSe8MaDpSrr5M4uuHXsvaCEOZg18QOvzfH6eV-iiBBGNaavMgLi0SjDsmauMSJTuGt-COKRQuWrojzT6nesUW7RSt6L5QZa4JotXw6yzEkFIFcrXS41777nh0YG77NrYUZcCdl7p642i0SxjNIjf8Ug8hg4gqj4pLg3Yovnd-WUEeT_G2Kio68DaAhntuBlRGoxtAfBidJk-p6aBq5IR_LGAvHj7jHH5GRuKbDWRRymd2YJgoAhZHjzFCZZsdiZbpuRU1c5FydDSV7RwTG8Pa82EiAPcuYmFYSpZCbIAytj7uArBDntfWrlj7t6l5ggbuFJdfgZ1K-EUf3qZRgs7qBqpEEG2EP6JXjKx5ekmzuU54cvMm2rw9WbY0hNFT2X7jDPdsU1EEuS5.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWFzdHJhLTIwMjYwOTAzfG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0f0dde302a6cfc12016ae6aa21ec6087d1af604bd903edb9b5",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 224,
+          "completion_tokens": 22,
+          "total_tokens": 246,
+          "cost": 0.00334,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00334,
+            "upstream_inference_prompt_cost": 0.00224,
+            "upstream_inference_completions_cost": 0.0011
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "GPT-6 Astra (max)",
+    "provider": "openrouter",
+    "model": "openai/gpt-6-astra",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "openai",
+      "astra"
+    ]
+  },
+  "error": null
+}

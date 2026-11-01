@@ -1,0 +1,1412 @@
+{
+  "run_id": "160b06b5b6",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T03:04:47.959764+00:00",
+  "provider": "openrouter",
+  "model": "openai/gpt-6-luna",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    68310427,
+    29471863,
+    73190542,
+    84629137,
+    58274016,
+    31760489,
+    46082713,
+    92835164,
+    15739206,
+    68420591
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 17988.81629999778,
+  "avg_turn_latency_ms": 1798.881629999778,
+  "total_usage": {
+    "prompt_tokens": 1250,
+    "completion_tokens": 252,
+    "total_tokens": 1502,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 162
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "68310427",
+      "thinking_trace": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!",
+      "parsed_integer": 68310427,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2632.358500000919,
+      "token_usage": {
+        "prompt_tokens": 17,
+        "completion_tokens": 31,
+        "total_tokens": 48,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 22
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502271-q3UnejNz8wJ4AXKjBskS",
+        "object": "chat.completion",
+        "created": 1793502271,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "68310427",
+              "refusal": null,
+              "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!",
+                  "format": "openai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxBSmmNvFroEUywefe33_D-IfPG3rhTulUmX9-yLr0iFyL71Pu91fR4giWziHlC5ikNwDFBdeG60blMhfNREgxB8rKyRONxp3Quedzmhv-DKlw8RcwO2wIbyXT-HUTqNkQEVykAlDmUd2EsWO4i3qbcUYppANhJ454KMkL2cmZduNvsHWIY3S9aA7WwDPFCF8otWpifnvdnyZ1-bFM0BcTiK-MSMRkxi3jF6RrWMJYKVsq2833pu5mQuvrqx5Wwl2LYAoRf9M5r7tjcz4ApLc32Ui75eXzLI7r2nWw3beMFpbSQzvd-EPqqgftjANPMg-bPY_tJz4TKGyXd1ZohC-8daXbGh6_-pc4fhOpCRLtev6y3SXWiGaG4yYozOfzMbtI-3Z8Kuy6mSZgOi5fx3h1pb0CXT0JxmXHqB38zuM8yVAF5g8NXj-GnOfC1QPBbbSoXtED-USLPU3ymibcIjCvjePL1KeCyVf2YZkrdnKdSJ54kv12_9rJxsZHQ3BxLXYKuA9isNoDjf137O969raiYG814jKHru29mRYtM8J8tpRib63qY7IOPvUONUByFMbySovV9nBM3vWe5jcNtuFsd32NV6MZ7wYGn6zSHRpcbgG4ZVJmOGOzo0JM9OezReI3TZ5N82FaFD5c6COFkle_aIy0MeVhMluHaFdgAt-PLmO-fYOTMZOCtwpfZHwXeR2YsvYxlU2_R34VZjD5ZBwJjfvvQMofupNHYjta11flvjXNqA87IhiKFTL36piudkTLX1uelPtJK_P6c_hxoapk_5R0CCSxWvHHqKduEOjjLbA6YbT1EQKOzsjPZDO5Z5cDFPL8nqv6xLHYkK5VffdId1212c6HBfBVRUhV4CzgpbeVoFvj4bjq786-C1ROvEdV_7IY8zbOljWxcP0FY4sId26KDZWer9owdoGbHAIcIvBdNSzZ_qygSMGCSnIe5OzoawnYGWqybYcWIOu2l8qa-ogYqnwzFGhSnI_VeX44TVLimM_ciUmQTFVVNJyhmv-pShxtrA6JVaz3WOC-SQGhCOGfsyWAFWAyQOchCNKDSdfHQQ8ELIwBmzQp8Vs3nL3jugWFOFmt9W6ivAcgSkfUpXna_g8iVhdZSjPav5RAQ4UnfUvVSNtflaalUDx-2I5Se3ZSrpLogDjiNXITlL1fIB3Q1KSbxWGfVHc4BHtDr4iAnKG92aDvDCYC47QHBzdz4t6p3e3un9R-ESU-JiWFV3daZjzuz6G7D768Arox8tl4VycLvJ-4E08Tswm6ZFiXlfE7TPUb9dvm1H9vzEZaC0wtrKKQH1wi7GwdhVSZzZgmQ4OoWoTPHhnRdti9mX5Q7pOGtG5Y_5AwtG2HXx9eC-IcsUjstAWIi2jP4vGu2-b1jYIhdKEyhU36rgCY94bl9OLeSoSYxT6VZ4U2zUQRGuWGiEIgVVt08nDXJWX1QSwzI4vyAfITJMJIQfdtNMMpqHKu9VFxwYsNVgRy_1AQiqpXUs48jQgUDBbaG9xyq4Y_yjujRPRfcay0lA1NLaZUKgr0ANsXRRJk_tOitzoLivOGMuLeq3gn9Gbi2lcwJtMp9kw29bcJ4CQkZIsak0dDayq8xAhCfdJ-7XtZRHoy_lCxD8IGbi2zn4TtwPontetSO4EKJTLXSbw8EXcLFWVdG0gwUL7iFePn5zVz0KQOWAJxF4rg2LDTCGUCE2bJRrk_8mYywPQIyGhACFsZw8tr2rDg368ZSFOrKe_F2krqSFaNtq2CVNEhWTNMMP49yxKzi2QDXEIb2u4fX4Ai6WI7PjupBsThXLtZTolCcueqBnVve6XZah1iFY1Ffsll7Y4c=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_02e19c9cd5074f9d016ae6ac405cc887d18e602648f3cafdbf",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 17,
+          "completion_tokens": 31,
+          "total_tokens": 48,
+          "cost": 1.72e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.72e-05,
+            "upstream_inference_prompt_cost": 1.7e-06,
+            "upstream_inference_completions_cost": 1.55e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 22,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "29471863",
+      "thinking_trace": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!",
+      "parsed_integer": 29471863,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1686.7715999997017,
+      "token_usage": {
+        "prompt_tokens": 41,
+        "completion_tokens": 22,
+        "total_tokens": 63,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 13
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "68310427",
+            "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502273-l7yeyHmInFS8BUV6BK3d",
+        "object": "chat.completion",
+        "created": 1793502273,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "29471863",
+              "refusal": null,
+              "reasoning": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!",
+                  "format": "openai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxD1nWbhlFDih90iDSgyjJydadBtpiBhGCLfGOLg2kXPcLdKrIq-XHrbok2PIOeaKIx-tFWJPquM2TGNDo8lBMKdYLPZDEsX8_qhjmS6z-4EAxfBXqQLYJ__Zg-Yx0ptiL29-HS498Ug2LcagHh-DbfpybjdRJLNDEGUrTt5bpw9rwuiCFQ5q9Sx98DuqMrSR-QEk-Uh4E_r2Uhxo9ond2kL5yvRUR8axyBr-zB_cFLmsrsIH-yufVU4fxxH-tlRg1IHQm9z2VF2eVXNn9zgk56ADsIkNkl3EVp3gdjbHrmGQcDq7ANhGxTRyHNmZD8VlwbMENSy-V0iUNVmYUyGjIV93NozOlN-3AnvjEDzRMc8Q2jp8H4CMwjpN64WbS5uKNEcYmBpjD696hwa7O74BsGqmLwkCbY6BIUHXFkk13TUm2-NUfUfH7cmKbDWqfJ7iU1yqERyiNzUnpyMThF5yIjk0gQ7INfI_zA1qQcQxlmGWT_TZiINE0i_92E-zKxOAFNFvDMQa5jXes2-NYT3V-z7gIRM2ducBOfHpgJT4xx280g6W2ypNwb1Vb5mb3vj2RqrXNLlL6Bp0SbWumtuiSDLlt7WqFZhzp--rGaEUwPQGMoRmwJae1x8q2SxcedtBz9mvhSAix1w4kNya0ggJqDQha1bgYFB_WQDx-Xbf3SnbC1AXPq2pmy2I0tEsEIlE2spCvwOUIN6toJS2dJqd1278puhHfEhfFtbcBFdVmCLNEsYk1iT8oggYUGsz5XGFihnpVeOZrjuWS3skdOidTuZcH8DLwq4TRyms5fapGz7axc4ghC2uDTjRl6R8K6VgROqdqXehChQO9OUWUqo3iWhcpdPX7ByYKut5lovWPXotgTiStSNMrXw6jJPyLWOey0IINt96tMl8LJm8-3LbTGUsh6KYcnMGU9mCBzdMQslsvzFTEr8-kGHPVf9emHTLciYS0Z43RCQYPMpnG4pylEYhz5y27aPZHqqsZ6mGXkjyalSTAGwEkp4Q48IrqRfQvZbei9Bwa1QzlaYPolM3KSOb9tvN1fzBk94_3fvY2o1Xh2OL34JBGGTpAtST5JhkHYy3Hnns7FCk1Tki2Lm4m5WYsfLv9OnYmIoTSVWRUOpBfYoVv3AS7gb0XgtADrUtJeDt6FAX-WLWf89H0QR3xLP4De0aBi0UfK7eWHngsTgAJ4PRhBMw-KCUXUbkQvMb0JJxMPOGnxUR2-N7Tp1YgM3RNN9XtsAbY_ZVRXPxh-7XI9NVYV-yRzY1GXM1dDDKwWGLI-IJbqun5sMULKEZS8GokhGodClC2gywHMcy-9i76ep14QarBWs2OuyuhV6FDx3SJJB443PtqmdLtW0tqwf4f0gRUKrna5WKd_r9VOJ3zIjJJ0u61mX3cju3J2MT0xbD9Vx0FXmctDbTi5A-GZnHjo8W6vw6yHmKPd-g67ZVc2YFQGxRc0da1l58FLQoO6EqYbGDCofthQOH20YUqXss1kwnVlA-rXjbpQHtAMr3jlwrKqVYq93Uc9CKVsO8SmwcNMlCNa-ktzAsblhAFvMtDZOi8G0-P3ODgRpu0QiJ2ZuVoxbpyLepQzZY_lMJZmuccmj0cZ29g-e_x7DkcdbawCR3wMid3l8c5Ev__Qbo-LvJUEJd6J4zi7GliXSwf-ZiPnHn4LAiVvyCB6SoCGYdL-rejZEXUyhC0ahO4XGTON4kXC0gPp56HLoOB6s32XYvxhmzLPVxrgFaZgxOujgQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0614c6ff99fb8c64016ae6ac426e4087d1baf48f04eb65989e",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 41,
+          "completion_tokens": 22,
+          "total_tokens": 63,
+          "cost": 1.51e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.51e-05,
+            "upstream_inference_prompt_cost": 4.1e-06,
+            "upstream_inference_completions_cost": 1.1e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 13,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "73190542",
+      "thinking_trace": null,
+      "parsed_integer": 73190542,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1021.0248999992473,
+      "token_usage": {
+        "prompt_tokens": 65,
+        "completion_tokens": 19,
+        "total_tokens": 84,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 10
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "68310427",
+            "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29471863",
+            "reasoning": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502275-1hzedKgDMtrDIWzY24xY",
+        "object": "chat.completion",
+        "created": 1793502275,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "73190542",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxEKTfpAo7qc-cTOGIXk7Ib3cQ2ClsYlj-ywFLPkTgEXDyycSX1WWbWl6XtXnwzm6wBgGNcimcf-lD2Fo9Ap9bG4UshbBfBc_sCRoYHBhGfAUhL_qMjaL3ge0A3JH18dgBAzt7eqWOS_A-ZZxbEyRpADvg8MgsK19b2fahgUXjx9rzIUJeyIrsKWRwuitQthQBvHpTH-kPA-109ARn9yUexA8Mcp_rjgeudORahXAifJcZ8AEV1640dkoNLJA6vF0gR3lus4Qx6zoqFe-UCJ6Bf4Ui01UwTMC49BhyDEsncw7-mS_stZ2uVlWu0ylHsJQf_WldL4Ols-CpAczFsm16jBNK655G4-sXBW7lPYe_km32T61PBNWyNgCtV7EDPe15NvQ3R9DkS3Q-fLDX9f-4in3VWq-Vyy_3yHaCdGzZCvF5c3DRT_jrx9OSSU03aKvyA-qmLuvdLgtHRwsWuL-7gAjjirvzm2m04kAimsYSDskM_lUGLRuokI287BZMTTQfHQGixmxLG2OwRv1_FGhMOHvNgO3pJ0NXcxROY8sv2q3FmgHPQRgmN8Fq0gjvUvEGesY3yZ53mR7ZSSKxuRzCKKBlp-kdHKiqnofxfthXKoZVIapgbAs8t2vKoIjaEzrINyvdJPSdjgP2Rdx_3eMFDtdZQFT-h4AAheGeMqLeK37aSFmUHwpMmeEBZFTaIh8OG7C0E4wB24yDDXLqKJb9Wau7m-8ihybvzMmqv_yBU_udKJB8DhE1lbHwCmi-RlYpYib6hA0n9y1ZhDYHrgwSNZb3bKSRgI_dM3rT7ZJt4TWOJon6nW8ranef4xIcr6miSLJASlkaDQ5yGGTsujj-_2M6tKeo_lAzh4oJ4hLU5ZA3WXSjotISL9BPXre_HlckOINqSzb4C-PFNQRZVgukKa02jkNww-xvrIwuGIB_ki6xVcmFDFCqkGr_sWPcm9krkklLkBRdzPFn2PVhYb-Mtmr3MpqZcCBAs0l061W5zFeF1Rupn8SAfYBKRhRIBvz5O2ShRetoJA4PoxO5aP4fuYptumvZfCOLkNRIAOsRoN4l3jBxIr78geUT02-hrvq4ltWIf2I4D-pLxnKsh2NezlYRQLRjaWE6gtjSbP20a4IBjN65JbH2ugBFyOKXoII7TMIRaTGUfMUvFcTgJvK2pcZcjqvNAM2FTL72wEd4qWR-494nFFCxPrDZ1j37b2YKf17U0iSnCeC1pPMOg5VPcGidJn6XfV1wpZGlpN6Ur1371TZMOpRitdvyRMNk8ZTBrggnQJvt9wwj9D9OL1j7wynq1tNQiaIh0wr0y2CYNVG8s-YnvNZeDKtXyo-7n4ghIR--jVvfX8m3ZxrRcNn-GdR6XferA9-pg3NYPOspqD4Ja32Aig2WFvi0DLzoYjO5qCw36pT6QfOSiuWLQWAuy5J2jUc_jOiJ1tQU2ebwArTT_pFafsu2ZqYZ5wE0JgQijM83I2f2bWftK5_JuTGw8OUUEKq1W0-ZjVx5WAalwLhTGQr0eMtEn9VAlcnrPy8yPpUng-tWOaJR-YKDxdW8NQEZpcRdZL4v9MbnXKFdl7fOYUbc1Y-WKcrBpgpdADEmk4-DP-rt-OygMRdQv2DK6zAUWaRHj7f9GFQ5WNdu2_KyQ2JZgjHNECb0KJKhwY2h4y2V2cjB4WDmpn8pdMw5OnOlO0vS3d3qX8Swu5FDySaI=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_078d7e1b6ca4d85b016ae6ac4412f887d18f4517e7a4b00185",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 65,
+          "completion_tokens": 19,
+          "total_tokens": 84,
+          "cost": 1.6e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.6e-05,
+            "upstream_inference_prompt_cost": 6.5e-06,
+            "upstream_inference_completions_cost": 9.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 10,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "84629137",
+      "thinking_trace": "**Ensuring integer output**\n\nI’m realizing that I need to output only an integer. It’s important to ensure it’s a random number. I’m thinking a good example could be 508271, as it fits the requirement. I need to keep it focused and straightforward so that any generated output matches the user's expectations and needs. It's all about clarity and precision here! Let's make sure we stick to that integer-only specification!",
+      "parsed_integer": 84629137,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1821.5753999993467,
+      "token_usage": {
+        "prompt_tokens": 89,
+        "completion_tokens": 26,
+        "total_tokens": 115,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 17
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "68310427",
+            "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29471863",
+            "reasoning": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73190542"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502276-KjIpGmdk5Ufu4j8KKF9q",
+        "object": "chat.completion",
+        "created": 1793502276,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "84629137",
+              "refusal": null,
+              "reasoning": "**Ensuring integer output**\n\nI’m realizing that I need to output only an integer. It’s important to ensure it’s a random number. I’m thinking a good example could be 508271, as it fits the requirement. I need to keep it focused and straightforward so that any generated output matches the user's expectations and needs. It's all about clarity and precision here! Let's make sure we stick to that integer-only specification!",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "**Ensuring integer output**\n\nI’m realizing that I need to output only an integer. It’s important to ensure it’s a random number. I’m thinking a good example could be 508271, as it fits the requirement. I need to keep it focused and straightforward so that any generated output matches the user's expectations and needs. It's all about clarity and precision here! Let's make sure we stick to that integer-only specification!",
+                  "format": "openai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxG8DLUFAX88P0EGZxjFif2Zv6kQuTT-MJiedejgRSQ0mcPn_PRDYYqQ9BOGlWLfQhUc0bHy30T28JvMmLeivtg8DI2QKTP4TmaePq0feDYhV5BhHwYT-i6O22F082QWFHEThGXGPI_1cx8wUzQpQclEfOh_COt6EpAYHPbELxYi0-vAUg8L73v2Dd8l9pK1t34bLqJFe4FGuYaG7I_mkJqdWFdtOtjT0BV2royIM8zOanLcmzswZWGZVrL5gEwRIjsTusXFYTUc5WO1ls2CWyt1kwXWD-QiextLPh6Dyj9mgDrvcTE0w0l8E70zXiorDcoTzA7vAXeUp3F1tw-kuEhT6NdclP8YiCYgU6ubayr-5gY2D_ZlnoU8WsTzJpw3LcxW3WHA__gQeOE6oyXkTsMg3OJcyYKoRXsyaHCo6kBcLWw-KBANRWZpkY3gGj_DylzrHNyFyh2WIschNkMLb8g0PH7v7eWyitChI8IzhnlpTTMeABeaZXSgCS_g-KuJLJ7Ielk4u5-fi2ORD6-KpX04NblT3rcLRjigzG5LM25qV9BXhXj2_Ve-irIiBzmuSy4l9F3vg-pNY63cFKiRaXxRp7xABIS73JdNFRwFvwZSe9TrgcFfPzPjtbKaLxSU9SC6xl0IfMRIFivlNhTDXCKPfe4H7ZerB1yFm7SiZXXgIKJKKmuVRzB-JjiEZgJUQVgIvANBZIhLNAkg7AXqdFrjgxnz2K_f_R6YEPlaYWkiVfgUsOzfSpn_3EyHPQH-wthgfk5pkv4VULzS8_q-r8hoIJd1JxTUOWAUKMov4EmVVCuxL6k3Fv6moQKFfhcepx7w6y_gEb9cEO04Px5oVH-FMSI3mb0OwYxTQCJEEJ3v9yjPSmGdb1sdP8FUVb1J37Uhas5HdtkXrhi4vGTSLMS9Ueqq6QJ1MqML6x24Rms95ozFITxm7fBzyg8r3VjhT4qA7w1ZOTbejqpuhCyT4C1blgm-fLNQAl_YTYyL6W8ffKSbVm8GIfO4Y7GPO6_c5-n8Tx4qkO1lVYlcJStoRTZlB6wJP5nPYKDwcblBS3qtT8IDeYdPHNFg8Y6pWixzMSDdanS9UBuHfZ5MItymaHKskr-BS-tjgZ9A79vlsVsMh3T4QbntnqI9RkcLHzH6YLzWC4CAv7QgUqUppWGft6pv1EgN4FLDX2cqfippC_1udOIdEI2nT1ydyOOzu6UKjd1Tb9Aq6YRDi_wbZ7ppGZNK3q-nC2aYb-Y01rO-nszAJ-dyCZWi1OOZwDOgePNAaHwuQnKRP565BxfljkqXkrO8dsshPHKE4rtIudFBcWU9xQy-To4dQB79soChOWJqdRUzrV1SBaqfptv3tKS-b7zskUcDps44TXagsPTxmrX9W_J_a41lQj3-4WIxfwenavCLZalTvcGFe7o3konfGYZNMqn9J5bGsB-JC2gT4u-ZJQ8pCb4gEE9EMET3PUd40vDiD5uciCMXLAyaxSwVWG0k31dtgbHgZTvlJFYxuWzTYHQbs7s2BXJBErMZD94ACuQb8QwMADv80Y9KrG9K9gQwzVOhHrC_TW_pT04o11qGbOvH2L1RrlBO_m3-qjcch5yg93piZKsURWTOqOLCuC7ZTVEonbSxRtq3wz6UMGzVQ3DN6gIf9QO5Bmm9r3sCEyoeF49FSgLdsFtk5IBsh5Nz-GBCZwWKRrap6BIYDdJZYMzns9B-OAKGWELQryxtaSSZZW8OzPTUIiQJHfZDVDRAUSRBCDBnvQbuZhpCwhbuTqnRSBSHweHJ-FBeluk02cB.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0429654f1c74b43f016ae6ac451c9087d1992ef4500429174b",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 89,
+          "completion_tokens": 26,
+          "total_tokens": 115,
+          "cost": 2.19e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.19e-05,
+            "upstream_inference_prompt_cost": 8.9e-06,
+            "upstream_inference_completions_cost": 1.3e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 17,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "58274016",
+      "thinking_trace": null,
+      "parsed_integer": 58274016,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2083.878099998401,
+      "token_usage": {
+        "prompt_tokens": 113,
+        "completion_tokens": 25,
+        "total_tokens": 138,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 16
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "68310427",
+            "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29471863",
+            "reasoning": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73190542"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "84629137",
+            "reasoning": "**Ensuring integer output**\n\nI’m realizing that I need to output only an integer. It’s important to ensure it’s a random number. I’m thinking a good example could be 508271, as it fits the requirement. I need to keep it focused and straightforward so that any generated output matches the user's expectations and needs. It's all about clarity and precision here! Let's make sure we stick to that integer-only specification!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502278-HHvxap4a6U8ztnP1bEvz",
+        "object": "chat.completion",
+        "created": 1793502278,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "58274016",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxIiBx7b_SGssL-0jcy_qgzAFeBDFvfm5a9AuaTDYr6mjFYFF_4BGVdQXmDIeH2UgohXAnl-bx6JFmvO5HF0FETGa2u4yIHBQlDxEdp5FV9TR7hUlXoLnKLzCkqVdeA6bm49Bv1qWhu7nTtCFGJfKLHEBmIYWn2xwZ7IFKCF5Zgk88ColGGqIZAqgOkHxZG0f7Ur-DwvHkPAZpzvihwgHKpkKke13wnDrP4LdcVuNqGiLhculpu6abJFYKcWFWGecCgJNCA_aoB5O_yVUh2r3hzqTo1vz-bLOStVIj4uSjJK8tGzqs09EQzoIgnUPPT41MQLQ_1dZLxyZwRai6z7GhvwG4wYtXF6V6u6bXkuUFXuWtsUjcQtPpr3hpUn7YWJZO5q_Esnk69LDiCGdusoOtHskDmj0cvcOAz9rDsnGdv530RZ7WH-NFn6I8NvmFB98wmN0QH205RdVGCW6boWNRUzobFspc3RDzq1vqzWCI7ae1ES8zuGVTvX22F8yAjaPFEttGRuMYHrfKgeIKs8wVVxbx1MYor0dTDnICBZjc9syCZsSvra-vqB1M3LwI8CK96r20mylQ2jC6Da2e4hXChYgxKlS7D2Krc9FpGdAERzQ1-ZdKQH0fRg6jiYlIELSiT7jQ9fvxQsnAg3koF-zJdaCoYqLOtd2xFvPSqkfZ7nWsjR2Frimt3d4ukUcOLa6Zm3xFwpHkvUEJNHyPc2EhbtcRgFs6KHfFUnwQM72Dw3FRnm5r97fynPZuJCNA1-nTk7wGZ63Q2-bR4ZXo0Uz0auc-0HXfttfcCKpiUzN5QhY10wUIsM1od1pwvZeuU1eGMUuuqvbp4RwuW-0sUFHG2iVGtpaRGuWlzwAis5QC6gL_-3VQWACBNaEiEulYt59R-TmzPp4MP8aEDIwiEAcKff9V4258bArBZRGAo2wLQkjzMwBJ0jyMZZkfu71dJhKX2em2VrqzN6IlroVGiuScUz0CF-LYDk5TeJKVvJbNB2iT953O6f4OrbA9zPuRVM7fLcYnYO1Ne7tuL9wi_LHbuUxieigWV7aPVaC2PqQ8GczTTqWJp7RhqLjOuihaTkzZnhLoDmLB-q_tbDYBA0eFJQk530-0YXjt4fw6rMtXR-i14BBeFHZxG7nr0BupK09FVj18BIudf24x1dmnxWTupmqzw-c-1Q62yhodzw3gFtCn-fvSSIZ-DA64EU_O-lobreol_AwcKW_HxduLwHS0lFOU9YDtnoi5bewhde7d0RTo3FzMlgXVifCHznaekgz7EIBwMPZiFEaBVHxNBHtdp_NtbhIAeQbkcb1zzMyxS1nJcBNdWnEtp7g3y8Smxq73soV-D3kanUXEQ60va4zwWpL-HMGTqR9hl_26hlC8NNQkACHBfSamfrhLtcWdv5DIepUzpOvQd6UPV7mCTS2Ytlyk6uOrkplB49Pwd1-64-8vW4WW7Ytb9Ol-91KRHFLHbDi7xJjEYkXDJQaGBpvA-e70hAOntSPPGCeEUEdm8Fka0HN_8ElZcdCLyEjVRI4aDhZ3ga4JcJ8eimgVh9PMQb39b1u--pbw3y0XTMi7ejQOqqnyA0ugxgyStOsOPlGmWXyY8e23JUjVd3nRBegdfqlL7GUOZLgvipudZpqdAbZ8rJT6QCZQBcnzoASPHt5KqO5QSXGKfECWmyxNq3cBFaDPa3sWiiQlzNfPd3qXUhSpcgcrY5SjZaaB0eVyfthZotYET0Alt4EJNKOtxiUwXRUoCjMWnYNFtiJmcZD-gWoONa1LPIPTEKS1GVVQ0Hc_2.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0804a9e0e9458fad016ae6ac4701e087d19a5d935fa12a360c",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 113,
+          "completion_tokens": 25,
+          "total_tokens": 138,
+          "cost": 2.38e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.38e-05,
+            "upstream_inference_prompt_cost": 1.13e-05,
+            "upstream_inference_completions_cost": 1.25e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 16,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "31760489",
+      "thinking_trace": "**Considering output requirements**\n\nI understand I need to output only an integer, and it's suggested that it should be diverse, with 8 digits. That’s interesting because it makes me think about how I can generate a number that meets those criteria. I’ll have to ensure it has variety within the digits, so maybe I should avoid repeating any numbers to make it more interesting. I'll get started on figuring this out!",
+      "parsed_integer": 31760489,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1852.2350000002916,
+      "token_usage": {
+        "prompt_tokens": 137,
+        "completion_tokens": 25,
+        "total_tokens": 162,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 16
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "68310427",
+            "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29471863",
+            "reasoning": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73190542"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "84629137",
+            "reasoning": "**Ensuring integer output**\n\nI’m realizing that I need to output only an integer. It’s important to ensure it’s a random number. I’m thinking a good example could be 508271, as it fits the requirement. I need to keep it focused and straightforward so that any generated output matches the user's expectations and needs. It's all about clarity and precision here! Let's make sure we stick to that integer-only specification!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58274016"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502280-H0EJx11QyTB3xz89yLHL",
+        "object": "chat.completion",
+        "created": 1793502280,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "31760489",
+              "refusal": null,
+              "reasoning": "**Considering output requirements**\n\nI understand I need to output only an integer, and it's suggested that it should be diverse, with 8 digits. That’s interesting because it makes me think about how I can generate a number that meets those criteria. I’ll have to ensure it has variety within the digits, so maybe I should avoid repeating any numbers to make it more interesting. I'll get started on figuring this out!",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "**Considering output requirements**\n\nI understand I need to output only an integer, and it's suggested that it should be diverse, with 8 digits. That’s interesting because it makes me think about how I can generate a number that meets those criteria. I’ll have to ensure it has variety within the digits, so maybe I should avoid repeating any numbers to make it more interesting. I'll get started on figuring this out!",
+                  "format": "openai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxK9s-zB-xOLxhuMydVVAoxsMcNh6TfcwJpg9ioFMbNETcLJJPyHUJHsa_gBwe8ZspiYm2xyZ2_A8Y68_1dsGCoMLIK5a8e9NREvtgxHVBGsD2UUPggyoBBmoW2Jhpn2wSSAey1G8tUqlV7BfQUFhq3B60H-B8-aV8c-ka6k_gzaAB9c3DzC0xuc7QQmoE-QO5BgEqlgWCHgUcIMIps_O0DyOWnE73n5DlZwo1CdBVid_lZwdtlMzB4pcRDBvbvNNQbmHGYSQzfXoRUW1MzT7kLttU9JLe7Aoh7pGZCKLBJTnGz8lpfwEeUt3aqQwrOZ5vh7gaOcu0rXsQ3YoqpiV4MUXa4xObTVnScxeUrRNZ2tWI0MhKdmpOBvUL1nx2t4oh_68OqPgb43ryTLMSwxH19CgxwJc3331XX8hgTnLLNnu6y3hdXNiQjQzni23YPVMJ5uM11IHweUR9fyyEf0qa9mJNbTRyLuZNhj7-MC9N0cXC9-He_pr7LMkgWOx2sq9vuuDA8dWS2UYEUX51e0uwJHr1uHWaph7gNCDYqvkvSMrX9a3wYphKTII8hFWlvJBGGIRwme_zTFEBc98kbToh_sIqb9fwDfjojwzXBNryVPAdYBp94n5nljZYxPixkHDb5EQ4GBoyQFQqhESrITN0QqYQ3IpU85ty_1Vmo6_PE971mCws8cRPlLNmZn7IPx2gfPpSXqkgA5ZdzPZyJcw9vtfB8qeWqMyL44mRgvF3dhaFo6qvieg11YP_iQa68N5WTZUINFqZr2zJMyD2llmjYLnwiOB6EXGJBKG3IqW3jLM1HiI1vSJ5f0knSlY0AdwIzF7En2OwybUzPSyKgIYGV6OEizQpSt7d3S3o_jDEQtzGiI6bOOfrD9qXVo5w22ifA5poqmYt3dvN4mR0A4YD9vXant0RSUsv_yXUhm6yGCrFGFNjM5MpiCDGVHxnzikhBsnMrR87lPq_QD_ZUvJUz9jOEk0ihJCIbRiOjeePBwuUVmN5Ch9QPcvQR4idfaWoysS1djJvl8uhHDJpjv8MUCJ-P9WIJ2L_Z5_CkMy5ZyS-dSG0IXoGLLmPaYb_dJ7WTRf5RGJXjrsu5LSo8IXScQgN1ICAl2ZpSUPMUBKvCpVIMXhXjSxkBFYH9524WXBN7Z1BFhhKG5RrpIa-ZfY8LCG46nYxsmhZZMYnjzWC10Fo9pFWz5SmOG1sTUZf98nfBomxowt29fDWJL7m_BV6zmtShY1GypZHT9Wr5eK1pwrZhT1PI_xacfrSrIUGfRksIRdZavQzbEDsOoC5qG3dc9SJKf5xywJFGjyhJ34glbqYH-YunCV-K4m3zHMgiwOSmcn4PMHXFzaBvB979JyxthWN8uHIERqUWF3FvlnRQBy7V3hK8cR1LBeq2IYs7fFonm9XuwZ-eMwMzHippKLjY4QP5NIlxNv1EfwT06gHOwJfQM-A4FxJBMkWv28ZmPpl7NzKvNnN1807Tb_B4_T4eRT4WofoniMa1YS3mg-sJy-63Eh5BI-NZcrqS35eiYZESSR3i4I4DyaW_RsXQrerVwzdkNomeGb5BRgJkMeogQ0IDGK4EL79f2R8O-T8468dB9kyc1hMIXajPpKjd-jQqmjcSAhIv7K6p6A7mj6HOAqZuSHXbA0Gr4RnN67yb3daJE_de4vlQZjaiKC5KPGQ62Y5eJ6fb2IIPGjI-leI7xmqbVu3Rc7A2pRvRmPSs506r98xKw2frpLgZvth3AP1x_h7ZxGqdoIrW72FS0VzHrNM=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0f76698fb18f7443016ae6ac491a0087d18013f1408b53839c",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 137,
+          "completion_tokens": 25,
+          "total_tokens": 162,
+          "cost": 2.62e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.62e-05,
+            "upstream_inference_prompt_cost": 1.37e-05,
+            "upstream_inference_completions_cost": 1.25e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 16,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "46082713",
+      "thinking_trace": null,
+      "parsed_integer": 46082713,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1947.37189999978,
+      "token_usage": {
+        "prompt_tokens": 161,
+        "completion_tokens": 29,
+        "total_tokens": 190,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 20
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "68310427",
+            "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29471863",
+            "reasoning": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73190542"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "84629137",
+            "reasoning": "**Ensuring integer output**\n\nI’m realizing that I need to output only an integer. It’s important to ensure it’s a random number. I’m thinking a good example could be 508271, as it fits the requirement. I need to keep it focused and straightforward so that any generated output matches the user's expectations and needs. It's all about clarity and precision here! Let's make sure we stick to that integer-only specification!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58274016"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "31760489",
+            "reasoning": "**Considering output requirements**\n\nI understand I need to output only an integer, and it's suggested that it should be diverse, with 8 digits. That’s interesting because it makes me think about how I can generate a number that meets those criteria. I’ll have to ensure it has variety within the digits, so maybe I should avoid repeating any numbers to make it more interesting. I'll get started on figuring this out!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502282-DYFd4OKcbvrWvSjyTVh6",
+        "object": "chat.completion",
+        "created": 1793502282,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "46082713",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxLdM6FqRCOLKpufY1fe7aMRL0HX0WNPTCV1hJhhpLHRTTGZWmJzXxmVay5jqqCbcCEWCatKuoM2arnfjviLO30cI5bN-xzOj7Zviv4DlU3qVg3sCg2zI9e9m0goTF3b7laWRXANzn_qrVkKKh6rmPn0ViawSxYASfLaDRa_lh0V2ZPN7PqywlQ2p-YHQLFwPSKfeCh6aR7PPDuYACJcSQBENWn3V3uPwe0GDsQyZ6T5Qs3p_BLiOs3XAftrUuz8YdOAxH0nK411TCan5YqLJkidg1ShQsblmFo86S5iynMr-IvETW9qkhR8A4jjl_Dnr4EHuBK9HbXZYbgc3OJyoHfDgAsMFBwzW1NJNKaXt2JEFYumyPH_nu3LCBOogNGnoFeXMciyw5w1kHz6k5acFK-AJWsMlUE7uPRKgXbjaTBlTYXyhyP0Yedh-k-nxYCf5j5j76LqyCAN6UtXO0FJYoNjrM-IcvL3pEat-bRX9Ds_6_d7qdO1OOlerFB9ksWKXuj0D8-kLHTYw5szUN5RC1GBxgboABJ8P1q8raEt3PHQDzLMOtP_tz24GQGDeNCiqjWsLojQVyBc53zezLfOsyGel5gaZENjZz-9JbhnNHN5zZu2g09TIUv77x2k_zjT-sjZ4caRAxIWW72m4CWlgVHvBCZ1GTHADbO-jrEBBsh8_a9q-IVYuB5kQSfKFytVvjnvkcelvihmK1pCvUucv5tjrg9VC6SJP7Oqfsrv9xEKQWVCSMejBAoLg4WV0eUHBlDsh_Wnww06vtWbg4TxIAyQqqkKIDN3WBW08lCjia1FPCZKjHZUhPG_c26XXqAJ2JZWJ5vcXzoXTnwoThJUm1si4xVzSxU1y0tn6jmAw0A4QFfDmvhvQcKfF69WCfkBIDO81wqu7Bm1SIh-5mb1vox4pXXdsh-PfSgw3IGWy-i6boT2Fc4b-pG3FAbKGkvliU7utR--qsI47rWD3uQcKo9fIpeJsmlILTsmoiNMLnv8C_dV1beeKEA5NVSiXbMttlfiOjgWRKpPm_IRzvwXAlzWAy9NnvVc7kowmhvXeSgjp6tl2Xhy7SUKh8zA_tOYDUEfhHiQR0D_FVohvjl1Tp2-JRrv0B4amUG-f62mSwDwz3yb5u6jEad_POmskdOq8I-kCtQEMWav7oQsncVrO-zlJQk0jK-94e7RyK4wbFRoradZxunuFKc9IOXUhic13PGN48-QrcPeFSUm0AWcW4INZ50FYDW4nfBuZMp8rWnXDeEY2J3seFjr2y6PGP0twq8yGa8G2_BW39pxeAW10rtiznm0DScFFtNT7CL0HtVUAUr38Z8uBUSG76Tj0n7M6uXkk1N_zQ8-ua07gn89TbabdNxNZtgTejBmGvf6iDYoW_bZw8_NQH4A0l5Di2iheQiThxT2oJUDYLZSl_r_Kqd992_6oHCiqxXcwS3GezktrEysCL8kYxayy39PyYrVHpz-sO9Zu0DeI5AEJm6gfpUys1xmcq51XJ_D6ygmiFOyiCwgwhl7cR2BXshLvLH4B2jPkrNIOc1vPLByQPTaFmmLKfvnqNUd8zYIi4UCYdhYY9-Dq-QNNIqIQjvMmQnUR3XVEQbdiXnDKDYGOH1iWVpMlVEpFALLWr3l7zgvFKHjz49-BarmU3tRJTw5b6Sjo2dtE8EgatXNL4Q801ZIPPna28kVYMJBTmWbafr6FKfJHnzp7LPOM-74_JllvkRkzVCLsbkM1Bw7VDNxlEu-ImDPnrLOPOdQP3XjVugpwls9XiySi0-Gv-VQRWenvEDElTQrpllh8RejSItoHpAXi3N9P8hGOXpoFeZnZfaEx4oGbg=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_03f5f561e2423921016ae6ac4aefd887d1a197eb2d129e85d2",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 161,
+          "completion_tokens": 29,
+          "total_tokens": 190,
+          "cost": 3.06e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 3.06e-05,
+            "upstream_inference_prompt_cost": 1.61e-05,
+            "upstream_inference_completions_cost": 1.45e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 20,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "92835164",
+      "thinking_trace": null,
+      "parsed_integer": 92835164,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1353.7931999999273,
+      "token_usage": {
+        "prompt_tokens": 185,
+        "completion_tokens": 22,
+        "total_tokens": 207,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 13
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "68310427",
+            "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29471863",
+            "reasoning": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73190542"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "84629137",
+            "reasoning": "**Ensuring integer output**\n\nI’m realizing that I need to output only an integer. It’s important to ensure it’s a random number. I’m thinking a good example could be 508271, as it fits the requirement. I need to keep it focused and straightforward so that any generated output matches the user's expectations and needs. It's all about clarity and precision here! Let's make sure we stick to that integer-only specification!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58274016"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "31760489",
+            "reasoning": "**Considering output requirements**\n\nI understand I need to output only an integer, and it's suggested that it should be diverse, with 8 digits. That’s interesting because it makes me think about how I can generate a number that meets those criteria. I’ll have to ensure it has variety within the digits, so maybe I should avoid repeating any numbers to make it more interesting. I'll get started on figuring this out!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "46082713"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502284-bEM8XHPHWliOSy6cZkgd",
+        "object": "chat.completion",
+        "created": 1793502284,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "92835164",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxNcfbzlS-N-3dZmvbDzggZsRQ802sPlaglV4mmHEgWnT0hivWHtu7cBKJ-M-sJt1xKwJchZZi8EZ4x2yu2uMPdnQvdb38EcBCqFu_VeXQjO70xS5JKQrn6vIzZ0Pri5-zTa0ULeWrKIYlLnlS76R6fLObsEpkmqdLOHQzQFrgtOZnCKHrryXEv1JQkkCQcL9-a6r1M10BO3HYi0xalyRcdFIYpyslmGEMzA_1wlIwG7-aVOb77TEr_tUiGaQGfyzQY_CrUhZS5A1Scpxtl4YgE8GO_yscSm0E4HnHhWS0oSXMc5gA68gn2defndDDn8Alf0Galt3ZiVQiglsw6JGbgFXgdcNvUONCebaVhDBxjBhr4mYpBRTiADjJm9BhqUGKK29n81EJmZUeGj0d0IMvnmB8r_3PvVcb4r5eypTLoSDjBbjM2Pfwjkqi4-xDzzJwkfykBzWWUXTNLHutor2qdbtRvDWd-fBlxnRIwrSPRXPmUZTlU7h4lcks6becOm-PGTCAneDjukY9mmcF7geukdrUcGHsT6APXym94M-8YNgNAhTZLITPsgjQ_k3O-aDn0n8jHlKiiuvYIIYrdMlE_9FScYSQepofdSdBAnMzYt4TFNUToufhN-8yzZWcB5Ak-MbT1uFw52DwSdX1NoS76X6UwIwRENIbQ4sWhJjatcj9gWwlMpptVQrh-Kk8e2B3xTKROTIjVqTrFi_qGN_MMEPA82G7mHYpJm1CE6p4kY4hv1XGTm50JKAMqaFrpAZ_zM4fGC9xep26j3Wyi3TpBhQFBfwgkeRCqyy8YWaOVDlPjFjCLdwBMsE2xERyrPlVygp9tidS8VzbioQLH2KtkatNQkVsh71_slnU-fMrN3mIeBpid5RxY41CcQD1HJHQpecOWbLzxlhS7bgY1NSfS3m7Bu8_iNUFNo_9eOWG44c3bL1mdzp8VDoKcdEHp2FhwNQdfe1ZzzYAmAMutTZnTr2ODAb2UuC72QJPTJtHjuqj-C2BM1KkRBl9RRB-kub8xn8682eSInbghdmbM-WTUNONROobdRzr_Yqs98_OZiGl7lUfpAyHw_yDh_h1EKJVURQGcxqam8j8jjy7bXMqMFnSD4u2bM9xhgKU0bTh6uOFJ_DdORygy0_9DxhC4LaM_BisiuX86m9588DS-Frgub9pk6qtsTfI82konWct-ve5Yl12wYQUqgfC_SqYF6PqC4csnRYrSwg4bbpDGrLIqutxU2C5kVkzfvHj82LL5m0foHWyyo8rYrUKrJZbQR9sD__jFrfGU6A4CTn92TvNKVSuFNATXrw51_xvpx0yiIYIZEvjTVqNDB6w04rADelKl4AkcY2mbh2E-NnpMyZ5SYCpPFvmb7FDI6Xn6WH_-m8E9k0JExnrArE0jkF3Zr14xo5iNw0rRzVJ2cPmkdlXsFuFbRbYjqFZZpow8AT_s7RQUW1BOfbxHt9XzWAtog33-gzuVpDMkr79wRwqAn2GOuzGmdjlZNZItX94YgCSifHhgkFpD4RDFG0Xid-J9CUQnODyH6tTRLWAy2IlJGeDMn0-ppwTKFNWgthPVOnTIASZKsKgwfZ7un9HwQsEGVVzmD4Ckh8Hvc7m8Vj7xHzSV5xV-B6WoH4sLxISRdtwfhCaZGkFbSj1O8dOxN3WZL5dIx8xB2BziC7ha89cWEoiQGgyh3ajUxEjbCpPUC2ALOYN0_EnGvoBTe1p4zlOdbIEkw7cwK6ynEHAwWSTXejMGtQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_07ef1d86d4892a22016ae6ac4cff0087d1b09140b98f568cd1",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 185,
+          "completion_tokens": 22,
+          "total_tokens": 207,
+          "cost": 2.95e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.95e-05,
+            "upstream_inference_prompt_cost": 1.85e-05,
+            "upstream_inference_completions_cost": 1.1e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 13,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "15739206",
+      "thinking_trace": "**Generating random integers**\n\nI’m focusing on generating random integers, ensuring they’re unique and varied enough. It’s important that the numbers feel randomish rather than repeating patterns. I should keep in mind that a balance between randomness and some constraints might be necessary to meet the user's needs! I guess I should think about the range of integers I’ll be using too, to maintain the randomness. Alright, let’s figure this out and get to it!",
+      "parsed_integer": 15739206,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1637.453600000299,
+      "token_usage": {
+        "prompt_tokens": 209,
+        "completion_tokens": 24,
+        "total_tokens": 233,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 15
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "68310427",
+            "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29471863",
+            "reasoning": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73190542"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "84629137",
+            "reasoning": "**Ensuring integer output**\n\nI’m realizing that I need to output only an integer. It’s important to ensure it’s a random number. I’m thinking a good example could be 508271, as it fits the requirement. I need to keep it focused and straightforward so that any generated output matches the user's expectations and needs. It's all about clarity and precision here! Let's make sure we stick to that integer-only specification!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58274016"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "31760489",
+            "reasoning": "**Considering output requirements**\n\nI understand I need to output only an integer, and it's suggested that it should be diverse, with 8 digits. That’s interesting because it makes me think about how I can generate a number that meets those criteria. I’ll have to ensure it has variety within the digits, so maybe I should avoid repeating any numbers to make it more interesting. I'll get started on figuring this out!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "46082713"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "92835164"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502285-tm3F7Qiv1JipPo6l8Zrr",
+        "object": "chat.completion",
+        "created": 1793502285,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "15739206",
+              "refusal": null,
+              "reasoning": "**Generating random integers**\n\nI’m focusing on generating random integers, ensuring they’re unique and varied enough. It’s important that the numbers feel randomish rather than repeating patterns. I should keep in mind that a balance between randomness and some constraints might be necessary to meet the user's needs! I guess I should think about the range of integers I’ll be using too, to maintain the randomness. Alright, let’s figure this out and get to it!",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "**Generating random integers**\n\nI’m focusing on generating random integers, ensuring they’re unique and varied enough. It’s important that the numbers feel randomish rather than repeating patterns. I should keep in mind that a balance between randomness and some constraints might be necessary to meet the user's needs! I guess I should think about the range of integers I’ll be using too, to maintain the randomness. Alright, let’s figure this out and get to it!",
+                  "format": "openai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxO6CoZJQdv1QZajj6qjfVweJg3ZJ_ecyHT6onOA3Ebzg4tn7n338jg_culJzUH9yWXeknGKryQjEU6kNb5K1RMVwCqdyZeISqKnhNSK7o1TF7kXJ7CzWXEEIB_O1CW1YIU4stOEeFusmwH2yuWjP-2KKFs7-kCbB7kiMhsRf-TZHmRKn3pJ2_3vWKBRU85xlYyJMzN4c6-OmBT4PCnzEG6HrZ_nrtail1e6Sj9Jjp2JAsNc-5UNOb_9R4jHj6Xzp7JJ2eI3HQJ6L7Zqmar-neNEVUUStVVJV77lvIejFCPfoHovq6Z0YvNgK1-mr1H2O7B5ruc8d6VtEz5QYvVJveOVFnbrOokxWjdeiDcLXNzP7EApG8LGLr8_y1iAGt3b1SnOZu7CmGNKAUewqOPO7OH0LAAZaYh7qHoDlGH767XJ61eD2qDvhcq2X5T57tDUYhm34H-X08WQ8Q1b1y1fINobWHcf86Cxbgu2pLN-vTXINQzmVUkfcNHSgZnV_nlSXBVJO-yqAkJMAs6acKmUzAqYDcO2MZRtTRxJoadVUZ59l_j_MVqDUqJaMp-Wrd4l6HOpVIcXNhQpnRQYe4wm4KuYVT_hL6qzYLxtSqotYu3-UEpPki8dYohv4SqWMtFcm3ZS_lLzyt38KEqlTcEucAQCc7rmqO7l-3uBWpdQxUrTKJlyeR4pnuwdi-KAX2xKyvDzjgwYcEjgFSymvLHL7XKZUFKmp_-PC1dOlwP7cPZZOfy1L10tcrO6LXCOdH6jhAAjJy5n3MqGEuNjUVTuO5Jtw0u9eOJBVfeAYKLH_WE2LuBj2pF_DPc9l47rgxDuIcDBNsH_hJ5LUXqp_OCBGW2P-2LAZ8slKzbemZWwJ_bnob0bbgqBZvTaXoL37G7uJRKCSTG211_RMRgw_8j9WI5ZglKXw8RqIz7mgYSwBbwBdFIGW7RKU3KViVAEiPQCI5nCcO7HM0ck6R5KUQpkTAPW1ciw64cqxlSf8M5plDUX7l3wp-Zsl5Os_f0F_2PT9qszyOvsAyjwtNvaZ_rmJO_0WtltjWDATvV2h7huEeSayT4nqG7iblZKifDWL4dpg-Ts5tzRhHMh09yqGi_ZPKUL92GvtcQ1Lm3ZO1h_AqrSN62TPEe9VTc3uxYty-0493F-zfTgs1uYCckFvtJkIRtK7XaDHoBdXR2-vdY1JLYsGS9mpza5LQAlrcGVYV_SFt8CYH4_u_3tk2Lvf-MnN861GBr5dzsJlxV6wAWCsrH6oi2kch244KHyV11sWbUmgWoiqN-qH5VLohGTn52AW9pT7G4HzYa8qDleIJSmAPMnjgZ7CRqMVCSJQkwqsCKnNF0EvIguLTm4cm7KfM1RPEM9foRcpmcmGcNwYP9O2zfCTzb1bB6YjWcFndIJcob4vfomQR3WuKtiTTD5qCw2hBPRukHNhmDmlFP_s-YovfEnoKrDNXCZlRlxRneKxXfsBq842f5xxo1orhrxvLojRm1DaWUffrCvrLdrmtjmZu8RtkQHMMy6-ENfRLx-swo9r2_1yNllIlzBMTKHicaXKWt5zg82bOd9SrwxsHZDYgLV7uNj6LkNnbEHQD7Ep9YCfP2yai6kyIcY0TEloq2sg3hA15OVY6oeS22YnYxP7TCPm_m52ar3daCDhtQXF_Lz7Acghns4r2gZdKy3ihu1SH-FWpQSpxBVWmX341S7StUthcCa6wekwX0Bsz2BaG2wuA0p1mX0TISwapsuX1j3EbKZ0mEM4-_qI0YZYPPaW_T_pk=.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_05dc61a1105c1ea8016ae6ac4e4adc87d199ed5ce65bc74590",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 209,
+          "completion_tokens": 24,
+          "total_tokens": 233,
+          "cost": 3.29e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 3.29e-05,
+            "upstream_inference_prompt_cost": 2.09e-05,
+            "upstream_inference_completions_cost": 1.2e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 15,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "68420591",
+      "thinking_trace": null,
+      "parsed_integer": 68420591,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1952.3540999998659,
+      "token_usage": {
+        "prompt_tokens": 233,
+        "completion_tokens": 29,
+        "total_tokens": 262,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 20
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6-luna",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "68310427",
+            "reasoning": "**Choosing a random integer**\n\nI want to generate a random integer, let’s say picking 47 as an example. I should make sure it feels random enough rather than predictable. This means I’ll consider how it comes across, ensuring it has that element of surprise. I’ll be careful not to overthink it though! Random integers work great when they’re just a little unexpected, right? So, let’s settle on a number that feels fun and genuine!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "29471863",
+            "reasoning": "**Generating random integers**\n\nI’m focused on ensuring that the output is strictly integers and totally random. It should be a straightforward process, but I want to make sure I’m on the right track because I know the user is expecting specific results. I’ll keep my approach clear and concise, sticking to generating only whole numbers without any additional formatting or complications. That way, it'll meet the user's needs effectively!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73190542"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "84629137",
+            "reasoning": "**Ensuring integer output**\n\nI’m realizing that I need to output only an integer. It’s important to ensure it’s a random number. I’m thinking a good example could be 508271, as it fits the requirement. I need to keep it focused and straightforward so that any generated output matches the user's expectations and needs. It's all about clarity and precision here! Let's make sure we stick to that integer-only specification!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "58274016"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "31760489",
+            "reasoning": "**Considering output requirements**\n\nI understand I need to output only an integer, and it's suggested that it should be diverse, with 8 digits. That’s interesting because it makes me think about how I can generate a number that meets those criteria. I’ll have to ensure it has variety within the digits, so maybe I should avoid repeating any numbers to make it more interesting. I'll get started on figuring this out!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "46082713"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "92835164"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "15739206",
+            "reasoning": "**Generating random integers**\n\nI’m focusing on generating random integers, ensuring they’re unique and varied enough. It’s important that the numbers feel randomish rather than repeating patterns. I should keep in mind that a balance between randomness and some constraints might be necessary to meet the user's needs! I guess I should think about the range of integers I’ll be using too, to maintain the randomness. Alright, let’s figure this out and get to it!"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502287-Gey6JX0AG3ulB91p1pTU",
+        "object": "chat.completion",
+        "created": 1793502287,
+        "model": "openai/gpt-6-luna",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "68420591",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qxQi_fWPaABt9tULocZ8Dmup4tJNMLi_sX6LSSFBUC-4wk34oEtL9YOtpP6r5jsvLEl2hbJ0J1FyrjMzy6Y6OqxQu0uZDSi__pv9hnib5mI9LHGrwMhBeLZugJRmqUj-tRBxZoQv23QBbDwSuVA_7CPH-c5Womzu3oG1vGAlhpBvZrZGt5_xvwjO12MGXhxHV_OgHlkXxuEBeBOPzyk4-v6SFzkdUR7bwB5SCoR-_LV1aKCUP2K8mds0gIGIAPiq-UfYNTVcNgN-XBrq7maXuzXqjj0N3pHAYal4hniKiFzxyL0eEzWWb3vOIM7VC-uVKEwRFd-Vz3U-JysubBUOwo9DYkVM7Q7QOSkhLwX0ezZHk9PPEQfcL3JUQK2I0jki61-kbkwgRCDJpxx_tsPvyKgSGjPz-n48rR_KnMk-bXC_iL5egSSV2O13VBdMOzExWJjuBeF1eaTuGGfA_FSJw6FZtCIXAsMZNJTpva1QNlyHg0zWa4LJzK7UQ-Rf-VhERsRnaHGN9sBMqnV6pCO1Wg-MrIUoh_jcQMqsE1DvC-QE0L7LnUWSkdquf2BTPCeO380ih40nw7PQxGhdU1rj58fommJO4TURqTOt8aiLB89cgh4W10WmMYam_p3MVlmXfXH4AZEzntJGHM92uSauYI0wEff-4TZsal6uf7H37_BgwoVo2QdmNHSAytdb3v5lIJc21sOHpKBEg3iQpO3H0uLZjYpHrcK1vF8ePkcK0odefvvyyNUkF2Ts0Q4g-oGzkkccInfmR6RNJyvEzwbdo1mM7hJFgtHg5t4Wb2naGEisd6oeX4an0XU_JECnMQRPhqA7LHZV2Ji0uXrT7IGp4PO09E26DaYVlcEZbpubDfG8S8UjyvM1QnP2Lx_NroT_FMvF48lKIVQ9u_Vg5TPlbIr7fgA4yKL1j9xAvT_-UGSroL6Mkjgcl7w865_bYTDBP-0MGpcuQc_qYfiwtJF05O-5OwLbs7MRFp7gGNw-bEXCrlrjJ0y1CyvT6qvp905vuybkvsTxvBbQyhD7-_Lc28Q04Frr2IJgyp8r54F9p6MubgbhUd5I32T7HfR-oi698DkBAYL5tkhaaDh2s_sXK3_ZokyV2EORvnPmhWUkAhCwpueOEPNifYSJrtsyPjzlu4R4u9447KdUcgmdDhXbY89YN9yy0c9k1nt221SlzCOx7wCIz9I8L6rgXSpmkSYJQyiiNoZoiMKvCBpgQc-Ry0c8zxjEDJHSv40-rISY7ahZUduZOGD1XjZPk32_z8tuiSVXbFDK99PH6P21IR7FbU7xuRjYL1yJBp6DSNpmvlteN0faHJvoF5WKjmGnoBtSK58aEeaT7xQI4N7ZtF_fqPX2tqIatsDyoxYg0KoraF3psKs-8lf-qSXsBOhCpQ5ZQTdgCpeK4hY6QHmNFm09G4UNlNrEdOyT95w8IiDu9NfT1dswpGLkAeQsNP8S1Y6iwRNGE1xXMWbuxghgPREygVH4Xbg6jBrm653Hdg0uyQN2fIQsH5FN7FSzv3gEEKyQ9Cl9Yz6eSh34DpeNgzSyocnez088aPzeStF3n0JP-Z2hSoa82uEFUpPuTML4xIPe6xmMEceIL3dNwSFsO5TYw1WcC_4nTOixaM7iivcb-71TfuLkDelYwWFMhS_s2dTiktyj_fN0JtjpyhhMfCBTlecE0cbzQsW3xogKPhfm52D34I6o7GyOy9UEBxxmtuhmf-mhOJqNe2hX0NtoMJooDtcBcX9IQAwltZuersNVdlt7x6Z99nFfEdQj_BowdgpKqK0Opa4XaYigq7L0O5C9-jJtA==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LWx1bmEtMjAyNjA5MjJ8b3BlbmFpIn0",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0452216d559ad3c7016ae6ac501bc087d195cfc2f39d81031d",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 233,
+          "completion_tokens": 29,
+          "total_tokens": 262,
+          "cost": 3.78e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 3.78e-05,
+            "upstream_inference_prompt_cost": 2.33e-05,
+            "upstream_inference_completions_cost": 1.45e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 20,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "GPT-6 Luna (max)",
+    "provider": "openrouter",
+    "model": "openai/gpt-6-luna",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "openai",
+      "luna"
+    ]
+  },
+  "error": null
+}

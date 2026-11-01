@@ -1,0 +1,1348 @@
+{
+  "run_id": "c61fa0afdc",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T03:04:29.529107+00:00",
+  "provider": "openrouter",
+  "model": "stepfun/step-5-preview",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    42,
+    137,
+    829,
+    4582,
+    77,
+    9013,
+    314159,
+    24680,
+    815,
+    6409
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 27987.00039999858,
+  "avg_turn_latency_ms": 2798.700039999858,
+  "total_usage": {
+    "prompt_tokens": 2628,
+    "completion_tokens": 264,
+    "total_tokens": 2892,
+    "cached_tokens": 1728,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "42",
+      "thinking_trace": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer.",
+      "parsed_integer": 42,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 3446.2485999993078,
+      "token_usage": {
+        "prompt_tokens": 22,
+        "completion_tokens": 49,
+        "total_tokens": 71,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "Featherless"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502242-tsTAsSgXEJuAK6gnAjZP",
+        "object": "chat.completion",
+        "created": 1793502242,
+        "model": "stepfun/step-5-preview",
+        "provider": "Featherless",
+        "system_fingerprint": "fp1-nst-ste",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "42",
+              "refusal": null,
+              "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 22,
+          "completion_tokens": 49,
+          "total_tokens": 71,
+          "cost": 0.0001543,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001543,
+            "upstream_inference_prompt_cost": 2.2e-05,
+            "upstream_inference_completions_cost": 0.0001323
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "137",
+      "thinking_trace": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally.",
+      "parsed_integer": 137,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1161.511000000246,
+      "token_usage": {
+        "prompt_tokens": 93,
+        "completion_tokens": 51,
+        "total_tokens": 144,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "StepFun"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502246-jSi0fxxvI88iUfSeETjf",
+        "object": "chat.completion",
+        "created": 1793502246,
+        "model": "stepfun/step-5-preview",
+        "provider": "StepFun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "137",
+              "refusal": null,
+              "reasoning": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 93,
+          "completion_tokens": 51,
+          "total_tokens": 144,
+          "cost": 0.0002307,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0002307,
+            "upstream_inference_prompt_cost": 9.3e-05,
+            "upstream_inference_completions_cost": 0.0001377
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "829",
+      "thinking_trace": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829.",
+      "parsed_integer": 829,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1150.1427000002877,
+      "token_usage": {
+        "prompt_tokens": 166,
+        "completion_tokens": 25,
+        "total_tokens": 191,
+        "cached_tokens": 128,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "StepFun"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "137",
+            "reasoning": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502247-YJxhm5NfQ2TpzmKvJ1k5",
+        "object": "chat.completion",
+        "created": 1793502247,
+        "model": "stepfun/step-5-preview",
+        "provider": "StepFun",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "829",
+              "refusal": null,
+              "reasoning": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 166,
+          "completion_tokens": 25,
+          "total_tokens": 191,
+          "cost": 0.0001183,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 128,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001183,
+            "upstream_inference_prompt_cost": 5.08e-05,
+            "upstream_inference_completions_cost": 6.75e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "4582",
+      "thinking_trace": "Need output only integer. Random. Pick 3? Let's pick 4,582 maybe. Need no formatting.",
+      "parsed_integer": 4582,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 12850.847800000338,
+      "token_usage": {
+        "prompt_tokens": 213,
+        "completion_tokens": 28,
+        "total_tokens": 241,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "Featherless"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "137",
+            "reasoning": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "829",
+            "reasoning": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502248-IhVqxDA9Fa8q1im9KVp1",
+        "object": "chat.completion",
+        "created": 1793502248,
+        "model": "stepfun/step-5-preview",
+        "provider": "Featherless",
+        "system_fingerprint": "fp1-nst-ste",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "4582",
+              "refusal": null,
+              "reasoning": "Need output only integer. Random. Pick 3? Let's pick 4,582 maybe. Need no formatting.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Need output only integer. Random. Pick 3? Let's pick 4,582 maybe. Need no formatting.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 213,
+          "completion_tokens": 28,
+          "total_tokens": 241,
+          "cost": 0.0002886,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0002886,
+            "upstream_inference_prompt_cost": 0.000213,
+            "upstream_inference_completions_cost": 7.56e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "77",
+      "thinking_trace": "Only integer. Pick 77 maybe.",
+      "parsed_integer": 77,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1503.002800000104,
+      "token_usage": {
+        "prompt_tokens": 263,
+        "completion_tokens": 11,
+        "total_tokens": 274,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "137",
+            "reasoning": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "829",
+            "reasoning": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4582",
+            "reasoning": "Need output only integer. Random. Pick 3? Let's pick 4,582 maybe. Need no formatting."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502261-K2bQKhUZsqgu8YnkdSkI",
+        "object": "chat.completion",
+        "created": 1793502261,
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "77",
+              "refusal": null,
+              "reasoning": "Only integer. Pick 77 maybe.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Only integer. Pick 77 maybe.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 263,
+          "completion_tokens": 11,
+          "total_tokens": 274,
+          "cost": 0.0002927,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0002927,
+            "upstream_inference_prompt_cost": 0.000263,
+            "upstream_inference_completions_cost": 2.97e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "9013",
+      "thinking_trace": "Need answer only integer. Pick 9013 maybe.",
+      "parsed_integer": 9013,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1753.1806999995752,
+      "token_usage": {
+        "prompt_tokens": 296,
+        "completion_tokens": 15,
+        "total_tokens": 311,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "137",
+            "reasoning": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "829",
+            "reasoning": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4582",
+            "reasoning": "Need output only integer. Random. Pick 3? Let's pick 4,582 maybe. Need no formatting."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "77",
+            "reasoning": "Only integer. Pick 77 maybe."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502262-7rjKSi72oTCVxoXSUAas",
+        "object": "chat.completion",
+        "created": 1793502262,
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "9013",
+              "refusal": null,
+              "reasoning": "Need answer only integer. Pick 9013 maybe.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Need answer only integer. Pick 9013 maybe.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 296,
+          "completion_tokens": 15,
+          "total_tokens": 311,
+          "cost": 0.0001061,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001061,
+            "upstream_inference_prompt_cost": 6.56e-05,
+            "upstream_inference_completions_cost": 4.05e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "314159",
+      "thinking_trace": "Just output integer. Pick maybe 314159? Ensure no commas.",
+      "parsed_integer": 314159,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1456.9646999989345,
+      "token_usage": {
+        "prompt_tokens": 333,
+        "completion_tokens": 18,
+        "total_tokens": 351,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "137",
+            "reasoning": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "829",
+            "reasoning": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4582",
+            "reasoning": "Need output only integer. Random. Pick 3? Let's pick 4,582 maybe. Need no formatting."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "77",
+            "reasoning": "Only integer. Pick 77 maybe."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9013",
+            "reasoning": "Need answer only integer. Pick 9013 maybe."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502264-6EbnaugMEuS6Nhbmuosk",
+        "object": "chat.completion",
+        "created": 1793502264,
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "314159",
+              "refusal": null,
+              "reasoning": "Just output integer. Pick maybe 314159? Ensure no commas.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Just output integer. Pick maybe 314159? Ensure no commas.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 333,
+          "completion_tokens": 18,
+          "total_tokens": 351,
+          "cost": 0.0001512,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001512,
+            "upstream_inference_prompt_cost": 0.0001026,
+            "upstream_inference_completions_cost": 4.86e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "24680",
+      "thinking_trace": "User wants random integer, nothing else. Need output only integer. Pick 24680.",
+      "parsed_integer": 24680,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1970.9086999991996,
+      "token_usage": {
+        "prompt_tokens": 373,
+        "completion_tokens": 22,
+        "total_tokens": 395,
+        "cached_tokens": 320,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "137",
+            "reasoning": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "829",
+            "reasoning": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4582",
+            "reasoning": "Need output only integer. Random. Pick 3? Let's pick 4,582 maybe. Need no formatting."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "77",
+            "reasoning": "Only integer. Pick 77 maybe."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9013",
+            "reasoning": "Need answer only integer. Pick 9013 maybe."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "314159",
+            "reasoning": "Just output integer. Pick maybe 314159? Ensure no commas."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502266-t0I2KITHP8JuzsDfGdeR",
+        "object": "chat.completion",
+        "created": 1793502266,
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "24680",
+              "refusal": null,
+              "reasoning": "User wants random integer, nothing else. Need output only integer. Pick 24680.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "User wants random integer, nothing else. Need output only integer. Pick 24680.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 373,
+          "completion_tokens": 22,
+          "total_tokens": 395,
+          "cost": 0.0001444,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 320,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001444,
+            "upstream_inference_prompt_cost": 8.5e-05,
+            "upstream_inference_completions_cost": 5.94e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "815",
+      "thinking_trace": "Need comply, only integer. Pick 815.",
+      "parsed_integer": 815,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1499.0878000007797,
+      "token_usage": {
+        "prompt_tokens": 417,
+        "completion_tokens": 13,
+        "total_tokens": 430,
+        "cached_tokens": 384,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "137",
+            "reasoning": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "829",
+            "reasoning": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4582",
+            "reasoning": "Need output only integer. Random. Pick 3? Let's pick 4,582 maybe. Need no formatting."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "77",
+            "reasoning": "Only integer. Pick 77 maybe."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9013",
+            "reasoning": "Need answer only integer. Pick 9013 maybe."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "314159",
+            "reasoning": "Just output integer. Pick maybe 314159? Ensure no commas."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "24680",
+            "reasoning": "User wants random integer, nothing else. Need output only integer. Pick 24680."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502267-gLoyeIBsvvtGl6Isp8Q1",
+        "object": "chat.completion",
+        "created": 1793502268,
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "815",
+              "refusal": null,
+              "reasoning": "Need comply, only integer. Pick 815.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Need comply, only integer. Pick 815.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 417,
+          "completion_tokens": 13,
+          "total_tokens": 430,
+          "cost": 0.0001065,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 384,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001065,
+            "upstream_inference_prompt_cost": 7.14e-05,
+            "upstream_inference_completions_cost": 3.51e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "6409",
+      "thinking_trace": "Need output just random integer. Pick 123? Could be fine. Need maybe ensure not same? No constraint. Pick 6409.",
+      "parsed_integer": 6409,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1195.1055999998061,
+      "token_usage": {
+        "prompt_tokens": 452,
+        "completion_tokens": 32,
+        "total_tokens": 484,
+        "cached_tokens": 384,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud"
+      },
+      "raw_request": {
+        "model": "stepfun/step-5-preview",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "42",
+            "reasoning": "We need answer user asks \"Generate a random integer. Do NOT output anything else.\" Need comply, output only integer. Need choose random integer. We can pick e.g. 42. No explanation. Ensure final only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "137",
+            "reasoning": "The user is asking again to generate a random integer and output nothing else. I should provide a different random integer this time. I'll pick something like 137. Need ensure final only contains the integer, no punctuation or whitespace ideally."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "829",
+            "reasoning": "We need answer only random integer. Could use any. Need no extra. Pick e.g. 829."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4582",
+            "reasoning": "Need output only integer. Random. Pick 3? Let's pick 4,582 maybe. Need no formatting."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "77",
+            "reasoning": "Only integer. Pick 77 maybe."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9013",
+            "reasoning": "Need answer only integer. Pick 9013 maybe."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "314159",
+            "reasoning": "Just output integer. Pick maybe 314159? Ensure no commas."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "24680",
+            "reasoning": "User wants random integer, nothing else. Need output only integer. Pick 24680."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "815",
+            "reasoning": "Need comply, only integer. Pick 815."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502269-NpnWePcW1zwV3wqTiZaI",
+        "object": "chat.completion",
+        "created": 1793502269,
+        "model": "stepfun/step-5-preview",
+        "provider": "GMICloud",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "6409",
+              "refusal": null,
+              "reasoning": "Need output just random integer. Pick 123? Could be fine. Need maybe ensure not same? No constraint. Pick 6409.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Need output just random integer. Pick 123? Could be fine. Need maybe ensure not same? No constraint. Pick 6409.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 452,
+          "completion_tokens": 32,
+          "total_tokens": 484,
+          "cost": 0.0001928,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 384,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001928,
+            "upstream_inference_prompt_cost": 0.0001064,
+            "upstream_inference_completions_cost": 8.64e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Step 5 Preview",
+    "provider": "openrouter",
+    "model": "stepfun/step-5-preview",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": false,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "stepfun"
+    ]
+  },
+  "error": null
+}

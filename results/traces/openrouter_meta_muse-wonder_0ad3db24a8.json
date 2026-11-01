@@ -1,0 +1,1368 @@
+{
+  "run_id": "0ad3db24a8",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:58:07.752800+00:00",
+  "provider": "openrouter",
+  "model": "meta/muse-wonder",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    472918,
+    638471,
+    472917,
+    472918,
+    7392,
+    582917,
+    841029,
+    394857,
+    582714,
+    847291
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 24153.301000000283,
+  "avg_turn_latency_ms": 2415.3301000000283,
+  "total_usage": {
+    "prompt_tokens": 1361,
+    "completion_tokens": 832,
+    "total_tokens": 2193,
+    "cached_tokens": 510,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 710
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "472918",
+      "thinking_trace": null,
+      "parsed_integer": 472918,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1965.3737999997247,
+      "token_usage": {
+        "prompt_tokens": 19,
+        "completion_tokens": 108,
+        "total_tokens": 127,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 97
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501864-Yx1k7M5XmtANrWMeIe4U",
+        "object": "chat.completion",
+        "created": 1793501864,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "472918",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgFh4T9-hfW5-FNiOibAKBbh8Oj4Q3BlsHkirggHzGDxjiuR2o8D5FGxFq4lF89oNacsAkdAA6ZvohEgFchYaexm-ojZbpjO_Kw38r9ay1DUvpP3bwAjHQF0eFQ7x1Ci6TonZ9_LX8UTfLoMJi-tAfo1fwN8RQWRA4xgwlnxMn58ppSr2vsf_OyyTZQoSfK0ZJLfRmNDCFxTEvsWZ69wd-A5Q9f5iKXpKikGP6CnU6XW7ufRBt3VKcJmM2TY0RFq57SXtNqttJe5g4xEQqQksH8eLK_p-I2aANMvArDDy1ZbjFrv4i1s91A0-9pNRuS6lU_f5a2DyDD2o8YsEyLy1xcKsk0IOL-mnpZbQWAwNNHEUTP8ykZ6KOJaq0IpXhzXDCfOpEVGUTSW7AkO3qtAftcQ9-g4802Ou0NnE4bahh2PnLwlu7JsV5ihjDuF4P93BjDkivFdZfTu6w_bmslldA6DOAh9CCcAUVrpvHlmdVg_U_GQlDyAdeOx7G2Dm5l2-ZKJr37RFJBuFcJ2nLA6ZbjXYUKDFoNd_uQjj60gPk-abgBtfFc8p8XbKKP4P94_pZUQWej5VY-hh_ZE1aMHSAzu8c-1o_EwCpYGOPB6SlBeDn4kQrKmdBm2Ujx58ZFb6JvwlikJEXbLmWOIdiRQw_uMKqmn0QcdKzRp2RjSSXmMepIGh-v8Z0NRD3OE2Vq5sojzU-EK_3tCMs0yn8DUsWS-pDBTEcBWOBXYFqy-VrPEFuVdqeV9uzsR09M6icyK4neOaklwwaLHSEe8Gge3iZrLA_32jlruLCOUgRD2ehDLCa9jLwQPZlWl6KTrbHkEQmtJJ7ZhAK1QBrU3_kO002TZzUEVDDk6BIeNFXtUr8r5Ki23ulzm0ftYOqSoPwsfdwVX9zD7TIbcbj13K-42RT2gi1IJcuizT1OT0hKr17JlcfWOhATKZj82rOk9Od1nNcvNwyENZGaoupqM2uhCjmrCsX1StQa9FqiiCuah4J-0meS2JSMXs0_KWXVfnSWJnzooTxxUVUkT7KfK4DDmMfwRK3gk1YjkcfYEwfA0XmTTNx-YVGmfaLUBhVaNB8qFZj14OLM5cEBd2Fd2AtObRjVzAij3J8Nps8rMvDjvQjApJ4p4SSiFotZPQbd-nozgbS6gZktDPel_wTcmifxCz61MLoJx4UkyAdQv9xtWykD388e7Xf340Z7UERzbQ11L59yuz6AVrD8aKXT4tNtbk1usFxWM7n6NPvyNNzeFqsdGJ8Ryd8SiAQ0YCxBvXp8xEjrAvVtci8W9vF0na766SGg1P8YO-w25JrWGhpA2mfm0rVhINGu8TGFUcNhzJybaxlsgIPUR-y2cYXc3JlS6dZ3WbNYEaklX4Cp7MLOrzggXXJTHi1zZgm6Fx--sUu7e0Yr1Mx0wATvXLg.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aaa9f6abf7a896b54c2a:rs_01a1950aa78c75958d99426de629efa6",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 19,
+          "completion_tokens": 108,
+          "total_tokens": 127,
+          "cost": 0.002236,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.002236,
+            "upstream_inference_prompt_cost": 7.6e-05,
+            "upstream_inference_completions_cost": 0.00216
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 97,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "638471",
+      "thinking_trace": "Generating a random integer under a no-extra-output constraint.",
+      "parsed_integer": 638471,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 3282.983200000672,
+      "token_usage": {
+        "prompt_tokens": 42,
+        "completion_tokens": 259,
+        "total_tokens": 301,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 236
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501866-Bu8fExk8WX2InHHa2Yuy",
+        "object": "chat.completion",
+        "created": 1793501866,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "638471",
+              "refusal": null,
+              "reasoning": "Generating a random integer under a no-extra-output constraint.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "Generating a random integer under a no-extra-output constraint.",
+                  "format": "meta-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgHrIub_NGnWDqTVmNXMULNxMGjmpTLU7LubN6XnsWV-Q_kvMkGRNvIBTV-YIaG_S4nZW9B5cl8QU0A3TM-mdbh2p5HqQdMyayV1eeD1kznL7k7QW4ipypKZse-yMsDDBZJo2K4suXTjSFn_Fch9nolgKRzhGRQiqDKoXDwXklew_2BFmEpV_Uyr1TyaQ-FTdq2tOop3fowpS2r1bll_mznJ2nuN545j_q4VVUiNc-J_HZVFHQOlGdHFCZw2KgSRZUifiiRbCbGAhIbz5qwMHAwPj0eSjpkeWNS6BECdBjR7I6FAkltJo-fv_2XvMg1j7UEepGNkek6HMUOOdbLMzj0Z_exVXoppXKkcG3JY4fCPrn_7UchSYW8STliV5ZhgjJ7RRaXl9N-3q_m8XPjAl-AXwyKC_YejejS_3k5Rxj_Q9uftyc67Pw9G1GN0Wv3JGUwaV-n4XaJH3MidAw9HYzktqQ0oXQv1l9H3XF1N1DCoorIwmI4igwmwogXXDTgfdNFy7HGUBplvGzKTpi55L5zE402zI0iJV6pGV1iY4OtFUFbnTB-Zi5viCkng2gl_V-x7fqGBePFPtLzxd-M1nLrgC9MWPCcQwiPXMPyVjdbhFrAMZSgmMMi0KxGNd1QLxzPHf2flWhbzYxkXWmZ5OxKlQujEymfPpIkh2-hjy_WNUm_vsRAtPy1iaOxrwdyu1VLalhyZNx618iyUxQzxUULLKz8LMdkiXz3R2hGDdA0gVgUvx76h7bqlrgTLSw3IiS5q-G9jIuUHInf5Np4v4EuyfKLNW8ccNt7Z-ZclCZZMvaw8zSTS_C6JEnbXwGIHg8E9TNJAXXJ7a0un4QP6G1XzC59uExAAptlRW3DSMliYdXMTtkJT17MqCcoxZs9wFx_o4iBgFb0qevRS6SScgv5igNDvkt6BVL3yc0XnON9afGqoDBg_sUqNTVClGv45BWWFGkyZFXjw4qccDLK7V2WHVHRFGeTN65D8QyR1uazjIepv8d1jJ13Fws_xwncBNfJj7N6-by2tL5vQWx1tbIWZ6djbI0qCME4IvGTXG_aceLqbwsX2BGE_ehB0ro2l4bBWKS6ILUh_3zbuuideSX6kdve9sVZ4Y946qeqW11VhxB5krGTrjoyZkmx2IhUpGfZfXvryVWwrs4ZfIsHeDZmJ7MufMRzbeEqg8BX3RddnuxzFNif1Fm54QXFVD6_7RcMDoha_E3U9OK5DaNmBzHKp7rRi-fWDV-TRGjw1IPL5JYEFH8TDWIWlQHsn4vgsAlViucHbbwARfzsUM_JLfhxQtY7zC0xwZ8tlnr2RggJk_mxKvMqszebkCaxY5ClYwd3hECFiEfOHWl1dHe-Bac6yY4I168QytAJyTGOt2yNrmSk_0IPZSnmuHjDlK4S2A8Q5A-pZGqSGIXE2hkAE_B9MPmPXQ0wVkqeiQk6-4wta8YGWQyAazGPwVHtOdw8ELwk6uVB3kL2JJo3zGeFA25XewzUbXFtVBnzDwc7fuhgAXgOFZGX1gjR_BuIf827Jw9ystj2KybbLPA7tUlxC-vly9lb2AcACED19drWL8LsnuWvIMX3CQq_CoHL6xsPHvWLhCsuIVx1ajqtNyTMaQjcVimGElMxMei_mFkdlHDkHgypqWP5f-ygYFaFU62NauTvqIq5vANUSJ2Cf4bO6YIhKCSGGRFSDUatxellegjFdYmv1WJyYc6pFWUcl2QjJHazku6293J9WV2ynNCqGqiqx9G3n7elwXqAOVthBBKZSbH7f_AnLrg3CCCLY_n-0NPlhoU_YejmZd4vHJyKD4fP4XPB97mik99LwhZZIbR-fTHF3VMzoRjBHGlrO_31W86A1d9TOxFa1ORFR93C8VAD1--uSKfOpVEkJcRaQi9PG7Te_a36thqHy-mYAPZv0T1pYgBZe_byivWFXHaUSeFmPq5Si_PG-jQ53p-eBEDoCYMMysbJUNKa5xPHw5CbCAW3JHfStWbNTcuQV7wVab0kgO5xQHE8fm1uJlDzMYBSr6VL5YMNlX4PwkYMuDjonWDQ1gBwxefmfY1vEmWnHVrpfi6iiv_VHxwOymwMoAcAXqScGaKhNY-u2p4THH5JGJ6m0UxGZwSAIdW4b3mFDfpIUajd8bntaoUtlE3x73dIUp663fNoelj90c9UPR1W7E6W-nJpx-rxL1uILVylnkZqHi6a0WJ1T3hgrZlSUgUGn9XdzGdVSFDRc-uTjbxR7RC-zq2cE7eSK-RgfR4bW1OUl6Zld9czZF90Q6bej65zRHLA2Dk91v3JDyYKTO_TKao2PJzsMMN5eA-sMrNCclHZFUdZJhTu8Qc1IPa66EWpD235OhU5MPw_MVidyn0RfIo7Z1HHUbsNfSa7VucjUDX2IGOaKW8sHZAhmRwbV8M_yZp7WBwqU61emXu5mhSP84rEBsgPG1gkksveT6QPcr7GwgJSJ_ymGFIG3sznCUeiu8OmLx5clKE7iSqyb4K-8xVdiYZXpINTlWE4AJdkhkqK8QuNNhFuNgq9NjrSO5FutdcIC_3Z_k8BQSjivJMvJwC_6RmKWpK3Ih0vJ88KrTzV-X0ES0ym52A7e91gTITdDfan-8071XDY42mfLRBaq0-AcP8yEG7-7XNvCTccMNVMmo2ylov47Meq4qqB87togS8nQXKUEDjRfDkUfHTRVjvVe6rEzEk6S6BSJFDjqhlO-UqNf-IUnAGGYyQYHlAs81WMdu0L5HyUeFX87v9abDvbPrzFTegoW25y2T1Gw5x_l2sXdGdLHpL0.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aaab791c10360b2040e8:rs_01a1950aaf3a76b1b237e0351f3857ba",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 42,
+          "completion_tokens": 259,
+          "total_tokens": 301,
+          "cost": 0.005348,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.005348,
+            "upstream_inference_prompt_cost": 0.000168,
+            "upstream_inference_completions_cost": 0.00518
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 236,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "472917",
+      "thinking_trace": null,
+      "parsed_integer": 472917,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1810.9454000004916,
+      "token_usage": {
+        "prompt_tokens": 82,
+        "completion_tokens": 15,
+        "total_tokens": 97,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 4
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "638471",
+            "reasoning": "Generating a random integer under a no-extra-output constraint."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501870-zzRLCZ57AKXNGhPHa7PR",
+        "object": "chat.completion",
+        "created": 1793501870,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "472917",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgGHzUrAdRSihrdfRWBRrI3REYKaF_kKe9j47ufYEZqicb4IGU3tCTouzHScTgzrvLv2s5_035dxYJZoaF380TX06NG8Bt8WUDC40ZTnM7taSkSLzGeI5oaoJ6VgflGG2SU76it6ASG9PRhAQTPZhOJVx0Lz0HL_eAGwYmuUObirVZXgTPT7hzJowttXchWxPoPwJJgsghOjIg3VckpefNCm-14RLrMJrZhvPCmbAM7TZWL9KeUysI3bE0VzBqnvdlbb0cL6QYxSSOuFOPnACSDbM6B9MwXO8Ji3PSjzYURW8I9XmgDuhD9nQDjfvJJodhz-8tlJSr5tilY8iVyMH0HvHrw6VzxElfaRSJiSWbz70t7gSnwBuNC8tbeSKv8i-FRR5w-cO40O8_VFP5wi9cLcGd2G5dJ-vzvFwzCT5RXNhYMKEppffd4fsRR-YsY0eAQdaNqBQyBdV1wDOAQ2Dti6FPukP1NujYJEkZiEWoOJayH7XwXsv8_XqOi5BekaOOsWCgqPL-93dtKU-MrQS30ljAt59XUFB2Rs38vKRxdASWuh_rKShZ6LUpFDYQpTbH_f8kkuQuss4W2JQlGA2YRO8XLmJKe9LLV3Z35tSpTOjtw6LuKnmgtdaUkaXwRgiAHhofFqMMlkjLQVu_h5upM9Up0U5kK-YbO5mo77gP88sR0rMLlE0i7xGOMFY5R704gZ0EpODxIRpTjTBGa-CYhkalqK4x3xzgOdEn1T4C8VeGn-vgZ8y_OZetYMjdSXA6mR4ExDsxAX-8_PDQdw_a9N3vJZNJG0sIl9AhRUliqADAy2dpzMGDNgaPX29XBt5lRL14QtRrvDtKfTfxpgsdDqFfoslZgHeaZ3tltLdI-bx9pS4ed62KzkSODF6UAR1iU54IF_RTyr8lLFYzch3bPC9IyJ8vP4UnVGceDVsOpD0_I99x8mKXQ9pgdspYzk0W_QucNoGahvvlWyuqpYP1BC7wlCp6e_Wa2tbn9ivDxw58fQdDfaamZpuCjVajHpNqgMSlS2-Ep49-SszJRDD5le1a1WrKnR7x74uVI3oOxNdWOSOOfQQ7jBVFcu_IjWOoIL3yycg0grQfM3RLdvSY8X3xRSueBG-VAdBi8Ae64zkEQBvnLtnsvVh7rVpdoXlEBxO5rsy0yI48x4Rj5r-yGDfJ-VzblFIld79FLzf9fWVIJ_fGmCVeYDfxvOV1ny1a6R1F5FMMhxWt9Mm_IKgwTr1qh7UP83-HZBzwcPyUkP7MGyqvsnYx6sMuVNgCSlJacTGdoMbtTryh_SgknDODUfJZI8f1sUX6ifSm055msUjohpmxsYEfWRkTcC_uYvdDzJ6T2whd2_NSsYKRvlvrmX5FqYPVeYAxO7YbxESSVDs0iBROE_GquHwW9gxUQSEZdumIYRW6qdnQ.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aaaf2968717a0fae4bfe:rs_01a1950abcc97576a31163e4b9c47529",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 82,
+          "completion_tokens": 15,
+          "total_tokens": 97,
+          "cost": 0.000628,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000628,
+            "upstream_inference_prompt_cost": 0.000328,
+            "upstream_inference_completions_cost": 0.0003
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 4,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "472918",
+      "thinking_trace": null,
+      "parsed_integer": 472918,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2864.209399998799,
+      "token_usage": {
+        "prompt_tokens": 105,
+        "completion_tokens": 36,
+        "total_tokens": 141,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 25
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "638471",
+            "reasoning": "Generating a random integer under a no-extra-output constraint."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501871-MhpVENgPRIX7FzU5D9L8",
+        "object": "chat.completion",
+        "created": 1793501871,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "472918",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgHNn-5JOERWMMKHKNhnsk1cJogipMM_zXFKF2h4_XvBJRd72QPb71Zw7iHc6fRMcMNwzCtfWBBVeyrFOCzFmey3YF1w7TNShY86ODfHgWv4USxWPspml5AVt549dpWyWUGvUcMC1Sh8Sw1x1U2lnk_Eq9fYuaofx1otmdvA1kT8Tthq3aUzzwGRp480X7PYkl8qD6l-Zcuepp_PI2qUJQvHIQfKMKGP-eJP-u5HCvhG2KUY-1pWz1tS36_8BofcIE9S04sQG9mYpn2JH0Um63Zy1M45y9IS3mm_QvYlBj4AznrurvYEoixaZiT6oVQRCaLRnIr1pKZHSkX30NE-4acS2FvN0Y7VbVln9jcE_XtHADlOab-hlWO8nAVrtlQU4RjKRBdNn6BG44VZvHbdna5IR3x8GaDPIMYF39Tc9Wmo_CGPNXWTUyFPrMwcdHtDIApjaPDvh_TG_ovx9PROhYc6WlWSB7-mzfYmT7GRnKrxzkRjBM-B1HwT1rMCJ7ys6inNtT5SL1ecm-kF1ZH7ff6bQVuocGp34VuMVi0SNDp0rbQYyzIbDVlTOPJDgYHxWhpYSkZFlUb7liJkah10cumIXaiNzNYFFmG0_DgnIAyUXEv4XryRPcOovJ3QzNaYadtKWuVpsGj24GeKvuPO0tvrTZP-pqQCn6PgpiThZDTOzWaJ5GY7ppMlyiyitirZ2cD2F49AwutBIcxXxjtQaUkdncsteOy79NDTH3FbAWMhRltPK3hl-rW5-tpCW-N9WGw3gtJEZs0RyFD3xWY96YyKaQG_meYZ7_HlmVb1LmPidR-hLZyTxt1TYoQ-ZX1zfU_kKpPHmvvUT-Ku3xgIHovry5zNZPRRLEUIgFcs4ZHvkzPc3poTGGkBMas-y8pc1RQxLxwL6ervE1sRP9EDRJSNYlUhp4eEgWlQkjz4LFYJKmZ7Qsq3tQDB-iu6-DIiBBZS8XGDbm8-FENowg13R-cB8yncDl5ct6ASb08gfRwr5IMewtqADOQMrl-WozOvQiv19AikKxTrylh4e8lGBkuiTxWvkwieKW7QP3Mz7eqygcDCTWSl2NmzC2i0vMw2PRTmr9jbftY1Q9j2G2Su7tMsBNSl8FTrlUIiSOVi6D5dEmc89HDFHlf9H0_A3RF6HB_rRS525ukxkW_PaZEONTqcMj37iXYOE2gM2O4wHI85plKkmjxD8i51qnF00S4wItiQRD7GKfUMBAkCWHPWYZo6vvgZRUqaxlzbI6nNQ48A-pA9jKGyC_Rxvw9aHg4LXpahD0vWv8dhkKSgbeJWVER5A7F5z254EpNGMESbb2wRUV7W5cACoY0J7fXf9WQKFwG5mz0-3AiOMA3lGjO-HVvMK9PZ8zw3s8zrT9l2jEk0vMXrdtvPSE0LP3rNEpDMn8aEEMYw8tuanw.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aab21414f4f9b11b4887:rs_01a1950ac781732d8fa18be073aa4f4d",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 105,
+          "completion_tokens": 36,
+          "total_tokens": 141,
+          "cost": 0.00114,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00114,
+            "upstream_inference_prompt_cost": 0.00042,
+            "upstream_inference_completions_cost": 0.00072
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 25,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7392",
+      "thinking_trace": null,
+      "parsed_integer": 7392,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1107.093000000532,
+      "token_usage": {
+        "prompt_tokens": 128,
+        "completion_tokens": 23,
+        "total_tokens": 151,
+        "cached_tokens": 102,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 12
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "638471",
+            "reasoning": "Generating a random integer under a no-extra-output constraint."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501874-vQIFyutvLBwMxeu6pA1b",
+        "object": "chat.completion",
+        "created": 1793501874,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "7392",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgGnVlpIEp-P_ZQD_q7kTTpgi_usxqKeeltsBOA5-wR3cHCBHNz6nh8nfl4eg-ygPxw4rWl0yTSmpEHTHLh0NWRoHyrYnqqqpcsyQUw27cuQ3K6zBEA1ugjQd610Tic1LoSRIZmTn-Hn4yX4heC6m_nvkYAVZsih002_tsmJc1CuMlFqSZgWpJ-d6IILgzCTuY9nDCxcb3TRMlPewl8tq9zBF87M2KRocBwAE5s_iCl4nSCAEW64bA0gUMeMlXsDx-X4OQolGNufCQ2j80AxqhKZIyV6FtJbcD7Xs11UzscecC53jpm1mQZ1ZpFqrkPcuWDTAeYMUIHxr5jSZ1dkWyTljbd_DSIBxFVp01Jnw1gX9T9zryIr7964QOI0r-BNuJQKy_y-L7EVwrQ_8w1GCWTVY1Ox6Lg-B9A9v3iGgKoRuRPcuOGeMU3iskI5VGBFPWjsyLoEK2-Rdl-L6eJ75AXwP9xfXBYmlJkAXz7vVfRak48kefnbrUCme6jcgxNKfXkaDrd4MuQmn8cDgDenmxa2-wtsEeNfIC5HRVdN2UfCzmQeNLEW5S03Ey_0l7n1g44VLeUH6Rh1tww3cwb99l1UGwVdYqjC2xFi6SL5pRzAVBWyhGbinE9JIR2V5zj49RlhnBne43-wX12uWyQSBlg08NfSl7_UWYTmZbz8gEtFt3uxQSgUl5DwKXhb5U1zPpianhIoQCn4PRJsGc9SFKWKfle_yj59ojiYf8tXjiEu-Eys0qFXdl8NGXlQn0QpgMOAYkches9u2vGTQ9wunXiizLSXW27gHVET5Kcb1V5jXs-6Ds9wDzie8q83rOKUSBfGOr9gdJ3m4kvDrx7VmnwC5lTXr_rEzYd1I-Pdqo65lrVhw074Sf9PsgXW74Mrbcz1gjVzbIV2lRT3Do5YztuVtcw0sF-6xTZg4PZB3uZ9GTzOx_LuS2q-z7vI8bVaBTTfDWbSqMIJOWRF8s9JyGQ1XvtsLnVkbMswMuVHdjYLOCJXTarYY-I5e_QGcHzSx8Ga1iGjjqdLk0GNCb5cq9DtcXLy9rvyllUOy77DdNU1mYudJn9gbY49qCgDjC1QlJQ1Uy7TMRcwXfSBJh3_P08h7biHPE6PsdGx8269gEnV3p5yOwYiRFazfx4YgPSMvezgZ6dnyR-7IL6eQcXg0bnIxgo7JhtsWEjJq-Kpic3HMhDFnHNKXjnmmYnXSxop66ivnFaQdUihSv1pIQaQUl5gH-L3QYhkQLaEY8SbrPnO_NBfD7lmlPxsqONAUbuRE5mQapmIZTbB5WkdK3HvRWhzk-fUaMnYRy6eMNBeEeR846I5IJQ3npwK_E-tP5n7V3D7R7rNCJCa-si8Dt10xa4tco-PAeqmjBlIaNGikJxhjHjgYkFo90BD6SxpCgcALJTraAhl_ewh1Q.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aab3073a8c37c0d64129:rs_01a1950acd18767bafac620190cac6ef",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 128,
+          "completion_tokens": 23,
+          "total_tokens": 151,
+          "cost": 0.0005844,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 102,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0005844,
+            "upstream_inference_prompt_cost": 0.0001244,
+            "upstream_inference_completions_cost": 0.00046
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 12,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "582917",
+      "thinking_trace": null,
+      "parsed_integer": 582917,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2077.993400000196,
+      "token_usage": {
+        "prompt_tokens": 151,
+        "completion_tokens": 21,
+        "total_tokens": 172,
+        "cached_tokens": 102,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 10
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "638471",
+            "reasoning": "Generating a random integer under a no-extra-output constraint."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501875-rxPcchHtjzwWYipnmnjW",
+        "object": "chat.completion",
+        "created": 1793501875,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "582917",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgFG3LeGI9hYAKWvS2NVeRbTVtlweffyssoyQr7fDlIS07KNnnWImLiRUHm1ibTzspYMu5ek0DJ0xnpPxE1NWensl4Vu4YnZj_ggz-fWVonSPsxRE63forirZ0WHD4PGlzwhSawt-F5fUelfZySjRZXWjuiXG_SXDMUIM6rsaoTbEOlIjrRpXIvy7qx8WxSmTV_b1SC8Rfad1GI8hfmzc5skP22Kv24d-dJOCLb2NzG-hfiGH2O9BH4-hxL83qCsIIh77lC-GkNAcbmj1XE6fCuPjIfgkaNyb0ZTEvHJhrnz_n0crsoartEnMzEN0Xcb74wX0oSu5pfbMtFYGz3nTuQIInvfeJRDuqDQ8FufF0hauCva2ERWfajTwcrDAKAbWPTJ6zbD8zdHn16cdFGX0dycMY0YII7sfaX-2kqITm0I-eBro3U8puLXhUcxJlxYIAhZUVVu-8e9CFxZgYCDKrZUHqqF7WB2aKt0lxHGKUwOCnPEvrFvwzYqgTscL7IFr4bu0bIy_GxNJ3X9GPbt1astA_7E3DOXw-tUU5yE22kW1LnQpakkE7r7it1Z4i11VxOsUPRqwBvsiHILoi2xBn0zavWbLOfOlLDvstyCUo8Osvj6k9dsvjYcOOyYbRX_H_xDO4edL_F_lDCLHKJNBrGOBqKACWZH4kZTZUF4t60Vc_VwEdVpCWQLWXpICtKC4r8pEJnsC6-z0P2YunfM65ngRANVwomJKP1gaKXfLnjx5yYg4nqzrDiBLiLeP5wD6ykOgvG1WOwWu5BT2V4PJhkeVwdt8XWaY8irhvavdn1ts_qYeLX88VUKxakhea4F2-5zg7c5tfHjV-w9oHkiFToFrDv_4bvlDGkLbnCyVNWUQ25SjlPHGwj6CS89aqJ8_Bj6VtBizlrOwKd4_F-2gcnBAUHIT-C3_5M1kQg4VcD6HHIVxuUFKJ9LbmtcvAicMGP8MfEdUxi-l7bbxAUpbQ_RMh2ug0QWLvwY_sjfhv28hdK_4FABbYzYcnrFpSj0ZJaNi_UN8CUaspk9-olGeayO8ckTw1sEnkuQbtC_h1wKtyW0Y3YQxO4mJGBdMX8uaxiIeDcu3rs1yl6cUpzZaOTVuT9HEC6ldO8mP0XQ3fB-Onb714Bi8LFbOphP1_7PwZrMZr0IgNT0YEPjyNGQKoMfEK6hWKxVULLMRdaMvNwFCjOIuDso0qHoXYolKHnqkAH7rQUXZqWCb36qXE5ewByEiIFlh6TOKyhFG0JbrAOkzo1wP09EVw6ZN_HBK--qsXc3RgPjUc2Z9og0UgDulrxAC0Ja6Sl207_XEyra599iJVVRTOpuuJfRZIldJDo3TiaPuGkkXI18aZLXm8u8RabmS1zEn6Dxn3MPi4_XCyns_1pX8aI_peB4h0iKlsu995cE0lQjrUcVPw.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aab5ac8d06f2d4ba4290:rs_01a1950ad501701ca2b2d6150ca34484",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 151,
+          "completion_tokens": 21,
+          "total_tokens": 172,
+          "cost": 0.0006364,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 102,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0006364,
+            "upstream_inference_prompt_cost": 0.0002164,
+            "upstream_inference_completions_cost": 0.00042
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 10,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "841029",
+      "thinking_trace": null,
+      "parsed_integer": 841029,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 3448.3703000005335,
+      "token_usage": {
+        "prompt_tokens": 174,
+        "completion_tokens": 103,
+        "total_tokens": 277,
+        "cached_tokens": 102,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 92
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "638471",
+            "reasoning": "Generating a random integer under a no-extra-output constraint."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "582917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501877-9kbnoPfKFHrr5iQt5f5Y",
+        "object": "chat.completion",
+        "created": 1793501877,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "841029",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgHSEDyW6pDiI6fu2ILdATXk9LAgjtvc8q3G8EXcml6Xxfa9C2Nyjc677CrzcvGTyRkuqhFZT_I4i_A2QbfVY3zESBwD5NRpXlarusVewG6L1Kn7RjvJvZg9ejOJ-d6MIlneH4UJi8D09UFaEDwsBHZwxv6NequNmwAYEJhkjcz1qbTVggKVmOO5TjIhGmre80cWcEl5Xij2XH3sxFUVfTO_6QrSbpDoSplSdNCBgykziynxo5CjPRGjFGeYKKJOGPcS8QHCmMkH47njUsCGMGu1hNp0pzOJ6phVbkkVw_5yGX1yE3DYFBnBBVrKBpU45rolUIkeiHsjsF_Jj2OlYRJPhfJbXRRLfRAHSree5TJ7N8K8Vnbhy9-gWy9kJtPYT4kr6gk0NEYuMdTYpW1Mf8lQMITPhhCOZa123B4MmDa2DKxRppJHffPhZURiLnkGuJL1t65eFa3xVIyPKYF-qR0mNjMvUsrn50DRKXKPeOeBMflkSQfZSid6s_ZdUzCvEtfO2A015eHO9jK05UNYSKtgmO5ttbdkHqa4rR4S2oEthgO-8ZtdFIQCn03Fpj0Xqi-ZZ2TOMMOC6KslPL-VpaJO_cLXn9ByrFTHYP2xL4tFi4HralMAJwrTHuo6bTaLLjtflNKN-UfIM_lLarMzzdKrNzaEvxR4wrBuq2FM_tk1sK-IxcD7taQGL4Jm2tLPYJ-OHGOUJ9xytTby8aa4fO9U_-DTSbTvVn7QAMsdZze4FMjx7EMCELHadFfpWXyOrUtym9njMszHn7QwVerNO2DYZn7b3shm28g4SSzTKHT7anyOtEQ3MSnhResIqaZzCWyPEB4TIJ26h9MpeV69TgKteueB4z_tondeaipWyIQSyQ-0ORi6j1ELXjzAXjPUZrB55b7un7WHLtn9sHhzwbjmvf5_UAhVOWCzMsT3qjw8zcA6K8hLaf6xWGOaNhtlF7Y6e_HfSEyOxET_6VQusf6lP33LDRONLa6BPN4R66LrLrZnZg54o37v8XImbcIWDAoOa3o_7yHlHBYcCY4YFTkX_ReV22Im0qT_pYLieU-Va_eBbZOhWxu1nLKEwVloTEMqgcP2t0E2IO_-_FjJdH2s4Q1f6NmUPUwNCBznoAj_p7eDPcCNA1o6H7h74pJCGChPC4uPGP7_5DdwwpPe_sX7gCsQ3sSPaLMU5o44T-QuKg0y3gTlCbeFpXf79xLIHYn1SZkilHIEXI1k0nfQJiUqEghR85-Fr8imCx18XNXfoBN4zN9vhWGVI7X6A09IGORukwoJ0O9f0QKph_-d5gh8J7gKKkKAnky1i4Mg0kdDn4LsvE4ovT1aciAAT48fc9nzXpeU1_CpT-fhh_Ji9GTDiAjfLDh39g1GmBHJbxGA4s-rI6dQ7zG7_6WYZqzvCPWB8M4dVrB39g.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aab883eb368e78da498b:rs_01a1950ae049763e92c395310a3e6554",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 174,
+          "completion_tokens": 103,
+          "total_tokens": 277,
+          "cost": 0.0023684,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 102,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0023684,
+            "upstream_inference_prompt_cost": 0.0003084,
+            "upstream_inference_completions_cost": 0.00206
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 92,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "394857",
+      "thinking_trace": null,
+      "parsed_integer": 394857,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 3356.0434999999416,
+      "token_usage": {
+        "prompt_tokens": 197,
+        "completion_tokens": 120,
+        "total_tokens": 317,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 109
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "638471",
+            "reasoning": "Generating a random integer under a no-extra-output constraint."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "582917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "841029"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501881-kR2d2379zspOTaEj5eWy",
+        "object": "chat.completion",
+        "created": 1793501881,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "394857",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgHuwd-PHqMgieSlFsQqLXwy7vOKvmuCk-0hydo4JqKzZUj-yeYeD6n38MBto4GGIYbCUD8UxKHpcwJQBa1XG7UoYwValaYxK_EB411mh1H9XGPtVBbyyZoXs6mordbLl1F1D5pgDk91fGmO5Q18StF3_yF5RaQrexKpX_A75iKhFfzVq2IhXApUU5FGO4NDzkfYXVW02LtbKM5IatTf3GkbmBqjvmgY1iEMr_WRMOiTFyCcFPIbausm6OpSUyf_J0pQSl1NAOph5gQNJiy5q0AnwSt8FamLETmonmPyOy8RP-cgCXG7968eILYcrd7QQ4ZZHux4-rH7EsFEfbIPTE9x91z-pNo9dE6B_qOXdIjY979RvZKOua-eIonnT3nsSERAaerR01hUQ7GftJxOiIX2IRx446xjgZty0W8BU6cDwOO4W0mWgftAYQK9TJhkAz9KzwBhMwOb8m6t50Is92wXlHgZlRQrK7D7nPITE3e4TQDU0mndDmFi4ujuit5rMJZj-DEkREv6GDv7VO_-H3QluCb-oSSPHoGszdFKLoFOlWEMjOR1qGk3HkITcqrF74xNd91r6kV-535Mx0AJ-oYNFbQu_eYAaaiYmct10WtM2WYf9BlfFBjfTXG5s71HIg7s9sTf3mBv5WwheLFf8jiXCTZYJmm3zDSicKOFceBomY3jpGumGZ-huG-EtG7oAu1580rQC-PgIp7r9WMbMvZKUh26gb4oEzkuEPQplromXDQt1PADuf8oqnB20GnwqimJBwJrbIMnNVA6m-oLhHHxj7UAeK6KTxjk9On0cp_Osysnpzmx6a0L4jSW_pZphv4Ho9V0mzUfK6py7aZtLinYBeXb7VC8BTwaaOZW2khYbQHTJTZfUwd8rAPuV2UHSgh3i4uEw8uKFPgyBuyJQis1MibX87eAShddpfF9s-sGEc2whwd5P1Dakqd1958vch0-_Wwdx56V_qDoh85JXnBcUS_LE8GodUQ0VjB0fxg80KamAcOQNP5Z_Y8_CIULIhcgcsaAjJsWshlkdPKTCNJHHpSwvRMfheSBxUlgJKKPiOrLczT65FbAWXjvlfktlB-RvNsYUNRAJbd69gkW0SfQBtc3bKx3-e88FUzfG5DgAgs7ONUu4Q31Q53x840OrYFevZqXCi8yfD0HNqeXPZiDBJqnPiOfXIIaW56zeZ-IqqAMcMbAdKqbexpoa0x-EZDRK01WmTdTHjmUnuzZcTxGrBj0xQeuCDK5715gKt7qlh_YCeB-zKEFUIej5thZTrzhGRyLwzCafybLKchN3ojend353XC1LTvwGE-cVbneEPJNJo7eugObkuq_YkAS70FR4gFTg8nPSbPR4pfDhi9FUAXyzLgdVw9TjZxksqfVpoInZ4CBxpRFGvOl4GKrn4x5RGPANDDi4w.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aabb41d5d5c37e814a68:rs_01a1950aed0d704a85d028ebb58b5b27",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 197,
+          "completion_tokens": 120,
+          "total_tokens": 317,
+          "cost": 0.003188,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.003188,
+            "upstream_inference_prompt_cost": 0.000788,
+            "upstream_inference_completions_cost": 0.0024
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 109,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "582714",
+      "thinking_trace": null,
+      "parsed_integer": 582714,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1188.9785999992455,
+      "token_usage": {
+        "prompt_tokens": 220,
+        "completion_tokens": 22,
+        "total_tokens": 242,
+        "cached_tokens": 102,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 11
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "638471",
+            "reasoning": "Generating a random integer under a no-extra-output constraint."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "582917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "841029"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "394857"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501884-z5GVP1W2g1YPKgEuHAd6",
+        "object": "chat.completion",
+        "created": 1793501884,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "582714",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgGtUCI9GwW-sNfXWETafvE2YVRO7KLPFtMJyHWDJKIMZXP0TxomBUBv1tA8ocG8WTF1LP8T4Oa-D2gRgzb9r5ptKXlUquQKj2qwDHj03GlELRO2vDfvK7sm_Vsc8SNxPNGkTmvq3xd1euR2tvmvNG7J_cBPR9Z640j9zJaGuZJ_fVxx_pORz1BsfU_PdKvX2AnhERHc-mOvm1uE5a-BdDp8ZhjQXVsFA1JjEeB0btjO4Ml6pyJx6w13OYEu88W4giY5-s8KJcuon5E2J5yF2F35-o9ev4-X7hXMhGWc1Jej2zJlW-YKJunRzQnJiocLBhrfFUvMuGfZOVbNQ1rAPsxndP550uk_lwuDJjcs4to2rIxBT1GbUMsyfWc5V7WpmC5J2qPs5E8b1D32DzI0srk9IZHMHtauOHgDACEJJGCQBk0G757_AQgTMBE1RQOGAyIOzC3iHXbFum2TnDYK3Uc6HbCG-LZRQcM8wv_AM2TyUSPcnESMVua5eNK3v4n6YTMEv7lPnHHgDC99EydTOaluth1I1tNKTYOZtp0iOCL4ec7XzC7XJzZddBYCzHy5GwERWpRYWdgBEpQ_T8aJpOuND2iSftw22L2olpLbOSMCjAZAUA2CzyETXUPIjKSJp3BFquK9GxNVA_KiXgsvCtLa2lzUXcGtHZIN6CUXiNEVLTSLyTrmw6NfePWwVzk-HJeE2De8b5T8Shdl_Av_9RYzCloj14gWgWCM0U4MB7DFCgwmh5oeXiQMxyH9Ff0p4CRHlHuMMC6cr8iwT4OsGDnfI8N0ZhjNWu4YpFWaBxX05q_x8yK2i1veHNLf1ZTb9MyPzh_j54iqHeZnOar6CNO4v29N3WQi4AqWiH6g8rYzGJdMkyyKlTUpS1BgwZBG6_kQa5_HyQ4eJjvWDlmyLehlQaMful3DUALjkiz4sA7c3BM8ZQ-cXYTSw2DSSpcdnAThdkGaIpmxEedsdpvKROBtlNEztabtuCNgrm3ByM5n78fmly04K1_9p8VKriz6DHXIq_tRU3pb7oAgHYPl_9C2IyGzl8fTZ-dwPuJN4PI5SWotE3al-UlPKEsZgmxPBBSRCCrjxbyTS1b9I3K8MqOijZGcyT0rilzxmP_tn7qNYUYqsU3HwkM8_nWF7atuYSyluLToURaeXc9m7erki520mZtbg3vJxhl5H6H3pnflilWuJYe-j6HJrJ1QiLdmA_MGXA4VWj-wZxamYP8Dj-PYscjg1cCybbF2C2rIjdjxGiayeGcqsJxs-Nmv1qbcqwD4AlBXV2rJM41VD6sEyyW0Zx0DZDt4IyLLT51TG118S5MWc_cGwOuXO4nR2MV0wJVMOQjwMpmbtcKhpq_p3aqjpW8BfSnQRbmMTWreC79fd4YqGUmBPa1fUKUv1Na4lF3NmfoLig4b7A.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aabd46498d59a5294add:rs_01a1950af46870059124e6fbdaf3663a",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 220,
+          "completion_tokens": 22,
+          "total_tokens": 242,
+          "cost": 0.0009324,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 102,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0009324,
+            "upstream_inference_prompt_cost": 0.0004924,
+            "upstream_inference_completions_cost": 0.00044
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 11,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "847291",
+      "thinking_trace": null,
+      "parsed_integer": 847291,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 3051.3104000001476,
+      "token_usage": {
+        "prompt_tokens": 243,
+        "completion_tokens": 125,
+        "total_tokens": 368,
+        "cached_tokens": 102,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 114
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-wonder",
+        "provider": "Meta"
+      },
+      "raw_request": {
+        "model": "meta/muse-wonder",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "638471",
+            "reasoning": "Generating a random integer under a no-extra-output constraint."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "472918"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "582917"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "841029"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "394857"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "582714"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501885-om97syx4oMOyQRAerIab",
+        "object": "chat.completion",
+        "created": 1793501885,
+        "model": "meta/muse-wonder",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "847291",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgFqENzSejdC2j6tgV7mCNusPRp9jlmQUHQhXUiwPzsj9hda__jUIigwLdo3U7xFG1mTvngZMxD0VpmkwYtDt_8p7VEUt_GyZspy74BNLQ9RTsnMtz0El6y5B_S9KF7hjUtunaNZewL_yebiHJYaWG3XxbtVaDuAZ6-ISqpJaV6mOLVTMlj6OTkHdUeGcvUXdmJo6LOn_QsSUd9GkQ4Pze1yFdD4P3sHSG1M1JfC8SmTC2fro50lhB1UZJX_UxeoBY9P2Xte6v03zvfukr6QKrA2f8iqvuDkv1m7pg3DZkoIJDYz82o80W4M2yT_r7h-N6Bc4ULPKvC8ffbS7H1_WlZvAIpbSQGIqYcaImJNU4wwwf0ip-O_FW2nLNEh5TajXkR92UFJziy2svV3xjjfcVYXPkS7wXF-cTUw75m4VpaaSieWyP6evbAKXJq-6Ti4iEjjtsQfdJhQ8x4nFVBz6d4-9yeL53ET-9QmFBFXwAIi3pOtbpK4O0vYdMB6I0YSl2bHbaBVeqRVlVAi2eel7FUvN38LBCSVggBDB_Gsqb5A9a8O3VKZxCt2CUlXAifbS4gBviOd-HBVXRpjjv2CH1GrEihc6iRZ9z-MhfGfK8AzuhxxzOpdFBTz2-0-s7I-8ad4lkK7KGLSXwkylfO1RncBVUotyZ9yx7RBVKYL3RagvaG6jP1hW6kUp0qC7wma_Kw6bpEEawHZJ247XfoGkjIBTyayoGIdqhKAZpyTC5uUbhykGuhBOsZAK4aAVuXHTi4n58PpFZNSs-BFxYcvK75SXHyEfegMopBT_30viHhO5oUxuEaitK4HED-lZMVrpxFIilPXn7G6ISUcdQkOt6uKtgUIRBTbC0drYpbsJ-FZvu8yXWawlLuNJVX-eBzaODxSOowA9jiPhoHxL_VUHpa7rdrNZjq4wJrc_jj2k91n30WPtzyQL79nI86p9uSkorNNS9KlRvZS4685Jn3b2Dwca_Gk7wSpQN8L-qOg1UlZ3UnycSjQcWV5Iq_BHywRnco6hhgdZe2Z9MRnZudy8tTdoI2QV4faFLm1wpv1u4euiCjSJWQyOemy2WlK13aMhWux2ucU1LDNWFeKOxyuYizoV4T03vy-Dc64BIVJvuFYGBWih8Xjuk38yzEv4lim49WZrxN1ANDxob7FOyQPDWuwkU3k9NK8PN6wuLYf4IltBHZ-MqZW2Y75hsDdD3Wd34p1Mf1XZwPgisJNrNnPPUcsjaUelU8GDSmW29_3fi8tRnuGyshG_ao8YU9PUbXAlGeEKF2f6F3-snKFx0IavAPsvFnHDGXw93Ue7ABQWGKZ6-766jsE-c93vi8wiu-p5BIlDqKU0DbD-lrhpaZ_d1hOsr3ctX6ldGsrYqKWZjAcYOAlhdC7CuE0nmn1mxCEXZzrnU50z18emg.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXdvbmRlci0yMDI2MTAxMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6ae6aabf12c5c515eaec47e4:rs_01a1950afb9875e1a5ae92eeda24a7be",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 243,
+          "completion_tokens": 125,
+          "total_tokens": 368,
+          "cost": 0.0030844,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 102,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0030844,
+            "upstream_inference_prompt_cost": 0.0005844,
+            "upstream_inference_completions_cost": 0.0025
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 114,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Muse Wonder (max)",
+    "provider": "openrouter",
+    "model": "meta/muse-wonder",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "meta",
+      "muse"
+    ]
+  },
+  "error": null
+}

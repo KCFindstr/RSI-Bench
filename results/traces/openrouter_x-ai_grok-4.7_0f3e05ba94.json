@@ -1,0 +1,1409 @@
+{
+  "run_id": "0f3e05ba94",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:58:31.364951+00:00",
+  "provider": "openrouter",
+  "model": "x-ai/grok-4.7",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    738291,
+    4829157,
+    9152847,
+    6284731,
+    3748291,
+    5829164,
+    8472915,
+    1938472,
+    6284739,
+    4729183
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 14591.656700000385,
+  "avg_turn_latency_ms": 1459.1656700000385,
+  "total_usage": {
+    "prompt_tokens": 13511,
+    "completion_tokens": 501,
+    "total_tokens": 14012,
+    "cached_tokens": 12288,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 472
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "738291",
+      "thinking_trace": "Generating a random integer and outputting nothing else.",
+      "parsed_integer": 738291,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1351.543999999194,
+      "token_usage": {
+        "prompt_tokens": 1253,
+        "completion_tokens": 58,
+        "total_tokens": 1311,
+        "cached_tokens": 1152,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 56
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501898-evnUUzwKcJ6fQV0YFHAn",
+        "object": "chat.completion",
+        "created": 1793501898,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "738291",
+              "refusal": null,
+              "reasoning": "Generating a random integer and outputting nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "Generating a random integer and outputting nothing else.",
+                  "format": "xai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "DyY9pjL46MRCohzdU3RxSN8oiKD9gj6vay1mLNfzw7NbWwrL19AJGzwQ3ArVeXtwwShYlsh2yeeJrvpnLLQWjIqAvJ3lXndQhLQ/ZevPLbhr6d17N7GEGp49JMaCu46ILzyEFSgwEGRv6GEFtBrEhRy0qlmK1beY7GIMcqOYvcby/4BAiDHGstnDuRqTkZP3TizCZIQ6l3EFPNGWSTPLplTxZCYp2Hm4EeD3DUTxTQmVre8zGBYV1gAiwPJfiSAuwQGx07Ws7Gm6BMUJ9ESCYFNGhKTLc2FUmR4jN5HD8saIr8y8us0MNFkT4YSm1TXuFhP4u2lucsIJ8BIoa++lWwweI4M4VtHlNi51U7PI1KqOoiHLpCI.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_8b8ee874-ec49-9b77-96f7-f30c6eb3afda",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1253,
+          "completion_tokens": 58,
+          "total_tokens": 1311,
+          "cost": 0.001126,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1152,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001126,
+            "upstream_inference_prompt_cost": 0.000778,
+            "upstream_inference_completions_cost": 0.000348
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 56,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "4829157",
+      "thinking_trace": "Generating a random integer and outputting nothing else.",
+      "parsed_integer": 4829157,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1271.1025999997219,
+      "token_usage": {
+        "prompt_tokens": 1274,
+        "completion_tokens": 46,
+        "total_tokens": 1320,
+        "cached_tokens": 1152,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 43
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "738291",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501899-zWiErodLGxtYqooCikBj",
+        "object": "chat.completion",
+        "created": 1793501899,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "4829157",
+              "refusal": null,
+              "reasoning": "Generating a random integer and outputting nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "Generating a random integer and outputting nothing else.",
+                  "format": "xai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "vvkvccGZ4I4aSvvrCJiFXRN32qJt8pRiWgr/QFJEmY3hAMm/ExfzrwjP+qa56uGzyRAh0JFpEu+U1m/F2DK44JIVZ/EsNHNrCl4IjtoNiUvDsgjyt9zYTge9mV3EhM4c3ahWZ0qHp1j3PScZtTrOHLYaUnI60BnYUHKZ0wVPDwReGyb2pBupj+hZF8ddU1aUVDTMUqw0OOjTyR+62WpM8owOxW8I66XtUBNsfVlyPsUEv/9/vU6GHkhvvYxO7NwoFjGicyEBMujxWI+kdoKCxQsiu5aW7Yo575DiAS4BI1PqZZ+VNWZeRr+8rQ5ehivJz8usuauZDw.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_aef4c622-1060-9f0c-b61e-461a55c1e692",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1274,
+          "completion_tokens": 46,
+          "total_tokens": 1320,
+          "cost": 0.001096,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1152,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001096,
+            "upstream_inference_prompt_cost": 0.00082,
+            "upstream_inference_completions_cost": 0.000276
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 43,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "9152847",
+      "thinking_trace": null,
+      "parsed_integer": 9152847,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1246.08679999983,
+      "token_usage": {
+        "prompt_tokens": 1296,
+        "completion_tokens": 40,
+        "total_tokens": 1336,
+        "cached_tokens": 1152,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 37
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "738291",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829157",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501900-nOlhyGneUNANwYbFqHCn",
+        "object": "chat.completion",
+        "created": 1793501900,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "9152847",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "ym3IvFgCuDmNy9ciilX9VTJu9rrwF8pmgoB13O4TD6srGMVra6URMhiKEO2EfUSxZGXtX6XTjblHcvPM16ndPqd7hcJd7kSVAmXSNZvm1m7PptVRtXHZSNPCc9qLyo2L30ygAP1QKEXiFs4ieKjxQZt308QpSyie8naKvQUHSRwgiu5LepfMCWzezBDyulBYBriDbEjEbz0qQsSvgw9LsoWV1TkWnm6/FHM6Yaocy2vgOHO/eoeQ52CNIzZ6VywQRAertQ6o7jcfXFEUfXcux07CaZqSM5BFlF3xwpA.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_50b81fab-8880-9781-9c40-c55189734f29",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1296,
+          "completion_tokens": 40,
+          "total_tokens": 1336,
+          "cost": 0.001104,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1152,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001104,
+            "upstream_inference_prompt_cost": 0.000864,
+            "upstream_inference_completions_cost": 0.00024
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 37,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "6284731",
+      "thinking_trace": "Generating a random integer.",
+      "parsed_integer": 6284731,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1514.080400000239,
+      "token_usage": {
+        "prompt_tokens": 1318,
+        "completion_tokens": 77,
+        "total_tokens": 1395,
+        "cached_tokens": 1152,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 74
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "738291",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829157",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9152847"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501901-FjEgws0fHHZWMAJmtrcI",
+        "object": "chat.completion",
+        "created": 1793501901,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "6284731",
+              "refusal": null,
+              "reasoning": "Generating a random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "Generating a random integer.",
+                  "format": "xai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Xl0TLAxC6iUk36xXgTtylQR0su5JEc14nPEq9m7U3tZzRFHJRlGVBS3L3tqhXkaDBsjwrUWHPaothvG6bloDXdKl7DjQ4T3s4Jvpv2Uy0+GocXQpjWXalNL1kHhcENDZDXxG7vbuivIGU4Z+xtBn+1rNLI8s2qQgmbPBCiBH2hSc0YTnN7y2JyTRbFzmr9M3tWK90xaJ8ZJIm9CHVTHO4Clvl41/dAEYqCtQIUh8TfTOpTIyfgl5bl3KykhaRbDvfZnsYHMPqU/GWCaZe27x8D6vG+J1M2ICQCCsYxpw1hVVO6M4RlB0JuA7IRHeqnxOD60xft2kmbl8KIbHdERUnLouRys3+yctLj9L2QbhbMUwloRx/xmmRL/zHZCnDAY78WhD7ilN7HfiFCqNT7VVFEzrhRQs7IyBExTL1KRru2omNKvOL/Y0fDVQyzeMBBEntje9GKoLv2NFWWsEn+lAGvy9fzMqXztrZSzpOAqX60I.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_7a017f47-0310-9bb0-91ca-aa0671d7ff9b",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1318,
+          "completion_tokens": 77,
+          "total_tokens": 1395,
+          "cost": 0.00137,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1152,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00137,
+            "upstream_inference_prompt_cost": 0.000908,
+            "upstream_inference_completions_cost": 0.000462
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 74,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "3748291",
+      "thinking_trace": null,
+      "parsed_integer": 3748291,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1047.0382000003156,
+      "token_usage": {
+        "prompt_tokens": 1340,
+        "completion_tokens": 33,
+        "total_tokens": 1373,
+        "cached_tokens": 1280,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 30
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "738291",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829157",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9152847"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6284731",
+            "reasoning": "Generating a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501903-LKKRlPaaKBO5OW1nyE4E",
+        "object": "chat.completion",
+        "created": 1793501903,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "3748291",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "21jFxlwNoN08C5tmOQAc7g8XaPTr1VOR8BG19NYZp9thW55bRXo6f4H6tricMUWq16ufFV21dbDQ+hYZNypUdng5Vsh8qNMlp9W+ZpcBl24mHLBFMQFMdKK7ElRyalL2o8ac0IkURcELYpenTjrv5/Nat5e0PHpko1aJavngQdAB0Ggq/6s8D9rQXcu5YNIbyNqQAtB+doRXgSg7fqjccHnHz+goCjUEopwV.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_bdfe67f9-03ed-9066-a089-fee4fd014ed3",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1340,
+          "completion_tokens": 33,
+          "total_tokens": 1373,
+          "cost": 0.000958,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000958,
+            "upstream_inference_prompt_cost": 0.00076,
+            "upstream_inference_completions_cost": 0.000198
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 30,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "5829164",
+      "thinking_trace": null,
+      "parsed_integer": 5829164,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1360.9603999993851,
+      "token_usage": {
+        "prompt_tokens": 1362,
+        "completion_tokens": 37,
+        "total_tokens": 1399,
+        "cached_tokens": 1280,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 34
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "738291",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829157",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9152847"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6284731",
+            "reasoning": "Generating a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3748291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501904-hTpmjriGkAsPC0t9JuSC",
+        "object": "chat.completion",
+        "created": 1793501904,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "5829164",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "6yClcRiiIn+sVUsTdcxX0M2j0hxmGjhR3Kg9JnwHG5r3M98cbq1ssZ2fJzBSKXD9JFAySu4hAfjXbIVVZ+KlPakpLWW8h6r1CQIg1IJpSLpvVz23XgWIk8mjDEc3eCwBC5b+U+8J4rpYP4M0BwfyZ30EVVpwgKUPhPp7hUdy1ZfVKnmS9S4qgZfmZ0qZUspbyL5/4WJGgy2eamLZJ/A6qrQAM/vjHSrqQ7bdn6Pcxb0oFj2YodB+qyNYxE+0oeZEFe5VgD3IjdZZBTkt.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_135a2a64-fb5a-91da-9155-b9a9949e5ffd",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1362,
+          "completion_tokens": 37,
+          "total_tokens": 1399,
+          "cost": 0.001026,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001026,
+            "upstream_inference_prompt_cost": 0.000804,
+            "upstream_inference_completions_cost": 0.000222
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 34,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "8472915",
+      "thinking_trace": null,
+      "parsed_integer": 8472915,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 903.8512999995874,
+      "token_usage": {
+        "prompt_tokens": 1384,
+        "completion_tokens": 34,
+        "total_tokens": 1418,
+        "cached_tokens": 1280,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 31
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "738291",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829157",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9152847"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6284731",
+            "reasoning": "Generating a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3748291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5829164"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501905-o6Vc8LVKoTvslIvZr4WJ",
+        "object": "chat.completion",
+        "created": 1793501905,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "8472915",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "wJS9Q9h3ep00SmOMJ6UaKO1dSDzrIMYtZ4EN29ZbbL37TdjPbN5P2o5TBylUpRepbEPIqG/I4Dnb2QcL1KCB/XkPR+9gAcYHUu9QvXd7VJkoB3m5yGK0uRvObi6ehU3SlrdqVXw4NMryDWyS6iJ50TbYLakUfTnM1ESdA8hGiK3Bg5BeqgZil43bMYioHL3m4uihjfG4P/a1pw0NFYtiaZ5YceFu1lZWCmOdaIcGMVTSUw.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_3ca4534a-c763-9e60-b397-1cda81f76442",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1384,
+          "completion_tokens": 34,
+          "total_tokens": 1418,
+          "cost": 0.001052,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001052,
+            "upstream_inference_prompt_cost": 0.000848,
+            "upstream_inference_completions_cost": 0.000204
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 31,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "1938472",
+      "thinking_trace": "Generating a random integer and outputting nothing else.",
+      "parsed_integer": 1938472,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1497.6837000012893,
+      "token_usage": {
+        "prompt_tokens": 1406,
+        "completion_tokens": 51,
+        "total_tokens": 1457,
+        "cached_tokens": 1280,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 48
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "738291",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829157",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9152847"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6284731",
+            "reasoning": "Generating a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3748291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5829164"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8472915"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501906-l8Z9Lu4KTtn7h0qaKzW6",
+        "object": "chat.completion",
+        "created": 1793501906,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "1938472",
+              "refusal": null,
+              "reasoning": "Generating a random integer and outputting nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "Generating a random integer and outputting nothing else.",
+                  "format": "xai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "pZ2d6J+TpnJXBlc0LR+uvqp/nS1gWL66Xd5jYNZvYshYXKjuYge3fMG/pmcrmNVwpoQxN98krBe/VvDFncvpJU/PXjFwl1cUZ9+OYsbble1e6hJwq3pjZ5WVNTqkrEsHdQjMpz5OuVTNL0UJAKIGogJ3M0Lw3QYj61dNKF9W6NQbvCn9phGi/X1bzuTrcBhgeqz05NdU9e3qSbsnRMKnSu17IQcnd4YxcZQ8BT0ADE9bKrvmgrdzM1XluaAgye+6RgEIyueVyxkS2Tcl2F2PcrL2+Eemhabyvjgz3WJBSaKh62W21mygcNqr1yO6cqgsKQkUvilzJkCvHpCUY5Oe4IXD4fXg65YTch6wSOwlyf96W5tqSA.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_3b2e0d83-aea8-9559-bb76-56f5fc58afff",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1406,
+          "completion_tokens": 51,
+          "total_tokens": 1457,
+          "cost": 0.001198,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001198,
+            "upstream_inference_prompt_cost": 0.000892,
+            "upstream_inference_completions_cost": 0.000306
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 48,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "6284739",
+      "thinking_trace": null,
+      "parsed_integer": 6284739,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1079.9877000008564,
+      "token_usage": {
+        "prompt_tokens": 1428,
+        "completion_tokens": 32,
+        "total_tokens": 1460,
+        "cached_tokens": 1280,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 29
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "738291",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829157",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9152847"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6284731",
+            "reasoning": "Generating a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3748291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5829164"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8472915"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1938472",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501908-TwzMF4MWsFhmqkhqpCeZ",
+        "object": "chat.completion",
+        "created": 1793501908,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "6284739",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "8JijR/wOoxzOs6ZRAWUUdNda7lQaoGVcTzN8oCCOmPvxLeKHT0IJusUP1gycd0X2IYqF1LuhCWH14I3BhApHDpPGkD+c/JOCQavcV7AYMEacXvXtuE+5CJGdOfrhKKpMgIYL8iWJi6MO7xkT7WUdJJnLmpXxIJVFWCZmOAOG0pxP+qyBpC2rMAdeBY5azlJEsj2LQW758zc5irhuwgyF3YKSJjhYZwpq.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_e181a2f3-1154-9361-a1f9-38410564de13",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1428,
+          "completion_tokens": 32,
+          "total_tokens": 1460,
+          "cost": 0.001128,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001128,
+            "upstream_inference_prompt_cost": 0.000936,
+            "upstream_inference_completions_cost": 0.000192
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 29,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "4729183",
+      "thinking_trace": "Generating a random integer and outputting only that value.",
+      "parsed_integer": 4729183,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 3319.3215999999666,
+      "token_usage": {
+        "prompt_tokens": 1450,
+        "completion_tokens": 93,
+        "total_tokens": 1543,
+        "cached_tokens": 1280,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 90
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI"
+      },
+      "raw_request": {
+        "model": "x-ai/grok-4.7",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "738291",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829157",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9152847"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6284731",
+            "reasoning": "Generating a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3748291"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5829164"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8472915"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1938472",
+            "reasoning": "Generating a random integer and outputting nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6284739"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501909-UD84oDdeQmwmhpMnMEoL",
+        "object": "chat.completion",
+        "created": 1793501909,
+        "model": "x-ai/grok-4.7",
+        "provider": "xAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "4729183",
+              "refusal": null,
+              "reasoning": "Generating a random integer and outputting only that value.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "Generating a random integer and outputting only that value.",
+                  "format": "xai-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "FsaXF9oUs60k5zV+KyOtinU2O8UKYh57YolbX++jiOhDql7E2Aq/WgsJKD6zDmmW1nRrD3mmY04aN57dWxedIkoBXRAB3uogQtzjGerjmOiUvjv5Ix7b68FC8KOE8OQwNCjO//XXuxjlWU91GXuCsPKQIUxAA4aOiQjTgMCVADTaqf4CXDsQgFCcJncFsZrt7kt6mnAQFzCG+nLhx54zhRkV2ETK089aLOaZKD2bQvX9UJN6jiORl09mSFjojiVpghFbh9rT9wyTB7H7DIr0Bf/zMr8MKTfAFhEsSRDI/r5pF2mprwuCgyqsAJsS9wdxuZuT6lN4d4k03zhoMaxlydrcNrvXBcbfOPe3kyrQ/CwKWq6/Y2Y7PVfXrnZBD5oRBoLFIWJZFNblhD58c4ZBpHfjL2xXtS4Erd5T9nruPtqlkwtQohuyiRP8B4XWN9jG4ACO43RqmTAHb5rOItoF6CeWN8x/Ae92mKA8Zza5Nfk4As4njSwZ0ZQJ3gpkVmMBGzPehejb4QyMW8RZfI0IVEUpoCaTNQm0ilJpKgKVMMIyut+11v+uFnk7FH45Twpnsj1d0mNbEdmhWlxAPqNcr7cQ0D1iXIS479xtPc89QtPcNDMOwt8CNNxeyZoW/lMDBuf7v3BT.eyJlbmRwb2ludF9zbHVnIjoieC1haS9ncm9rLTQuNy0yMDI2MDkxNnx4YWkifQ",
+                  "format": "xai-responses-v1",
+                  "id": "rs_aa1118c1-19cc-9c6b-8b0f-f8a1e9f1dbfc",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1450,
+          "completion_tokens": 93,
+          "total_tokens": 1543,
+          "cost": 0.001538,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 1280,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.001538,
+            "upstream_inference_prompt_cost": 0.00098,
+            "upstream_inference_completions_cost": 0.000558
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 90,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Grok 4.7 (xhigh)",
+    "provider": "openrouter",
+    "model": "x-ai/grok-4.7",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 24000,
+    "thinking_level": "xhigh",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "xai",
+      "grok"
+    ]
+  },
+  "error": null
+}

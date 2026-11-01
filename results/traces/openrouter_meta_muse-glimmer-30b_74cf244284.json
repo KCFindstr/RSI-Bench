@@ -1,0 +1,1390 @@
+{
+  "run_id": "74cf244284",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T03:07:21.406100+00:00",
+  "provider": "openrouter",
+  "model": "meta/muse-glimmer-30b",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    4829173,
+    9374621,
+    5528190,
+    471028,
+    902341,
+    6184739,
+    3048571,
+    7392048,
+    1654329,
+    2847193
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 19174.93590000231,
+  "avg_turn_latency_ms": 1917.493590000231,
+  "total_usage": {
+    "prompt_tokens": 4402,
+    "completion_tokens": 442,
+    "total_tokens": 4844,
+    "cached_tokens": 2688,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 383
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "4829173",
+      "thinking_trace": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk.",
+      "parsed_integer": 4829173,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 5698.726900000111,
+      "token_usage": {
+        "prompt_tokens": 67,
+        "completion_tokens": 172,
+        "total_tokens": 239,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 190
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502423-pYI98fVHbbYU6uao1TYR",
+        "object": "chat.completion",
+        "created": 1793502423,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "4829173",
+              "refusal": null,
+              "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 67,
+          "completion_tokens": 172,
+          "total_tokens": 239,
+          "cost": 0.0002265,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0002265,
+            "upstream_inference_prompt_cost": 2.01e-05,
+            "upstream_inference_completions_cost": 0.0002064
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 190,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "9374621",
+      "thinking_trace": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text.",
+      "parsed_integer": 9374621,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2290.1064999987284,
+      "token_usage": {
+        "prompt_tokens": 256,
+        "completion_tokens": 67,
+        "total_tokens": 323,
+        "cached_tokens": 64,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 68
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829173",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502429-YoNfs9nhG2ApW7olGRRV",
+        "object": "chat.completion",
+        "created": 1793502429,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "9374621",
+              "refusal": null,
+              "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 256,
+          "completion_tokens": 67,
+          "total_tokens": 323,
+          "cost": 0.00014056,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00014056,
+            "upstream_inference_prompt_cost": 6.016e-05,
+            "upstream_inference_completions_cost": 8.04e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 68,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "5528190",
+      "thinking_trace": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n",
+      "parsed_integer": 5528190,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1562.2780000012426,
+      "token_usage": {
+        "prompt_tokens": 340,
+        "completion_tokens": 36,
+        "total_tokens": 376,
+        "cached_tokens": 192,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 28
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829173",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9374621",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502431-0cTkqvCSAvLCU3owjviP",
+        "object": "chat.completion",
+        "created": 1793502431,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "5528190",
+              "refusal": null,
+              "reasoning": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 340,
+          "completion_tokens": 36,
+          "total_tokens": 376,
+          "cost": 9.528e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 192,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 9.528e-05,
+            "upstream_inference_prompt_cost": 5.208e-05,
+            "upstream_inference_completions_cost": 4.32e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 28,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "471028",
+      "thinking_trace": "We need continue. Output integer.\n\nProbably 123456789? Could be any.\n\nDo not output anything else. Just integer.\n\nLet's pick 471028.\n\n",
+      "parsed_integer": 471028,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2669.1829999999754,
+      "token_usage": {
+        "prompt_tokens": 393,
+        "completion_tokens": 44,
+        "total_tokens": 437,
+        "cached_tokens": 192,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 36
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829173",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9374621",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5528190",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502432-azJg7NDKdS7GgFlHvcyB",
+        "object": "chat.completion",
+        "created": 1793502432,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "471028",
+              "refusal": null,
+              "reasoning": "We need continue. Output integer.\n\nProbably 123456789? Could be any.\n\nDo not output anything else. Just integer.\n\nLet's pick 471028.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need continue. Output integer.\n\nProbably 123456789? Could be any.\n\nDo not output anything else. Just integer.\n\nLet's pick 471028.\n\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 393,
+          "completion_tokens": 44,
+          "total_tokens": 437,
+          "cost": 0.00012078,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 192,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00012078,
+            "upstream_inference_prompt_cost": 6.798e-05,
+            "upstream_inference_completions_cost": 5.28e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 36,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "902341",
+      "thinking_trace": "User keeps asking. Just output integer. Continue.\n\nLet's output 902341.\n\n",
+      "parsed_integer": 902341,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1200.8290000012494,
+      "token_usage": {
+        "prompt_tokens": 454,
+        "completion_tokens": 28,
+        "total_tokens": 482,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 20
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829173",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9374621",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5528190",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "471028",
+            "reasoning": "We need continue. Output integer.\n\nProbably 123456789? Could be any.\n\nDo not output anything else. Just integer.\n\nLet's pick 471028.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502435-OMw6p8ZQWWutB5cQUUoo",
+        "object": "chat.completion",
+        "created": 1793502435,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "902341",
+              "refusal": null,
+              "reasoning": "User keeps asking. Just output integer. Continue.\n\nLet's output 902341.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "User keeps asking. Just output integer. Continue.\n\nLet's output 902341.\n\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 454,
+          "completion_tokens": 28,
+          "total_tokens": 482,
+          "cost": 0.00010324,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00010324,
+            "upstream_inference_prompt_cost": 6.964e-05,
+            "upstream_inference_completions_cost": 3.36e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 20,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "6184739",
+      "thinking_trace": "We should comply. Output integer.\n\nMaybe random each time. Let's do 6184739.\n\n",
+      "parsed_integer": 6184739,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1630.7145000009768,
+      "token_usage": {
+        "prompt_tokens": 499,
+        "completion_tokens": 32,
+        "total_tokens": 531,
+        "cached_tokens": 320,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 21
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829173",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9374621",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5528190",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "471028",
+            "reasoning": "We need continue. Output integer.\n\nProbably 123456789? Could be any.\n\nDo not output anything else. Just integer.\n\nLet's pick 471028.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "902341",
+            "reasoning": "User keeps asking. Just output integer. Continue.\n\nLet's output 902341.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502436-Ptvj6oMMmH3auMZOUawb",
+        "object": "chat.completion",
+        "created": 1793502436,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "6184739",
+              "refusal": null,
+              "reasoning": "We should comply. Output integer.\n\nMaybe random each time. Let's do 6184739.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We should comply. Output integer.\n\nMaybe random each time. Let's do 6184739.\n\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 499,
+          "completion_tokens": 32,
+          "total_tokens": 531,
+          "cost": 0.0001049,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 320,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001049,
+            "upstream_inference_prompt_cost": 6.65e-05,
+            "upstream_inference_completions_cost": 3.84e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 21,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "3048571",
+      "thinking_trace": "Continue.\n\nOutput integer.\n\n",
+      "parsed_integer": 3048571,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1881.2534999997297,
+      "token_usage": {
+        "prompt_tokens": 548,
+        "completion_tokens": 18,
+        "total_tokens": 566,
+        "cached_tokens": 384,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 8
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829173",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9374621",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5528190",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "471028",
+            "reasoning": "We need continue. Output integer.\n\nProbably 123456789? Could be any.\n\nDo not output anything else. Just integer.\n\nLet's pick 471028.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "902341",
+            "reasoning": "User keeps asking. Just output integer. Continue.\n\nLet's output 902341.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6184739",
+            "reasoning": "We should comply. Output integer.\n\nMaybe random each time. Let's do 6184739.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502438-TXlaAe5LX2F95yTwlrud",
+        "object": "chat.completion",
+        "created": 1793502438,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "3048571",
+              "refusal": null,
+              "reasoning": "Continue.\n\nOutput integer.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Continue.\n\nOutput integer.\n\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 548,
+          "completion_tokens": 18,
+          "total_tokens": 566,
+          "cost": 8.616e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 384,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 8.616e-05,
+            "upstream_inference_prompt_cost": 6.456e-05,
+            "upstream_inference_completions_cost": 2.16e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7392048",
+      "thinking_trace": "Continue.\n\n",
+      "parsed_integer": 7392048,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 855.803399999786,
+      "token_usage": {
+        "prompt_tokens": 583,
+        "completion_tokens": 15,
+        "total_tokens": 598,
+        "cached_tokens": 384,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 4
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829173",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9374621",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5528190",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "471028",
+            "reasoning": "We need continue. Output integer.\n\nProbably 123456789? Could be any.\n\nDo not output anything else. Just integer.\n\nLet's pick 471028.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "902341",
+            "reasoning": "User keeps asking. Just output integer. Continue.\n\nLet's output 902341.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6184739",
+            "reasoning": "We should comply. Output integer.\n\nMaybe random each time. Let's do 6184739.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3048571",
+            "reasoning": "Continue.\n\nOutput integer.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502440-Wmki5yKOuiqBmimIpl1f",
+        "object": "chat.completion",
+        "created": 1793502440,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "7392048",
+              "refusal": null,
+              "reasoning": "Continue.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Continue.\n\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 583,
+          "completion_tokens": 15,
+          "total_tokens": 598,
+          "cost": 9.306e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 384,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 9.306e-05,
+            "upstream_inference_prompt_cost": 7.506e-05,
+            "upstream_inference_completions_cost": 1.8e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 4,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "1654329",
+      "thinking_trace": "Continue.\n\n",
+      "parsed_integer": 1654329,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 791.2378000000899,
+      "token_usage": {
+        "prompt_tokens": 615,
+        "completion_tokens": 15,
+        "total_tokens": 630,
+        "cached_tokens": 448,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 4
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829173",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9374621",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5528190",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "471028",
+            "reasoning": "We need continue. Output integer.\n\nProbably 123456789? Could be any.\n\nDo not output anything else. Just integer.\n\nLet's pick 471028.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "902341",
+            "reasoning": "User keeps asking. Just output integer. Continue.\n\nLet's output 902341.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6184739",
+            "reasoning": "We should comply. Output integer.\n\nMaybe random each time. Let's do 6184739.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3048571",
+            "reasoning": "Continue.\n\nOutput integer.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392048",
+            "reasoning": "Continue.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502441-C9BM5a3nKEtkmdBo3ghd",
+        "object": "chat.completion",
+        "created": 1793502441,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "1654329",
+              "refusal": null,
+              "reasoning": "Continue.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Continue.\n\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 615,
+          "completion_tokens": 15,
+          "total_tokens": 630,
+          "cost": 8.602e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 448,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 8.602e-05,
+            "upstream_inference_prompt_cost": 6.802e-05,
+            "upstream_inference_completions_cost": 1.8e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 4,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "2847193",
+      "thinking_trace": "Continue.\n\n",
+      "parsed_integer": 2847193,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 594.8033000004216,
+      "token_usage": {
+        "prompt_tokens": 647,
+        "completion_tokens": 15,
+        "total_tokens": 662,
+        "cached_tokens": 448,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 4
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "meta/muse-glimmer-30b",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4829173",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe need generate a random integer. Do NOT output anything else.\n\nSo just output a number. Probably integer. No extra text. Do NOT output anything else.\n\nWe should output just the integer. Possibly with newline? Probably fine.\n\nGenerate random integer. Let's pick 847392. Or random. Could be negative? Integer.\n\nJust output number.\n\nMake sure no explanation. Just number.\n\nProbably okay.\n\nEnsure no extra whitespace? Might be okay.\n\nOutput: 4829173\n\nLet's pick 739201.\n\nMake sure no \"Here is...\". Just integer.\n\nProbably follow instruction.\n\nPotential issue: random each time? We'll output one.\n\nDo NOT output anything else. So just digits.\n\nLet's output 184729305.\n\nOk."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9374621",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nWe already output. User repeats same request. Should we generate new random integer? Probably yes. Do NOT output anything else.\n\nJust output integer. Maybe different.\n\nLet's output 9374621.\n\nNo extra text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5528190",
+            "reasoning": "Generate a random integer. Do NOT output anything else.\n\nContinue. Output integer.\n\nLet's do 5528190.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "471028",
+            "reasoning": "We need continue. Output integer.\n\nProbably 123456789? Could be any.\n\nDo not output anything else. Just integer.\n\nLet's pick 471028.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "902341",
+            "reasoning": "User keeps asking. Just output integer. Continue.\n\nLet's output 902341.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6184739",
+            "reasoning": "We should comply. Output integer.\n\nMaybe random each time. Let's do 6184739.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3048571",
+            "reasoning": "Continue.\n\nOutput integer.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392048",
+            "reasoning": "Continue.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1654329",
+            "reasoning": "Continue.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502441-EihuIgzLoGcwKC73CYTV",
+        "object": "chat.completion",
+        "created": 1793502441,
+        "model": "meta/muse-glimmer-30b",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "2847193",
+              "refusal": null,
+              "reasoning": "Continue.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Continue.\n\n",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 647,
+          "completion_tokens": 15,
+          "total_tokens": 662,
+          "cost": 9.562e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 448,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 9.562e-05,
+            "upstream_inference_prompt_cost": 7.762e-05,
+            "upstream_inference_completions_cost": 1.8e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 4,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Muse Glimmer (high)",
+    "provider": "openrouter",
+    "model": "meta/muse-glimmer-30b",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 16000,
+    "thinking_level": "high",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "meta",
+      "llama",
+      "glimmer"
+    ]
+  },
+  "error": null
+}

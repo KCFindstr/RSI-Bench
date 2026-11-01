@@ -1,0 +1,1264 @@
+{
+  "run_id": "b52c2418c7",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:58:16.585413+00:00",
+  "provider": "openrouter",
+  "model": "anthropic/claude-haiku-5.5",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    7,
+    4,
+    7,
+    3,
+    5,
+    2,
+    6,
+    8,
+    1,
+    9
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 8652.291100001094,
+  "avg_turn_latency_ms": 865.2291100001094,
+  "total_usage": {
+    "prompt_tokens": 1295,
+    "completion_tokens": 30,
+    "total_tokens": 1325,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7",
+      "thinking_trace": null,
+      "parsed_integer": 7,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 800.201999998535,
+      "token_usage": {
+        "prompt_tokens": 26,
+        "completion_tokens": 3,
+        "total_tokens": 29,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501889-gSom6n1Qw8TcYqPdKYcL",
+        "object": "chat.completion",
+        "created": 1793501889,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "7",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 26,
+          "completion_tokens": 3,
+          "total_tokens": 29,
+          "cost": 4.1e-06,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 4.1e-06,
+            "upstream_inference_prompt_cost": 2.6e-06,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "4",
+      "thinking_trace": null,
+      "parsed_integer": 4,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 957.7344000008452,
+      "token_usage": {
+        "prompt_tokens": 49,
+        "completion_tokens": 3,
+        "total_tokens": 52,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501889-2VYCkcGEif4Pn4EYRaiv",
+        "object": "chat.completion",
+        "created": 1793501889,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "4",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 49,
+          "completion_tokens": 3,
+          "total_tokens": 52,
+          "cost": 6.4e-06,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 6.4e-06,
+            "upstream_inference_prompt_cost": 4.9e-06,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7",
+      "thinking_trace": null,
+      "parsed_integer": 7,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1047.2884999999224,
+      "token_usage": {
+        "prompt_tokens": 72,
+        "completion_tokens": 3,
+        "total_tokens": 75,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501890-PmDSJQ7UvN4cG695cJR8",
+        "object": "chat.completion",
+        "created": 1793501890,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "7",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 72,
+          "completion_tokens": 3,
+          "total_tokens": 75,
+          "cost": 8.7e-06,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 8.7e-06,
+            "upstream_inference_prompt_cost": 7.2e-06,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "3",
+      "thinking_trace": null,
+      "parsed_integer": 3,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1146.2843999997858,
+      "token_usage": {
+        "prompt_tokens": 95,
+        "completion_tokens": 3,
+        "total_tokens": 98,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501891-Gq2673gx739dUqg4KjEv",
+        "object": "chat.completion",
+        "created": 1793501891,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "3",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 95,
+          "completion_tokens": 3,
+          "total_tokens": 98,
+          "cost": 1.1e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.1e-05,
+            "upstream_inference_prompt_cost": 9.5e-06,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "5",
+      "thinking_trace": null,
+      "parsed_integer": 5,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 791.5960000009363,
+      "token_usage": {
+        "prompt_tokens": 118,
+        "completion_tokens": 3,
+        "total_tokens": 121,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501893-okz6WbDB0NfvVYqQtG59",
+        "object": "chat.completion",
+        "created": 1793501893,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "5",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 118,
+          "completion_tokens": 3,
+          "total_tokens": 121,
+          "cost": 1.33e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.33e-05,
+            "upstream_inference_prompt_cost": 1.18e-05,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "2",
+      "thinking_trace": null,
+      "parsed_integer": 2,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 845.5264000003808,
+      "token_usage": {
+        "prompt_tokens": 141,
+        "completion_tokens": 3,
+        "total_tokens": 144,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501893-ZItgel3IKRwSJcYscvRw",
+        "object": "chat.completion",
+        "created": 1793501893,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "2",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 3,
+          "total_tokens": 144,
+          "cost": 1.56e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.56e-05,
+            "upstream_inference_prompt_cost": 1.41e-05,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "6",
+      "thinking_trace": null,
+      "parsed_integer": 6,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 736.1203000000387,
+      "token_usage": {
+        "prompt_tokens": 164,
+        "completion_tokens": 3,
+        "total_tokens": 167,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501894-O8HP9mB5oKa9bYeMlVfk",
+        "object": "chat.completion",
+        "created": 1793501894,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "6",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 164,
+          "completion_tokens": 3,
+          "total_tokens": 167,
+          "cost": 1.79e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.79e-05,
+            "upstream_inference_prompt_cost": 1.64e-05,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "8",
+      "thinking_trace": null,
+      "parsed_integer": 8,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 766.1102999991272,
+      "token_usage": {
+        "prompt_tokens": 187,
+        "completion_tokens": 3,
+        "total_tokens": 190,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501895-JYmeJReCcOAIDkCAv8R9",
+        "object": "chat.completion",
+        "created": 1793501895,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "8",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 187,
+          "completion_tokens": 3,
+          "total_tokens": 190,
+          "cost": 2.02e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.02e-05,
+            "upstream_inference_prompt_cost": 1.87e-05,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "1",
+      "thinking_trace": null,
+      "parsed_integer": 1,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 807.7348000006168,
+      "token_usage": {
+        "prompt_tokens": 210,
+        "completion_tokens": 3,
+        "total_tokens": 213,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501896-kcl2oRdfP8ETI0AEqrGt",
+        "object": "chat.completion",
+        "created": 1793501896,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "1",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 210,
+          "completion_tokens": 3,
+          "total_tokens": 213,
+          "cost": 2.25e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.25e-05,
+            "upstream_inference_prompt_cost": 2.1e-05,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "9",
+      "thinking_trace": null,
+      "parsed_integer": 9,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 753.6940000009054,
+      "token_usage": {
+        "prompt_tokens": 233,
+        "completion_tokens": 3,
+        "total_tokens": 236,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS"
+      },
+      "raw_request": {
+        "model": "anthropic/claude-haiku-5.5",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "3"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "2"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "6"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501897-wOwTuWGPyKX0nIMPzxil",
+        "object": "chat.completion",
+        "created": 1793501897,
+        "model": "anthropic/claude-haiku-5.5",
+        "provider": "Claude Platform on AWS",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "end_turn",
+            "message": {
+              "role": "assistant",
+              "content": "9",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 233,
+          "completion_tokens": 3,
+          "total_tokens": 236,
+          "cost": 2.48e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.48e-05,
+            "upstream_inference_prompt_cost": 2.33e-05,
+            "upstream_inference_completions_cost": 1.5e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Claude Haiku 5.5 (max)",
+    "provider": "openrouter",
+    "model": "anthropic/claude-haiku-5.5",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "anthropic",
+      "haiku"
+    ]
+  },
+  "error": null
+}

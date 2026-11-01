@@ -1,0 +1,1389 @@
+{
+  "run_id": "8324f3aec2",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:59:01.162510+00:00",
+  "provider": "openrouter",
+  "model": "deepseek/deepseek-v4.1-flash-1017",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    47,
+    8,
+    63,
+    91,
+    12,
+    56,
+    37,
+    284,
+    73,
+    482
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 6731.822699997792,
+  "avg_turn_latency_ms": 673.1822699997792,
+  "total_usage": {
+    "prompt_tokens": 870,
+    "completion_tokens": 281,
+    "total_tokens": 1151,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 251
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "47",
+      "thinking_trace": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47.",
+      "parsed_integer": 47,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 661.8435000000318,
+      "token_usage": {
+        "prompt_tokens": 15,
+        "completion_tokens": 32,
+        "total_tokens": 47,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 29
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501935-077vE9RBNGuFSBWz85DF",
+        "object": "chat.completion",
+        "created": 1793501935,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "47",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 15,
+          "completion_tokens": 32,
+          "total_tokens": 47,
+          "cost": 1.88e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.88e-05,
+            "upstream_inference_prompt_cost": 1.2e-06,
+            "upstream_inference_completions_cost": 1.76e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 29,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "8",
+      "thinking_trace": "The user wants a random integer. I should just output a number and nothing else.",
+      "parsed_integer": 8,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 469.6684999998979,
+      "token_usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 20,
+        "total_tokens": 51,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 17
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501936-lcHHl6rbIooGkTGszlue",
+        "object": "chat.completion",
+        "created": 1793501936,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "8",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. I should just output a number and nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. I should just output a number and nothing else.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 31,
+          "completion_tokens": 20,
+          "total_tokens": 51,
+          "cost": 1.348e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.348e-05,
+            "upstream_inference_prompt_cost": 2.48e-06,
+            "upstream_inference_completions_cost": 1.1e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 17,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "63",
+      "thinking_trace": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63.",
+      "parsed_integer": 63,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 638.4068999996089,
+      "token_usage": {
+        "prompt_tokens": 47,
+        "completion_tokens": 28,
+        "total_tokens": 75,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 25
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501936-KmpCAmCQsKROHNOe2fII",
+        "object": "chat.completion",
+        "created": 1793501936,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "63",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 47,
+          "completion_tokens": 28,
+          "total_tokens": 75,
+          "cost": 1.916e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.916e-05,
+            "upstream_inference_prompt_cost": 3.76e-06,
+            "upstream_inference_completions_cost": 1.54e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 25,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "91",
+      "thinking_trace": "We need to generate a random integer. The user says do NOT output anything else. So just the integer. I'll pick something random-ish. Let me think: 42 is common but maybe too predictable. Use a different one. 17? 83? Let's go with 91. Actually ensure it's an integer. Output only the number.",
+      "parsed_integer": 91,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 740.4500000011467,
+      "token_usage": {
+        "prompt_tokens": 63,
+        "completion_tokens": 75,
+        "total_tokens": 138,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 72
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "63",
+            "reasoning": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501937-02IeHIxLYea5T2Jpcx3v",
+        "object": "chat.completion",
+        "created": 1793501937,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "91",
+              "refusal": null,
+              "reasoning": "We need to generate a random integer. The user says do NOT output anything else. So just the integer. I'll pick something random-ish. Let me think: 42 is common but maybe too predictable. Use a different one. 17? 83? Let's go with 91. Actually ensure it's an integer. Output only the number.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need to generate a random integer. The user says do NOT output anything else. So just the integer. I'll pick something random-ish. Let me think: 42 is common but maybe too predictable. Use a different one. 17? 83? Let's go with 91. Actually ensure it's an integer. Output only the number.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 63,
+          "completion_tokens": 75,
+          "total_tokens": 138,
+          "cost": 4.629e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 4.629e-05,
+            "upstream_inference_prompt_cost": 5.04e-06,
+            "upstream_inference_completions_cost": 4.125e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 72,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "12",
+      "thinking_trace": "We need answer only random integer. Need comply.",
+      "parsed_integer": 12,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 653.6431000004086,
+      "token_usage": {
+        "prompt_tokens": 79,
+        "completion_tokens": 13,
+        "total_tokens": 92,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 10
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "63",
+            "reasoning": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "We need to generate a random integer. The user says do NOT output anything else. So just the integer. I'll pick something random-ish. Let me think: 42 is common but maybe too predictable. Use a different one. 17? 83? Let's go with 91. Actually ensure it's an integer. Output only the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501938-hmY5VMNgkyaHVQjs7n8c",
+        "object": "chat.completion",
+        "created": 1793501938,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "12",
+              "refusal": null,
+              "reasoning": "We need answer only random integer. Need comply.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer only random integer. Need comply.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 79,
+          "completion_tokens": 13,
+          "total_tokens": 92,
+          "cost": 1.347e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.347e-05,
+            "upstream_inference_prompt_cost": 6.32e-06,
+            "upstream_inference_completions_cost": 7.15e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 10,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "56",
+      "thinking_trace": "The user wants a random integer. I should just output a number and nothing else.",
+      "parsed_integer": 56,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 356.96549999920535,
+      "token_usage": {
+        "prompt_tokens": 95,
+        "completion_tokens": 20,
+        "total_tokens": 115,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 17
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "63",
+            "reasoning": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "We need to generate a random integer. The user says do NOT output anything else. So just the integer. I'll pick something random-ish. Let me think: 42 is common but maybe too predictable. Use a different one. 17? 83? Let's go with 91. Actually ensure it's an integer. Output only the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "12",
+            "reasoning": "We need answer only random integer. Need comply."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501938-z7k6T5NwjucJxWxkSbAc",
+        "object": "chat.completion",
+        "created": 1793501938,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "56",
+              "refusal": null,
+              "reasoning": "The user wants a random integer. I should just output a number and nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer. I should just output a number and nothing else.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 95,
+          "completion_tokens": 20,
+          "total_tokens": 115,
+          "cost": 1.86e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.86e-05,
+            "upstream_inference_prompt_cost": 7.6e-06,
+            "upstream_inference_completions_cost": 1.1e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 17,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "37",
+      "thinking_trace": "The user wants a random integer, nothing else.",
+      "parsed_integer": 37,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1443.7273999992613,
+      "token_usage": {
+        "prompt_tokens": 111,
+        "completion_tokens": 13,
+        "total_tokens": 124,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 10
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "63",
+            "reasoning": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "We need to generate a random integer. The user says do NOT output anything else. So just the integer. I'll pick something random-ish. Let me think: 42 is common but maybe too predictable. Use a different one. 17? 83? Let's go with 91. Actually ensure it's an integer. Output only the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "12",
+            "reasoning": "We need answer only random integer. Need comply."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "56",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501939-FcDTpzSmyb6EZmQrWvJv",
+        "object": "chat.completion",
+        "created": 1793501939,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "37",
+              "refusal": null,
+              "reasoning": "The user wants a random integer, nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer, nothing else.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 111,
+          "completion_tokens": 13,
+          "total_tokens": 124,
+          "cost": 1.603e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.603e-05,
+            "upstream_inference_prompt_cost": 8.88e-06,
+            "upstream_inference_completions_cost": 7.15e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 10,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "284",
+      "thinking_trace": "We need to generate a random integer. Need to output only integer. Need to ensure random. I can pick something like 284. But need random. Could use mental randomness. Output only integer.",
+      "parsed_integer": 284,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 622.2810999988724,
+      "token_usage": {
+        "prompt_tokens": 127,
+        "completion_tokens": 43,
+        "total_tokens": 170,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 40
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "63",
+            "reasoning": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "We need to generate a random integer. The user says do NOT output anything else. So just the integer. I'll pick something random-ish. Let me think: 42 is common but maybe too predictable. Use a different one. 17? 83? Let's go with 91. Actually ensure it's an integer. Output only the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "12",
+            "reasoning": "We need answer only random integer. Need comply."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "56",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "37",
+            "reasoning": "The user wants a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501940-CmC7qf2Yqzuu83SmbeHy",
+        "object": "chat.completion",
+        "created": 1793501940,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "284",
+              "refusal": null,
+              "reasoning": "We need to generate a random integer. Need to output only integer. Need to ensure random. I can pick something like 284. But need random. Could use mental randomness. Output only integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need to generate a random integer. Need to output only integer. Need to ensure random. I can pick something like 284. But need random. Could use mental randomness. Output only integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 127,
+          "completion_tokens": 43,
+          "total_tokens": 170,
+          "cost": 3.381e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 3.381e-05,
+            "upstream_inference_prompt_cost": 1.016e-05,
+            "upstream_inference_completions_cost": 2.365e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 40,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "73",
+      "thinking_trace": "We need answer only random integer. Need comply no else. Choose 73.",
+      "parsed_integer": 73,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 671.9362000003457,
+      "token_usage": {
+        "prompt_tokens": 143,
+        "completion_tokens": 19,
+        "total_tokens": 162,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 16
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "63",
+            "reasoning": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "We need to generate a random integer. The user says do NOT output anything else. So just the integer. I'll pick something random-ish. Let me think: 42 is common but maybe too predictable. Use a different one. 17? 83? Let's go with 91. Actually ensure it's an integer. Output only the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "12",
+            "reasoning": "We need answer only random integer. Need comply."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "56",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "37",
+            "reasoning": "The user wants a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "284",
+            "reasoning": "We need to generate a random integer. Need to output only integer. Need to ensure random. I can pick something like 284. But need random. Could use mental randomness. Output only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501941-tJNITi7NH1QCMwfmDVMa",
+        "object": "chat.completion",
+        "created": 1793501941,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "73",
+              "refusal": null,
+              "reasoning": "We need answer only random integer. Need comply no else. Choose 73.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "We need answer only random integer. Need comply no else. Choose 73.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 143,
+          "completion_tokens": 19,
+          "total_tokens": 162,
+          "cost": 2.189e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.189e-05,
+            "upstream_inference_prompt_cost": 1.144e-05,
+            "upstream_inference_completions_cost": 1.045e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 16,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "482",
+      "thinking_trace": "The user wants a random integer, nothing else. Just output a number.",
+      "parsed_integer": 482,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 472.90049999901385,
+      "token_usage": {
+        "prompt_tokens": 159,
+        "completion_tokens": 18,
+        "total_tokens": 177,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 15
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet"
+      },
+      "raw_request": {
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "47",
+            "reasoning": "The user wants a random integer. I should just output a single integer and nothing else. Let me pick one, e.g., 47."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "63",
+            "reasoning": "The user wants a random integer. I should just output one number, nothing else. Let me pick something like 63."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91",
+            "reasoning": "We need to generate a random integer. The user says do NOT output anything else. So just the integer. I'll pick something random-ish. Let me think: 42 is common but maybe too predictable. Use a different one. 17? 83? Let's go with 91. Actually ensure it's an integer. Output only the number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "12",
+            "reasoning": "We need answer only random integer. Need comply."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "56",
+            "reasoning": "The user wants a random integer. I should just output a number and nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "37",
+            "reasoning": "The user wants a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "284",
+            "reasoning": "We need to generate a random integer. Need to output only integer. Need to ensure random. I can pick something like 284. But need random. Could use mental randomness. Output only integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "We need answer only random integer. Need comply no else. Choose 73."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501941-USI26HlQkazn2DpHGt0a",
+        "object": "chat.completion",
+        "created": 1793501941,
+        "model": "deepseek/deepseek-v4.1-flash-1017",
+        "provider": "InferenceNet",
+        "system_fingerprint": "inference.net",
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "482",
+              "refusal": null,
+              "reasoning": "The user wants a random integer, nothing else. Just output a number.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer, nothing else. Just output a number.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 159,
+          "completion_tokens": 18,
+          "total_tokens": 177,
+          "cost": 2.262e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.262e-05,
+            "upstream_inference_prompt_cost": 1.272e-05,
+            "upstream_inference_completions_cost": 9.9e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 15,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "DeepSeek V4.1 Flash 1017 (max)",
+    "provider": "openrouter",
+    "model": "deepseek/deepseek-v4.1-flash-1017",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "deepseek",
+      "reasoning"
+    ]
+  },
+  "error": null
+}

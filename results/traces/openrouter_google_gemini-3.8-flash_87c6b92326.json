@@ -1,0 +1,1421 @@
+{
+  "run_id": "87c6b92326",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:59:29.656672+00:00",
+  "provider": "openrouter",
+  "model": "google/gemini-3.8-flash",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    428,
+    619,
+    7392,
+    5814,
+    91402,
+    38491,
+    41982,
+    73620,
+    64817,
+    82513
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 20491.681100002097,
+  "avg_turn_latency_ms": 2049.1681100002097,
+  "total_usage": {
+    "prompt_tokens": 783,
+    "completion_tokens": 1317,
+    "total_tokens": 2100,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 1273
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "428",
+      "thinking_trace": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n",
+      "parsed_integer": 428,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2153.6049999995157,
+      "token_usage": {
+        "prompt_tokens": 11,
+        "completion_tokens": 145,
+        "total_tokens": 156,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 142
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501950-TgfTZ8nvpnTaags1gLY5",
+        "object": "chat.completion",
+        "created": 1793501950,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "provisioned",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "428",
+              "refusal": null,
+              "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n",
+                  "format": "google-gemini-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "AY89a194yWsAFRclVMrrc+fZAuiDAVemB9n9/gvetjTkpkTaOhZk2z+x6dGuSkchTh1y9wfGjxClrPBi/AHu0Mxwbm5j94nCIahcEyBDcebun26VC9kNPUgFHjPwznF1cWP+ITjcHLCXsma85orcKQltcJprxlpRQxuQr34w2HAAA5y6UudMRhW8KECIiK74kwDVrXWl7paLl031kpF+via68FJW3+aujd0bH4S6P9atp3hB1auCnRmb9qFsZbofezM990v/U4uZkxQv+/owqRHURjhqJM4BNpmY+6xHs7IbxbjTRdX3ZKOYhPoxeCy611e3kkKYCd/Kqon2HTC9AVTpDaQYh0l/Fkz8ZXjq3qLYogQJW9aSseNQGzTAwsTQZwXaCpDj9xqGywJVQ4uoEVqdvjN2BrmIVREDYGt98uVX2i6ZgEiX3gHLURkRB1q+MTdJ/EiRlokcz5lx9zH1K936/keObfz5hzebe+wOaIrp/dOlfydXdYhZZeiKjkW6LS/FwUrJV2CQ4ij1vmRMKfLXLNsNbMfhK/LpsHp7w7uJhXn2gcJ/jE61lMxdGUHEjIhPTeJqDfwvlwTLXOiH3/lIPb3U8an2ovQNzyYT+XB+9F2AXJUTS+z9uLNM6tf3UHbB9LOYqELId+A6pnnHl5ISK/bqThsg6B4gzDVt5KaJH+VTbYVex7Jynj/3M9GEOU0yjSc1dtWu0K2NLv7w6fgqBcbg2iJlZnikI2+cRRc+J+Qr0B/MdFYf5RD6TZLdyYrj3Vj1oo4m+pfdIAJgj3YimpDWU02l7hoLqdMF0yudXB7scXKlFyEOpHNnxhPsxOifHY1jORtXXy03",
+                  "format": "google-gemini-v1",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 11,
+          "completion_tokens": 145,
+          "total_tokens": 156,
+          "cost": 0.000552,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000552,
+            "upstream_inference_prompt_cost": 8.25e-06,
+            "upstream_inference_completions_cost": 0.00054375
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 142,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "619",
+      "thinking_trace": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n",
+      "parsed_integer": 619,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1881.5862000010384,
+      "token_usage": {
+        "prompt_tokens": 25,
+        "completion_tokens": 122,
+        "total_tokens": 147,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 119
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428",
+            "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501952-l5NrNt9erko1pww0f1vr",
+        "object": "chat.completion",
+        "created": 1793501952,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "619",
+              "refusal": null,
+              "reasoning": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n",
+                  "format": "google-gemini-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "AY89a1+OGN8CkSz4Q8dzLHE4dbFaeDxQordZ7N04WZUZDzbTdE+1v6PGcKr4h7dU1x7932fMuEaXF0kBRzR6FwSrOY3XQn/oY5MsJRfii2RoPgriSrFEQfKZ2Xi8Oot5p0klYLYMu+NnbFrYI8ks+zjZTdSL/hVXSpiM28YwEQJRLZNot6CJbzlbOE9aPxqQbmI3s8swGCeIelrfHI3WSr4WO+vgFkmrkp5+7wZvR+KO/5ll6oyBIf/cUzP1rluwURXgHfNa8oCNkPdsqo6cE9lr4WKyW1XknmiWYdJYaJMwyp4uadYlJUp4PgkWaInaN+uWEsbjW4MWCxxl35p7zNCEsZEMLzwA4FEnhI5SY9DX9wS8O6dOrLquvZmKQHv716tL9GaNrl5/1UThq/69/m3fT/YYnpsOHlUVYI7HMZeOWRBLniITtWnk7pqO1d7cR/kZ43Ai9lrXToGlPuNMQAGG3l6yJO/9SIhHQpDIe3Mxz2A3gsLoa6ARP8wfolopFNQOwSF0sTMvLQm0KhBFSXQc5SyjI51VLNp/l34aTjNVuImVoPNnssr33laZkS3Q+NI//jdkCJB1zfODmqOlRWPT5S++F41GT/SI/7e6n4S89hqHGMvaSVwblVk0GvKzYMMvVUxHQnaSPFkUaEwYyoEWiMDmy9jK2XIpwrR0RnmzP/a+9tdSTE1EbHCqgs/W2qj6T8HfHqrsgRHYZy70BthOeXFDUuFcc8WMs/xZ6VeFzkRkjK7unQ==",
+                  "format": "google-gemini-v1",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 25,
+          "completion_tokens": 122,
+          "total_tokens": 147,
+          "cost": 0.00047625,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00047625,
+            "upstream_inference_prompt_cost": 1.875e-05,
+            "upstream_inference_completions_cost": 0.0004575
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 119,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7392",
+      "thinking_trace": null,
+      "parsed_integer": 7392,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2030.567699999665,
+      "token_usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 132,
+        "total_tokens": 171,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 128
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428",
+            "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "619",
+            "reasoning": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501954-1vOYFzavUEacVvzXLKaY",
+        "object": "chat.completion",
+        "created": 1793501954,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "7392",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "AY89a1/zbEUL1YflZrv1rk3MjUBTogpiJwjnrYxpwwc1tG8pKEtBS0SN4z7dpr7557eirYQuUA5tC3jl3cSjHIs/jCiUkK0qXQRxkYLPtRKatcVewiSIZXdupnBSkUcdfofyiZK9ZH6FP0PIAqU1GhRNUHyT74SXrI3J1kArxIijCtfPNQR95L9ky9AUVxLtKsq9tf9aBldXPeSAYM78rgcYPklDD/+T2TJqS6Wf6m1UWmbjIW38H3toI3X5lTj4qmShRWoBZ6gnodYkepPjGEWfVumRZsrESe0hjIfPPISV1OyQFvYjk1Ccblj8bEVDUFA8LqSsUzsANvZpoxcDOVF9HuKpU0UX0DllG7JDiclHE+DNYoEdI+AkBY0n2V2VJjvXCpUaEq91lB4gTETR3rjHKrlEAqUW0G5T2Rx9N0Y/RubdxW+RKmvtlVQMEF1ppSxO+vEpNrHbsDL4dcZ2tx32LeMje/7rnVLwEFz0MiwazjGdxuypQ/fvRPaxwDOUkAyRhlgrIwHQ2vjdgAGCsk+tcty5YMzw1ccgzQT9OFdnJubd8QokqxtWzY+aBNs9eq2uHLepPPjD3IRP/ddVOomlYryPqpu1MaZoKPoUjL7oxSLLvY67fKMQ/QEEKP4F44S4y8XizkOssbRygSSPFcrpDB7BRUQGhZoyq21ZfPA+DadpO1679QrcoyHj5QpVgVRTn29GQ+tHFmTkQnCGMTWdsYy1Fy14x0pgDYCtwnWBzXau41su1egMsAKNQy7o9hUWgIT1E2h1GG3djtOO2xLMQagrB8vp6fCxOWv6N1PvOTx5Wmdaue0x9iTgtdwbzFOti0q6706RjYd9yKybQGbCZgQ=",
+                  "format": "google-gemini-v1",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 39,
+          "completion_tokens": 132,
+          "total_tokens": 171,
+          "cost": 0.00052425,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00052425,
+            "upstream_inference_prompt_cost": 2.925e-05,
+            "upstream_inference_completions_cost": 0.000495
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 128,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "5814",
+      "thinking_trace": "**Generating Random Integer**\n\nI'm focused on producing a random integer as requested, with no additional output. My current step is to select that integer.\n\n",
+      "parsed_integer": 5814,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2309.2845999999554,
+      "token_usage": {
+        "prompt_tokens": 54,
+        "completion_tokens": 84,
+        "total_tokens": 138,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 80
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428",
+            "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "619",
+            "reasoning": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501956-6SikXL5TNtiejdehQ6Wc",
+        "object": "chat.completion",
+        "created": 1793501956,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "provisioned",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "5814",
+              "refusal": null,
+              "reasoning": "**Generating Random Integer**\n\nI'm focused on producing a random integer as requested, with no additional output. My current step is to select that integer.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "**Generating Random Integer**\n\nI'm focused on producing a random integer as requested, with no additional output. My current step is to select that integer.\n\n",
+                  "format": "google-gemini-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "AY89a19MhuSfCUEehp9HuGkZ2YWG0cvn5KGljgkKrGjLMM5yL3x5WHRwgjR0VQKGuCcnpiDlMqwUHLioEGmQ+2E/YSsoSgNkolzDDx1jdZci8L4HO8YRQL9iq/Usszocv0dkq6Vq2dQ2p0aPJ2yb+DjIFAGFFICsnKcQLIotDxskQUcT09GiIsFHYWg8Bi/kM2XmZlRVyVyV241gxqrKoOxeG61PMTG5Uss1Jc+2XNvoxu5FDGLu0BfRyt1SFaD/hPrzX3CjJwkkfun4bm5uww7yfsHAIIwcZOUs18KlOVvOKW+WBSDJsNRBGRvK1s2pIPAraKd7Spa0T+/w9eszIjQoCd3yBQ1f+4SroUMh6mBJA61Lg8YXg2p1yVqJmrVBjV5E+cuPfjkdcY9khyHRzweM3Qze5MCLsEV5oe4IwwWAk582tA9liJV7NubAVKju5N+dtaa2XDMpczQ7IGuCfle+TERMBe8PbW+OXd/In4WrD49bFpX4cV9VbDvO3LTLjPlI2S2CGdsSLw0A2sIxEJIbQljxvZ/itzVWQo+YiI9sNG2OLRhYP/cbbrAwnwKDxATKiBg3V4jTJOWZ7Qz8+UAH34YcI1a3GPrrbZShu3uzWcaecT4iCt+M",
+                  "format": "google-gemini-v1",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 54,
+          "completion_tokens": 84,
+          "total_tokens": 138,
+          "cost": 0.0003555,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0003555,
+            "upstream_inference_prompt_cost": 4.05e-05,
+            "upstream_inference_completions_cost": 0.000315
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 80,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "91402",
+      "thinking_trace": "**Generating Integer**\n\nI'm focusing on precisely adhering to the instruction to output *only* a randomly generated integer, ensuring absolutely no extraneous characters or formatting are included in the final output.\n\n",
+      "parsed_integer": 91402,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1887.6737999999023,
+      "token_usage": {
+        "prompt_tokens": 69,
+        "completion_tokens": 138,
+        "total_tokens": 207,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 133
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428",
+            "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "619",
+            "reasoning": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5814",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on producing a random integer as requested, with no additional output. My current step is to select that integer.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501958-OQ5yE6yCnVONVDmrR2vV",
+        "object": "chat.completion",
+        "created": 1793501958,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "provisioned",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "91402",
+              "refusal": null,
+              "reasoning": "**Generating Integer**\n\nI'm focusing on precisely adhering to the instruction to output *only* a randomly generated integer, ensuring absolutely no extraneous characters or formatting are included in the final output.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "**Generating Integer**\n\nI'm focusing on precisely adhering to the instruction to output *only* a randomly generated integer, ensuring absolutely no extraneous characters or formatting are included in the final output.\n\n",
+                  "format": "google-gemini-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "AY89a1+Fn1qcIEeXs1JY1MBg1iapVPq7+3PrKV4eZlFrlkIIL//dCu+0nf00i6aOe5tDpRNkV97QbZ72P0g+sGvvX0qzUWg68k9Moo/z3vDyrOwQaaIdcQQa3frdSC5vUIwn/Rs7b9gXZKXCuq81Q2aNBR76VtBWNJsRxx3a8rFfAlOtWUKYH4R6qOMHngBwHpHgPGoX96ey0QAAuvwEEkr+RtrI7KtiiRAyrEOyC+sQBh13FE/c2Rmtm+7xdur90q+gnS4Pnk2eoHOkvESh8/7I12qItncPKYv1NW7+5BAL1+Ke5V79Zhs950cQaRcuidNwLjLAFbmPzideEp9QHc4IGjqOzzRCJKYqgGv5FO4B9fKJUkhYkYacCsmXnp9Aa0h+VCDClk2FQYgSVFboJa9yGqVnbb2jcIC1a20JXa1iLSjXUwQr+v25znMG8XoW9aTKSmH2qCbTp7GqPHXv+Qx9pXNeXFkbI2e5QsQqIsabCMF2/AOpqz/a5KBTioY8nwZj3JlKWFW6HnnLsFbDwvMs3FR8On85mCDYbFZ080MSIpYXfbz/8p+M2b565mPg0Hnv8jwEAgTF7WngMlcnlZx2Y9Qe3R3trlXB6iMHwq2VvWJY9sCgm5gzzf8VwCOjwVYJD2166wa7YGiPBTBk9Mu181Q1yH9IgPEdiC+xaNJR+gFL8o1qIFwsRV/NgV8KrsiHMiWwvIH1InBJfE9+uH1W9jpNCU4x5c4Y3yF2IgF6HNBhuPnXL9JlV9UJ4dfzXgVMgCwkCojJU+pkxDNakn5G5wExkTnKJs0=",
+                  "format": "google-gemini-v1",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 69,
+          "completion_tokens": 138,
+          "total_tokens": 207,
+          "cost": 0.00056925,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00056925,
+            "upstream_inference_prompt_cost": 5.175e-05,
+            "upstream_inference_completions_cost": 0.0005175
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 133,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "38491",
+      "thinking_trace": "**Generating Random Integer**\n\nI'm focused on fulfilling the core request: generating a single random integer. The output will be solely that number, with no additional commentary or formatting.\n\n",
+      "parsed_integer": 38491,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2451.051500000176,
+      "token_usage": {
+        "prompt_tokens": 85,
+        "completion_tokens": 170,
+        "total_tokens": 255,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 165
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428",
+            "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "619",
+            "reasoning": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5814",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on producing a random integer as requested, with no additional output. My current step is to select that integer.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91402",
+            "reasoning": "**Generating Integer**\n\nI'm focusing on precisely adhering to the instruction to output *only* a randomly generated integer, ensuring absolutely no extraneous characters or formatting are included in the final output.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501960-NPWxuGIRc4Dl0LFaMETd",
+        "object": "chat.completion",
+        "created": 1793501960,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "provisioned",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "38491",
+              "refusal": null,
+              "reasoning": "**Generating Random Integer**\n\nI'm focused on fulfilling the core request: generating a single random integer. The output will be solely that number, with no additional commentary or formatting.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "**Generating Random Integer**\n\nI'm focused on fulfilling the core request: generating a single random integer. The output will be solely that number, with no additional commentary or formatting.\n\n",
+                  "format": "google-gemini-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "AY89a1+9G3LfBMrWSOTEGemL7T72Jc9VVhxeBkKS47AF4sj0CeB/vT99vjashU+FaNPhfhFq/w91FdqLvxBtD3u5YWdLjWqz/z3wK0w1QZqS1+6nptFlKh65vVEZNNFCUB62DWom3lOCS5Yej87BSOUY3D9orz7+AW2RLaTYLuXqUDuhYgUlgmqIii5eCzVFVZHwaW2udlq1UrAi2ncXKoBuVnbT1Dp/nN5SENjYD0ApIoQfg7tf8c9faASRK13zqgnrzO8b9toxqXMg30BOG5ustjlU+cEkUqiOZTQLwUTqgkRoBfhIzwZvfZHgii1ZbFCv6nD2aTCbcmYfjkW6iD/wz2pxWT1ygbPVxQyaXZUV0NpmK4L2SPcQC0Dz7+pnWFwleBefDeAhyFZ3MSZJ+e0Er2UhlkmL/q3hopmyxybrSqQuFjgpgPy6SlhAbmM7OopcyuZESzBsUpCIVnng6lR1t2pJxDjV8bjNBI4hJ2j/DQmIjX+LpJxASdc6BN9kaN9G9uKT8ulgNtLj3gPpcd4un/lUaPfnofH9uLUpOrx+Vjgv+VJSbcgGqmHUXO+Ko8KKWiY5r76z24vSvKstI/f6THTAh5V95hMUVVAx+bdGtk5t7GOmonqOe/drz+KdIri/MdsOHu0RFNzD8j0XNsVxZCasvPOioNLmpB/ghdKS2brKPgTVns2/7AASSGvO51HYfFA7DsBLDt4GWd02Umh/mO4CT00zpGcA9wwPlSEVISBAGM3Cbs9K74yzZboq+/IBWt2+X9LKRgRzXW1EN9F0PzF20WzqH5cq1guQ+afPfgRwndiO7UanoL3LL7MiKyZFAPqIDP0gESQPoacGFr+tBpKyZH0MnlLrHPW8ViQk24JC9kFGbTseFARsbAjsDDVdo8VkOKPWE+gvyK75gyTmQG4n/sj4GIDbZPWBv61Sig/otUCMRjwDEvj88VIbu3U+tJ0W44R+Qw/G9OD0LtCBPF0G",
+                  "format": "google-gemini-v1",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 85,
+          "completion_tokens": 170,
+          "total_tokens": 255,
+          "cost": 0.00070125,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00070125,
+            "upstream_inference_prompt_cost": 6.375e-05,
+            "upstream_inference_completions_cost": 0.0006375
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 165,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "41982",
+      "thinking_trace": "**Generating Numbers**\n\nI'm focusing on strictly outputting only the requested integer. My latest iterations confirm I can consistently adhere to this, ensuring no extraneous characters or formatting interfere with the raw numerical output.\n\n",
+      "parsed_integer": 41982,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2465.77630000138,
+      "token_usage": {
+        "prompt_tokens": 101,
+        "completion_tokens": 216,
+        "total_tokens": 317,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 211
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428",
+            "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "619",
+            "reasoning": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5814",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on producing a random integer as requested, with no additional output. My current step is to select that integer.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91402",
+            "reasoning": "**Generating Integer**\n\nI'm focusing on precisely adhering to the instruction to output *only* a randomly generated integer, ensuring absolutely no extraneous characters or formatting are included in the final output.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "38491",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on fulfilling the core request: generating a single random integer. The output will be solely that number, with no additional commentary or formatting.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501963-OElFesbrUkvdChJsaKjD",
+        "object": "chat.completion",
+        "created": 1793501963,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "provisioned",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "41982",
+              "refusal": null,
+              "reasoning": "**Generating Numbers**\n\nI'm focusing on strictly outputting only the requested integer. My latest iterations confirm I can consistently adhere to this, ensuring no extraneous characters or formatting interfere with the raw numerical output.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "**Generating Numbers**\n\nI'm focusing on strictly outputting only the requested integer. My latest iterations confirm I can consistently adhere to this, ensuring no extraneous characters or formatting interfere with the raw numerical output.\n\n",
+                  "format": "google-gemini-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "AY89a1+80/LGqzaBtr+b4VDtUgrpfzRCXzK5j97eDUW/783U5Ho/gE9Uhe/Tg6LfkRa3hsQDirJyxJqywGdgaMKMCinhZMlW/55bxeZRyYrrOf7ILo4z1quMSGIhdbWJdSmLVZABt47aO5DJBDK9LdKWu55zXCRezUYUn/j8OyLFP4xAkA32wRuMy49Cgbftr2Lxu4lg5k4XLzNU3V8JhmutIzaAb8HTU/RLFlTqtUEERJ0QOAN+m69I2x9fx9EsZUc+WpHJFCKNh3J5csTwnXdCGKpUqi19WgdwbPUeq5mPT+B43jLtJqP3tOiKsqypjdhYXUVx7K8O1Ts+S56Vp2OLZT25p1iTDVGF4CEczuvnot0ae7MQV7f6yTx098TX2kJnyTqFyhEpAN5LtbC0MtGjb+Afr7z6zxCdmtCb3uPOkZaSfRmzZcdlOpRF/SMVhdOAD74xnK6GQkcO4n4WHd1rSIoZVbCacGvSODKfNawPycTJ05++je2sdXGsmM/kA0G2TiHZegKlC+32bvLVsnOVcqW8F8HgpJP+/9Xvi3IzS16dpMBK7s6S+5gTRjsxSz0EEzNlDjYW49wPOK6tX0LMvPjyOGkoWDEdg9Rqxn8e6hBOi5q+71CvnT0/hHctivXV1jdzE2yGk39jWLbNZbkIDS2SrpUWzy3r3YzwEpjueGxVaKrxQozws4dWGZ+aDWHxIJM6Fd5FLcJdCnRImXcsKot1oMw41XF7T+dr4QXSR5OWHCXg3iYzWb7FLPib6Q7tFdaTPaiTbJv2yaednG3LcSf6/jV/E4S/XmizzhOuaoTm8LnBc2Mx7CIfNaxLpvDy/6/fOMFItvUyOOv0RU1foWeoCrdl4chzM5Wx7JofTbEWkICG60nPsQMr0ykoF8zqNwMjrugLJ3dxoDmv6soqiZnZZZ86uHxittvSnzw2zIA3ZloxOhBsStA+A5sGUspbusVkbnf0KhBzLCAjONIWbGd6UHMRTZjaFH5B5qbp3/Dl2vqi/9E14ZCClfEfRqFIcBmpyslo4MzkPqa/29fqjCcNQWxOYlBAmVBRBDZMgie2s3efA/nVCa0RNa5/csP3B1ybwKNHTPEfBp7TtUb9twQK7XD32+ZulxZc2Ck/pFBHNwAvNGhf09sV+QHP6T0z5ZTSJx2DAqM=",
+                  "format": "google-gemini-v1",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 101,
+          "completion_tokens": 216,
+          "total_tokens": 317,
+          "cost": 0.00088575,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00088575,
+            "upstream_inference_prompt_cost": 7.575e-05,
+            "upstream_inference_completions_cost": 0.00081
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 211,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "73620",
+      "thinking_trace": null,
+      "parsed_integer": 73620,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 816.9797999998991,
+      "token_usage": {
+        "prompt_tokens": 117,
+        "completion_tokens": 5,
+        "total_tokens": 122,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428",
+            "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "619",
+            "reasoning": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5814",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on producing a random integer as requested, with no additional output. My current step is to select that integer.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91402",
+            "reasoning": "**Generating Integer**\n\nI'm focusing on precisely adhering to the instruction to output *only* a randomly generated integer, ensuring absolutely no extraneous characters or formatting are included in the final output.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "38491",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on fulfilling the core request: generating a single random integer. The output will be solely that number, with no additional commentary or formatting.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "41982",
+            "reasoning": "**Generating Numbers**\n\nI'm focusing on strictly outputting only the requested integer. My latest iterations confirm I can consistently adhere to this, ensuring no extraneous characters or formatting interfere with the raw numerical output.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501965-vQbYMuRRojbU1hPDTw5g",
+        "object": "chat.completion",
+        "created": 1793501965,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "provisioned",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "73620",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 117,
+          "completion_tokens": 5,
+          "total_tokens": 122,
+          "cost": 0.0001065,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0001065,
+            "upstream_inference_prompt_cost": 8.775e-05,
+            "upstream_inference_completions_cost": 1.875e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "64817",
+      "thinking_trace": "**Generating Integer Randomly**\n\nI'm focusing on the core task: producing a single, random integer. My current thought is entirely dedicated to ensuring that the output contains *only* the number, with no additional characters or formatting.\n\n",
+      "parsed_integer": 64817,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2331.981299999825,
+      "token_usage": {
+        "prompt_tokens": 133,
+        "completion_tokens": 133,
+        "total_tokens": 266,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 128
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428",
+            "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "619",
+            "reasoning": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5814",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on producing a random integer as requested, with no additional output. My current step is to select that integer.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91402",
+            "reasoning": "**Generating Integer**\n\nI'm focusing on precisely adhering to the instruction to output *only* a randomly generated integer, ensuring absolutely no extraneous characters or formatting are included in the final output.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "38491",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on fulfilling the core request: generating a single random integer. The output will be solely that number, with no additional commentary or formatting.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "41982",
+            "reasoning": "**Generating Numbers**\n\nI'm focusing on strictly outputting only the requested integer. My latest iterations confirm I can consistently adhere to this, ensuring no extraneous characters or formatting interfere with the raw numerical output.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73620"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501966-NtsmZAnmcfWHUXtdRPyZ",
+        "object": "chat.completion",
+        "created": 1793501966,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "64817",
+              "refusal": null,
+              "reasoning": "**Generating Integer Randomly**\n\nI'm focusing on the core task: producing a single, random integer. My current thought is entirely dedicated to ensuring that the output contains *only* the number, with no additional characters or formatting.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "**Generating Integer Randomly**\n\nI'm focusing on the core task: producing a single, random integer. My current thought is entirely dedicated to ensuring that the output contains *only* the number, with no additional characters or formatting.\n\n",
+                  "format": "google-gemini-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "AY89a19op4XVyAUteRVEXqA1JJyksWFXva82WuHHF4+8id9x+XAR3GQJry5C8rel1JZTBYScJLqk6DLEQ7LhWsTLsV3s8XGSijr4OtGdsioF+wkuxan7v8kY1Ly6PblvlxVkIPNXMGUXkbnMK9bMwrPeoQZ4QcwcUnXnVNTMsHsauXn0YQ1EBIJQ5t0ijF9Erq9Q34SdrLAOylRk+stiIqGFJn89YDvYHJBxdieegHmyE6DTUrA/klsmNTbDC5mySNVTjh7UmrvcB0W2tRwMpZdyt5xfVN9gCHE8rRKY7L2Ea5gPv0pVnv/evihbsMxcAbiJpghqfgrRzTWDQm2URfjPQv4Rz584SGWWqHN4BZ0cWZVmYRpPcXR6PSpzheJuIX3SkNNSvBrfeSz+EWFmHKjpijhjz1wV5WI25Ib8g4f1bu7uBXTRfkrp+GsFM9gBUGnyMgPDXKjZaeIEFn9nEHBMu7ox/qQpt+vpOF1u9WwsEJ3LU3pdtwjuMSnOyYGTgPljXNnuPA8ygGqi7DMSTuMcDAQ8YSqnGtbWxFMz3RafmuN8cN2hM3R3F0vmqpYd+MkokJdUxCIdPwtGnrWPoAg9STVEFt8LFRE5xDaiwvGatmngu84NVCGhotLjtj13DQt9uvx9nVP9cL3cXKRhd7XAbfc/pBS3GTJVI7VYGW3fw8KqAhw7HsdyCgkTdO1p7+H+113uEO1tbWWZLw/oY13XfS5n2QvAtZxd2YMqI8l8GPmfMIq1X/K7Iaui5s54UMKc8PKC5mZBztIplVzFZzSYcBAcXz0UB9hSth0M6mv67nWIJxC44cWXy6R2S75ya1mBv4405vZ1gUuEFa0oCI5VaOgiSY02qWOCdCk+VHueQ8wYQ2EQLuujCTHfkYuZiFbBIHklew==",
+                  "format": "google-gemini-v1",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 133,
+          "completion_tokens": 133,
+          "total_tokens": 266,
+          "cost": 0.0005985,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0005985,
+            "upstream_inference_prompt_cost": 9.975e-05,
+            "upstream_inference_completions_cost": 0.00049875
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 128,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "82513",
+      "thinking_trace": "**Generating New Integers**\n\nI'm currently focused on the core task: producing a random integer as requested. My process involves isolating the generation and ensuring absolutely nothing else is outputted.\n\n",
+      "parsed_integer": 82513,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2163.1749000007403,
+      "token_usage": {
+        "prompt_tokens": 149,
+        "completion_tokens": 172,
+        "total_tokens": 321,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 167
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google"
+      },
+      "raw_request": {
+        "model": "google/gemini-3.8-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428",
+            "reasoning": "**Generating Random Value**\n\nI've settled on a strategy to produce the required random integer, aiming to deliver just the numerical output as requested.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "619",
+            "reasoning": "**Generating Random Integers**\n\nI'm focusing on the core task: producing a single random integer and ensuring only that number is presented. My current aim is to eliminate any extraneous output, making it a purely numerical result for the user.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7392"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5814",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on producing a random integer as requested, with no additional output. My current step is to select that integer.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "91402",
+            "reasoning": "**Generating Integer**\n\nI'm focusing on precisely adhering to the instruction to output *only* a randomly generated integer, ensuring absolutely no extraneous characters or formatting are included in the final output.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "38491",
+            "reasoning": "**Generating Random Integer**\n\nI'm focused on fulfilling the core request: generating a single random integer. The output will be solely that number, with no additional commentary or formatting.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "41982",
+            "reasoning": "**Generating Numbers**\n\nI'm focusing on strictly outputting only the requested integer. My latest iterations confirm I can consistently adhere to this, ensuring no extraneous characters or formatting interfere with the raw numerical output.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73620"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "64817",
+            "reasoning": "**Generating Integer Randomly**\n\nI'm focusing on the core task: producing a single, random integer. My current thought is entirely dedicated to ensuring that the output contains *only* the number, with no additional characters or formatting.\n\n"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501968-H5hu071pKd3JebM2yVPA",
+        "object": "chat.completion",
+        "created": 1793501968,
+        "model": "google/gemini-3.8-flash",
+        "provider": "Google",
+        "system_fingerprint": null,
+        "service_tier": "provisioned",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "STOP",
+            "message": {
+              "role": "assistant",
+              "content": "82513",
+              "refusal": null,
+              "reasoning": "**Generating New Integers**\n\nI'm currently focused on the core task: producing a random integer as requested. My process involves isolating the generation and ensuring absolutely nothing else is outputted.\n\n",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "**Generating New Integers**\n\nI'm currently focused on the core task: producing a random integer as requested. My process involves isolating the generation and ensuring absolutely nothing else is outputted.\n\n",
+                  "format": "google-gemini-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "AY89a1/R4AAZJyTsUrndN0NjVAoUiYpxoZgTueLhd5Gylxss5Q74uuODzfdEgJKeyD8LJBPOKXb9+cs6YCZR3AYK13rGs7bwke8I72Uk4XqeCqistqHs8y3yDHQX79xBv4qLyNwEyLPnLhCaArUPQnDi3mM17oppq2M5wvijifbQKxdw4AlrIF80kmIjSVwVCOm8e2aQ+y/0JENIXyHzKE2PU4Xwn4f8z35BpRiEc/5bY0ALOSKon9NW2QyLY6IWbWTSGo6OdLlHV9uYnUdPMBS92OLqmgKLH6NHrtFBANGbsNveF8FINiQtLxsr+KSwkSi3jG2jh+WzB95SMv04B6vIzdSvpMtxOGvL5kVhQOo9ztOhZ/VKQ1gun4kFwICJloq8tKkSlU7A/5rf0si9Z2424cxq0ZC/c0yu6+R6MxFq4VFGo5C+CABCabE9ZNNuBAuRpO6JKYA4sd2namk/Oqz9a5F+0Yyd7Q7dUGuqesYQ17RmdzhSLgpF+z/wvCYQIL8oppdWwPQwDWkhSCW1vfIlbKf07CHsqbycqmHMUp6sL2mafewfOOYLGkdiad2vFip/WZGTU3QxlWhqreY5g/Dk/cgLRNxmUU3I4rkC9oLTULHVsQ8/Pa7FmruQHYcCjTbC9xVzqDH4zaMXTGiPO8+xoxTXrBX9KmHnHqx2UFKuFINPM6hKZC7CM0Bdvq9ZnayJ4JFxYNPKbguP48K/8ctUgsrVKJQDI7zw1BW+kUaGIybQrGFEftmB7OC6AQYAiz+APgfGqugpZPsuAqesI1nwwZdK95zfJYSZp7CACd3ZnAlkO7rXSkhexGWdaoCTyAeOocnIjRkLDi84wHOYJGU2oNee9PnJpRLn1P0fQyr5So22ZwxaCVGBiELhK0LtBdnYwMT5",
+                  "format": "google-gemini-v1",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 172,
+          "total_tokens": 321,
+          "cost": 0.00075675,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00075675,
+            "upstream_inference_prompt_cost": 0.00011175,
+            "upstream_inference_completions_cost": 0.000645
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 167,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Gemini 3.8 Flash (high)",
+    "provider": "openrouter",
+    "model": "google/gemini-3.8-flash",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 16000,
+    "thinking_level": "high",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "google",
+      "gemini",
+      "flash"
+    ]
+  },
+  "error": null
+}

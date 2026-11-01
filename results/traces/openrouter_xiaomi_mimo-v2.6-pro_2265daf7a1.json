@@ -1,0 +1,1349 @@
+{
+  "run_id": "2265daf7a1",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:59:38.331243+00:00",
+  "provider": "openrouter",
+  "model": "xiaomi/mimo-v2.6-pro",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    73,
+    -418,
+    1563,
+    -207,
+    381,
+    -902,
+    1246,
+    -573,
+    64,
+    -1385
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 8484.677600003124,
+  "avg_turn_latency_ms": 848.4677600003124,
+  "total_usage": {
+    "prompt_tokens": 1537,
+    "completion_tokens": 110,
+    "total_tokens": 1647,
+    "cached_tokens": 1024,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 45
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "73",
+      "thinking_trace": "The user wants me to generate a random integer and output only that number.",
+      "parsed_integer": 73,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 674.5506999995996,
+      "token_usage": {
+        "prompt_tokens": 18,
+        "completion_tokens": 20,
+        "total_tokens": 38,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 15
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501971-QcM1iHeweIKTnI0cc2NJ",
+        "object": "chat.completion",
+        "created": 1793501971,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "73",
+              "refusal": null,
+              "reasoning": "The user wants me to generate a random integer and output only that number.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants me to generate a random integer and output only that number.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 18,
+          "completion_tokens": 20,
+          "total_tokens": 38,
+          "cost": 2.2626e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.2626e-05,
+            "upstream_inference_prompt_cost": 6.966e-06,
+            "upstream_inference_completions_cost": 1.566e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 15,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-418",
+      "thinking_trace": "Random integer.",
+      "parsed_integer": -418,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1319.7125000006054,
+      "token_usage": {
+        "prompt_tokens": 56,
+        "completion_tokens": 10,
+        "total_tokens": 66,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 4
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "Novita"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "The user wants me to generate a random integer and output only that number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501971-GeAYYBMEW8jnTzltmgdr",
+        "object": "chat.completion",
+        "created": 1793501971,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "Novita",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-418",
+              "refusal": null,
+              "reasoning": "Random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 56,
+          "completion_tokens": 10,
+          "total_tokens": 66,
+          "cost": 3.306e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 3.306e-05,
+            "upstream_inference_prompt_cost": 2.436e-05,
+            "upstream_inference_completions_cost": 8.7e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 4,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "1563",
+      "thinking_trace": "Generate a random integer.",
+      "parsed_integer": 1563,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 885.545799999818,
+      "token_usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 12,
+        "total_tokens": 96,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 5
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "The user wants me to generate a random integer and output only that number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-418",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501972-MOaD17QsCkLiaR88x0r9",
+        "object": "chat.completion",
+        "created": 1793501972,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "1563",
+              "refusal": null,
+              "reasoning": "Generate a random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Generate a random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 84,
+          "completion_tokens": 12,
+          "total_tokens": 96,
+          "cost": 4.1904e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 4.1904e-05,
+            "upstream_inference_prompt_cost": 3.2508e-05,
+            "upstream_inference_completions_cost": 9.396e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 5,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-207",
+      "thinking_trace": "Random integer.",
+      "parsed_integer": -207,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 452.38180000160355,
+      "token_usage": {
+        "prompt_tokens": 114,
+        "completion_tokens": 10,
+        "total_tokens": 124,
+        "cached_tokens": 64,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 3
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "The user wants me to generate a random integer and output only that number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-418",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1563",
+            "reasoning": "Generate a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501973-0twcsNKRhpZDngmJMHo5",
+        "object": "chat.completion",
+        "created": 1793501973,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-207",
+              "refusal": null,
+              "reasoning": "Random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 114,
+          "completion_tokens": 10,
+          "total_tokens": 124,
+          "cost": 2.738736e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.738736e-05,
+            "upstream_inference_prompt_cost": 1.955736e-05,
+            "upstream_inference_completions_cost": 7.83e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "381",
+      "thinking_trace": "Random integer.",
+      "parsed_integer": 381,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1267.91250000133,
+      "token_usage": {
+        "prompt_tokens": 142,
+        "completion_tokens": 9,
+        "total_tokens": 151,
+        "cached_tokens": 96,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 3
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "The user wants me to generate a random integer and output only that number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-418",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1563",
+            "reasoning": "Generate a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-207",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501974-qXwW11U0jAbrISpmF2OK",
+        "object": "chat.completion",
+        "created": 1793501974,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "381",
+              "refusal": null,
+              "reasoning": "Random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 9,
+          "total_tokens": 151,
+          "cost": 2.516004e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 96,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.516004e-05,
+            "upstream_inference_prompt_cost": 1.811304e-05,
+            "upstream_inference_completions_cost": 7.047e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-902",
+      "thinking_trace": "Random integer.",
+      "parsed_integer": -902,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 400.9786999995413,
+      "token_usage": {
+        "prompt_tokens": 169,
+        "completion_tokens": 10,
+        "total_tokens": 179,
+        "cached_tokens": 112,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 3
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "The user wants me to generate a random integer and output only that number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-418",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1563",
+            "reasoning": "Generate a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-207",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "381",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501975-PvCjlYmU4eF2xLiTIuII",
+        "object": "chat.completion",
+        "created": 1793501975,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-902",
+              "refusal": null,
+              "reasoning": "Random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 169,
+          "completion_tokens": 10,
+          "total_tokens": 179,
+          "cost": 3.025188e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 112,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 3.025188e-05,
+            "upstream_inference_prompt_cost": 2.242188e-05,
+            "upstream_inference_completions_cost": 7.83e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "1246",
+      "thinking_trace": "Random integer.",
+      "parsed_integer": 1246,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 708.4949000000051,
+      "token_usage": {
+        "prompt_tokens": 197,
+        "completion_tokens": 10,
+        "total_tokens": 207,
+        "cached_tokens": 144,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 3
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "The user wants me to generate a random integer and output only that number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-418",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1563",
+            "reasoning": "Generate a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-207",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "381",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-902",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501976-y7OIYoYtIzR4fHzSbeQS",
+        "object": "chat.completion",
+        "created": 1793501976,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "1246",
+              "refusal": null,
+              "reasoning": "Random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 197,
+          "completion_tokens": 10,
+          "total_tokens": 207,
+          "cost": 2.880756e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 144,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.880756e-05,
+            "upstream_inference_prompt_cost": 2.097756e-05,
+            "upstream_inference_completions_cost": 7.83e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-573",
+      "thinking_trace": "Random integer.",
+      "parsed_integer": -573,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1187.5275000002148,
+      "token_usage": {
+        "prompt_tokens": 225,
+        "completion_tokens": 10,
+        "total_tokens": 235,
+        "cached_tokens": 176,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 3
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "The user wants me to generate a random integer and output only that number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-418",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1563",
+            "reasoning": "Generate a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-207",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "381",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-902",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1246",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501976-6SkY7Zihnizqv7HH4y4v",
+        "object": "chat.completion",
+        "created": 1793501976,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-573",
+              "refusal": null,
+              "reasoning": "Random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 225,
+          "completion_tokens": 10,
+          "total_tokens": 235,
+          "cost": 2.736324e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 176,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.736324e-05,
+            "upstream_inference_prompt_cost": 1.953324e-05,
+            "upstream_inference_completions_cost": 7.83e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "64",
+      "thinking_trace": "Random integer.",
+      "parsed_integer": 64,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1016.5512000003218,
+      "token_usage": {
+        "prompt_tokens": 253,
+        "completion_tokens": 8,
+        "total_tokens": 261,
+        "cached_tokens": 208,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 3
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "The user wants me to generate a random integer and output only that number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-418",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1563",
+            "reasoning": "Generate a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-207",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "381",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-902",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1246",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-573",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501978-tY71HvkjwI0cpQOE5o7N",
+        "object": "chat.completion",
+        "created": 1793501978,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "64",
+              "refusal": null,
+              "reasoning": "Random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 253,
+          "completion_tokens": 8,
+          "total_tokens": 261,
+          "cost": 2.435292e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 208,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 2.435292e-05,
+            "upstream_inference_prompt_cost": 1.808892e-05,
+            "upstream_inference_completions_cost": 6.264e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-1385",
+      "thinking_trace": "Random integer.",
+      "parsed_integer": -1385,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 571.0220000000845,
+      "token_usage": {
+        "prompt_tokens": 279,
+        "completion_tokens": 11,
+        "total_tokens": 290,
+        "cached_tokens": 224,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 3
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "xiaomi/mimo-v2.6-pro",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "73",
+            "reasoning": "The user wants me to generate a random integer and output only that number."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-418",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1563",
+            "reasoning": "Generate a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-207",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "381",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-902",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "1246",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-573",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "64",
+            "reasoning": "Random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501978-0LAmuvafqD4C6kbeF8h3",
+        "object": "chat.completion",
+        "created": 1793501978,
+        "model": "xiaomi/mimo-v2.6-pro",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-1385",
+              "refusal": null,
+              "reasoning": "Random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 279,
+          "completion_tokens": 11,
+          "total_tokens": 290,
+          "cost": 3.062376e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 224,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 3.062376e-05,
+            "upstream_inference_prompt_cost": 2.201076e-05,
+            "upstream_inference_completions_cost": 8.613e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "MiMo-V2.6-Pro",
+    "provider": "openrouter",
+    "model": "xiaomi/mimo-v2.6-pro",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": false,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "xiaomi",
+      "mimo"
+    ]
+  },
+  "error": null
+}

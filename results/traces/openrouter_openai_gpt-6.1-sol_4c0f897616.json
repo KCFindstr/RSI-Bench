@@ -1,0 +1,1310 @@
+{
+  "run_id": "4c0f897616",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T02:55:44.740564+00:00",
+  "provider": "openrouter",
+  "model": "openai/gpt-6.1-sol",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    731,
+    428,
+    596283,
+    184927,
+    370651,
+    82416,
+    592740,
+    267839,
+    683105,
+    947258
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 15180.669500001386,
+  "avg_turn_latency_ms": 1518.0669500001386,
+  "total_usage": {
+    "prompt_tokens": 1188,
+    "completion_tokens": 146,
+    "total_tokens": 1334,
+    "cached_tokens": 0,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 78
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "731",
+      "thinking_trace": null,
+      "parsed_integer": 731,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1728.7025999994512,
+      "token_usage": {
+        "prompt_tokens": 17,
+        "completion_tokens": 25,
+        "total_tokens": 42,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 18
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501730-PiY6yDZx7Nc28BB6AqCP",
+        "object": "chat.completion",
+        "created": 1793501730,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "731",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qokq52Wrp5UEc6vPplOync05XU299IikQvkGw_K2MLywFONl743dE-q_69EIpnbe9SyS2oyWoGm3qEns5j3sw7le5xUXGp1VkOUe97Q6hOyBmL_PofoijAfAcRp1ZvrgFYUVkBdbnJMvhn2rzj5gMszaD4JjyfKP2QjaLtQy3UXksXu-aDg85yDvpMIjd7osfdjoIsodMjzG45Rxadmc9kttmwgCQZFKrpklRlgI-u887jkRdesy3Pxt0T-dMdgiaRfH3eUGoPPkLkIp0k5lPduajzdAJTtB24UtJbFmcJUDMqjV3QsIf-MyqPs0t9lm2DXyAmimAEyGs7afP8eZ7BI5-5pU_JQmHvsNge78xJbmjYGxRuYp6zZpge54SCy-LFcTDrIkojiC1uk8jjjs7agLz8SA3wCW2QEEv3sfYnHqy3yP7sH9oUAlSLqPZvOLSV4AX86kZkyLvSvtjaBGNvl1Z38wi-E_kjWnScNnjldH84h8iDFZZ1uhwamwSSdyAvgkQpwpSTE3bgFHvKbMnybbMGmjMlbluxs6f6aHDMLRxyN9FmT6LSG_9HfnyAlpNT5xDwQcKrFUW4vy0mo40zpGRYtSgrw0Is5120QBKrziovhHVi1N4LR_rt7PN69YHHskaMVQVbfFEUfRIwndD_bSsvheFJZ8maaTkf31w6DF7Ulfxix-xHsbqZ2_3V03IeI_NZYv3eZHNik2z0npnK3Y68tqX0GPz-V6-r5KGMHMHfwbxC1q-Ep63VIQULgJRrDoq34vM25JhZ2ldhqrVfwf7OJfC1Soyev_Q6K-HXvIq_EgecHXDeCCSJ-nj8F5n0Ruj-dqhEzoQybyLYXYMCvCU851B9qwGeASnv_hveXUhwNvcryKev3LRznSNHRiI5cd4x2s1tZjDR66rzIaSahnEAe-KCeWJodZy98Hbs1ioau1Qm-rom9JBRBvAac4Y-Oa237jsF73KzsDGShqFda9Rr3Durg_MBVxnl8rF_EdLIZrdVx7Xn4A0XLy_0SPbwrQ8JO-7cEqUTl1_Lnc52A8xaL7jeRcVuYNfPlFM-pcbC2YlT4x4y8JiFuTmZp3zk93TdKCMFAX--nfF0CBqe9AKeFyfHdAJXl1kRDTRAg3Dfoh1Gy6oFj8UFVCTMfUoYSMh4EVnifw0U2hhXzqhqVU01Hf8joN9nM5Jsl9k4Fo-mSCMU9A94WReO1yHK5Ld86a2mgQTCkN8_6KVNUW3-O5ke2ftBcTI4tFvRXf8Id4ThmFD1c0LAPhEUVloHdZ98cuHEAlaa4Jjwqgy_5ohCcczruoG62j5ITLuiSRFvTI1wmGqJkCKbUOezqa4NPoLWsUwzlZwA2LTy-k5caQkT5VxBiYV-RUzAv1H9KDi4mSkGLd1G9_cKX0WaZg0b7XrMYTB4tGEzn1ybQhVCAytrlP3-wiSAY-DkBZhVTUXaoYdkuJxpBIEsYAEk2ZHlztoKTJzrtizdflm2Qdj555PJc9GRcgyoWhlAa2_lxGYzXASpj9BGnEmC7mkIYHcG9xbZfRK-pT-beIlaz6qI5PxoMcCow7kTyMKyPaljWpPja0KQawQEEWl9yBRWCo4uSORdDId1hJAiEbzZzfSODE7KPbzzDmjQ1AkMuc68uo6FbSBptU9mNsOhBY36b6aV1V1JY59uvaNOzvbwFCgMQQuUT01LVkHNi5JcAvYhamwT1JLDCK7_Ev_HacRAy0jTxW_nPekmve5Mo4W33x3gmnLzVs0Sd_O3SgY6NbblRo4g2AhmV6JfhrRDvCtxplUBM02LO.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LjEtc29sLTIwMjYwOTI5fG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_071bb8ec064b46cb016ae6aa23a2a087d1bbfce08ace4077da",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 17,
+          "completion_tokens": 25,
+          "total_tokens": 42,
+          "cost": 0.000284,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000284,
+            "upstream_inference_prompt_cost": 3.4e-05,
+            "upstream_inference_completions_cost": 0.00025
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 18,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "428",
+      "thinking_trace": null,
+      "parsed_integer": 428,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1808.2045999999536,
+      "token_usage": {
+        "prompt_tokens": 39,
+        "completion_tokens": 27,
+        "total_tokens": 66,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 20
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "731"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501732-yHV8kepwI5hUHU9RgGyX",
+        "object": "chat.completion",
+        "created": 1793501732,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "428",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qomwV__gU5_rO2E83sY5NMxgVOUdtHUdWafBDBMjVhwfqsRWjEaicSrT9ukxqSerkF1MM3EPrvIhBe8UD9p-I6fbXyyvc7Ep91yVh_IWNKL9INCPQydzfekeJSw7MoLNGLbD97XrSlMC_dMBRx3ovcaY3XKP7jwE441UO_9U0fu4cUUh-MOwcSof2ekDNNu7HwPvHzrYLNMtuksI1y9ErQ41H3L5nbyLDf2feKQ4lWnDVn2_sXgtmh1j7GUE1F8sHMr2g70GeB2oSjHcL3B9cth3SjK39Guu8ZH1xit94Mgf1rA0mvg89ctJHZfAvmAP7UicCbYrW59jHtY_WtuUzjHUwYNP0HNzBao8yo_oVg5wEFDaqSsPXwGS8ccGsjWhhLe-H-RxfAjbWNam16lCkqcvEemGaG6Mz90oHmuqWIoR04xvRyBBGa1Gu5lMTeIogIt6AusREPAxR5_CNgDObB1GsnneQewRSLPmgrKXUNTzptMdr1c-QaokQsjWLsSjNZCDqq4CPQlJsYRGuwrPnp4PVPFAMvJ7Q6CHIsVkRwwEtP1uMwCpHBCQUGcXW91f7U2kShn8fGtFUsXk4LqGDYkM8ntZZaZcA6PExYs1bp8_KePMe2RW3C59lfnFxNLYA8rDyFOADS0s3rLoOIEnuAfpbxydru5Y3hjMLqb2qyfXNV4CF_OJ41Q3aLRJABb_c-Ryp0199Y-HSdWbFxOn9IOZrS5JtXpzgdimhsZfvTIipvrnHd0qoiN4JiQbywHU7XXm_ylfq5eI83U6_uVm4DvVuOKKQP5L8bY9WeCKFLoVX3TyvwooNqqOq8aubL9yk7ZyQJOPVtxDJ-DJC-EqCQeimeFGNEIpYc35FSVX3X4UScLuy8LlkHy8Vuzd5ZY-b4hdHL0dGydwdPImQcqKaSjl8GNoG6iI5-BMSzHB3luEh0vlRjXQI6oD2GczSHuBFmF3wTnimMEP-mOdqsHFpPWnjUrBPCECYuhJW5Eu4AC_LDW5a2NRLgKy_wiQo2l4ZmXyymRIRxYrdj4jmj9UdDFuMOIfWmG1HillI1mpcqyLlMeFbJz08kwhU-oDcB9_o6OEUWfgDiE8D-rh1RgijidKYv7rFLuO8lHokyQc9JxWfVTMyDGVLoEG-6MlVFQ-avhz4na-PVBnE0QmpR-j2VEi-_576_nCsHzZsy1sSQTm-u_xfGgHLnHcwjgnC_1kUWCiTMvMy9XeZLGaaJo2H8rfbLSS8wSBoFT1WSt0RorUy96DIj1DM0G_IuuzONOynxzultcrlQXwqRfKyawr6efjBpPho2CRY_KL7oaVx9LMtO5oElGsm5tkv009u2FteZxbcAgG-QSQO2mZM4e8jzM9JgflmFPpnmh_NKH78WO2x0njgfbbrF8R_dZ7SLh2u4QNeET9I0dHGJ4M5b4rm3zIXpe4mVbcV4-9NavrgcEe8_WOGK_dHKSMotQginDSA1sy7V7tTXBmu9nkAOk_R1kWiZ081ngRscVBTgGGs-sMAbb8vnvVv5N-RskGVgSm-EleXSIsn40VGFgSSGidvmu5OlI_A7TiZYu2hFuttNF3MFFj3M9DXYEg0rLXlgTd3Q6Bza7hqOPvoxp_qtlkCDWD_BfR55-ciG2IYH3bgBkclAuXEqwwPpx73FdV9VrNj8kQ2d-bCVgRP6PKHneKhIuKWHmycTNadcqeCPhyfCvfOOawo8iC5VJmTaINAZn5ZE97XX3GZ16j7i2X9UyNYutWOZMuf9m58xSl7Hz2-C_0o7Y99FiQru1Vq4B8Z1GoBgyAjvRqYoftU1AEFFHNNeJTQ==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LjEtc29sLTIwMjYwOTI5fG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0991027a91c39eb4016ae6aa257c1087d1a34d3f5b768a763a",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 39,
+          "completion_tokens": 27,
+          "total_tokens": 66,
+          "cost": 0.000348,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000348,
+            "upstream_inference_prompt_cost": 7.8e-05,
+            "upstream_inference_completions_cost": 0.00027
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 20,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "596283",
+      "thinking_trace": null,
+      "parsed_integer": 596283,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1973.7540000005538,
+      "token_usage": {
+        "prompt_tokens": 61,
+        "completion_tokens": 26,
+        "total_tokens": 87,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 18
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "731"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501734-9XdPgauH5Nx6r2sGGoJu",
+        "object": "chat.completion",
+        "created": 1793501734,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "596283",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qooIL6BLdXpVffap4pKkypRP5fAf5JdJQDyIgIxjVQ_Q6Fz0Vnun2bNOU_4aUSc6204ocghziU7SOpKDYOMQ5g64CBIBy59UFmqg4ggDPvEQFcuetEnKmgJ3H87lvg8-uhHBP06PhKDDgS6lVSvjc728uf-NH_MaqfZgk9E7ygUi9rdrcikQ3T669dbMNOdy7JYlEzz3LmHNSSQEFVmEvksEH-pRJeh9_1kuSZLz3PDzJRT4Qijrdoqnlb9mIfKEThqyGMqOy8Om3TZhPZQXvx7kAVOYgKK7SGNrLgVz7sOHcaMoJF1_tbkCf8tCnXtx1IGFplUvuUc54tKwWcSAYYrL9GVtgsuUFFHQXw-tBBDal6IidNxNjkH14nOsH6wzeZrTdA07YGOPYqPOTcs10WCSJE9uXeP8mcig30n42UwQyc3MoKKoqS0gn9MpljDLPNPbZSmY9lZ3nccMlmKhnzNGNEkPJsjSsrurRy1XK7AV7MSKdaET1JoGPD3Woo6m7Z_iZfM3sV43lwziTjXaNZ2NVmrm8mjENqkgpko1NVaEjq89RyBYJnMaAG_OJiOow4qNQMXZx4cbAFzql_CtZDEQ5UIsO0xoaYpz94rdx5nVJK-HK5m_RZ_zkTPbm_5si624nprUCJauKO4MyfBtLw0lHF1svKrw1tPHHjMcZS76-f0KCxPD7HGi6_rVt3F_xUyebw4MZXH97vLoEVnTnG8amYvV-y76LOFs99zBLurAyIF1J253ZXYnoFYqgoR_oylwvDAZWqXYtvagLpWDuOGJ_QlHKtL4_OIkOsiX16FM18w-cZyPIXfyz8tDqG8DF2WSpQRJJJwFIH_1wcQC0z-DSbu9tQxLbr6TmaN_z9leGhpsxDGLpLW1gQRMVuKDcLl3dudKHlQx_eo1NqY7sY3P-mGkPczmhsekyxr07cwyf2dtdvskZCOz8jsng5Rj4MMOozPNQdLDJMF9g57UDIVptb_uaY_gbz2vXvQsANq3twowzii9aH-OUSaIcDsWNS4RaoAK1rL1dehMXGOU8ovpboo9qRhJYEwCsvckur4jPn0CCKPmN4MJQCkyMZ85MSxmKBXKmxu45qjjNe7YdF4NPXt_4kDu68UCccUPA1AVu4x-2UDIkvpY0S-cudSihYJ4YW5Kr3VxqF2lKAdswao36DoQ6z-PCGMkL3fO-RgOKXVsfP6K-rJBmYoiBGDrhJdaLtL1eRgcOdT036Nk6RFDStIgd-GIcCHFUjq4TVSdfggCcbjgdFLAXu5ipQSsdCfrgxsR6Re05tmI3cg0w0ysh69JQH1tjxDkRMv24WDdrezUfKZ3QpOIUANkIqibZVaS_4mDalIOyrREhXGz9c9zeDaD4K4dhtZMj-3_G4zDWeJT7ZzGnR7YK12k8pNX9XuJK4dDx8-_rjjuTzz1ed_6EfPAHlcGTcd-LeHETTLcVn0GyR980xw0iBJaqS3JYM6ct1sUeFY3D-yit2gaBIJgz1I45q4Gsg9bno7DWnU0b-zIE8nebAmsNCpM12M8saMYnAgdmVn-SHYDcgQ665R8ytKIYWlONAIjgYp2WOEbt9CTMkF43ohDkgg0QnHtPgaVesWNc1XQIRyQWyEldYm5PpO43HYpxdsmBhmLbmQ1xb8E1GKzR6PY1HqYygO3G2Hx9LfXio7mZIuh1RTIfvGoQmye7tp7hr7hqaoEncvAZA2eN-Us8UT4SOgMxsGelC3L_YNXSR-MrllPW9p-S1siulcTQS_roaNJRNe7Uj_Ug5zbuefcvYxQ44KpMiCleVq.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LjEtc29sLTIwMjYwOTI5fG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0385ca877624513c016ae6aa273ab087d1b313c8b9e4dd9df9",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 61,
+          "completion_tokens": 26,
+          "total_tokens": 87,
+          "cost": 0.000382,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000382,
+            "upstream_inference_prompt_cost": 0.000122,
+            "upstream_inference_completions_cost": 0.00026
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 18,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "184927",
+      "thinking_trace": null,
+      "parsed_integer": 184927,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1208.5667999999714,
+      "token_usage": {
+        "prompt_tokens": 84,
+        "completion_tokens": 6,
+        "total_tokens": 90,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "731"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "596283"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501736-Craej4mp88hveapOfR4q",
+        "object": "chat.completion",
+        "created": 1793501736,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "184927",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 84,
+          "completion_tokens": 6,
+          "total_tokens": 90,
+          "cost": 0.000228,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000228,
+            "upstream_inference_prompt_cost": 0.000168,
+            "upstream_inference_completions_cost": 6e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "370651",
+      "thinking_trace": null,
+      "parsed_integer": 370651,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1245.3896000006353,
+      "token_usage": {
+        "prompt_tokens": 107,
+        "completion_tokens": 6,
+        "total_tokens": 113,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "731"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "596283"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "184927"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501737-CYpzy1MK1KpVIV47SZvq",
+        "object": "chat.completion",
+        "created": 1793501737,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "370651",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 107,
+          "completion_tokens": 6,
+          "total_tokens": 113,
+          "cost": 0.000274,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000274,
+            "upstream_inference_prompt_cost": 0.000214,
+            "upstream_inference_completions_cost": 6e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "82416",
+      "thinking_trace": null,
+      "parsed_integer": 82416,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1593.2133000005706,
+      "token_usage": {
+        "prompt_tokens": 130,
+        "completion_tokens": 6,
+        "total_tokens": 136,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "731"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "596283"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "184927"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "370651"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501738-f3FfU4jXpT3koz0cGyTp",
+        "object": "chat.completion",
+        "created": 1793501738,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "82416",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 130,
+          "completion_tokens": 6,
+          "total_tokens": 136,
+          "cost": 0.00032,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00032,
+            "upstream_inference_prompt_cost": 0.00026,
+            "upstream_inference_completions_cost": 6e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "592740",
+      "thinking_trace": null,
+      "parsed_integer": 592740,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1417.8950999994413,
+      "token_usage": {
+        "prompt_tokens": 153,
+        "completion_tokens": 22,
+        "total_tokens": 175,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "731"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "596283"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "184927"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "370651"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "82416"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501740-UZM3ywqLguT1D6BicVqX",
+        "object": "chat.completion",
+        "created": 1793501740,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "592740",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qotVOzW0MzKg1lI_bV3ERkiLu-MMs4NJWRo_bCfi8XaOc4Zs-J02U56VAiAgS8S5eMKgcAVzW79Vuv8XeInh6Kzo3LHaV2KOSlfLM9h5K2pgU_mLG-nAzbGouxN3rDORt-3lVPIJ2lXEaZOFbVercfBZftWk7piBua_Y9KLPpzMGzHpMxDPd6iIr5TC9Npsw7giyABWXVY81QzL4UJ3jFIyvnsxN1ZykBqOW12XvM_61gil5-mV_qC_OiUzII253KXSVjOmIS4S0f0TsIjUzK7CWelEnH52mIG5oBLKlqIz8O4urCmRx7odf1_ysFF9J8J-SImUlfanLENZZv4LNm8zybSbFOuC967T4wOqubDECiJxJip2XcwdPHou4UR-WuFkfbdXPri7UR_fDq3uHjtuuE5HvduWFkf_jL4SsueQnvt-guRzQUudAYhYlTN5-NB-kCQNIARpm3qucUK08rhmpJhG5N2D5rV5UuFkhW33BFJBO3z_gt5FGBvUUqUDzKAZkYTco_maN5ixMB4x6H3JSd8K8AQSlJiTDYauIkmQVa_Sw10II0gZWDxlwlsg1PDlDEGwcRiirdSVZipOYlPYk5V54Xs05dWs5hsvqLxtcqxETyL8_duPduuOLmWCAJrP8sqzFqP2oQkuBY3Bxi_NLIRgq1juXHpXrDAJ_eEf8HRhKEfnqVgrzqkFCnkNgg_5qFFdZftBUaJ2K2jpHFxGwDK4WalfzCsOq4MqDvPZ_aetQjWCckDRNTkGnuwBrvpUVAkkmJd9XkkktBAG0AU8NWokLnwL0oaquL5PpJNz1yUyhMSXtEo5JH4Phs_i9mbg4Ie8k9w-8OAYI95oVo6j29jKuEwpBoU6kSyua8tuUmlA2Hn7oo4kMe9eeutJn18DPZVArDuU6JztQ8TlyfqYve2ifbnV3JI20k-kn-ce-0zLFbqd7prGlH4M7vJxdJCD_VwyQNaEAAnCF2hlC-YvsiuRogVHbcTQjMrKHvPeb1ewhKZg7Kl1ne2X0hejqJ-dXBSHu5fC_gMfHeYqTHcC2pPv8fGfcftu0ifm3geBp-tJr4lSZhKfPHRSzT1HtTFQNxeAAXeblJoM2PAF5_-1T1kojN_dMAk1Jm6NLTUEOOgFH-Lpg1CEOz0L2oyq8bdEosZBQlf76FkcJEyL3cTGs2B8I-o1XNkwiE0iomQ2RN-ckYcjsh6okYkyPZ862sVJBGGc_nqV1vFDkWMMxy0A1J0yZxG8zxyAYs62D14GjHrNO5QruOGQ-ZwkkXpxSQhWCjRkIqX0NtRVEgPZWT57gsgAQm9HBWvAHO1k4K9wqFFyvT1GxBffqHGk5p6RAAWLKLdgK7J_JimkAdRkAYQlgTz1V3COsiM3Blymjjp-jzNA_qKkB88jwFD4m82GVs2MQrPNozoQ7eTNqZL8ve85hueqv2dxXfm-mVbZtVPc4SsgLGQ3RVkfPchYkIENq4zMpt03I81auscR7tzmeLGq-CH6Nqb2vX9XzFYV3ziKaZrH4qZpUsvyBugFMu5ggmx1bLv0VD6cEYKqsBNh_vzbm5XJJUSi0PprcCD1zpHWhsTD5FjGpDuU5vJYm6qU1J_neWuNx-Jaeia5uAfkMdaBnOThAXH5LcKfQeedHmr3zkHI1u5o1eaHD84_lRt3jacFPRzG22OghwmBKv-6Apcz5mLkzes9ix5EW4ohx-3w7qSMZjh-1fKSed8aiLx1fuCn.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LjEtc29sLTIwMjYwOTI5fG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_00f266f86fc6afe9016ae6aa2d409087d1a81680910c753e6b",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 153,
+          "completion_tokens": 22,
+          "total_tokens": 175,
+          "cost": 0.000526,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000526,
+            "upstream_inference_prompt_cost": 0.000306,
+            "upstream_inference_completions_cost": 0.00022
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "267839",
+      "thinking_trace": null,
+      "parsed_integer": 267839,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1577.1938000016235,
+      "token_usage": {
+        "prompt_tokens": 176,
+        "completion_tokens": 16,
+        "total_tokens": 192,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 8
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "731"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "596283"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "184927"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "370651"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "82416"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "592740"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501741-IQ56GrkOx0ofB2m2FMlA",
+        "object": "chat.completion",
+        "created": 1793501741,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "267839",
+              "refusal": null,
+              "reasoning": null,
+              "reasoning_details": [
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "gAAAAABq5qovwr0dijxmfQ9Xuc6NM1qdf1ZzMrt5VQUaUGOAw7tbVyprGyEjXceedz9YM48VbeP6CqDp8-EQ71zbGY_uWUWpjdn0pgUkXsFCOU508y5_MphjxyuF9mBjaIoy9J4OVeeasRsD6Xo5D2DHGYlHu24Y0lWTFPNd_2fmOR3vs5i8n1IT0GrfNsXuxD4Tqj3GOCM2HwGWR9YYkRvuX33jJLtm4xLolMj_MXI5Y7qvmsLH3hY9D86exhrXwdDoY_nJCEGW5MyYxdpzpctJZW4xrt3_QYYrSDPjMd8SDxbGB9gEkEiCGRSb1h9OBzwx5EObkJRx0WJOpManWD3opmZyhjnEZCFCSlMgBQvDD8TMJBJIo0mDhXQICLIbRzDbEhISVZHDrwQmu04k_ocwLVxBuahmRFTJpM96hY8XU8TW8zGAUfkucpF_dLwvtETxlSA3pjBJmqW7Nq_b9oMRu15GDrOdQx1tmpRiOuc81DwSpAR_V_IB1q5bF0pkUtLU6GqcSDM3VQX02Pa7d5s98HG2kP63mv5CsdqA3TEddjOlM2X_5u76aV6in7Vb6qcDyx_6NW6rhNz0htKWxlY5oKsWYCzsl2WwefzH8Z-cJJ9Wnwy7zbR_rmxyPRcgA9pTqn9Et4OGkKSl5dGYQulY9lhh221xHnevrf7MIQs2PcH9-_1rxeyA72OZln6eRpR8OkmiBrtTuO-8JB_TKq9GNLemC9LedLkikZkkXUKd2UJuUSiUK2nYiE6DQ7a7WoG66J6auSKpwrJ66hN3TFlmSVno1tmbYQonZ2rs32xSr1_oG3qm3DTZU4vkbevzyER-7RTBIe9LgJa15IsUAPpTuCHBARCiM2RPI9rTje0N-l5xlPQ74RUs0BCgy1IKbLzbDmMvm3f1-nM8IZtGakcE2tZyEwQZmDtKYkuepU4-ziPCXluQJOoiJPTj3sOnKFELIeHJ8OYpuz-cVyErbx2j-0IzYBi4CtjBL8xUIIjo8BEurZCUodKxsx6HPzZhfNLJMgB9EtLOTrFmx95pO6NLwBsPQMw_IlkQ_FvCizOxeXU-D7XjJStuts7HYncKDkPOOxc-ekLj7IwSpY224crWfO1V-ufCdZfv8TEFMnGqgXqzDiY6IjEKAk8tXodB8wsg8BviOVv5EX9MikQPykH0jKpPwv9d3bbzSGE9srRSvRbI3sGkqrmkCslbXPvWV3Z2qpdaZuf-X30CvTAWeTePEiyscnmIh4V9Qv0GnxF6YA95JlPZzEEujswgJ15W2BQo0aPciPWX5-KHrlgXSkQ38ZvIwzzWGLGBNATFJqB4HKfMj8Xi-8zszEONeJLQtgdvlSEuSXxgaMgO_RhQnqolBVBEOjbnWtkwpGKcFWUFuGSr9M9G3fql0DJSRz8hrLKw9juAv84ZxroGpm1VwX-d9g8W1ZEUVNc-vlXqRltTQA4Bq3KvPydzmPdDjMXIeaq8f6CGAWnGBwSemhpo_MuZKKcYvrXCU6nSJx_3KTP1AnwumbT1XeCd0AOZEDb8vVQl3g8tj093Pv0TejhFqemy4Tgkj7qFEKi37hQnTy5roPMYDpjab83YmRS9c5vrOcFHC_zgHGGIW8TW4e9UvPFghAeJKGpOnQe31a2NgXTHREwbz16n7vjU1C_ELIAiCE6TTb5XElkLxnjEDblnLGEslpvf0EqM8Q==.eyJlbmRwb2ludF9zbHVnIjoib3BlbmFpL2dwdC02LjEtc29sLTIwMjYwOTI5fG9wZW5haSJ9",
+                  "format": "openai-responses-v1",
+                  "id": "rs_0d6f26e9a516daf3016ae6aa2ec09887d192b403abf44f8005",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 176,
+          "completion_tokens": 16,
+          "total_tokens": 192,
+          "cost": 0.000512,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000512,
+            "upstream_inference_prompt_cost": 0.000352,
+            "upstream_inference_completions_cost": 0.00016
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "683105",
+      "thinking_trace": null,
+      "parsed_integer": 683105,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1313.8447999990603,
+      "token_usage": {
+        "prompt_tokens": 199,
+        "completion_tokens": 6,
+        "total_tokens": 205,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "731"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "596283"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "184927"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "370651"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "82416"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "592740"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "267839"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501743-mXwGHu5nyKgzVNVdL5AD",
+        "object": "chat.completion",
+        "created": 1793501743,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "683105",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 199,
+          "completion_tokens": 6,
+          "total_tokens": 205,
+          "cost": 0.000458,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000458,
+            "upstream_inference_prompt_cost": 0.000398,
+            "upstream_inference_completions_cost": 6e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "947258",
+      "thinking_trace": null,
+      "parsed_integer": 947258,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1313.904900000125,
+      "token_usage": {
+        "prompt_tokens": 222,
+        "completion_tokens": 6,
+        "total_tokens": 228,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 0
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI"
+      },
+      "raw_request": {
+        "model": "openai/gpt-6.1-sol",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "731"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "428"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "596283"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "184927"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "370651"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "82416"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "592740"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "267839"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "683105"
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "include_reasoning": true,
+        "reasoning": {
+          "effort": "high"
+        },
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501744-RVebEivaDlHAR5MHxQTS",
+        "object": "chat.completion",
+        "created": 1793501744,
+        "model": "openai/gpt-6.1-sol",
+        "provider": "OpenAI",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "947258",
+              "refusal": null,
+              "reasoning": null
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 222,
+          "completion_tokens": 6,
+          "total_tokens": 228,
+          "cost": 0.000504,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000504,
+            "upstream_inference_prompt_cost": 0.000444,
+            "upstream_inference_completions_cost": 6e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "GPT-6.1 Sol (max)",
+    "provider": "openrouter",
+    "model": "openai/gpt-6.1-sol",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": true,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "openai",
+      "sol",
+      "reasoning"
+    ]
+  },
+  "error": null
+}

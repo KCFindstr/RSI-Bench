@@ -1,0 +1,1348 @@
+{
+  "run_id": "72e497f7c5",
+  "benchmark_name": "RSI-Bench",
+  "timestamp": "2026-11-01T03:03:52.046503+00:00",
+  "provider": "openrouter",
+  "model": "inclusionai/ling-3.1-flash",
+  "num_turns_requested": 10,
+  "num_turns_completed": 10,
+  "parsed_integers": [
+    4273915826,
+    -7428193056,
+    5839201746,
+    -3847201659,
+    9024738156,
+    -6158273049,
+    8304712659,
+    -4827391560,
+    7294180356,
+    -518092374
+  ],
+  "all_valid": true,
+  "valid_turns_count": 10,
+  "total_latency_ms": 253518.29200000066,
+  "avg_turn_latency_ms": 25351.829200000066,
+  "total_usage": {
+    "prompt_tokens": 6631,
+    "completion_tokens": 4343,
+    "total_tokens": 10974,
+    "cached_tokens": 5696,
+    "cache_creation_tokens": 0,
+    "reasoning_tokens": 182
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "4273915826",
+      "thinking_trace": "The user wants a single random integer, no other text.",
+      "parsed_integer": 4273915826,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 10550.485699999626,
+      "token_usage": {
+        "prompt_tokens": 31,
+        "completion_tokens": 24,
+        "total_tokens": 55,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501979-4SgignWOZLblpSzQz2hg",
+        "object": "chat.completion",
+        "created": 1793501979,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "4273915826",
+              "refusal": null,
+              "reasoning": "The user wants a single random integer, no other text.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a single random integer, no other text.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 31,
+          "completion_tokens": 24,
+          "total_tokens": 55,
+          "cost": 7.725e-06,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 7.725e-06,
+            "upstream_inference_prompt_cost": 2.325e-06,
+            "upstream_inference_completions_cost": 5.4e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 2,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-7428193056",
+      "thinking_trace": "The user wants just a random integer, nothing else.",
+      "parsed_integer": -7428193056,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1110.7431999989785,
+      "token_usage": {
+        "prompt_tokens": 78,
+        "completion_tokens": 24,
+        "total_tokens": 102,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 13
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "Novita"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4273915826",
+            "reasoning": "The user wants a single random integer, no other text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501990-KNg7alh3rkxHjpdarr2D",
+        "object": "chat.completion",
+        "created": 1793501990,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "Novita",
+        "system_fingerprint": null,
+        "service_tier": null,
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-7428193056",
+              "refusal": null,
+              "reasoning": "The user wants just a random integer, nothing else.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants just a random integer, nothing else.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 78,
+          "completion_tokens": 24,
+          "total_tokens": 102,
+          "cost": 1.125e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.125e-05,
+            "upstream_inference_prompt_cost": 5.85e-06,
+            "upstream_inference_completions_cost": 5.4e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 13,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 3,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "5839201746",
+      "thinking_trace": "The user wants a random integer with no other output. Just provide one.",
+      "parsed_integer": 5839201746,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1065.4921000004833,
+      "token_usage": {
+        "prompt_tokens": 125,
+        "completion_tokens": 27,
+        "total_tokens": 152,
+        "cached_tokens": 0,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 18
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4273915826",
+            "reasoning": "The user wants a single random integer, no other text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-7428193056",
+            "reasoning": "The user wants just a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501991-O2Fy3aiQRGUKp7BkKXFG",
+        "object": "chat.completion",
+        "created": 1793501991,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "5839201746",
+              "refusal": null,
+              "reasoning": "The user wants a random integer with no other output. Just provide one.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer with no other output. Just provide one.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 125,
+          "completion_tokens": 27,
+          "total_tokens": 152,
+          "cost": 1.545e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.545e-05,
+            "upstream_inference_prompt_cost": 9.375e-06,
+            "upstream_inference_completions_cost": 6.075e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 18,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 4,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-3847201659",
+      "thinking_trace": "The user wants a random integer, nothing else. I'll generate one.",
+      "parsed_integer": -3847201659,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1317.819600000803,
+      "token_usage": {
+        "prompt_tokens": 175,
+        "completion_tokens": 28,
+        "total_tokens": 203,
+        "cached_tokens": 64,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 17
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4273915826",
+            "reasoning": "The user wants a single random integer, no other text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-7428193056",
+            "reasoning": "The user wants just a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5839201746",
+            "reasoning": "The user wants a random integer with no other output. Just provide one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501992-IN62FLsH14cui4z5O12Q",
+        "object": "chat.completion",
+        "created": 1793501992,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-3847201659",
+              "refusal": null,
+              "reasoning": "The user wants a random integer, nothing else. I'll generate one.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer, nothing else. I'll generate one.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 175,
+          "completion_tokens": 28,
+          "total_tokens": 203,
+          "cost": 1.5585e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.5585e-05,
+            "upstream_inference_prompt_cost": 9.285e-06,
+            "upstream_inference_completions_cost": 6.3e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 17,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 5,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "9024738156",
+      "thinking_trace": "The user wants a random integer and nothing else. I'll just produce one.",
+      "parsed_integer": 9024738156,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1618.1971000005433,
+      "token_usage": {
+        "prompt_tokens": 226,
+        "completion_tokens": 28,
+        "total_tokens": 254,
+        "cached_tokens": 128,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 18
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4273915826",
+            "reasoning": "The user wants a single random integer, no other text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-7428193056",
+            "reasoning": "The user wants just a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5839201746",
+            "reasoning": "The user wants a random integer with no other output. Just provide one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-3847201659",
+            "reasoning": "The user wants a random integer, nothing else. I'll generate one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501993-3M5XaIAHFpsiPPD6A8GF",
+        "object": "chat.completion",
+        "created": 1793501993,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "9024738156",
+              "refusal": null,
+              "reasoning": "The user wants a random integer and nothing else. I'll just produce one.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer and nothing else. I'll just produce one.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 226,
+          "completion_tokens": 28,
+          "total_tokens": 254,
+          "cost": 1.557e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 128,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.557e-05,
+            "upstream_inference_prompt_cost": 9.27e-06,
+            "upstream_inference_completions_cost": 6.3e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 18,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 6,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-6158273049</think>-6158273049",
+      "thinking_trace": "The user wants a random integer only. Just output one.",
+      "parsed_integer": -6158273049,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 1571.7354999997042,
+      "token_usage": {
+        "prompt_tokens": 277,
+        "completion_tokens": 37,
+        "total_tokens": 314,
+        "cached_tokens": 192,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 14
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4273915826",
+            "reasoning": "The user wants a single random integer, no other text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-7428193056",
+            "reasoning": "The user wants just a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5839201746",
+            "reasoning": "The user wants a random integer with no other output. Just provide one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-3847201659",
+            "reasoning": "The user wants a random integer, nothing else. I'll generate one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9024738156",
+            "reasoning": "The user wants a random integer and nothing else. I'll just produce one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501995-sv39PAa1kxM7Jp5uXu58",
+        "object": "chat.completion",
+        "created": 1793501995,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "-6158273049</think>-6158273049",
+              "refusal": null,
+              "reasoning": "The user wants a random integer only. Just output one.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer only. Just output one.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 277,
+          "completion_tokens": 37,
+          "total_tokens": 314,
+          "cost": 1.758e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 192,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.758e-05,
+            "upstream_inference_prompt_cost": 9.255e-06,
+            "upstream_inference_completions_cost": 8.325e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 14,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 7,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "8304712659",
+      "thinking_trace": "The user wants a random integer, nothing else. Just output a single integer.",
+      "parsed_integer": 8304712659,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 2280.104100000244,
+      "token_usage": {
+        "prompt_tokens": 337,
+        "completion_tokens": 28,
+        "total_tokens": 365,
+        "cached_tokens": 256,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 19
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4273915826",
+            "reasoning": "The user wants a single random integer, no other text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-7428193056",
+            "reasoning": "The user wants just a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5839201746",
+            "reasoning": "The user wants a random integer with no other output. Just provide one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-3847201659",
+            "reasoning": "The user wants a random integer, nothing else. I'll generate one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9024738156",
+            "reasoning": "The user wants a random integer and nothing else. I'll just produce one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-6158273049</think>-6158273049",
+            "reasoning": "The user wants a random integer only. Just output one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501996-KbnCioZdRztTTaKPVwvm",
+        "object": "chat.completion",
+        "created": 1793501996,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "8304712659",
+              "refusal": null,
+              "reasoning": "The user wants a random integer, nothing else. Just output a single integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants a random integer, nothing else. Just output a single integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 337,
+          "completion_tokens": 28,
+          "total_tokens": 365,
+          "cost": 1.6215e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 256,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 1.6215e-05,
+            "upstream_inference_prompt_cost": 9.915e-06,
+            "upstream_inference_completions_cost": 6.3e-06
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 19,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 8,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-",
+      "thinking_trace": "Just output a random integer.",
+      "parsed_integer": -4827391560,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 120116.12459999924,
+      "token_usage": {
+        "prompt_tokens": 388,
+        "completion_tokens": 2048,
+        "total_tokens": 2436,
+        "cached_tokens": 320,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 8
+      },
+      "provider_metadata": {
+        "finish_reason": "length",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4273915826",
+            "reasoning": "The user wants a single random integer, no other text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-7428193056",
+            "reasoning": "The user wants just a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5839201746",
+            "reasoning": "The user wants a random integer with no other output. Just provide one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-3847201659",
+            "reasoning": "The user wants a random integer, nothing else. I'll generate one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9024738156",
+            "reasoning": "The user wants a random integer and nothing else. I'll just produce one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-6158273049</think>-6158273049",
+            "reasoning": "The user wants a random integer only. Just output one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8304712659",
+            "reasoning": "The user wants a random integer, nothing else. Just output a single integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793501999-DNvKt8MSOIqHqXfdr7FL",
+        "object": "chat.completion",
+        "created": 1793501999,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "length",
+            "native_finish_reason": "length",
+            "message": {
+              "role": "assistant",
+              "content": "-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-",
+              "refusal": null,
+              "reasoning": "Just output a random integer.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Just output a random integer.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 388,
+          "completion_tokens": 2048,
+          "total_tokens": 2436,
+          "cost": 0.0004707,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 320,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0004707,
+            "upstream_inference_prompt_cost": 9.9e-06,
+            "upstream_inference_completions_cost": 0.0004608
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 9,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "7294180356",
+      "thinking_trace": "The user wants just a random integer with no other output. I should output exactly one integer and nothing else. Prior turns had some corruption with repeated output, but I should just comply cleanly.",
+      "parsed_integer": 7294180356,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 4033.2557000001543,
+      "token_usage": {
+        "prompt_tokens": 2460,
+        "completion_tokens": 51,
+        "total_tokens": 2511,
+        "cached_tokens": 2304,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 50
+      },
+      "provider_metadata": {
+        "finish_reason": "stop",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4273915826",
+            "reasoning": "The user wants a single random integer, no other text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-7428193056",
+            "reasoning": "The user wants just a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5839201746",
+            "reasoning": "The user wants a random integer with no other output. Just provide one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-3847201659",
+            "reasoning": "The user wants a random integer, nothing else. I'll generate one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9024738156",
+            "reasoning": "The user wants a random integer and nothing else. I'll just produce one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-6158273049</think>-6158273049",
+            "reasoning": "The user wants a random integer only. Just output one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8304712659",
+            "reasoning": "The user wants a random integer, nothing else. Just output a single integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-",
+            "reasoning": "Just output a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502119-voC8WNcd5KVhRCdF0yaD",
+        "object": "chat.completion",
+        "created": 1793502119,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "7294180356",
+              "refusal": null,
+              "reasoning": "The user wants just a random integer with no other output. I should output exactly one integer and nothing else. Prior turns had some corruption with repeated output, but I should just comply cleanly.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "The user wants just a random integer with no other output. I should output exactly one integer and nothing else. Prior turns had some corruption with repeated output, but I should just comply cleanly.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2460,
+          "completion_tokens": 51,
+          "total_tokens": 2511,
+          "cost": 5.7735e-05,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 2304,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 5.7735e-05,
+            "upstream_inference_prompt_cost": 4.626e-05,
+            "upstream_inference_completions_cost": 1.1475e-05
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 50,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "turn_index": 10,
+      "prompt": "Generate a random integer. Do NOT output anything else.",
+      "raw_response_text": "-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-518092374",
+      "thinking_trace": "Generate a random integer, output only that.",
+      "parsed_integer": -518092374,
+      "parse_success": true,
+      "parse_error": null,
+      "latency_ms": 109854.33440000088,
+      "token_usage": {
+        "prompt_tokens": 2534,
+        "completion_tokens": 2048,
+        "total_tokens": 4582,
+        "cached_tokens": 2432,
+        "cache_creation_tokens": 0,
+        "reasoning_tokens": 11
+      },
+      "provider_metadata": {
+        "finish_reason": "length",
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra"
+      },
+      "raw_request": {
+        "model": "inclusionai/ling-3.1-flash",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "4273915826",
+            "reasoning": "The user wants a single random integer, no other text."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-7428193056",
+            "reasoning": "The user wants just a random integer, nothing else."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "5839201746",
+            "reasoning": "The user wants a random integer with no other output. Just provide one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-3847201659",
+            "reasoning": "The user wants a random integer, nothing else. I'll generate one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "9024738156",
+            "reasoning": "The user wants a random integer and nothing else. I'll just produce one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-6158273049</think>-6158273049",
+            "reasoning": "The user wants a random integer only. Just output one."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "8304712659",
+            "reasoning": "The user wants a random integer, nothing else. Just output a single integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-4827391560</think>-",
+            "reasoning": "Just output a random integer."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          },
+          {
+            "role": "assistant",
+            "content": "7294180356",
+            "reasoning": "The user wants just a random integer with no other output. I should output exactly one integer and nothing else. Prior turns had some corruption with repeated output, but I should just comply cleanly."
+          },
+          {
+            "role": "user",
+            "content": "Generate a random integer. Do NOT output anything else."
+          }
+        ],
+        "temperature": 1.0,
+        "max_tokens": 2048
+      },
+      "raw_response": {
+        "id": "gen-1793502124-mmKeF2ph7HgHYvf7STgp",
+        "object": "chat.completion",
+        "created": 1793502124,
+        "model": "inclusionai/ling-3.1-flash",
+        "provider": "DeepInfra",
+        "system_fingerprint": null,
+        "service_tier": "default",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "length",
+            "native_finish_reason": "length",
+            "message": {
+              "role": "assistant",
+              "content": "-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-5180923746</think>-518092374",
+              "refusal": null,
+              "reasoning": "Generate a random integer, output only that.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.text",
+                  "text": "Generate a random integer, output only that.",
+                  "format": "unknown",
+                  "index": 0
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2534,
+          "completion_tokens": 2048,
+          "total_tokens": 4582,
+          "cost": 0.00050493,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 2432,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.00050493,
+            "upstream_inference_prompt_cost": 4.413e-05,
+            "upstream_inference_completions_cost": 0.0004608
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 11,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "name": "Ling 3.1 Flash 1019",
+    "provider": "openrouter",
+    "model": "inclusionai/ling-3.1-flash",
+    "num_turns": 10,
+    "prompt": "Generate a random integer. Do NOT output anything else.",
+    "system_prompt": null,
+    "enable_thinking": false,
+    "thinking_budget": 32000,
+    "thinking_level": "max",
+    "temperature": 1.0,
+    "top_p": null,
+    "seed": null,
+    "max_tokens": 2048,
+    "enable_caching": true,
+    "use_local_cache": false,
+    "local_cache_dir": ".rsi_cache",
+    "timeout_seconds": 90.0,
+    "max_retries": 3,
+    "api_key": null,
+    "base_url": "https://openrouter.ai/api/v1",
+    "extra_headers": {},
+    "extra_body": {},
+    "tags": [
+      "ling"
+    ]
+  },
+  "error": null
+}
