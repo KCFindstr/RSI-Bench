@@ -67,9 +67,10 @@ runs:
   # 1. Claude Opus 5.5 (max with fallback) [Anthropic, Reference Score: 58]
   - name: "Claude Opus 5.5 (max with fallback)"
     provider: "openrouter"
-    model: "anthropic/claude-3-opus"
+    model: "anthropic/claude-opus-5.5"
     turns: 3
     thinking: true
+    thinking_level: "max"
     cache: true
     enabled: false
     tags: ["anthropic", "opus", "reasoning"]
@@ -77,9 +78,10 @@ runs:
   # 2. GPT-6 Astra (max) [OpenAI, Reference Score: 57]
   - name: "GPT-6 Astra (max)"
     provider: "openrouter"
-    model: "openai/gpt-4o"
+    model: "openai/gpt-6-astra"
     turns: 3
     thinking: true
+    thinking_level: "max"
     cache: true
     enabled: false
     tags: ["openai", "astra"]
@@ -87,9 +89,10 @@ runs:
   # 3. GPT-6.1 Sol (max) [OpenAI, Reference Score: 55]
   - name: "GPT-6.1 Sol (max)"
     provider: "openrouter"
-    model: "openai/o1"
+    model: "openai/gpt-6.1-sol"
     turns: 3
     thinking: true
+    thinking_level: "max"
     cache: true
     enabled: false
     tags: ["openai", "sol", "reasoning"]
@@ -97,9 +100,10 @@ runs:
   # 4. Claude Sonnet 5.5 (max with fallback) [Anthropic, Reference Score: 54]
   - name: "Claude Sonnet 5.5 (max with fallback)"
     provider: "openrouter"
-    model: "anthropic/claude-3.7-sonnet"
+    model: "anthropic/claude-sonnet-5.5"
     turns: 3
     thinking: true
+    thinking_level: "max"
     cache: true
     enabled: false
     tags: ["anthropic", "sonnet", "reasoning"]
@@ -107,9 +111,10 @@ runs:
   # 5. GPT-6.1 Terra (max) [OpenAI, Reference Score: 51]
   - name: "GPT-6.1 Terra (max)"
     provider: "openrouter"
-    model: "openai/o3-mini"
+    model: "openai/gpt-6.1-terra"
     turns: 3
     thinking: true
+    thinking_level: "max"
     cache: true
     enabled: false
     tags: ["openai", "terra", "reasoning"]
@@ -117,9 +122,10 @@ runs:
   # 6. Gemini 4 Argon (high) [Google, Reference Score: 50]
   - name: "Gemini 4 Argon (high)"
     provider: "openrouter"
-    model: "google/gemini-2.0-flash-001"
+    model: "google/gemini-4-argon"
     turns: 3
     thinking: true
+    thinking_level: "high"
     cache: true
     enabled: false
     tags: ["google", "gemini", "argon"]
@@ -129,9 +135,10 @@ runs:
   # 7. Claude Fable 5.1 (max with fallback) [Anthropic, Reference Score: 49]
   - name: "Claude Fable 5.1 (max with fallback)"
     provider: "openrouter"
-    model: "anthropic/claude-3.5-sonnet"
+    model: "anthropic/claude-fable-5.1"
     turns: 3
     thinking: true
+    thinking_level: "max"
     cache: true
     enabled: false
     tags: ["anthropic", "fable"]
@@ -142,24 +149,27 @@ runs:
     model: "moonshotai/kimi-k3.1-pro"
     turns: 3
     thinking: true
+    thinking_level: "high"
     enabled: false
     tags: ["moonshot", "kimi"]
 
   # 9. Muse Wonder (max) [Meta, Reference Score: 43]
   - name: "Muse Wonder (max)"
     provider: "openrouter"
-    model: "meta-llama/llama-3.3-70b-instruct"
+    model: "meta/muse-wonder"
     turns: 3
     thinking: true
+    thinking_level: "max"
     enabled: false
     tags: ["meta", "muse"]
 
   # 10. Claude Haiku 5.5 (max) [Anthropic, Reference Score: 36]
   - name: "Claude Haiku 5.5 (max)"
     provider: "openrouter"
-    model: "anthropic/claude-3.5-haiku"
+    model: "anthropic/claude-haiku-5.5"
     turns: 3
-    thinking: false
+    thinking: true
+    thinking_level: "max"
     cache: true
     enabled: false
     tags: ["anthropic", "haiku"]
@@ -167,27 +177,30 @@ runs:
   # 11. Grok 4.7 (xhigh) [xAI, Reference Score: 34]
   - name: "Grok 4.7 (xhigh)"
     provider: "openrouter"
-    model: "x-ai/grok-2"
+    model: "x-ai/grok-4.7"
     turns: 3
     thinking: true
+    thinking_level: "xhigh"
     enabled: false
     tags: ["xai", "grok"]
 
   # 12. Qwen3.8 Max (0902) [Alibaba, Reference Score: 34]
   - name: "Qwen3.8 Max (0902)"
     provider: "openrouter"
-    model: "qwen/qwen-2.5-72b-instruct"
+    model: "qwen/qwen3.8-max-0902"
     turns: 3
     thinking: true
+    thinking_level: "max"
     enabled: false
     tags: ["alibaba", "qwen", "max"]
 
   # 13. DeepSeek V4.1 Flash 1017 (max) [DeepSeek, Reference Score: 32]
   - name: "DeepSeek V4.1 Flash 1017 (max)"
     provider: "openrouter"
-    model: "deepseek/deepseek-r1"
+    model: "deepseek/deepseek-v4.1-flash-1017"
     turns: 3
     thinking: true
+    thinking_level: "max"
     cache: true
     enabled: false
     tags: ["deepseek", "reasoning"]
@@ -195,18 +208,20 @@ runs:
   # 14. GLM-5.3 (max) [Zhipu, Reference Score: 32]
   - name: "GLM-5.3 (max)"
     provider: "openrouter"
-    model: "zhipu/glm-4-plus"
+    model: "z-ai/glm-5.3"
     turns: 3
     thinking: true
+    thinking_level: "max"
     enabled: false
     tags: ["zhipu", "glm"]
 
   # 15. Gemini 3.8 Flash (high) [Google, Reference Score: 31]
   - name: "Gemini 3.8 Flash (high)"
     provider: "openrouter"
-    model: "google/gemini-2.0-flash-lite-preview-02-05"
+    model: "google/gemini-3.8-flash"
     turns: 3
     thinking: true
+    thinking_level: "high"
     cache: true
     enabled: false
     tags: ["google", "gemini", "flash"]
@@ -223,7 +238,7 @@ runs:
   # 17. Ling 3.1 Flash 1019 [Ling, Reference Score: 29]
   - name: "Ling 3.1 Flash 1019"
     provider: "openrouter"
-    model: "ling/ling-3.1-flash"
+    model: "inclusionai/ling-3.1-flash"
     turns: 3
     thinking: false
     enabled: false
@@ -232,7 +247,7 @@ runs:
   # 18. MiniMax-M3.1-Flash [MiniMax, Reference Score: 29]
   - name: "MiniMax-M3.1-Flash"
     provider: "openrouter"
-    model: "minimax/minimax-01"
+    model: "minimax/minimax-m3.1-flash"
     turns: 3
     thinking: false
     enabled: false
@@ -241,7 +256,7 @@ runs:
   # 19. Step 5 Preview [StepFun, Reference Score: 29]
   - name: "Step 5 Preview"
     provider: "openrouter"
-    model: "stepfun/step-2-16k"
+    model: "stepfun/step-5-preview"
     turns: 3
     thinking: false
     enabled: false
@@ -250,9 +265,10 @@ runs:
   # 20. GPT-6 Luna (max) [OpenAI, Reference Score: 28]
   - name: "GPT-6 Luna (max)"
     provider: "openrouter"
-    model: "openai/gpt-4o-mini"
+    model: "openai/gpt-6-luna"
     turns: 3
-    thinking: false
+    thinking: true
+    thinking_level: "max"
     cache: true
     enabled: false
     tags: ["openai", "luna"]
@@ -260,7 +276,7 @@ runs:
   # 21. Mistral Large 4 Preview [Mistral, Reference Score: 25]
   - name: "Mistral Large 4 Preview"
     provider: "openrouter"
-    model: "mistralai/mistral-large-2411"
+    model: "mistralai/mistral-large-4-0"
     turns: 3
     thinking: false
     enabled: false
@@ -269,25 +285,27 @@ runs:
   # 22. Muse Spark Open (xhigh) [Meta, Reference Score: 25]
   - name: "Muse Spark Open (xhigh)"
     provider: "openrouter"
-    model: "meta-llama/llama-3.1-405b-instruct"
+    model: "meta/muse-spark-open"
     turns: 3
     thinking: true
+    thinking_level: "xhigh"
     enabled: false
     tags: ["meta", "llama", "spark"]
 
   # 23. Qwen3.8 27B (xhigh) [Alibaba, Reference Score: 20]
   - name: "Qwen3.8 27B (xhigh)"
     provider: "openrouter"
-    model: "qwen/qwen-2.5-32b-instruct"
+    model: "qwen/qwen3.8-27b"
     turns: 3
     thinking: true
+    thinking_level: "xhigh"
     enabled: false
     tags: ["alibaba", "qwen"]
 
   # 24. K2 Horizon 375B A23B [Horizon, Reference Score: 18]
   - name: "K2 Horizon 375B A23B"
     provider: "openrouter"
-    model: "horizon/k2-375b-a23b"
+    model: "moonshotai/kimi-k2.6"
     turns: 3
     thinking: false
     enabled: false
@@ -296,7 +314,7 @@ runs:
   # 25. Beam 1.0 [Beam, Reference Score: 18]
   - name: "Beam 1.0"
     provider: "openrouter"
-    model: "beam/beam-1.0"
+    model: "reflection/beam-1.0-501b-a23b"
     turns: 3
     thinking: false
     enabled: false
@@ -305,26 +323,28 @@ runs:
   # 26. Nemotron 3.5 Super VL [Nvidia, Reference Score: 14]
   - name: "Nemotron 3.5 Super VL"
     provider: "openrouter"
-    model: "nvidia/llama-3.1-nemotron-70b-instruct"
+    model: "nvidia/nemotron-3.5-super-vl"
     turns: 3
-    thinking: true
+    thinking: false
     enabled: false
     tags: ["nvidia", "nemotron"]
 
   # 27. Inkling (xhigh) [Inkling, Reference Score: 12]
   - name: "Inkling (xhigh)"
     provider: "openrouter"
-    model: "inkling/inkling-xhigh"
+    model: "thinkingmachines/inkling"
     turns: 3
-    thinking: false
+    thinking: true
+    thinking_level: "xhigh"
     enabled: false
     tags: ["inkling"]
 
   # 28. Muse Glimmer (high) [Meta, Reference Score: 6]
   - name: "Muse Glimmer (high)"
     provider: "openrouter"
-    model: "meta-llama/llama-3.2-3b-instruct"
+    model: "meta/muse-glimmer-30b"
     turns: 3
-    thinking: false
+    thinking: true
+    thinking_level: "high"
     enabled: false
     tags: ["meta", "llama", "glimmer"]
