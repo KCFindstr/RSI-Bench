@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RSI-Bench Index</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #FFFFFF;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #111827;
+      padding: 30px 36px;
+      min-width: 1418px;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      max-width: 1358px;
+    }
+    .title-block {
+      max-width: 680px;
+    }
+    .chart-title {
+      font-family: Merriweather, Georgia, "Times New Roman", serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #18181B;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .chart-subtitle {
+      font-size: 13px;
+      line-height: 1.45;
+      color: #71717A;
+      margin-bottom: 6px;
+    }
+    .scale-note {
+      font-size: 11.5px;
+      color: #9CA3AF;
+      font-style: italic;
+      margin-top: 4px;
+    }
+    .brand-logo-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+    }
+    .brand-name-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: Merriweather, Georgia, serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #18181B;
+      letter-spacing: -0.2px;
+    }
+    .brand-spark {
+      color: #8B5CF6;
+      font-size: 20px;
+      line-height: 1;
+    }
+    .repo-url-link {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 11.5px;
+      font-weight: 500;
+      color: #6366F1;
+      text-decoration: none;
+      letter-spacing: normal;
+    }
+    .repo-url-link:hover {
+      text-decoration: underline;
+    }
+    .chart-stage {
+      position: relative;
+      width: 1358px;
+      height: 540px;
+      margin-top: 10px;
+    }
+    svg.chart-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1358px;
+      height: 360px;
+      overflow: visible;
+    }
+    .provider-logo {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .model-label {
+      position: absolute;
+      transform: rotate(50deg);
+      transform-origin: top left;
+      font-size: 10.5px;
+      line-height: 1.16;
+      color: #18181B;
+      font-weight: 500;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .bar-rect:hover {
+      opacity: 0.88;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-container">
+    <div class="title-block">
+      <h1 class="chart-title">
+        <a href="https://github.com/KCFindstr/RSI-Bench" target="_blank" style="text-decoration: none; color: inherit;">RSI-Bench Index ↗</a>
+      </h1>
+      <p class="chart-subtitle">RSI-Bench v1.0 evaluates frontier model capabilities across multi-turn recursive stochastic sequence summation</p>
+      <div class="scale-note">* Symmetrical logarithmic scale (symlog) applied for dynamic range visualization.</div>
+    </div>
+    <div class="brand-logo-block">
+      <div class="brand-name-row">
+        <span class="brand-spark">❖</span>
+        <span>RSI-Bench</span>
+      </div>
+      <a href="https://github.com/KCFindstr/RSI-Bench" target="_blank" class="repo-url-link">https://github.com/KCFindstr/RSI-Bench</a>
+    </div>
+  </div>
+
+  <div class="chart-stage">
+    <svg class="chart-svg" viewBox="0 0 1358 360">
+      <defs>
+        <pattern id="hatch-pattern" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+          <rect width="8" height="8" fill="#0081FB" />
+          <line x1="0" y1="0" x2="0" y2="8" stroke="#FFFFFF" stroke-width="2.5" stroke-opacity="0.85" />
+        </pattern>
+      </defs>
+
+      <!-- Grid lines -->
+      <line x1="30" y1="360.0" x2="1338" y2="360.0" stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />
+    <line x1="30" y1="315.0" x2="1338" y2="315.0" stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />
+    <line x1="30" y1="270.0" x2="1338" y2="270.0" stroke="#9CA3AF" stroke-width="1.5"  />
+    <line x1="30" y1="225.0" x2="1338" y2="225.0" stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />
+    <line x1="30" y1="180.0" x2="1338" y2="180.0" stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />
+    <line x1="30" y1="135.0" x2="1338" y2="135.0" stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />
+    <line x1="30" y1="90.0" x2="1338" y2="90.0" stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />
+    <line x1="30" y1="45.0" x2="1338" y2="45.0" stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />
+    <line x1="30" y1="0.0" x2="1338" y2="0.0" stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />
+
+      <!-- Bars and score labels -->
+      <g class="bar-group" data-model="Ling 3.1 Flash 1019" data-score="11957597045">  <rect x="30" y="43.3" width="34" height="226.7" rx="3" ry="3" fill="#4AA5F8" class="bar-rect" />  <text x="47.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">10.1</text></g>
+    <g class="bar-group" data-model="GPT-6 Luna (max)" data-score="568714148">  <rect x="76" y="73.0" width="34" height="197.0" rx="3" ry="3" fill="#1E2022" class="bar-rect" />  <text x="93.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">8.8</text></g>
+    <g class="bar-group" data-model="Gemini 4 Argon (high)" data-score="92839985">  <rect x="122" y="90.7" width="34" height="179.3" rx="3" ry="3" fill="#2EA043" class="bar-rect" />  <text x="139.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">8.0</text></g>
+    <g class="bar-group" data-model="Grok 4.7 (xhigh)" data-score="52007790">  <rect x="168" y="96.4" width="34" height="173.6" rx="3" ry="3" fill="#8566E2" class="bar-rect" />  <text x="185.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">7.7</text></g>
+    <g class="bar-group" data-model="Muse Glimmer (high)" data-score="42232233">  <rect x="214" y="98.4" width="34" height="171.6" rx="3" ry="3" fill="#0081FB" class="bar-rect" />  <text x="231.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">7.6</text></g>
+    <g class="bar-group" data-model="Muse Wonder (max)" data-score="5313424">  <rect x="260" y="118.7" width="34" height="151.3" rx="3" ry="3" fill="#0081FB" class="bar-rect" />  <text x="277.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">6.7</text></g>
+    <g class="bar-group" data-model="Claude Sonnet 5.5 (max)" data-score="5007094">  <rect x="306" y="119.3" width="34" height="150.7" rx="3" ry="3" fill="#C8644A" class="bar-rect" />  <text x="323.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">6.7</text></g>
+    <g class="bar-group" data-model="GPT-6.1 Sol (max)" data-score="3726378">  <rect x="352" y="122.1" width="34" height="147.9" rx="3" ry="3" fill="#1E2022" class="bar-rect" />  <text x="369.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">6.6</text></g>
+    <g class="bar-group" data-model="Kimi K3.1 Pro" data-score="2798134">  <rect x="398" y="124.9" width="34" height="145.1" rx="3" ry="3" fill="#0B65FE" class="bar-rect" />  <text x="415.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">6.4</text></g>
+    <g class="bar-group" data-model="Nemotron 3.5 Super VL" data-score="1536334">  <rect x="444" y="130.8" width="34" height="139.2" rx="3" ry="3" fill="#76B900" class="bar-rect" />  <text x="461.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">6.2</text></g>
+    <g class="bar-group" data-model="K2 Horizon 375B A23B" data-score="867834">  <rect x="490" y="136.4" width="34" height="133.6" rx="3" ry="3" fill="#17236F" class="bar-rect" />  <text x="507.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">5.9</text></g>
+    <g class="bar-group" data-model="GPT-6 Astra (max)" data-score="547051">  <rect x="536" y="140.9" width="34" height="129.1" rx="3" ry="3" fill="#1E2022" class="bar-rect" />  <text x="553.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">5.7</text></g>
+    <g class="bar-group" data-model="Muse Spark Open (xhigh)" data-score="526758">  <rect x="582" y="141.3" width="34" height="128.7" rx="3" ry="3" fill="#0081FB" class="bar-rect" />  <text x="599.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">5.7</text></g>
+    <g class="bar-group" data-model="Gemini 3.8 Flash (high)" data-score="407078">  <rect x="628" y="143.8" width="34" height="126.2" rx="3" ry="3" fill="#2EA043" class="bar-rect" />  <text x="645.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">5.6</text></g>
+    <g class="bar-group" data-model="Step 5 Preview" data-score="360743">  <rect x="674" y="145.0" width="34" height="125.0" rx="3" ry="3" fill="#00D2CE" class="bar-rect" />  <text x="691.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">5.6</text></g>
+    <g class="bar-group" data-model="GPT-6.1 Terra (max)" data-score="325802">  <rect x="720" y="146.0" width="34" height="124.0" rx="3" ry="3" fill="#1E2022" class="bar-rect" />  <text x="737.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">5.5</text></g>
+    <g class="bar-group" data-model="Claude Fable 5.1 (max)" data-score="51932">  <rect x="766" y="163.9" width="34" height="106.1" rx="3" ry="3" fill="#C8644A" class="bar-rect" />  <text x="783.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">4.7</text></g>
+    <g class="bar-group" data-model="MiniMax-M3.1-Flash" data-score="29278">  <rect x="812" y="169.5" width="34" height="100.5" rx="3" ry="3" fill="#ED3E78" class="bar-rect" />  <text x="829.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">4.5</text></g>
+    <g class="bar-group" data-model="Claude Opus 5.5 (max)" data-score="24191">  <rect x="858" y="171.4" width="34" height="98.6" rx="3" ry="3" fill="#C8644A" class="bar-rect" />  <text x="875.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">4.4</text></g>
+    <g class="bar-group" data-model="Inkling (xhigh)" data-score="13229">  <rect x="904" y="177.3" width="34" height="92.7" rx="3" ry="3" fill="#5E6571" class="bar-rect" />  <text x="921.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">4.1</text></g>
+    <g class="bar-group" data-model="Mistral Large 4 Preview" data-score="5380">  <rect x="950" y="186.1" width="34" height="83.9" rx="3" ry="3" fill="#F73812" class="bar-rect" />  <text x="967.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">3.7</text></g>
+    <g class="bar-group" data-model="Qwen3.8 27B (xhigh)" data-score="2195">  <rect x="996" y="194.8" width="34" height="75.2" rx="3" ry="3" fill="#FF5B00" class="bar-rect" />  <text x="1013.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">3.3</text></g>
+    <g class="bar-group" data-model="DeepSeek V4.1 Flash 1017 (max)" data-score="1153">  <rect x="1042" y="201.1" width="34" height="68.9" rx="3" ry="3" fill="#1D59F5" class="bar-rect" />  <text x="1059.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">3.1</text></g>
+    <g class="bar-group" data-model="GLM-5.3 (max)" data-score="696">  <rect x="1088" y="206.0" width="34" height="64.0" rx="3" ry="3" fill="#2C71F6" class="bar-rect" />  <text x="1105.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2.8</text></g>
+    <g class="bar-group" data-model="Beam 1.0" data-score="381">  <rect x="1134" y="211.9" width="34" height="58.1" rx="3" ry="3" fill="#1B4426" class="bar-rect" />  <text x="1151.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2.6</text></g>
+    <g class="bar-group" data-model="Qwen3.8 Max (0902)" data-score="350">  <rect x="1180" y="212.7" width="34" height="57.3" rx="3" ry="3" fill="#FF5B00" class="bar-rect" />  <text x="1197.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2.5</text></g>
+    <g class="bar-group" data-model="Claude Haiku 5.5 (max)" data-score="52">  <rect x="1226" y="231.2" width="34" height="38.8" rx="3" ry="3" fill="#C8644A" class="bar-rect" />  <text x="1243.0" y="252.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">1.7</text></g>
+    <g class="bar-group" data-model="MiMo-V2.6-Pro" data-score="-158">  <rect x="1272" y="270.0" width="34" height="49.5" rx="3" ry="3" fill="#FF6900" class="bar-rect" />  <text x="1289.0" y="292.0" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">-2.2</text></g>
+    </svg>
+
+    <!-- HTML Provider Logos & 45-degree Angled Model Labels -->
+    <div class="provider-logo" style="left: 38.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/inclusionai.jpg" width="18" height="18" alt="ling" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 51.0px; top: 396px;">Ling 3.1<br>Flash 1019</div>
+    <div class="provider-logo" style="left: 84.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" height="18" alt="openai" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 97.0px; top: 396px;">GPT-6 Luna<br>(max)</div>
+    <div class="provider-logo" style="left: 130.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/google.svg" width="18" height="18" alt="google" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 143.0px; top: 396px;">Gemini 4<br>Argon (high)</div>
+    <div class="provider-logo" style="left: 176.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/spacexai.svg" width="18" height="18" alt="xai" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 189.0px; top: 396px;">Grok 4.7<br>(xhigh)</div>
+    <div class="provider-logo" style="left: 222.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/meta.svg" width="18" height="18" alt="meta" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 235.0px; top: 396px;">Muse Glimmer<br>(high)</div>
+    <div class="provider-logo" style="left: 268.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/meta.svg" width="18" height="18" alt="meta" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 281.0px; top: 396px;">Muse Wonder<br>(max)</div>
+    <div class="provider-logo" style="left: 314.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/anthropic.svg" width="18" height="18" alt="anthropic" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 327.0px; top: 396px;">Claude Sonnet<br>5.5 (max)</div>
+    <div class="provider-logo" style="left: 360.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" height="18" alt="openai" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 373.0px; top: 396px;">GPT-6.1 Sol<br>(max)</div>
+    <div class="provider-logo" style="left: 406.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/kimi.jpg" width="18" height="18" alt="kimi" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 419.0px; top: 396px;">Kimi K3.1<br>Pro</div>
+    <div class="provider-logo" style="left: 452.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/nvidia.svg" width="18" height="18" alt="nvidia" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 465.0px; top: 396px;">Nemotron 3.5<br>Super VL</div>
+    <div class="provider-logo" style="left: 498.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/ifm.svg" width="18" height="18" alt="horizon" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 511.0px; top: 396px;">K2 Horizon<br>375B A23B</div>
+    <div class="provider-logo" style="left: 544.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" height="18" alt="openai" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 557.0px; top: 396px;">GPT-6 Astra<br>(max)</div>
+    <div class="provider-logo" style="left: 590.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/meta.svg" width="18" height="18" alt="meta" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 603.0px; top: 396px;">Muse Spark<br>Open (xhigh)</div>
+    <div class="provider-logo" style="left: 636.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/google.svg" width="18" height="18" alt="google" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 649.0px; top: 396px;">Gemini 3.8<br>Flash (high)</div>
+    <div class="provider-logo" style="left: 682.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/stepfun.svg" width="18" height="18" alt="stepfun" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 695.0px; top: 396px;">Step 5<br>Preview</div>
+    <div class="provider-logo" style="left: 728.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/openai.svg" width="18" height="18" alt="openai" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 741.0px; top: 396px;">GPT-6.1 Terra<br>(max)</div>
+    <div class="provider-logo" style="left: 774.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/anthropic.svg" width="18" height="18" alt="anthropic" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 787.0px; top: 396px;">Claude Fable<br>5.1 (max)</div>
+    <div class="provider-logo" style="left: 820.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/minimax.svg" width="18" height="18" alt="minimax" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 833.0px; top: 396px;">MiniMax-M3.1-Flash</div>
+    <div class="provider-logo" style="left: 866.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/anthropic.svg" width="18" height="18" alt="anthropic" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 879.0px; top: 396px;">Claude Opus<br>5.5 (max)</div>
+    <div class="provider-logo" style="left: 912.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/thinking-machines.svg" width="18" height="18" alt="inkling" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 925.0px; top: 396px;">Inkling (xhigh)</div>
+    <div class="provider-logo" style="left: 958.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/mistral.svg" width="18" height="18" alt="mistral" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 971.0px; top: 396px;">Mistral Large<br>4 Preview</div>
+    <div class="provider-logo" style="left: 1004.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" height="18" alt="alibaba" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 1017.0px; top: 396px;">Qwen3.8 27B<br>(xhigh)</div>
+    <div class="provider-logo" style="left: 1050.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/deepseek.svg" width="18" height="18" alt="deepseek" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 1063.0px; top: 396px;">DeepSeek V4.1<br>Flash 1017<br>(max)</div>
+    <div class="provider-logo" style="left: 1096.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/zai.svg" width="18" height="18" alt="zhipu" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 1109.0px; top: 396px;">GLM-5.3 (max)</div>
+    <div class="provider-logo" style="left: 1142.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/reflection.svg" width="18" height="18" alt="beam" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 1155.0px; top: 396px;">Beam 1.0</div>
+    <div class="provider-logo" style="left: 1188.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/alibaba.svg" width="18" height="18" alt="alibaba" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 1201.0px; top: 396px;">Qwen3.8 Max<br>(0902)</div>
+    <div class="provider-logo" style="left: 1234.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/anthropic.svg" width="18" height="18" alt="anthropic" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 1247.0px; top: 396px;">Claude Haiku<br>5.5 (max)</div>
+    <div class="provider-logo" style="left: 1280.0px; top: 368px;"><img src="https://artificialanalysis.ai/img/logos/xiaomi.svg" width="18" height="18" alt="xiaomi" style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" /></div>
+    <div class="model-label" style="left: 1293.0px; top: 396px;">MiMo-V2.6-Pro</div>
+  </div>
+
+</body>
+</html>

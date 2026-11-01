@@ -2,9 +2,9 @@
 Visualization engine for RSI-Bench.
 
 Generates:
-1. Artificial Analysis Intelligence Index style bar charts matching the benchmark design.
+1. RSI-Bench Index bar charts matching the frontier intelligence index design.
 2. Multi-turn trajectory line graphs showing turn-by-turn outputs and cumulative prefix sums
-   WITHOUT labeled axes (preserving the joke).
+   with symmetrical logarithmic scaling (symlog) and WITHOUT labeled axes (preserving the joke).
 3. Headless Chrome/Edge rendering of self-contained HTML to PNG images.
 """
 
@@ -28,130 +28,41 @@ from rsi_bench.models import BatchBenchmarkResult, BenchmarkResult
 # Model Reference Registry (29 models matching the Artificial Analysis index)
 # ==============================================================================
 
-# SVG Provider Logos (Clean, self-contained vector paths)
+# Official Provider Logo URLs (Direct official vector and image assets from Artificial Analysis)
+OFFICIAL_LOGO_URLS: Dict[str, str] = {
+    "anthropic": "https://artificialanalysis.ai/img/logos/anthropic.svg",
+    "openai": "https://artificialanalysis.ai/img/logos/openai.svg",
+    "google": "https://artificialanalysis.ai/img/logos/google.svg",
+    "meta": "https://artificialanalysis.ai/img/logos/meta.svg",
+    "xai": "https://artificialanalysis.ai/img/logos/spacexai.svg",
+    "alibaba": "https://artificialanalysis.ai/img/logos/alibaba.svg",
+    "deepseek": "https://artificialanalysis.ai/img/logos/deepseek.svg",
+    "zhipu": "https://artificialanalysis.ai/img/logos/zai.svg",
+    "xiaomi": "https://artificialanalysis.ai/img/logos/xiaomi.svg",
+    "ling": "https://artificialanalysis.ai/img/logos/inclusionai.jpg",
+    "kimi": "https://artificialanalysis.ai/img/logos/kimi.jpg",
+    "minimax": "https://artificialanalysis.ai/img/logos/minimax.svg",
+    "stepfun": "https://artificialanalysis.ai/img/logos/stepfun.svg",
+    "mistral": "https://artificialanalysis.ai/img/logos/mistral.svg",
+    "horizon": "https://artificialanalysis.ai/img/logos/ifm.svg",
+    "beam": "https://artificialanalysis.ai/img/logos/reflection.svg",
+    "nvidia": "https://artificialanalysis.ai/img/logos/nvidia.svg",
+    "inkling": "https://artificialanalysis.ai/img/logos/thinking-machines.svg",
+}
+
 LOGOS: Dict[str, str] = {
-    "anthropic": (
-        '<svg viewBox="0 0 24 24" width="18" height="18" fill="#18181B">'
-        '<path d="M13.8 3.5h3.3L23.5 20.5h-3.3l-1.6-3.8h-6.1l-1.6 3.8H7.6L13.8 3.5zm3.1 9.4l-1.9-4.7-1.9 4.7h3.8zM0.5 20.5h3.3L10 3.5H6.7L0.5 20.5z"/>'
-        '</svg>'
-    ),
-    "openai": (
-        '<svg viewBox="0 0 24 24" width="18" height="18" fill="#18181B">'
-        '<path d="M22.28 10.45a5.9 5.9 0 0 0-.47-4.49 6.06 6.06 0 0 0-4.74-3.13 6.04 6.04 0 0 0-5.32 1.6 5.9 5.9 0 0 0-4.14-.37 6.04 6.04 0 0 0-4.4 3.57 6.08 6.08 0 0 0 .74 5.97 5.93 5.93 0 0 0 .48 4.49 6.05 6.05 0 0 0 4.73 3.13 6.08 6.08 0 0 0 5.33-1.6 5.9 5.9 0 0 0 4.14.37 6.05 6.05 0 0 0 4.4-3.57 6.08 6.08 0 0 0-.75-5.97zm-8.83 9.47a4.2 4.2 0 0 1-2.9-.66l.16-.09 4.8-2.77a.9.9 0 0 0 .45-.78v-6.78l2.03 1.17v5.62a4.23 4.23 0 0 1-4.54 4.3zm-8.23-3.9a4.2 4.2 0 0 1-.5-2.93l.16.1 4.8 2.77a.9.9 0 0 0 .9 0l5.87-3.39v2.35l-4.87 2.81a4.23 4.23 0 0 1-6.36-1.71zm-1.1-8.91a4.2 4.2 0 0 1 2.4-2.27v5.74a.9.9 0 0 0 .45.78l5.87 3.39-2.03 1.17-4.87-2.81a4.23 4.23 0 0 1-1.82-5.97v-.03zm14.28 2.37l-5.87-3.39 2.03-1.17 4.87 2.81a4.23 4.23 0 0 1 1.82 5.97v.03a4.2 4.2 0 0 1-2.4 2.27v-5.74a.9.9 0 0 0-.45-.78zm2.63 4.96a4.23 4.23 0 0 1-2.06 2.7l-.16-.1-4.8-2.77a.9.9 0 0 0-.9 0l-5.87 3.39v-2.35l4.87-2.81a4.23 4.23 0 0 1 6.36 1.71l2.56.23zm-10.42-3.86l2.39-1.38 2.39 1.38v2.76l-2.39 1.38-2.39-1.38V10.58z"/>'
-        '</svg>'
-    ),
-    "google": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>'
-        '<path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>'
-        '<path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>'
-        '<path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>'
-        '</svg>'
-    ),
-    "meta": (
-        '<svg viewBox="0 0 24 24" width="18" height="18" fill="#0081FB">'
-        '<path d="M16.94 4.5c-2.47 0-4.6 1.61-5.18 3.82-.4-1.74-1.96-3.05-3.8-3.05-2.2 0-3.98 1.83-3.98 4.08 0 1.54.85 2.89 2.1 3.57l4.9 2.68c.27.15.59.23.92.23s.65-.08.92-.23l4.9-2.68c1.25-.68 2.1-2.03 2.1-3.57 0-2.25-1.78-4.08-3.98-4.08zm-9.04 6.38c-1.25 0-2.27-1.04-2.27-2.3 0-1.28 1.02-2.31 2.27-2.31 1.15 0 2.11.86 2.25 1.99l-2.25 2.62zm8.16 0l-2.25-2.62c.14-1.13 1.1-1.99 2.25-1.99 1.25 0 2.27 1.03 2.27 2.31 0 1.26-1.02 2.3-2.27 2.3z"/>'
-        '</svg>'
-    ),
-    "kimi": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#000000"/>'
-        '<text x="6" y="17" font-family="Arial, sans-serif" font-weight="900" font-size="16" fill="#FFFFFF">K</text>'
-        '</svg>'
-    ),
-    "xai": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#000000"/>'
-        '<path fill="#FFFFFF" d="M14.2 10.7L20.4 3.5h-1.5L13.5 9.7 9.2 3.5H4.1l6.5 9.5L4.1 20.5h1.5l5.7-6.5 4.5 6.5h5.1l-6.7-9.8zm-2 2.3l-.7-1-5.3-7.6h2.3l4.3 6.1.7 1 5.6 7.9h-2.3l-4.6-6.4z"/>'
-        '</svg>'
-    ),
-    "alibaba": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#FF5B00"/>'
-        '<circle cx="12" cy="12" r="6" fill="#FFFFFF"/>'
-        '<circle cx="12" cy="12" r="3" fill="#FF5B00"/>'
-        '</svg>'
-    ),
-    "deepseek": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#1D59F5"/>'
-        '<path fill="#FFFFFF" d="M12 5c-3.9 0-7 2.2-7 5 0 1.8 1.3 3.3 3.3 4.2L7 17l3.2-1.6c.6.1 1.2.2 1.8.2 3.9 0 7-2.2 7-5s-3.1-5-7-5z"/>'
-        '</svg>'
-    ),
-    "zhipu": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#2C71F6"/>'
-        '<text x="7" y="17" font-family="Arial, sans-serif" font-weight="900" font-size="16" fill="#FFFFFF">Z</text>'
-        '</svg>'
-    ),
-    "xiaomi": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="5" fill="#FF6900"/>'
-        '<path fill="#FFFFFF" d="M7 8h3v5h2V8h3v8h-3v-3h-2v3H7V8z"/>'
-        '</svg>'
-    ),
-    "ling": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#18181B"/>'
-        '<path fill="#4AA5F8" d="M12 4l5 8-5 8-5-8z"/>'
-        '</svg>'
-    ),
-    "minimax": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#ED3E78"/>'
-        '<path fill="#FFFFFF" d="M6 14V10h2v4H6zm3 2V8h2v8H9zm3 2V6h2v12h-2zm3-2V8h2v8h-2zm3-2V10h2v4h-2z"/>'
-        '</svg>'
-    ),
-    "stepfun": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<circle cx="12" cy="12" r="10" fill="#00D2CE"/>'
-        '<path fill="#FFFFFF" d="M8 16h8v-2h-3v-2h-2v-2H8v6z"/>'
-        '</svg>'
-    ),
-    "mistral": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#F73812"/>'
-        '<rect x="5.5" y="6" width="3.5" height="12" fill="#FFFFFF"/>'
-        '<rect x="10.25" y="9.5" width="3.5" height="4" fill="#FFFFFF"/>'
-        '<rect x="15" y="6" width="3.5" height="12" fill="#FFFFFF"/>'
-        '</svg>'
-    ),
-    "horizon": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#17236F"/>'
-        '<rect x="5.5" y="5.5" width="6" height="6" fill="#FFFFFF"/>'
-        '<rect x="12.5" y="5.5" width="6" height="6" fill="#5070FF"/>'
-        '<rect x="5.5" y="12.5" width="6" height="6" fill="#5070FF"/>'
-        '<rect x="12.5" y="12.5" width="6" height="6" fill="#FFFFFF"/>'
-        '</svg>'
-    ),
-    "beam": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#1B4426"/>'
-        '<circle cx="12" cy="12" r="6" stroke="#FFFFFF" stroke-width="2" fill="none"/>'
-        '<circle cx="12" cy="12" r="2" fill="#FFFFFF"/>'
-        '</svg>'
-    ),
-    "nvidia": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#76B900"/>'
-        '<path fill="#FFFFFF" d="M12.3 5.5c-3.6 0-6.6 2.5-7.5 5.9 1-.6 2.3-.9 3.6-.9 3 0 5.4 2.1 5.4 4.7 0 1.2-.5 2.3-1.4 3.1 3-.7 5.2-3.3 5.2-6.5 0-3.5-2.4-6.3-5.3-6.3zm-.2 2.2c1.9 0 3.4 1.8 3.4 4.1s-1.5 4.1-3.4 4.1c-.8 0-1.6-.3-2.1-.9.7-.7 1.1-1.7 1.1-2.7 0-1.8-1.5-3.3-3.4-3.5.7-.7 1.6-1.1 2.6-1.1z"/>'
-        '</svg>'
-    ),
-    "inkling": (
-        '<svg viewBox="0 0 24 24" width="18" height="18">'
-        '<rect width="24" height="24" rx="4" fill="#5E6571"/>'
-        '<circle cx="12" cy="12" r="6" fill="#FFFFFF"/>'
-        '<path fill="#5E6571" d="M12 8l3 5H9z"/>'
-        '</svg>'
-    ),
+    key: (
+        f'<img src="{url}" width="18" height="18" alt="{key}" '
+        f'style="width: 18px; height: 18px; object-fit: contain; border-radius: 2px; display: block;" />'
+    )
+    for key, url in OFFICIAL_LOGO_URLS.items()
 }
 
 
 REFERENCE_MODELS: List[Dict[str, Any]] = [
     {
         "id": "claude-opus-5-5",
-        "name": "Claude Opus 5.5 (max with fallback)",
+        "name": "Claude Opus 5.5 (max)",
         "provider": "Anthropic",
         "provider_key": "anthropic",
         "score": 58,
@@ -184,7 +95,7 @@ REFERENCE_MODELS: List[Dict[str, Any]] = [
     },
     {
         "id": "claude-sonnet-5-5",
-        "name": "Claude Sonnet 5.5 (max with fallback)",
+        "name": "Claude Sonnet 5.5 (max)",
         "provider": "Anthropic",
         "provider_key": "anthropic",
         "score": 54,
@@ -222,13 +133,13 @@ REFERENCE_MODELS: List[Dict[str, Any]] = [
         "provider_key": "meta",
         "score": 50,
         "color": "#0081FB",
-        "has_public_api": False,  # Hatched: "No publicly available API"
-        "is_hatched": True,
+        "has_public_api": True,
+        "is_hatched": False,
         "openrouter_model": None,
     },
     {
         "id": "claude-fable-5-1",
-        "name": "Claude Fable 5.1 (max with fallback)",
+        "name": "Claude Fable 5.1 (max)",
         "provider": "Anthropic",
         "provider_key": "anthropic",
         "score": 49,
@@ -705,27 +616,25 @@ def _deterministic_color(text: str) -> str:
 
 
 # ==============================================================================
-# HTML / SVG Chart Rendering: 1. Artificial Analysis Intelligence Index
+# HTML / SVG Chart Rendering: 1. RSI-Bench Index Bar Chart
 # ==============================================================================
 
 def render_intelligence_index_bar_chart_html(
     models: Optional[List[Dict[str, Any]]] = None,
-    title: str = "Artificial Analysis Intelligence Index ↗",
+    title: str = "RSI-Bench Index ↗",
     subtitle: Optional[str] = None,
 ) -> str:
     """
-    Render self-contained HTML for the Artificial Analysis Intelligence Index bar chart.
-    Faithfully replicates the font, header, purple spark logo, dotted grid lines,
+    Render self-contained HTML for the RSI-Bench Index bar chart.
+    Faithfully replicates the font, header, brand spark logo, dotted grid lines,
     rounded bars with scores inside, provider logos, and 45-degree rotated model labels.
     """
     model_list = models if models is not None else REFERENCE_MODELS
 
     if subtitle is None:
         subtitle = (
-            "Artificial Analysis Intelligence Index v5.0 incorporates 9 evaluations: "
-            "AA-Briefcase v1.1, AutomationBench-AA, Terminal-Bench 4.0, FrontierCode 2.0, "
-            "AA-Omniscience v1.1, GDP.pdf, HLE-Diamond, CritPt v2 (Hard Subset), and "
-            "Terminal-Bench-Science 0.1"
+            "RSI-Bench v1.0 evaluates frontier model capabilities across "
+            "multi-turn recursive stochastic sequence summation"
         )
 
     # Layout dimensions
@@ -738,58 +647,104 @@ def render_intelligence_index_bar_chart_html(
     chart_width = max(1120, bars_extent_width)
     total_svg_height = 540
 
-    # Determine score range & dynamic scale
+    # Determine score range & dynamic scale (symlog if values exceed normal index range)
     all_scores = [float(m.get("score", 0)) for m in model_list]
     min_score = min(all_scores) if all_scores else 0.0
     max_score = max(all_scores) if all_scores else 60.0
 
-    if min_score >= 0.0 and max_score <= 60.0:
+    is_symlog = not (min_score >= 0.0 and max_score <= 60.0)
+
+    def symlog_fn(v: float) -> float:
+        if v == 0:
+            return 0.0
+        return math.copysign(math.log10(1.0 + abs(v)), v)
+
+    if not is_symlog:
         range_min = 0.0
         range_max = 60.0
-        ticks = [10, 20, 30, 40, 50, 60]
+        ticks = [10.0, 20.0, 30.0, 40.0, 50.0, 60.0]
+        total_range = 60.0
+        y_zero = chart_height
+
+        def get_bar_geom(sc: float) -> Tuple[float, float]:
+            h = max(2.0, (sc / total_range) * chart_height)
+            return y_zero - h, h
     else:
-        val_min = min(0.0, min_score)
-        val_max = max(60.0, max_score)
-        span = val_max - val_min
-        raw_step = max(1.0, span / 6)
-        step_magnitude = 10 ** math.floor(math.log10(raw_step))
-        normalized = raw_step / step_magnitude
-        if normalized <= 1.0:
-            nice_step = 1.0 * step_magnitude
-        elif normalized <= 2.0:
-            nice_step = 2.0 * step_magnitude
-        elif normalized <= 5.0:
-            nice_step = 5.0 * step_magnitude
+        s_scores = [symlog_fn(s) for s in all_scores]
+        s_min = min(s_scores)
+        s_max = max(s_scores)
+
+        if s_min >= 0:
+            s_bottom = 0.0
+            s_top = max(2.0, math.ceil(s_max + 0.1))
         else:
-            nice_step = 10.0 * step_magnitude
+            s_bottom = math.floor(s_min - 0.1)
+            s_top = max(1.0, math.ceil(s_max + 0.1))
 
-        range_min = math.floor(val_min / nice_step) * nice_step
-        range_max = math.ceil(val_max / nice_step) * nice_step
+        s_span = s_top - s_bottom
+        step = 1.0 if s_span <= 6 else (2.0 if s_span <= 14 else 4.0)
+
+        if s_bottom < 0:
+            s_bottom = math.floor(s_bottom / step) * step
+        s_top = math.ceil(s_top / step) * step
+
+        total_range = max(1.0, s_top - s_bottom)
+        y_zero = chart_height * ((s_top - 0.0) / total_range)
+
+        # Collect grid ticks
         ticks = []
-        cur = range_min
-        while cur <= range_max + nice_step * 0.1:
-            ticks.append(int(round(cur)) if nice_step >= 1 else round(cur, 2))
-            cur += nice_step
+        if s_bottom < 0:
+            cur = s_bottom
+            while cur < 0:
+                ticks.append(cur)
+                cur += step
+        ticks.append(0.0)
+        cur = step
+        while cur <= s_top:
+            ticks.append(cur)
+            cur += step
 
-    total_range = max(1.0, range_max - range_min)
-    y_zero = chart_height * (range_max / total_range)
+        def get_bar_geom(sc: float) -> Tuple[float, float]:
+            s_val = symlog_fn(sc)
+            if sc >= 0:
+                h = max(3.0, (s_val / total_range) * chart_height)
+                y = y_zero - h
+            else:
+                h = max(3.0, (abs(s_val) / total_range) * chart_height)
+                y = y_zero
+            return y, h
 
     # Grid lines (dotted horizontal lines across the range)
     grid_svg_lines = []
-    for tick in ticks:
-        if abs(tick) < 1e-6 and range_min < 0:
-            continue
-        y_pos = chart_height * ((range_max - tick) / total_range)
-        grid_svg_lines.append(
-            f'<line x1="{margin_left}" y1="{y_pos:.1f}" x2="{chart_width - 20}" y2="{y_pos:.1f}" '
-            f'stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />'
-        )
-    if range_min < 0:
-        grid_svg_lines.append(
-            f'<line x1="{margin_left}" y1="{y_zero:.1f}" x2="{chart_width - 20}" y2="{y_zero:.1f}" '
-            f'stroke="#9CA3AF" stroke-width="1.5" />'
-        )
+    if not is_symlog:
+        for tick in ticks:
+            y_pos = chart_height * ((60.0 - tick) / 60.0)
+            grid_svg_lines.append(
+                f'<line x1="{margin_left}" y1="{y_pos:.1f}" x2="{chart_width - 20}" y2="{y_pos:.1f}" '
+                f'stroke="#E5E7EB" stroke-width="1.2" stroke-dasharray="2,4" />'
+            )
+    else:
+        for tick in ticks:
+            y_pos = chart_height * ((s_top - tick) / total_range)
+            is_zero = abs(tick) < 1e-6
+            stroke_col = "#9CA3AF" if is_zero else "#E5E7EB"
+            stroke_w = "1.5" if is_zero else "1.2"
+            dash_attr = "" if is_zero else 'stroke-dasharray="2,4"'
+            grid_svg_lines.append(
+                f'<line x1="{margin_left}" y1="{y_pos:.1f}" x2="{chart_width - 20}" y2="{y_pos:.1f}" '
+                f'stroke="{stroke_col}" stroke-width="{stroke_w}" {dash_attr} />'
+            )
     grid_lines_html = "\n    ".join(grid_svg_lines)
+
+    def format_bar_score(sc: float) -> str:
+        if not is_symlog:
+            return str(int(round(sc)))
+        if sc == 0:
+            return "0.0"
+        log_val = symlog_fn(sc)
+        return f"{log_val:.1f}"
+
+    repo_url = "https://github.com/KCFindstr/RSI-Bench"
 
     # Render bars, scores, logos, and labels
     bars_svg_elements = []
@@ -805,10 +760,11 @@ def render_intelligence_index_bar_chart_html(
         x_pos = margin_left + idx * (bar_width + bar_gap)
         fill_attr = 'fill="url(#hatch-pattern)"' if is_hatched else f'fill="{color}"'
 
+        y_pos, bar_h = get_bar_geom(score)
+        score_x = x_pos + bar_width / 2
+        display_score = format_bar_score(score)
+
         if score >= 0:
-            bar_h = max(2.0, (score / total_range) * chart_height)
-            y_pos = y_zero - bar_h
-            score_x = x_pos + bar_width / 2
             if bar_h > 35:
                 score_y = y_zero - 18
                 score_color = "#FFFFFF"
@@ -816,9 +772,6 @@ def render_intelligence_index_bar_chart_html(
                 score_y = y_pos - 6
                 score_color = "#18181B"
         else:
-            bar_h = max(2.0, (abs(score) / total_range) * chart_height)
-            y_pos = y_zero
-            score_x = x_pos + bar_width / 2
             if bar_h > 35:
                 score_y = y_zero + 22
                 score_color = "#FFFFFF"
@@ -832,7 +785,7 @@ def render_intelligence_index_bar_chart_html(
             f'rx="3" ry="3" {fill_attr} class="bar-rect" />'
             f'  <text x="{score_x:.1f}" y="{score_y:.1f}" fill="{score_color}" '
             f'font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" '
-            f'font-size="13" font-weight="700" text-anchor="middle">{score}</text>'
+            f'font-size="12" font-weight="700" text-anchor="middle">{display_score}</text>'
             f'</g>'
         )
         bars_svg_elements.append(bar_elem)
@@ -871,6 +824,11 @@ def render_intelligence_index_bar_chart_html(
         )
         logos_html_elements.append(label_elem)
 
+    symlog_note_badge = (
+        '<div class="scale-note">* Symmetrical logarithmic scale (symlog) applied for dynamic range visualization.</div>'
+        if is_symlog else ""
+    )
+
     bars_html = "\n    ".join(bars_svg_elements)
     overlays_html = "\n    ".join(logos_html_elements)
 
@@ -878,7 +836,7 @@ def render_intelligence_index_bar_chart_html(
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Artificial Analysis Intelligence Index</title>
+  <title>RSI-Bench Index</title>
   <style>
     * {{
       box-sizing: border-box;
@@ -916,31 +874,21 @@ def render_intelligence_index_bar_chart_html(
       font-size: 13px;
       line-height: 1.45;
       color: #71717A;
-      margin-bottom: 14px;
+      margin-bottom: 6px;
     }}
-    .legend-row {{
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #27272A;
-      margin-top: 8px;
-    }}
-    .hatch-sample {{
-      width: 18px;
-      height: 18px;
-      border: 1px solid #D1D5DB;
-      border-radius: 2px;
-      background: repeating-linear-gradient(
-        45deg,
-        #D1D5DB,
-        #D1D5DB 2px,
-        #FFFFFF 2px,
-        #FFFFFF 5px
-      );
+    .scale-note {{
+      font-size: 11.5px;
+      color: #9CA3AF;
+      font-style: italic;
+      margin-top: 4px;
     }}
     .brand-logo-block {{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
+    }}
+    .brand-name-row {{
       display: flex;
       align-items: center;
       gap: 6px;
@@ -954,6 +902,17 @@ def render_intelligence_index_bar_chart_html(
       color: #8B5CF6;
       font-size: 20px;
       line-height: 1;
+    }}
+    .repo-url-link {{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 11.5px;
+      font-weight: 500;
+      color: #6366F1;
+      text-decoration: none;
+      letter-spacing: normal;
+    }}
+    .repo-url-link:hover {{
+      text-decoration: underline;
     }}
     .chart-stage {{
       position: relative;
@@ -998,16 +957,18 @@ def render_intelligence_index_bar_chart_html(
 
   <div class="header-container">
     <div class="title-block">
-      <h1 class="chart-title">{title}</h1>
+      <h1 class="chart-title">
+        <a href="{repo_url}" target="_blank" style="text-decoration: none; color: inherit;">{title}</a>
+      </h1>
       <p class="chart-subtitle">{subtitle}</p>
-      <div class="legend-row">
-        <div class="hatch-sample"></div>
-        <span>No publicly available API</span>
-      </div>
+      {symlog_note_badge}
     </div>
     <div class="brand-logo-block">
-      <span class="brand-spark">❖</span>
-      <span>Artificial Analysis</span>
+      <div class="brand-name-row">
+        <span class="brand-spark">❖</span>
+        <span>RSI-Bench</span>
+      </div>
+      <a href="{repo_url}" target="_blank" class="repo-url-link">{repo_url}</a>
     </div>
   </div>
 
@@ -1043,42 +1004,61 @@ def render_intelligence_index_bar_chart_html(
 
 def render_trajectory_line_graph_html(
     trajectory_data: Dict[str, Dict[str, Any]],
-    title: str = "Multi-Turn Dynamic Performance Trajectory Index",
-    subtitle: str = "Continuous multi-turn state convergence across evaluated frontier models",
+    title: str = "RSI-Bench Multi-Turn Performance Trajectory",
+    subtitle: str = "Continuous multi-turn cumulative stochastic sequence summation across evaluated frontier models",
 ) -> str:
     """
-    Render self-contained HTML for the line graph showing each model's turn-by-turn output
-    and cumulative prefix sum from turn 1 to turn N.
+    Render self-contained HTML for the line graph showing each model's cumulative prefix sum
+    trajectory from step 1 to step N.
 
-    CRITICAL JOKE CONSTRAINT:
-    Axes are completely UNLABELED. No titles like "Turns", "Steps", "Score", "Integer",
-    or "Prefix Sum" exist anywhere on the axes or graph frame.
+    Design constraints:
+    - Card outline removed: edge-to-edge full graph on clean background.
+    - Y-axis labels removed completely (numbers only on x-axis with 'Step' label).
+    - Outliers filtered to preserve vertical dynamic range so lines are not flat.
+    - Right-hand side lists all plotted models in exact order matching line endpoints at step N.
     """
     models = list(trajectory_data.values())
     if not models:
         models = list(generate_mock_trajectory_data(num_turns=5).values())
 
-    max_turns = max(len(m.get("turns", [1])) for m in models)
+    def symlog(v: float) -> float:
+        if v == 0:
+            return 0.0
+        return math.copysign(math.log10(1.0 + abs(v)), v)
+
+    # Detect extreme sequence outliers (|val| > 2e9)
+    outliers = [m for m in models if any(abs(v) > 2_000_000_000 for v in m.get("prefix_sums", []))]
+    plotted_models = [m for m in models if m not in outliers]
+    if not plotted_models:
+        plotted_models = list(models)
+
+    if outliers:
+        outlier_names = ", ".join(m.get("name", "Unknown") for m in outliers)
+        scale_note = (
+            f"* Symmetrical logarithmic scale (symlog). Outlier excluded for trajectory resolution: "
+            f"{outlier_names} (|sequence variance| &gt; 10¹⁰). Cumulative score tracked in RSI-Bench Index."
+        )
+    else:
+        scale_note = "* Symmetrical logarithmic scale (symlog) applied for dynamic range visualization."
+
+    max_turns = max((len(m.get("turns", [1])) for m in plotted_models), default=1)
     all_sums = []
-    all_raws = []
-    for m in models:
+    for m in plotted_models:
         all_sums.extend(m.get("prefix_sums", [0]))
-        all_raws.extend(m.get("integers", [0]))
 
-    min_val = min(all_sums + all_raws) if (all_sums or all_raws) else -100
-    max_val = max(all_sums + all_raws) if (all_sums or all_raws) else 100
+    all_vals = all_sums if all_sums else [0]
+    transformed_vals = [symlog(v) for v in all_vals]
+    s_min = math.floor(min(transformed_vals))
+    s_max = math.ceil(max(transformed_vals))
 
-    val_range = max(1, max_val - min_val)
-    y_min = math.floor((min_val - 0.1 * val_range) / 100) * 100
-    y_max = math.ceil((max_val + 0.1 * val_range) / 100) * 100
-    total_y_range = max(1, y_max - y_min)
+    total_s_range = max(1.0, s_max - s_min)
 
-    svg_width = 1260
-    svg_height = 540
-    margin_left = 75
-    margin_right = 35
-    margin_top = 35
-    margin_bottom = 45
+    svg_width = 1420
+    svg_height = 740
+    margin_left = 40
+    margin_right = 320
+    margin_top = 40
+    margin_bottom = 65
 
     plot_width = svg_width - margin_left - margin_right
     plot_height = svg_height - margin_top - margin_bottom
@@ -1089,113 +1069,103 @@ def render_trajectory_line_graph_html(
         return margin_left + ((turn - 1) / (max_turns - 1)) * plot_width
 
     def y_coord(val: float) -> float:
-        ratio = (val - y_min) / total_y_range
+        s_val = symlog(val)
+        ratio = (s_val - s_min) / total_s_range
         return margin_top + plot_height - (ratio * plot_height)
 
-    # Generate Y grid lines and unlabeled ticks (NUMBERS ONLY, NO AXIS LABEL)
-    y_ticks_count = 8
-    y_step = total_y_range / y_ticks_count
+    # Horizontal grid lines (NO Y-AXIS LABELS)
     y_grid_lines = []
-    y_tick_labels = []
-
-    for i in range(y_ticks_count + 1):
-        v = y_min + i * y_step
-        rounded_v = int(round(v / 50) * 50)
-        y_pos = y_coord(rounded_v)
+    for s in range(int(s_min), int(s_max) + 1):
+        y_pos = margin_top + plot_height - (((s - s_min) / total_s_range) * plot_height)
+        is_zero = abs(s) == 0
+        stroke_color = "#E5E7EB" if is_zero else "#F3F4F6"
+        stroke_w = "1.4" if is_zero else "1.0"
+        dash_attr = "" if is_zero else 'stroke-dasharray="3,3"'
         y_grid_lines.append(
             f'<line x1="{margin_left}" y1="{y_pos:.1f}" x2="{margin_left + plot_width}" y2="{y_pos:.1f}" '
-            f'stroke="#F3F4F6" stroke-width="1.2" stroke-dasharray="3,3" />'
-        )
-        y_tick_labels.append(
-            f'<text x="{margin_left - 12}" y="{y_pos + 4:.1f}" font-family="-apple-system, sans-serif" '
-            f'font-size="11" fill="#9CA3AF" text-anchor="end">{rounded_v}</text>'
+            f'stroke="{stroke_color}" stroke-width="{stroke_w}" {dash_attr} />'
         )
 
-    # Generate X grid lines and unlabeled ticks (NUMBERS ONLY, NO AXIS LABEL)
+    # X-axis grid lines, step numbers, and 'Step' axis indicator
     x_tick_labels = []
     x_grid_lines = []
     for t in range(1, max_turns + 1):
         x_pos = x_coord(t)
         x_grid_lines.append(
             f'<line x1="{x_pos:.1f}" y1="{margin_top}" x2="{x_pos:.1f}" y2="{margin_top + plot_height}" '
-            f'stroke="#F9FAFB" stroke-width="1" />'
+            f'stroke="#F3F4F6" stroke-width="1" />'
         )
         x_tick_labels.append(
-            f'<text x="{x_pos:.1f}" y="{margin_top + plot_height + 22}" font-family="-apple-system, sans-serif" '
+            f'<text x="{x_pos:.1f}" y="{margin_top + plot_height + 22}" '
+            f'font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" '
             f'font-size="12" fill="#6B7280" font-weight="600" text-anchor="middle">{t}</text>'
         )
 
-    zero_line_svg = ""
-    if y_min <= 0 <= y_max:
-        z_y = y_coord(0)
-        zero_line_svg = (
-            f'<line x1="{margin_left}" y1="{z_y:.1f}" x2="{margin_left + plot_width}" y2="{z_y:.1f}" '
-            f'stroke="#D1D5DB" stroke-width="1.5" />'
-        )
+    x_axis_title = (
+        f'<text x="{margin_left + plot_width / 2:.1f}" y="{margin_top + plot_height + 46}" '
+        f'font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" '
+        f'font-size="13" fill="#4B5563" font-weight="600" text-anchor="middle">Step</text>'
+    )
+
+    # Sort plotted models by final prefix sum for right-hand list alignment
+    sorted_models = sorted(
+        plotted_models,
+        key=lambda m: m.get("prefix_sums", [0])[-1] if m.get("prefix_sums") else 0,
+        reverse=True,
+    )
 
     trajectory_paths = []
-    raw_output_paths = []
-    legend_items = []
+    right_labels = []
+    num_plotted = len(sorted_models)
+    label_start_y = margin_top + 10
+    label_end_y = margin_top + plot_height - 10
+    label_step = (label_end_y - label_start_y) / max(1, num_plotted - 1)
 
-    for m in models:
+    for idx, m in enumerate(sorted_models):
         name = m.get("name", "Unknown")
         color = m.get("color", "#1E2022")
         turns = m.get("turns", [])
         sums = m.get("prefix_sums", [])
-        raws = m.get("integers", [])
 
-        # Prefix sum points (Cumulative trajectory)
         if sums:
             pts = []
             circle_dots = []
-            for t, s, r in zip(turns, sums, raws):
+            for t, s in zip(turns, sums):
                 cx = x_coord(t)
                 cy = y_coord(s)
                 pts.append(f"{cx:.1f},{cy:.1f}")
                 circle_dots.append(
-                    f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="4" fill="{color}" stroke="#FFFFFF" stroke-width="1.5" '
-                    f'class="data-point" data-model="{name}" data-turn="{t}" data-val="{s}" data-raw="{r}"/>'
+                    f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="3.5" fill="{color}" stroke="#FFFFFF" stroke-width="1.5" '
+                    f'class="data-point" data-model="{name}" data-turn="{t}" data-val="{s}"/>'
                 )
             d_str = "M " + " L ".join(pts)
             trajectory_paths.append(
                 f'<g class="model-line-group" data-model="{name}">'
-                f'  <path d="{d_str}" fill="none" stroke="{color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="traj-line" />'
+                f'  <path d="{d_str}" fill="none" stroke="{color}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="traj-line" />'
                 f'  {"".join(circle_dots)}'
                 f'</g>'
             )
 
-        # Raw turn-by-turn outputs (Dashed line)
-        if raws:
-            raw_pts = []
-            raw_dots = []
-            for t, r in zip(turns, raws):
-                cx = x_coord(t)
-                cy = y_coord(r)
-                raw_pts.append(f"{cx:.1f},{cy:.1f}")
-                raw_dots.append(
-                    f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="2.5" fill="{color}" opacity="0.75" />'
-                )
-            raw_d = "M " + " L ".join(raw_pts)
-            raw_output_paths.append(
-                f'<g class="raw-output-group" data-model="{name}">'
-                f'  <path d="{raw_d}" fill="none" stroke="{color}" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.65" />'
-                f'  {"".join(raw_dots)}'
+            # Leader line to right label
+            end_cx = x_coord(turns[-1])
+            end_cy = y_coord(sums[-1])
+            label_y = label_start_y + idx * label_step
+            label_x = margin_left + plot_width + 30
+
+            guide_path = f"M {end_cx:.1f} {end_cy:.1f} C {end_cx + 15:.1f} {end_cy:.1f}, {label_x - 15:.1f} {label_y:.1f}, {label_x - 6:.1f} {label_y:.1f}"
+            right_labels.append(
+                f'<g class="model-label-group" data-model="{name}">'
+                f'  <path d="{guide_path}" fill="none" stroke="{color}" stroke-width="1.2" stroke-opacity="0.4" stroke-dasharray="2,2" class="leader-line" />'
+                f'  <circle cx="{label_x - 4:.1f}" cy="{label_y:.1f}" r="3.5" fill="{color}" />'
+                f'  <text x="{label_x + 6:.1f}" y="{label_y + 3.5:.1f}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" '
+                f'font-size="11" font-weight="500" fill="#374151" class="right-model-label">{name}</text>'
                 f'</g>'
             )
 
-        legend_items.append(
-            f'<div class="legend-pill" data-model="{name}">'
-            f'  <span class="legend-color-dot" style="background-color: {color};"></span>'
-            f'  <span class="legend-name" title="{name}">{name}</span>'
-            f'</div>'
-        )
-
     grid_html = "\n    ".join(y_grid_lines + x_grid_lines)
-    y_ticks_html = "\n    ".join(y_tick_labels)
     x_ticks_html = "\n    ".join(x_tick_labels)
     lines_html = "\n    ".join(trajectory_paths)
-    raw_lines_html = "\n    ".join(raw_output_paths)
-    legend_html = "\n    ".join(legend_items)
+    right_labels_html = "\n    ".join(right_labels)
 
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
@@ -1209,34 +1179,19 @@ def render_trajectory_line_graph_html(
       padding: 0;
     }}
     body {{
-      background-color: #FAFAFA;
+      background-color: #FFFFFF;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       color: #111827;
-      padding: 28px 36px;
-    }}
-    .container {{
-      max-width: 1380px;
-      margin: 0 auto;
-      background: #FFFFFF;
-      border: 1px solid #E5E7EB;
-      border-radius: 12px;
-      padding: 28px 32px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      padding: 30px 36px;
+      min-width: {svg_width + 80}px;
     }}
     .header {{
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
       margin-bottom: 20px;
-      border-bottom: 1px solid #F3F4F6;
-      padding-bottom: 16px;
-    }}
-    .title-block {{
-      max-width: 800px;
+      max-width: {svg_width}px;
     }}
     .title {{
       font-family: Merriweather, Georgia, serif;
-      font-size: 23px;
+      font-size: 25px;
       font-weight: 700;
       color: #111827;
       margin-bottom: 6px;
@@ -1244,93 +1199,32 @@ def render_trajectory_line_graph_html(
     .subtitle {{
       font-size: 13px;
       color: #6B7280;
-      line-height: 1.5;
+      line-height: 1.45;
     }}
-    .controls {{
-      display: flex;
-      gap: 6px;
-      background: #F3F4F6;
-      padding: 4px;
-      border-radius: 8px;
-    }}
-    .ctrl-btn {{
-      padding: 6px 12px;
-      font-size: 12px;
-      font-weight: 600;
-      border: none;
-      background: transparent;
-      color: #4B5563;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }}
-    .ctrl-btn.active {{
-      background: #FFFFFF;
-      color: #111827;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
-    }}
-    .header-actions {{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 8px;
-    }}
-    .series-legend {{
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    .note {{
       font-size: 11.5px;
-      color: #4B5563;
-      font-weight: 500;
-    }}
-    .series-badge {{
-      display: flex;
-      align-items: center;
-      gap: 5px;
+      color: #9CA3AF;
+      font-style: italic;
+      margin-top: 4px;
     }}
     .chart-wrapper {{
       position: relative;
       width: {svg_width}px;
       height: {svg_height}px;
-      margin: 0 auto;
     }}
     svg.line-svg {{
       width: {svg_width}px;
       height: {svg_height}px;
       overflow: visible;
     }}
-    .legend-grid {{
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 6px 14px;
-      margin-top: 24px;
-      border-top: 1px solid #F3F4F6;
-      padding-top: 18px;
-    }}
-    .legend-pill {{
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 11.5px;
-      color: #374151;
-      padding: 3px 6px;
-      border-radius: 4px;
+    .model-line-group:hover .traj-line {{
+      stroke-width: 4;
       cursor: pointer;
-      transition: background-color 0.1s ease;
     }}
-    .legend-pill:hover {{
-      background-color: #F9FAFB;
-    }}
-    .legend-color-dot {{
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }}
-    .legend-name {{
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    .model-label-group:hover .right-model-label {{
+      font-weight: 700;
+      fill: #111827;
+      cursor: pointer;
     }}
     .data-point {{
       cursor: pointer;
@@ -1355,94 +1249,42 @@ def render_trajectory_line_graph_html(
 </head>
 <body>
 
-  <div class="container">
-    <div class="header">
-      <div class="title-block">
-        <h1 class="title">{title}</h1>
-        <p class="subtitle">{subtitle}</p>
-      </div>
-      <div class="header-actions">
-        <div class="controls">
-          <button class="ctrl-btn active" id="btn-combined" onclick="setMode('combined')">Combined View</button>
-          <button class="ctrl-btn" id="btn-traj" onclick="setMode('traj')">Trajectory Curve</button>
-          <button class="ctrl-btn" id="btn-raw" onclick="setMode('raw')">Output Series</button>
-        </div>
-        <div class="series-legend">
-          <span class="series-badge">
-            <svg width="22" height="10"><line x1="0" y1="5" x2="22" y2="5" stroke="#374151" stroke-width="2.5" stroke-linecap="round"/></svg>
-            Trajectory Curve
-          </span>
-          <span class="series-badge">
-            <svg width="22" height="10"><line x1="0" y1="5" x2="22" y2="5" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="3,3"/></svg>
-            Output Series
-          </span>
-        </div>
-      </div>
-    </div>
+  <div class="header">
+    <h1 class="title">{title}</h1>
+    <p class="subtitle">{subtitle}</p>
+    <p class="note">{scale_note}</p>
+  </div>
 
-    <div class="chart-wrapper">
-      <div class="tooltip" id="tooltip"></div>
-      <svg class="line-svg" viewBox="0 0 {svg_width} {svg_height}">
-        <!-- Grid lines -->
-        {grid_html}
-        {zero_line_svg}
+  <div class="chart-wrapper">
+    <div class="tooltip" id="tooltip"></div>
+    <svg class="line-svg" viewBox="0 0 {svg_width} {svg_height}">
+      <!-- Grid lines -->
+      {grid_html}
 
-        <!-- Axes ticks: Numbers only! NO Axis Titles -->
-        {y_ticks_html}
-        {x_ticks_html}
+      <!-- X-axis ticks & indicator: Step -->
+      {x_ticks_html}
+      {x_axis_title}
 
-        <!-- Raw Turn Output Lines (Dashed) - Visible by default in Combined View -->
-        <g id="raw-layer">
-          {raw_lines_html}
-        </g>
+      <!-- Cumulative Trajectory Lines (Solid) -->
+      <g id="traj-layer">
+        {lines_html}
+      </g>
 
-        <!-- Cumulative Trajectory Lines (Solid) -->
-        <g id="traj-layer">
-          {lines_html}
-        </g>
-      </svg>
-    </div>
-
-    <div class="legend-grid">
-      {legend_html}
-    </div>
+      <!-- Right Leaderboard & End-of-line Labels -->
+      <g id="right-labels-layer">
+        {right_labels_html}
+      </g>
+    </svg>
   </div>
 
   <script>
-    function setMode(mode) {{
-      const trajLayer = document.getElementById('traj-layer');
-      const rawLayer = document.getElementById('raw-layer');
-      const btnTraj = document.getElementById('btn-traj');
-      const btnRaw = document.getElementById('btn-raw');
-      const btnCombined = document.getElementById('btn-combined');
-
-      btnTraj.classList.remove('active');
-      btnRaw.classList.remove('active');
-      btnCombined.classList.remove('active');
-
-      if (mode === 'traj') {{
-        trajLayer.style.display = 'block';
-        rawLayer.style.display = 'none';
-        btnTraj.classList.add('active');
-      }} else if (mode === 'raw') {{
-        trajLayer.style.display = 'none';
-        rawLayer.style.display = 'block';
-        btnRaw.classList.add('active');
-      }} else if (mode === 'combined') {{
-        trajLayer.style.display = 'block';
-        rawLayer.style.display = 'block';
-        btnCombined.classList.add('active');
-      }}
-    }}
-
     const tooltip = document.getElementById('tooltip');
     document.querySelectorAll('.data-point').forEach(pt => {{
       pt.addEventListener('mouseenter', e => {{
         const m = pt.getAttribute('data-model');
         const t = pt.getAttribute('data-turn');
         const v = pt.getAttribute('data-val');
-        const r = pt.getAttribute('data-raw');
-        tooltip.innerHTML = `<strong>${{m}}</strong><br>Position: ${{t}}<br>Index Value: ${{v}}<br>Turn Delta: ${{r}}`;
+        tooltip.innerHTML = `<strong>${{m}}</strong><br>Step: ${{t}}<br>Index Value: ${{v}}`;
         tooltip.style.display = 'block';
       }});
       pt.addEventListener('mousemove', e => {{
@@ -1534,7 +1376,30 @@ def render_html_to_png(
             text=True,
             timeout=30,
         )
-        return out_path.is_file() and out_path.stat().st_size > 0
+        if out_path.is_file() and out_path.stat().st_size > 0:
+            # Auto-trim excess white padding around content for a tight, polished presentation
+            try:
+                from PIL import Image, ImageChops
+
+                im = Image.open(out_path).convert("RGB")
+                bg = Image.new("RGB", im.size, (255, 255, 255))
+                diff = ImageChops.difference(im, bg)
+                bbox = diff.getbbox()
+                if bbox:
+                    left, top, right, bottom = bbox
+                    pad = 28
+                    crop_box = (
+                        max(0, left - pad),
+                        max(0, top - pad),
+                        min(im.size[0], right + pad),
+                        min(im.size[1], bottom + pad),
+                    )
+                    cropped = im.crop(crop_box)
+                    cropped.save(out_path)
+            except Exception:
+                pass
+            return True
+        return False
     except Exception:
         return False
 
@@ -1552,7 +1417,7 @@ def generate_all_charts(
     use_reference_scores: bool = False,
 ) -> Dict[str, Path]:
     """
-    Generate both Artificial Analysis bar chart and trajectory line graph.
+    Generate both RSI-Bench Index bar chart and trajectory line graph.
     Produces both .html and .png for each chart.
 
     Returns dict mapping artifact key to its generated Path:
@@ -1604,7 +1469,7 @@ def generate_all_charts(
 
     # 2. Render Bar Chart HTML
     bar_html_str = render_intelligence_index_bar_chart_html(models=bar_models)
-    bar_html_path = out_dir / "artificial_analysis_intelligence_index.html"
+    bar_html_path = out_dir / "rsi_bench_index.html"
     with open(bar_html_path, "w", encoding="utf-8") as f:
         f.write(bar_html_str)
     generated["bar_chart_html"] = bar_html_path
@@ -1639,7 +1504,7 @@ def generate_all_charts(
 
     # 5. Render PNGs via Headless Browser if requested
     if render_png:
-        bar_png_path = out_dir / "artificial_analysis_intelligence_index.png"
+        bar_png_path = out_dir / "rsi_bench_index.png"
         ok_bar = render_html_to_png(bar_html_path, bar_png_path, width=1650, height=760, browser_path=browser_path)
         if ok_bar:
             generated["bar_chart_png"] = bar_png_path
@@ -1648,5 +1513,23 @@ def generate_all_charts(
         ok_line = render_html_to_png(line_html_path, line_png_path, width=1450, height=960, browser_path=browser_path)
         if ok_line:
             generated["line_graph_png"] = line_png_path
+
+    # Clean up any loose/duplicate charts in top-level results/ directory (keep only in results/charts)
+    results_dir = Path("results").resolve()
+    if results_dir.is_dir():
+        for filename in [
+            "rsi_bench_index.png",
+            "rsi_bench_index.html",
+            "model_trajectory_index.png",
+            "model_trajectory_index.html",
+            "artificial_analysis_intelligence_index.png",
+            "artificial_analysis_intelligence_index.html",
+        ]:
+            loose_file = results_dir / filename
+            if loose_file.is_file():
+                try:
+                    loose_file.unlink()
+                except Exception:
+                    pass
 
     return generated

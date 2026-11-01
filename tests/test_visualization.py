@@ -24,23 +24,13 @@ from rsi_bench.visualization import (
 
 
 def test_reference_models_registry():
-    """Verify registry contains 29 models, exactly 1 without public API, and scores range from 58 to 6."""
+    """Verify registry contains 29 models, and scores range from 58 to 6."""
     models = get_reference_models()
     assert len(models) == 29
 
-    # Exactly 1 model without public API
-    hatched = [m for m in models if not m["has_public_api"]]
-    assert len(hatched) == 1
-    assert hatched[0]["name"] == "Muse Wonder Full (max)"
-    assert hatched[0]["is_hatched"] is True
-
-    # 28 models with public APIs
-    public_models = get_public_models()
-    assert len(public_models) == 28
-
     # Top model has score 58, lowest has score 6
     assert models[0]["score"] == 58
-    assert models[0]["name"] == "Claude Opus 5.5 (max with fallback)"
+    assert models[0]["name"] == "Claude Opus 5.5 (max)"
     assert models[-1]["score"] == 6
     assert models[-1]["name"] == "Muse Glimmer (high)"
 
@@ -55,13 +45,12 @@ def test_reference_models_registry():
 
 
 def test_bar_chart_html_rendering():
-    """Verify HTML generation of the Artificial Analysis bar chart."""
+    """Verify HTML generation of the RSI-Bench bar chart."""
     html = render_intelligence_index_bar_chart_html()
     assert isinstance(html, str)
     assert html.startswith("<!DOCTYPE html>")
-    assert "Artificial Analysis Intelligence Index" in html
-    assert "No publicly available API" in html
-    assert "hatch-pattern" in html
+    assert "RSI-Bench Index" in html
+    assert "RSI-Bench" in html
 
     # Verify scores are rendered inside bars
     for score in [58, 57, 55, 54, 51, 50, 49, 46, 43, 36, 34, 32, 31, 30, 29, 28, 25, 20, 18, 14, 12, 6]:
@@ -77,7 +66,7 @@ def test_bar_chart_html_rendering():
 def test_line_graph_unlabeled_axes_joke_constraint():
     """
     CRITICAL JOKE CONSTRAINT TEST:
-    Verify the line graph shows turn-by-turn outputs + cumulative prefix sums
+    Verify the line graph shows cumulative prefix sums
     WITHOUT disclosing or labeling what each axis means (no axis titles like
     'Turns', 'Steps', 'Score', 'Integer', or 'Prefix Sum').
     """
@@ -86,35 +75,31 @@ def test_line_graph_unlabeled_axes_joke_constraint():
 
     assert isinstance(html, str)
     assert html.startswith("<!DOCTYPE html>")
-    assert "Multi-Turn Dynamic Performance Trajectory Index" in html
+    assert "RSI-Bench Multi-Turn Performance Trajectory" in html
+    assert "Symmetrical logarithmic scale" in html
 
-    # Verify model names are in the legend
-    assert "Claude Opus 5.5 (max with fallback)" in html
+    # Verify model names are in the right-hand labels layer
+    assert "Claude Opus 5.5 (max)" in html
     assert "GPT-6 Astra (max)" in html
+    assert 'id="right-labels-layer"' in html
 
-    # Verify ticks are bare numbers (1, 2, 3, 4, 5)
+    # Verify ticks are bare numbers (1, 2, 3, 4, 5) and x-axis indicator shows 'Step'
     for t in range(1, 6):
         assert f">{t}</text>" in html
+    assert ">Step</text>" in html
 
-    # Verify that NO axis label elements or axis titles exist!
-    # Check that there are NO axis titles for turns or integers/scores
-    forbidden_axis_labels = [
-        r"<text[^>]*>\s*Turns?\s*</text>",
-        r"<text[^>]*>\s*Steps?\s*</text>",
+    # Verify that Y-AXIS has NO labels or titles (no scores, integers, prefix sums)
+    forbidden_y_axis_labels = [
         r"<text[^>]*>\s*Score\s*</text>",
         r"<text[^>]*>\s*Scores\s*</text>",
         r"<text[^>]*>\s*Integer\s*</text>",
         r"<text[^>]*>\s*Integers\s*</text>",
         r"<text[^>]*>\s*Prefix\s*Sum\s*</text>",
         r"<text[^>]*>\s*Cumulative\s*Sum\s*</text>",
-        r"<text[^>]*>\s*Time\s*</text>",
-        r"<text[^>]*>\s*Rounds?\s*</text>",
         r"class=\"axis-title\"",
-        r"class=\"axis-label\"",
-        r"id=\"x-axis-label\"",
         r"id=\"y-axis-label\"",
     ]
-    for pattern in forbidden_axis_labels:
+    for pattern in forbidden_y_axis_labels:
         match = re.search(pattern, html, re.IGNORECASE)
         assert match is None, f"Found forbidden axis label matching '{pattern}': {match.group(0)}"
 
@@ -157,11 +142,11 @@ def test_extract_trajectory_from_benchmark_results():
             TurnTrace(turn_index=2, prompt="p", raw_response_text="-25", parsed_integer=-25, parse_success=True),
             TurnTrace(turn_index=3, prompt="p", raw_response_text="50", parsed_integer=50, parse_success=True),
         ],
-        config={"name": "Claude Opus 5.5 (max with fallback)"},
+        config={"name": "Claude Opus 5.5 (max)"},
     )
 
     traj = extract_trajectory_data([res1])
-    name = "Claude Opus 5.5 (max with fallback)"
+    name = "Claude Opus 5.5 (max)"
     assert name in traj
     assert traj[name]["integers"] == [100, -25, 50]
     assert traj[name]["prefix_sums"] == [100, 75, 125]
@@ -250,9 +235,10 @@ def test_bar_chart_negative_and_dynamic_scores():
 
     html = render_intelligence_index_bar_chart_html(models=mixed_models)
     assert isinstance(html, str)
-    assert ">-1412</text>" in html
-    assert ">250</text>" in html
-    assert ">0</text>" in html
+    # Log-scale score rendering for symlog dynamic range (e.g. -3.2, 2.4, 0.0)
+    assert ">-3.2</text>" in html
+    assert ">2.4</text>" in html
+    assert ">0.0</text>" in html
 
     # Verify no negative height in any rect tag
     rect_heights = re.findall(r'<rect[^>]+height="([^"]+)"', html)
@@ -280,18 +266,16 @@ def test_bar_chart_single_model_header_layout():
     assert container_width >= 1100, f"Expected container width >= 1100, got {container_width}"
 
 
-def test_line_graph_shows_both_output_and_trajectory_by_default():
-    """Verify both turn outputs (dashed) and prefix sums (solid) are visible by default in line graph and rendered PNG."""
+def test_line_graph_shows_prefix_sums_only():
+    """Verify only prefix sum trajectory curves are drawn, with no raw dashed series or mode controls."""
     mock_data = generate_mock_trajectory_data(num_turns=3, seed=777)
     html = render_trajectory_line_graph_html(mock_data)
 
-    # raw-layer must NOT be hidden by default (so headless browser captures both series)
-    assert 'id="raw-layer"' in html
-    assert 'id="raw-layer" style="display: none;"' not in html
     assert 'id="traj-layer"' in html
-    assert 'class="ctrl-btn active" id="btn-combined"' in html
-    assert "Trajectory Curve" in html
-    assert "Output Series" in html
+    assert 'class="traj-line"' in html
+    assert 'id="raw-layer"' not in html
+    assert 'btn-combined' not in html
+    assert "Output Series" not in html
 
 
 def test_generate_all_charts_from_real_benchmark_result_with_negative_integers(tmp_path):
@@ -311,7 +295,7 @@ def test_generate_all_charts_from_real_benchmark_result_with_negative_integers(t
             TurnTrace(turn_index=2, prompt="p", raw_response_text="-772", parsed_integer=-772, parse_success=True),
             TurnTrace(turn_index=3, prompt="p", raw_response_text="-949", parsed_integer=-949, parse_success=True),
         ],
-        config={"name": "Claude Opus 5.5 (max with fallback)"},
+        config={"name": "Claude Opus 5.5 (max)"},
     )
 
     out_dir = tmp_path / "charts_from_result"

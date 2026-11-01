@@ -17,14 +17,14 @@ CONFIG_ACTIVE_PATH = REPO_ROOT / "config.yaml"
 
 
 EXPECTED_28_MODELS = [
-    "Claude Opus 5.5 (max with fallback)",
+    "Claude Opus 5.5 (max)",
     "GPT-6 Astra (max)",
     "GPT-6.1 Sol (max)",
-    "Claude Sonnet 5.5 (max with fallback)",
+    "Claude Sonnet 5.5 (max)",
     "GPT-6.1 Terra (max)",
     "Gemini 4 Argon (high)",
     # Muse Wonder Full (max) is omitted!
-    "Claude Fable 5.1 (max with fallback)",
+    "Claude Fable 5.1 (max)",
     "Kimi K3.1 Pro",
     "Muse Wonder (max)",
     "Claude Haiku 5.5 (max)",

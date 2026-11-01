@@ -1233,7 +1233,7 @@
     }
   ],
   "config": {
-    "name": "Claude Fable 5.1 (max with fallback)",
+    "name": "Claude Fable 5.1 (max)",
     "provider": "openrouter",
     "model": "anthropic/claude-fable-5.1",
     "num_turns": 10,

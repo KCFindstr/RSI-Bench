@@ -5238,7 +5238,7 @@
         }
       ],
       "config": {
-        "name": "Claude Sonnet 5.5 (max with fallback)",
+        "name": "Claude Sonnet 5.5 (max)",
         "provider": "openrouter",
         "model": "anthropic/claude-sonnet-5.5",
         "num_turns": 10,
@@ -9220,7 +9220,7 @@
         }
       ],
       "config": {
-        "name": "Claude Fable 5.1 (max with fallback)",
+        "name": "Claude Fable 5.1 (max)",
         "provider": "openrouter",
         "model": "anthropic/claude-fable-5.1",
         "num_turns": 10,

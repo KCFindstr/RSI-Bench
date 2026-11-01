@@ -64,8 +64,8 @@ runs:
     enabled: true
     tags: ["simulation", "offline", "ci"]
 
-  # 1. Claude Opus 5.5 (max with fallback) [Anthropic, Reference Score: 58]
-  - name: "Claude Opus 5.5 (max with fallback)"
+  # 1. Claude Opus 5.5 (max) [Anthropic, Reference Score: 58]
+  - name: "Claude Opus 5.5 (max)"
     provider: "openrouter"
     model: "anthropic/claude-opus-5.5"
     turns: 3
@@ -97,8 +97,8 @@ runs:
     enabled: false
     tags: ["openai", "sol", "reasoning"]
 
-  # 4. Claude Sonnet 5.5 (max with fallback) [Anthropic, Reference Score: 54]
-  - name: "Claude Sonnet 5.5 (max with fallback)"
+  # 4. Claude Sonnet 5.5 (max) [Anthropic, Reference Score: 54]
+  - name: "Claude Sonnet 5.5 (max)"
     provider: "openrouter"
     model: "anthropic/claude-sonnet-5.5"
     turns: 3
@@ -132,8 +132,8 @@ runs:
 
   # [Note: Muse Wonder Full (max) is skipped as it has no publicly available API]
 
-  # 7. Claude Fable 5.1 (max with fallback) [Anthropic, Reference Score: 49]
-  - name: "Claude Fable 5.1 (max with fallback)"
+  # 7. Claude Fable 5.1 (max) [Anthropic, Reference Score: 49]
+  - name: "Claude Fable 5.1 (max)"
     provider: "openrouter"
     model: "anthropic/claude-fable-5.1"
     turns: 3

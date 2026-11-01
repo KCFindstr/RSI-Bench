@@ -7,6 +7,7 @@ name = "rsi-bench"
 version = "0.1.0"
 description = "Multi-turn LLM benchmark suite with trace and thinking recording, provider prompt caching, and robust integer parsing."
 readme = "README.md"
+license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = [
     "httpx>=0.28.0",
